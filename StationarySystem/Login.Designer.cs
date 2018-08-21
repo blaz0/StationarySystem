@@ -38,7 +38,7 @@
             // UsernameLb
             // 
             this.UsernameLb.AutoSize = true;
-            this.UsernameLb.Location = new System.Drawing.Point(60, 50);
+            this.UsernameLb.Location = new System.Drawing.Point(60, 68);
             this.UsernameLb.Name = "UsernameLb";
             this.UsernameLb.Size = new System.Drawing.Size(58, 13);
             this.UsernameLb.TabIndex = 0;
@@ -55,23 +55,23 @@
             // 
             // LoginBtn
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(174, 154);
+            this.LoginBtn.Location = new System.Drawing.Point(144, 140);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(75, 23);
+            this.LoginBtn.Size = new System.Drawing.Size(79, 23);
             this.LoginBtn.TabIndex = 2;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.UseVisualStyleBackColor = true;
             // 
             // UsernameTF
             // 
-            this.UsernameTF.Location = new System.Drawing.Point(164, 50);
+            this.UsernameTF.Location = new System.Drawing.Point(134, 65);
             this.UsernameTF.Name = "UsernameTF";
             this.UsernameTF.Size = new System.Drawing.Size(100, 20);
             this.UsernameTF.TabIndex = 3;
             // 
             // PasswordTF
             // 
-            this.PasswordTF.Location = new System.Drawing.Point(164, 100);
+            this.PasswordTF.Location = new System.Drawing.Point(134, 100);
             this.PasswordTF.Name = "PasswordTF";
             this.PasswordTF.Size = new System.Drawing.Size(100, 20);
             this.PasswordTF.TabIndex = 4;
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 231);
+            this.ClientSize = new System.Drawing.Size(344, 204);
             this.Controls.Add(this.PasswordTF);
             this.Controls.Add(this.UsernameTF);
             this.Controls.Add(this.LoginBtn);
