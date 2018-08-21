@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class Profile : Form
+    public partial class ProfileScreen : Form
     {
-        public Profile()
+        public ProfileScreen()
         {
             InitializeComponent();
         }

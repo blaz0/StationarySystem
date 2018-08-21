@@ -1,6 +1,6 @@
 ﻿namespace StationarySystem
 {
-    partial class Profile
+    partial class ProfileScreen
     {
         /// <summary>
         /// Required designer variable.

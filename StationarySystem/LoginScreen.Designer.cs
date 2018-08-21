@@ -43,6 +43,7 @@
             this.UsernameLb.Size = new System.Drawing.Size(58, 13);
             this.UsernameLb.TabIndex = 0;
             this.UsernameLb.Text = "Username:";
+            this.UsernameLb.Click += new System.EventHandler(this.UsernameLb_Click);
             // 
             // PasswordLb
             // 
@@ -68,6 +69,7 @@
             this.UsernameTF.Name = "UsernameTF";
             this.UsernameTF.Size = new System.Drawing.Size(100, 20);
             this.UsernameTF.TabIndex = 3;
+            this.UsernameTF.TextChanged += new System.EventHandler(this.UsernameTF_TextChanged);
             // 
             // PasswordTF
             // 
@@ -75,6 +77,7 @@
             this.PasswordTF.Name = "PasswordTF";
             this.PasswordTF.Size = new System.Drawing.Size(100, 20);
             this.PasswordTF.TabIndex = 4;
+            this.PasswordTF.TextChanged += new System.EventHandler(this.PasswordTF_TextChanged);
             // 
             // LoginScreen
             // 

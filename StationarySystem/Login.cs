@@ -1,25 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class LoginScreen : Form
+    class Login
     {
-        public LoginScreen()
+        //variables
+        public string Username { get; set; }
+        public string Password { get; set; }
+
+        //initialise
+        public Login(string username, string password)
         {
-            InitializeComponent();
+            this.Username = username;
+            this.Password = password;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        //validate username
+        private bool validUsername(string input)
         {
-
+            string pattern = "Regina";
+            if( input == pattern)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
