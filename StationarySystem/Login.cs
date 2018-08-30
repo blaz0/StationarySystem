@@ -34,43 +34,26 @@ namespace StationarySystem
         //method to check if eligible to be logged in 
         internal bool isLoggedIn(string id, string password)
         {
-            //check user name empty 
-            if (string.IsNullOrEmpty(id))
-            {
-                MessageBox.Show("Please enter a valid staffID");
-                return false;
-
-            }
             //check user name is correct 
+            if (id != staffid)
+            {
+                ClearTexts(id, password);
+                return false;
+            }
             else
             {
-                if (id != staffid)
+                //check password is correct 
+                if (password != staffPassword)
                 {
-                    MessageBox.Show("Invalid ID");
-                    ClearTexts(id, password);
+                    MessageBox.Show("Password is incorrect.");
                     return false;
                 }
-                //check password is empty 
                 else
                 {
-                    if (string.IsNullOrEmpty(password))
-                    {
-                        MessageBox.Show("Please enter the correct password.");
-                        return false;
-                    }
-
-                    //check password is correct 
-                    else if (password != staffPassword)
-                    {
-                        MessageBox.Show("Password is incorrect.");
-                        return false;
-                    }
-                    else
-                    {
-                        return true;
-                    }
+                    return true;
                 }
             }
+            
         }
     }
 }

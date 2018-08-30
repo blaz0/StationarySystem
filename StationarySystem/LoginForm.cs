@@ -17,6 +17,7 @@ namespace StationarySystem
             InitializeComponent();
         }
 
+        //Login credentials - replace with mySQL feed
         Login login = new Login("admin", "abcd");
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace StationarySystem
 
         }
 
+        //On Login button click
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string staffID = StaffIDTF.Text;
@@ -36,10 +38,14 @@ namespace StationarySystem
 
             if(login.isLoggedIn(staffID, staffPassword))
             {
-                MessageBox.Show("Login successful.");
+                this.Hide();
+                Main main = new Main();
+                main.ShowDialog();
             }
             else
             {
+                StaffIDTF.Clear();
+                PasswordTF.Clear();
                 MessageBox.Show("Login details incorrect.");
             }
         }

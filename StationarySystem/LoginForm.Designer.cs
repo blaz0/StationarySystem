@@ -33,15 +33,15 @@
             this.StaffIDTF = new System.Windows.Forms.TextBox();
             this.PasswordTF = new System.Windows.Forms.TextBox();
             this.LoginBtn = new System.Windows.Forms.Button();
-            this.errorMsgLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // StaffIDLbl
             // 
             this.StaffIDLbl.AutoSize = true;
-            this.StaffIDLbl.Location = new System.Drawing.Point(96, 40);
+            this.StaffIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffIDLbl.Location = new System.Drawing.Point(12, 40);
             this.StaffIDLbl.Name = "StaffIDLbl";
-            this.StaffIDLbl.Size = new System.Drawing.Size(50, 13);
+            this.StaffIDLbl.Size = new System.Drawing.Size(74, 20);
             this.StaffIDLbl.TabIndex = 0;
             this.StaffIDLbl.Text = "Staff ID#";
             this.StaffIDLbl.Click += new System.EventHandler(this.label1_Click);
@@ -49,30 +49,33 @@
             // PasswordLbl
             // 
             this.PasswordLbl.AutoSize = true;
-            this.PasswordLbl.Location = new System.Drawing.Point(96, 79);
+            this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLbl.Location = new System.Drawing.Point(12, 79);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLbl.Size = new System.Drawing.Size(78, 20);
             this.PasswordLbl.TabIndex = 1;
             this.PasswordLbl.Text = "Password";
             // 
             // StaffIDTF
             // 
-            this.StaffIDTF.Location = new System.Drawing.Point(168, 33);
+            this.StaffIDTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffIDTF.Location = new System.Drawing.Point(103, 37);
             this.StaffIDTF.Name = "StaffIDTF";
-            this.StaffIDTF.Size = new System.Drawing.Size(100, 20);
+            this.StaffIDTF.Size = new System.Drawing.Size(154, 26);
             this.StaffIDTF.TabIndex = 2;
             // 
             // PasswordTF
             // 
-            this.PasswordTF.Location = new System.Drawing.Point(168, 79);
+            this.PasswordTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTF.Location = new System.Drawing.Point(103, 76);
             this.PasswordTF.Name = "PasswordTF";
-            this.PasswordTF.Size = new System.Drawing.Size(100, 20);
+            this.PasswordTF.Size = new System.Drawing.Size(154, 26);
             this.PasswordTF.TabIndex = 3;
             this.PasswordTF.TextChanged += new System.EventHandler(this.PasswordTF_TextChanged);
             // 
             // LoginBtn
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(193, 150);
+            this.LoginBtn.Location = new System.Drawing.Point(103, 130);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(75, 23);
             this.LoginBtn.TabIndex = 4;
@@ -80,20 +83,11 @@
             this.LoginBtn.UseVisualStyleBackColor = true;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
-            // errorMsgLbl
-            // 
-            this.errorMsgLbl.AutoSize = true;
-            this.errorMsgLbl.Location = new System.Drawing.Point(203, 119);
-            this.errorMsgLbl.Name = "errorMsgLbl";
-            this.errorMsgLbl.Size = new System.Drawing.Size(0, 13);
-            this.errorMsgLbl.TabIndex = 5;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(456, 185);
-            this.Controls.Add(this.errorMsgLbl);
+            this.ClientSize = new System.Drawing.Size(289, 165);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PasswordTF);
             this.Controls.Add(this.StaffIDTF);
@@ -114,6 +108,5 @@
         private System.Windows.Forms.TextBox StaffIDTF;
         private System.Windows.Forms.TextBox PasswordTF;
         private System.Windows.Forms.Button LoginBtn;
-        private System.Windows.Forms.Label errorMsgLbl;
     }
 }
