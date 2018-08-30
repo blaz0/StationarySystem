@@ -43,5 +43,10 @@ namespace StationarySystem
                 MessageBox.Show("Login details incorrect.");
             }
         }
+
+        private void PasswordTF_TextChanged(object sender, EventArgs e)
+        {
+            PasswordTF.PasswordChar = '*';
+        }
     }
 }
