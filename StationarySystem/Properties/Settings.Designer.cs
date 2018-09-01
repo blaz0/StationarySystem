@@ -33,5 +33,27 @@ namespace StationarySystem.Properties {
                 return ((string)(this["sepdbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("user id=root;server=localhost;database=sepdb;allowuservariables=True;password=pas" +
+            "sword;persistsecurityinfo=True")]
+        public string sepdbConnectionString1 {
+            get {
+                return ((string)(this["sepdbConnectionString1"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=password;database=sepdb;persistsecurityinf" +
+            "o=True")]
+        public string sepdbConnectionString2 {
+            get {
+                return ((string)(this["sepdbConnectionString2"]));
+            }
+        }
     }
 }

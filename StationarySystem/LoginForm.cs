@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace StationarySystem
 {
@@ -37,12 +31,22 @@ namespace StationarySystem
             string staffPassword = PasswordTF.Text;
 
             //Create SqlConnection
-            SqlConnection con = new SqlConnection(@"server = localhost; user id = root; password = J@sonDerul0?; persistsecurityinfo=True;database=sepdb");
-            SqlCommand cmd = new SqlCommand("Select * from user where username=@username and password=@password", con);
+            MySqlConnection con = new MySqlConnection(@"server=localhost;uid=root;pwd=password;persistsecurityinfo=True;database=sepdb");
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand("Select * from user where username=@username and password=@password", con);
             cmd.Parameters.AddWithValue("@username", staffID);
             cmd.Parameters.AddWithValue("@password", staffPassword);
-            con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            rdr.Read();
+            rdr.Close();
+            //Testing
+            //System.Windows.MessageBox.Show(rdr[0].ToString());
+            //System.Windows.MessageBox.Show(rdr[1].ToString());
+            //System.Windows.MessageBox.Show(rdr[2].ToString());
+            //System.Windows.MessageBox.Show(rdr[3].ToString());
+
+            MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             adapt.Fill(ds);
             con.Close();
