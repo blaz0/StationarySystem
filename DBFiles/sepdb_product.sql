@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `sepdb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `sepdb`;
 -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: sepdb
@@ -26,15 +24,14 @@ DROP TABLE IF EXISTS `product`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `product` (
   `productID` int(8) NOT NULL,
+  `supplierID` int(8) NOT NULL,
   `name` varchar(20) NOT NULL,
   `description` varchar(100) NOT NULL,
   `stock` int(11) NOT NULL,
   `price` decimal(10,0) NOT NULL,
-  `supplierID` int(8) NOT NULL,
   PRIMARY KEY (`productID`),
   UNIQUE KEY `productID_UNIQUE` (`productID`),
-  KEY `FKsupplierID_idx` (`supplierID`),
-  CONSTRAINT `productFKsupplier` FOREIGN KEY (`supplierID`) REFERENCES `supplier` (`supplierid`)
+  KEY `productFKsupplier_idx` (`supplierID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Product information';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -44,7 +41,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,'blue pen','blue ballpoint pen',50,3,1),(2,'black pen','black ballpoint pen',50,3,1),(3,'butcher\'s paper','A3 butcher\'s paper',50,5,2),(4,'whiteboard marker','black whiteboard marker',50,4,1),(5,'ruler','clear plastic 30cm ruler',50,3,3);
+INSERT INTO `product` VALUES (1,1,'blue pen','blue ballpoint pen',50,3),(2,1,'black pen','black ballpoint pen',50,3),(3,2,'butcher\'s paper','A3 butcher\'s paper',50,5),(4,1,'whiteboard marker','black whiteboard marker',50,4),(5,3,'ruler','clear plastic 30cm ruler',50,3);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-27 15:22:52
+-- Dump completed on 2018-09-01 12:43:10
