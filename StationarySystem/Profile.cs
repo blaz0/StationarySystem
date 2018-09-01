@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class Main : Form
+    public partial class Profile : Form
     {
-        public Main()
+        public Profile()
         {
             InitializeComponent();
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
         }
     }
 }
