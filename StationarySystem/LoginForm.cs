@@ -14,8 +14,6 @@ namespace StationarySystem
 {
     public partial class LoginForm : Form
     {
-        public char KeyChar { get; set; }
-
         public LoginForm()
         {
             InitializeComponent();
@@ -37,13 +35,15 @@ namespace StationarySystem
             string staffPassword = PasswordTF.Text;
 
             //Create SqlConnection
-            SqlConnection con = new SqlConnection(@"server = localhost; user id = root; password = J@sonDerul0?; persistsecurityinfo=True;database=sepdb");
-            SqlCommand cmd = new SqlCommand("Select * from user where username=@username and password=@password", con);
+            MySqlConnection con = new MySqlConnection(@"server = localhost; user id = root; password = J@sonDerul0?; persistsecurityinfo=True;database=sepdb");
+            MySqlCommand cmd = new MySqlCommand("Select * from user where username=@username and password=@password", con);
+
             cmd.Parameters.AddWithValue("@username", staffID);
             cmd.Parameters.AddWithValue("@password", staffPassword);
             con.Open();
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
+
             adapt.Fill(ds);
             con.Close();
             int count = ds.Tables[0].Rows.Count;
@@ -51,7 +51,7 @@ namespace StationarySystem
             if (count == 1)
             {
                 this.Hide();
-                Profile profile = new Profile();
+                ProfileForm profile = new ProfileForm();
                 profile.Show();
             }
             else
@@ -65,9 +65,6 @@ namespace StationarySystem
         private void PasswordTF_TextChanged(object sender, EventArgs e)
         {
             PasswordTF.PasswordChar = '*';
-
-            if (KeyChar == (char)13)
-                LoginBtn.PerformClick();
         }
 
         private void StaffIDTF_TextChanged(object sender, EventArgs e)
