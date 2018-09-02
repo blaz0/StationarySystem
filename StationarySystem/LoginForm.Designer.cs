@@ -39,7 +39,7 @@
             // 
             this.StaffIDLbl.AutoSize = true;
             this.StaffIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIDLbl.Location = new System.Drawing.Point(29, 43);
+            this.StaffIDLbl.Location = new System.Drawing.Point(52, 47);
             this.StaffIDLbl.Name = "StaffIDLbl";
             this.StaffIDLbl.Size = new System.Drawing.Size(74, 20);
             this.StaffIDLbl.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLbl.Location = new System.Drawing.Point(25, 92);
+            this.PasswordLbl.Location = new System.Drawing.Point(48, 96);
             this.PasswordLbl.Name = "PasswordLbl";
             this.PasswordLbl.Size = new System.Drawing.Size(78, 20);
             this.PasswordLbl.TabIndex = 1;
@@ -59,7 +59,7 @@
             // StaffIDTF
             // 
             this.StaffIDTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIDTF.Location = new System.Drawing.Point(121, 43);
+            this.StaffIDTF.Location = new System.Drawing.Point(144, 47);
             this.StaffIDTF.Name = "StaffIDTF";
             this.StaffIDTF.Size = new System.Drawing.Size(154, 26);
             this.StaffIDTF.TabIndex = 2;
@@ -68,7 +68,7 @@
             // PasswordTF
             // 
             this.PasswordTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTF.Location = new System.Drawing.Point(121, 92);
+            this.PasswordTF.Location = new System.Drawing.Point(144, 96);
             this.PasswordTF.Name = "PasswordTF";
             this.PasswordTF.PasswordChar = '*';
             this.PasswordTF.Size = new System.Drawing.Size(154, 26);
@@ -77,10 +77,10 @@
             // 
             // LoginBtn
             // 
-            this.LoginBtn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LoginBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(121, 144);
+            this.LoginBtn.Location = new System.Drawing.Point(144, 148);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(100, 40);
             this.LoginBtn.TabIndex = 4;
@@ -93,7 +93,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(334, 211);
+            this.ClientSize = new System.Drawing.Size(384, 211);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PasswordTF);
             this.Controls.Add(this.StaffIDTF);
@@ -111,8 +111,8 @@
 
         private System.Windows.Forms.Label StaffIDLbl;
         private System.Windows.Forms.Label PasswordLbl;
-        private System.Windows.Forms.TextBox StaffIDTF;
         private System.Windows.Forms.TextBox PasswordTF;
         private System.Windows.Forms.Button LoginBtn;
+        public System.Windows.Forms.TextBox StaffIDTF;
     }
 }
