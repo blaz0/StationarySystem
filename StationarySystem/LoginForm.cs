@@ -41,10 +41,10 @@ namespace StationarySystem
             rdr.Read();
             rdr.Close();
             //Testing
-            //System.Windows.MessageBox.Show(rdr[0].ToString());
-            //System.Windows.MessageBox.Show(rdr[1].ToString());
-            //System.Windows.MessageBox.Show(rdr[2].ToString());
-            //System.Windows.MessageBox.Show(rdr[3].ToString());
+                //System.Windows.MessageBox.Show(rdr[0].ToString());
+                //System.Windows.MessageBox.Show(rdr[1].ToString());
+                //System.Windows.MessageBox.Show(rdr[2].ToString());
+                //System.Windows.MessageBox.Show(rdr[3].ToString());
 
             MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
