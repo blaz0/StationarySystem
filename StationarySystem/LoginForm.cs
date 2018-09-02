@@ -51,8 +51,8 @@ namespace StationarySystem
             if (count == 1)
             {
                 this.Hide();
-                ProfileForm profile = new ProfileForm();
-                profile.Show();
+                HomeForm home = new HomeForm();
+                home.Show();
             }
             else
             {

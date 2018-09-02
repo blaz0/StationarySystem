@@ -46,6 +46,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,6 +65,7 @@
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnProfile
             // 
@@ -221,7 +223,6 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(204, 31);
             this.txtFName.TabIndex = 8;
-            this.txtFName.Text = "Maxine Koh";
             this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
             // 
             // txtEmail
@@ -269,15 +270,27 @@
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
+            // btnEdit
+            // 
+            this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
+            this.btnEdit.Location = new System.Drawing.Point(597, 217);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(46, 45);
+            this.btnEdit.TabIndex = 8;
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // ProfileForm
             // 
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Name = "ProfileForm";
+            this.Text = "Profile";
             this.Load += new System.EventHandler(this.Profile_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -308,5 +321,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtCC;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnEdit;
     }
 }
