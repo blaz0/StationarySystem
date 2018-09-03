@@ -21,14 +21,18 @@ namespace StationarySystem
                 sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
                 //sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
                 sepdbDataSet.usersDataTable dt = user.GetDataByUserId(userIDparam);
+                DataColumn fullName = new DataColumn("fullname");
+                fullName.Expression = string.Format("{0}+' '+{1}", "firstName", "lastName");
+                dt.Columns.Add(fullName);
                 if (dt.Rows.Count > 0)
                 {
                     DataRow dr = dt.Rows[0];
-                    // Display values
-                    txtFName.Text = dr["firstName"].ToString();
+                    // Display values                    
+                    txtFName.Text = dr["fullname"].ToString();
                     txtID.Text = dr["userid"].ToString();
                     txtEmail.Text = dr["emailAddress"].ToString();
                     txtCC.Text = dr["costCentre"].ToString();
+
                 }
                 else
                 {
