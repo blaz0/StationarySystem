@@ -55,5 +55,37 @@ namespace StationarySystem.Properties {
                 return ((string)(this["sepdbConnectionString2"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=password;database=sepdb")]
+        public string sepdbDataSource {
+            get {
+                return ((string)(this["sepdbDataSource"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;User ID=sa;Password=" +
+            "password")]
+        public string sepdb_SQL {
+            get {
+                return ((string)(this["sepdb_SQL"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;Persist Security Info=True;User" +
+            " ID=sa;Password=password")]
+        public string sepdbConnectionStringMS {
+            get {
+                return ((string)(this["sepdbConnectionStringMS"]));
+            }
+        }
     }
 }

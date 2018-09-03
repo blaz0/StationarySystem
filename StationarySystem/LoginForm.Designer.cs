@@ -1,4 +1,6 @@
-﻿namespace StationarySystem
+﻿using System;
+
+namespace StationarySystem
 {
     partial class LoginForm
     {
@@ -44,7 +46,6 @@
             this.StaffIDLbl.Size = new System.Drawing.Size(74, 20);
             this.StaffIDLbl.TabIndex = 0;
             this.StaffIDLbl.Text = "Staff ID#";
-            this.StaffIDLbl.Click += new System.EventHandler(this.label1_Click);
             // 
             // PasswordLbl
             // 
@@ -60,6 +61,7 @@
             // 
             this.StaffIDTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StaffIDTF.Location = new System.Drawing.Point(144, 47);
+            this.StaffIDTF.MaxLength = 8;
             this.StaffIDTF.Name = "StaffIDTF";
             this.StaffIDTF.Size = new System.Drawing.Size(154, 26);
             this.StaffIDTF.TabIndex = 2;
@@ -105,6 +107,16 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void StaffIDTF_TextChanged(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         #endregion

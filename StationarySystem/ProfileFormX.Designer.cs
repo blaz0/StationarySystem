@@ -1,7 +1,9 @@
 ﻿namespace StationarySystem
 {
-    partial class ProfileForm
+    partial class ProfileFormX
     {
+        public int userIDparam = 0;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -28,7 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileForm));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileFormX));
             this.btnHome = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
@@ -37,18 +40,27 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtCC = new System.Windows.Forms.TextBox();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.lblCC = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.txtFName = new System.Windows.Forms.TextBox();
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,6 +166,7 @@
             // txtCC
             // 
             this.txtCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "costCentre", true));
             this.txtCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCC.Location = new System.Drawing.Point(143, 114);
@@ -162,6 +175,16 @@
             this.txtCC.Size = new System.Drawing.Size(204, 33);
             this.txtCC.TabIndex = 11;
             this.txtCC.TextChanged += new System.EventHandler(this.txtCC_TextChanged);
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.sepdbDataSet;
+            // 
+            // sepdbDataSet
+            // 
+            this.sepdbDataSet.DataSetName = "sepdbDataSet";
+            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCC
             // 
@@ -214,6 +237,7 @@
             // txtFName
             // 
             this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "firstName", true));
             this.txtFName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFName.Location = new System.Drawing.Point(143, 3);
@@ -221,12 +245,17 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.Size = new System.Drawing.Size(204, 31);
             this.txtFName.TabIndex = 8;
-            this.txtFName.Text = "Maxine Koh";
             this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged);
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdbDataSet;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "emailAddress", true));
             this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(143, 40);
@@ -239,6 +268,7 @@
             // txtID
             // 
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userId", true));
             this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(143, 77);
@@ -247,6 +277,12 @@
             this.txtID.Size = new System.Drawing.Size(204, 31);
             this.txtID.TabIndex = 10;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = this.sepdbDataSet;
+            this.usersBindingSource.Position = 0;
+            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
             // 
             // pictureBox2
             // 
@@ -258,34 +294,35 @@
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
-            // txtName
+            // usersTableAdapter
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(364, 197);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(209, 28);
-            this.txtName.TabIndex = 7;
-            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // ProfileForm
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // ProfileFormX
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.txtName);
+            this.ClientSize = new System.Drawing.Size(788, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
-            this.Name = "ProfileForm";
+            this.Name = "ProfileFormX";
             this.Load += new System.EventHandler(this.Profile_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -307,6 +344,11 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtCC;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private sepdbDataSet sepdbDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.BindingSource usersBindingSource2;
     }
 }

@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,68 +15,88 @@ namespace StationarySystem
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
         //On Login button click
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string staffID = StaffIDTF.Text;
             string staffPassword = PasswordTF.Text;
 
-            //Create SqlConnection
-            MySqlConnection con = new MySqlConnection(@"server=localhost;uid=root;pwd=password;persistsecurityinfo=True;database=sepdb");
-            con.Open();
-            MySqlCommand cmd = new MySqlCommand("Select * from user where username=@username and password=@password", con);
-            cmd.Parameters.AddWithValue("@username", staffID);
-            cmd.Parameters.AddWithValue("@password", staffPassword);
-            MySqlDataReader rdr = cmd.ExecuteReader();
+            // Check for missing ID - later disable login button until values is filled
+            if (string.IsNullOrEmpty(StaffIDTF.Text))
+            {
+                MessageBox.Show("Please enter your Staff ID", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                StaffIDTF.Focus();
+                return;
+            }
 
-            rdr.Read();
-            rdr.Close();
+            try
+            {
+                sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
+                sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow dr = dt.Rows[0];
+                    int userID = int.Parse(dr["userid"].ToString());
+                    //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ProfileFormX profile = new ProfileFormX();
+                    //Form1 profile = new Form1();
+                    profile.userIDparam = userID;
+                    profile.Show();
+                }
+                else
+                {
+                    //StaffIDTF.Clear();
+                    //PasswordTF.Clear();
+                    MessageBox.Show("Login details incorrect.");
+                    StaffIDTF.Focus();
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return; 
+            }
+            //Create SqlConnection
+            //SqlConnection con = new SqlConnection(@"server=localhost;uid=root;pwd=password;persistsecurityinfo=True;database=sepdb");
+            //con.Open();
+            //SqlCommand cmd = new SqlCommand("Select * from user where username=@username and password=@password", con);
+            //cmd.Parameters.AddWithValue("@username", staffID);
+            //cmd.Parameters.AddWithValue("@password", staffPassword);
+            //SqlDataReader rdr = cmd.ExecuteReader();
+
+            //rdr.Read();
+            //rdr.Close();
             //Testing
                 //System.Windows.MessageBox.Show(rdr[0].ToString());
                 //System.Windows.MessageBox.Show(rdr[1].ToString());
                 //System.Windows.MessageBox.Show(rdr[2].ToString());
                 //System.Windows.MessageBox.Show(rdr[3].ToString());
 
-            MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adapt.Fill(ds);
-            con.Close();
-            int count = ds.Tables[0].Rows.Count;
+            //MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
+            //DataSet ds = new DataSet();
+            //adapt.Fill(ds);
+            //con.Close();
+            //int count = ds.Tables[0].Rows.Count;
 
-            if (count == 1)
+            //if (count == 1)
+           // {
+             //   this.Hide();
+               // //ProfileFormX profile = new ProfileFormX();
+               // Form1 profile = new Form1();
+               // profile.Show();
+          //  }
+            //else
             {
-                this.Hide();
-                Profile profile = new Profile();
-                profile.Show();
-            }
-            else
-            {
-                StaffIDTF.Clear();
-                PasswordTF.Clear();
-                MessageBox.Show("Login details incorrect.");
             }
         }
 
         private void PasswordTF_TextChanged(object sender, EventArgs e)
         {
-            PasswordTF.PasswordChar = '*';
+            //PasswordTF.PasswordChar = '*';
 
             if (KeyChar == (char)13)
                 LoginBtn.PerformClick();
-        }
-
-        private void StaffIDTF_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
