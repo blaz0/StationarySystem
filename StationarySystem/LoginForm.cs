@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace StationarySystem
 {
     public partial class LoginForm : Form
     {
+        public char KeyChar { get; set; }
+
         public LoginForm()
         {
             InitializeComponent();
@@ -35,15 +31,23 @@ namespace StationarySystem
             string staffPassword = PasswordTF.Text;
 
             //Create SqlConnection
-            MySqlConnection con = new MySqlConnection(@"server = localhost; user id = root; password = J@sonDerul0?; persistsecurityinfo=True;database=sepdb");
+            MySqlConnection con = new MySqlConnection(@"server=localhost;uid=root;pwd=password;persistsecurityinfo=True;database=sepdb");
+            con.Open();
             MySqlCommand cmd = new MySqlCommand("Select * from user where username=@username and password=@password", con);
-
             cmd.Parameters.AddWithValue("@username", staffID);
             cmd.Parameters.AddWithValue("@password", staffPassword);
-            con.Open();
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            rdr.Read();
+            rdr.Close();
+            //Testing
+                //System.Windows.MessageBox.Show(rdr[0].ToString());
+                //System.Windows.MessageBox.Show(rdr[1].ToString());
+                //System.Windows.MessageBox.Show(rdr[2].ToString());
+                //System.Windows.MessageBox.Show(rdr[3].ToString());
+
             MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
-
             adapt.Fill(ds);
             con.Close();
             int count = ds.Tables[0].Rows.Count;
@@ -51,8 +55,8 @@ namespace StationarySystem
             if (count == 1)
             {
                 this.Hide();
-                HomeForm home = new HomeForm();
-                home.Show();
+                Profile profile = new Profile();
+                profile.Show();
             }
             else
             {
@@ -65,6 +69,9 @@ namespace StationarySystem
         private void PasswordTF_TextChanged(object sender, EventArgs e)
         {
             PasswordTF.PasswordChar = '*';
+
+            if (KeyChar == (char)13)
+                LoginBtn.PerformClick();
         }
 
         private void StaffIDTF_TextChanged(object sender, EventArgs e)
