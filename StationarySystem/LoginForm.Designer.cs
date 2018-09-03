@@ -159,17 +159,18 @@ namespace StationarySystem
             //ensure that the maximised screen still displays the toolbar/taskbar
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            //int boundWidth = Screen.PrimaryScreen.Bounds.Width;
-            //int boundHeight = Screen.PrimaryScreen.Bounds.Height;
-            //int x = boundWidth - this.Width;
-            //int y = boundHeight - this.Height;
-            //this.Location = new Point(x / 2, y / 2);
+            LoginBtn.Enabled = false;
 
         }
+        //void calculate()
+        //{
+        //    LoginBtn.Enabled = (StaffIDTF.Text != "" && PasswordTF.Text != "");
+        //}
 
         private void StaffIDTF_TextChanged(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
+            //throw new NotImplementedException
+            
         }
 
         #endregion

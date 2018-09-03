@@ -99,6 +99,15 @@ namespace StationarySystem
 
             if (KeyChar == (char)13)
                 LoginBtn.PerformClick();
+            if (String.IsNullOrWhiteSpace(PasswordTF.Text))
+            {
+                LoginBtn.Enabled = false;
+            }
+            else
+            {
+                LoginBtn.Enabled = true;
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
