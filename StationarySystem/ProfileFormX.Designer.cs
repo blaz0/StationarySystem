@@ -1,4 +1,8 @@
-﻿namespace StationarySystem
+﻿using System;
+using System.Windows;
+using System.Windows.Forms;
+
+namespace StationarySystem
 {
     partial class ProfileFormX
     {
@@ -54,6 +58,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -66,11 +71,12 @@
             // 
             // btnHome
             // 
+            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 197);
+            this.btnHome.Location = new System.Drawing.Point(0, 285);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(250, 40);
             this.btnHome.TabIndex = 0;
@@ -79,24 +85,27 @@
             // 
             // btnProfile
             // 
+            this.btnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProfile.BackColor = System.Drawing.Color.Teal;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 243);
+            this.btnProfile.Location = new System.Drawing.Point(0, 331);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(250, 40);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.UseVisualStyleBackColor = false;
             // 
             // btnNotifications
             // 
+            this.btnNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNotifications.FlatAppearance.BorderSize = 0;
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 289);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 377);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(250, 40);
             this.btnNotifications.TabIndex = 2;
@@ -105,11 +114,12 @@
             // 
             // btnSystemSettings
             // 
+            this.btnSystemSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSystemSettings.FlatAppearance.BorderSize = 0;
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 335);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 423);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
             this.btnSystemSettings.TabIndex = 3;
@@ -118,7 +128,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSystemSettings);
             this.panel1.Controls.Add(this.btnNotifications);
@@ -127,21 +137,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 461);
+            this.panel1.Size = new System.Drawing.Size(250, 637);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(75, 82);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(100, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
@@ -153,21 +165,23 @@
             this.tableLayoutPanel1.Controls.Add(this.txtFName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(293, 265);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(649, 313);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(350, 150);
             this.tableLayoutPanel1.TabIndex = 6;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // txtCC
             // 
+            this.txtCC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "costCentre", true));
-            this.txtCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCC.Location = new System.Drawing.Point(143, 114);
             this.txtCC.Multiline = true;
@@ -188,57 +202,59 @@
             // 
             // lblCC
             // 
+            this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCC.AutoSize = true;
-            this.lblCC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCC.Location = new System.Drawing.Point(3, 111);
+            this.lblCC.Location = new System.Drawing.Point(14, 111);
             this.lblCC.Name = "lblCC";
-            this.lblCC.Size = new System.Drawing.Size(134, 39);
+            this.lblCC.Size = new System.Drawing.Size(112, 39);
             this.lblCC.TabIndex = 7;
             this.lblCC.Text = "Cost Centre";
             this.lblCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblID
             // 
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
-            this.lblID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(3, 74);
+            this.lblID.Location = new System.Drawing.Point(32, 74);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(134, 37);
+            this.lblID.Size = new System.Drawing.Size(75, 37);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID #";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEmail
             // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(3, 37);
+            this.lblEmail.Location = new System.Drawing.Point(21, 37);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(134, 37);
+            this.lblEmail.Size = new System.Drawing.Size(97, 37);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblFullName
             // 
+            this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(3, 0);
+            this.lblFullName.Location = new System.Drawing.Point(12, 0);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(134, 37);
+            this.lblFullName.Size = new System.Drawing.Size(116, 37);
             this.lblFullName.TabIndex = 0;
-            this.lblFullName.Text = "Full Name";
+            this.lblFullName.Text = "Nickname";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFullName.Click += new System.EventHandler(this.lblFullName_Click);
             // 
             // txtFName
             // 
+            this.txtFName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtFName.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "firstName", true));
-            this.txtFName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFName.Location = new System.Drawing.Point(143, 3);
             this.txtFName.Multiline = true;
@@ -254,9 +270,9 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "emailAddress", true));
-            this.txtEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(143, 40);
             this.txtEmail.Multiline = true;
@@ -267,9 +283,9 @@
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource1, "userId", true));
-            this.txtID.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(143, 77);
             this.txtID.Multiline = true;
@@ -286,8 +302,9 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(393, 26);
+            this.pictureBox2.Location = new System.Drawing.Point(762, 114);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -304,10 +321,22 @@
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.textBox1.Location = new System.Drawing.Point(752, 270);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(179, 61);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.Text = "Full Name Goes Here";
+            // 
             // ProfileFormX
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 461);
+            this.ClientSize = new System.Drawing.Size(1526, 637);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
@@ -323,6 +352,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -350,5 +380,7 @@
         private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource usersBindingSource2;
+        private TextBox textBox1;
     }
+    
 }

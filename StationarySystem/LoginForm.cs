@@ -21,6 +21,7 @@ namespace StationarySystem
             string staffID = StaffIDTF.Text;
             string staffPassword = PasswordTF.Text;
 
+
             // Check for missing ID - later disable login button until values is filled
             if (string.IsNullOrEmpty(StaffIDTF.Text))
             {
@@ -42,6 +43,7 @@ namespace StationarySystem
                     //Form1 profile = new Form1();
                     profile.userIDparam = userID;
                     profile.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -97,6 +99,11 @@ namespace StationarySystem
 
             if (KeyChar == (char)13)
                 LoginBtn.PerformClick();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

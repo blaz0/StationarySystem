@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace StationarySystem
@@ -15,7 +16,10 @@ namespace StationarySystem
         {
             // TODO: This line of code loads data into the 'sepdbDataSet3.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet1.users);
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
             // TODO: This line of code loads data into the 'sepdbDataSet2.user' table. You can move, or remove it, as needed
+
             try
             {
                 sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
@@ -99,5 +103,15 @@ namespace StationarySystem
         private void loginToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
                     }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblFullName_Click(object sender, EventArgs e)
+        {
+            lblFullName.TextAlign = ContentAlignment.MiddleLeft;
+        }
     }
 }
