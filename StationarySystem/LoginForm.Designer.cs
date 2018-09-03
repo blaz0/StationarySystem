@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace StationarySystem
 {
@@ -112,6 +113,9 @@ namespace StationarySystem
         private void LoginForm_Load(object sender, EventArgs e)
         {
             //throw new NotImplementedException();
+            //ensure that the maximised screen still displays the toolbar/taskbar
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void StaffIDTF_TextChanged(object sender, EventArgs e)

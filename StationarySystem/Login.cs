@@ -46,6 +46,7 @@ namespace StationarySystem
                 if (password != staffPassword)
                 {
                     MessageBox.Show("Password is incorrect.");
+                    ClearTexts(id, password);
                     return false;
                 }
                 else
