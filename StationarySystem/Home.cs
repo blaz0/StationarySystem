@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
         }
@@ -21,6 +21,11 @@ namespace StationarySystem
         {
             // TODO: This line of code loads data into the 'sepdbDataSet.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet.users);
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
