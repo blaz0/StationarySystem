@@ -165,7 +165,7 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.txtFName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(649, 313);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(567, 313);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -205,9 +205,9 @@ namespace StationarySystem
             this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCC.AutoSize = true;
             this.lblCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCC.Location = new System.Drawing.Point(14, 111);
+            this.lblCC.Location = new System.Drawing.Point(23, 120);
             this.lblCC.Name = "lblCC";
-            this.lblCC.Size = new System.Drawing.Size(112, 39);
+            this.lblCC.Size = new System.Drawing.Size(94, 20);
             this.lblCC.TabIndex = 7;
             this.lblCC.Text = "Cost Centre";
             this.lblCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,9 +217,9 @@ namespace StationarySystem
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(32, 74);
+            this.lblID.Location = new System.Drawing.Point(50, 82);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(75, 37);
+            this.lblID.Size = new System.Drawing.Size(39, 20);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "ID #";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,9 +229,9 @@ namespace StationarySystem
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(21, 37);
+            this.lblEmail.Location = new System.Drawing.Point(46, 45);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(97, 37);
+            this.lblEmail.Size = new System.Drawing.Size(48, 20);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,9 +241,9 @@ namespace StationarySystem
             this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(12, 0);
+            this.lblFullName.Location = new System.Drawing.Point(30, 8);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(116, 37);
+            this.lblFullName.Size = new System.Drawing.Size(79, 20);
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Nickname";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -304,7 +304,7 @@ namespace StationarySystem
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(762, 114);
+            this.pictureBox2.Location = new System.Drawing.Point(680, 114);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -326,16 +326,16 @@ namespace StationarySystem
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.textBox1.Location = new System.Drawing.Point(752, 270);
+            this.textBox1.Location = new System.Drawing.Point(670, 270);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(179, 61);
+            this.textBox1.Size = new System.Drawing.Size(179, 31);
             this.textBox1.TabIndex = 7;
             this.textBox1.Text = "Full Name Goes Here";
             // 
             // ProfileFormX
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1526, 637);
+            this.ClientSize = new System.Drawing.Size(1362, 637);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox2);
