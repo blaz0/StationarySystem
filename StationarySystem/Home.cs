@@ -25,7 +25,16 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            //sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
+            //DataRow dr = dt.Rows[0];
+            //int userID = int.Parse(dr["userid"].ToString());
+            //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ProfileFormX profile = new ProfileFormX();
+            //Home homepage = new Home();
+            //Form1 profile = new Form1();
+            //profile.userIDparam = userID;
+            profile.Show();
+            this.Hide();
         }
     }
 }

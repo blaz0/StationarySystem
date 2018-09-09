@@ -67,5 +67,10 @@ namespace StationarySystem
         {
             return this.costCentre;
         }
+
+        public string getPhoneNo()
+        {
+            return this.phoneNumber;
+        }
     }
 }

@@ -112,16 +112,17 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(158, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 240);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnSystemSettings);
             this.panel1.Controls.Add(this.btnNotifications);
@@ -129,8 +130,9 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 461);
+            this.panel1.Size = new System.Drawing.Size(500, 887);
             this.panel1.TabIndex = 7;
             // 
             // btnSystemSettings
@@ -139,9 +141,10 @@
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 335);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 644);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
+            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "System Settings";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
@@ -152,9 +155,10 @@
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 289);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 556);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
+            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -165,9 +169,10 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 243);
+            this.btnProfile.Location = new System.Drawing.Point(0, 467);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(250, 40);
+            this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
@@ -175,16 +180,18 @@
             // 
             // btnHome
             // 
+            this.btnHome.BackColor = System.Drawing.Color.Teal;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 197);
+            this.btnHome.Location = new System.Drawing.Point(0, 379);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(250, 40);
+            this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.UseVisualStyleBackColor = false;
             // 
             // btnProducts
             // 
@@ -192,9 +199,10 @@
             this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProducts.ForeColor = System.Drawing.Color.White;
             this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
-            this.btnProducts.Location = new System.Drawing.Point(320, 183);
+            this.btnProducts.Location = new System.Drawing.Point(640, 352);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(125, 125);
+            this.btnProducts.Size = new System.Drawing.Size(250, 240);
             this.btnProducts.TabIndex = 8;
             this.btnProducts.Text = "Products";
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -206,9 +214,10 @@
             this.btnRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRequests.ForeColor = System.Drawing.Color.White;
             this.btnRequests.Image = ((System.Drawing.Image)(resources.GetObject("btnRequests.Image")));
-            this.btnRequests.Location = new System.Drawing.Point(451, 183);
+            this.btnRequests.Location = new System.Drawing.Point(902, 352);
+            this.btnRequests.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnRequests.Name = "btnRequests";
-            this.btnRequests.Size = new System.Drawing.Size(125, 125);
+            this.btnRequests.Size = new System.Drawing.Size(250, 240);
             this.btnRequests.TabIndex = 9;
             this.btnRequests.Text = "Requests";
             this.btnRequests.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -220,9 +229,10 @@
             this.btnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.ForeColor = System.Drawing.Color.White;
             this.btnOrders.Image = ((System.Drawing.Image)(resources.GetObject("btnOrders.Image")));
-            this.btnOrders.Location = new System.Drawing.Point(582, 183);
+            this.btnOrders.Location = new System.Drawing.Point(1164, 352);
+            this.btnOrders.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(125, 125);
+            this.btnOrders.Size = new System.Drawing.Size(250, 240);
             this.btnOrders.TabIndex = 10;
             this.btnOrders.Text = "Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -230,14 +240,15 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 461);
+            this.ClientSize = new System.Drawing.Size(1576, 887);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnRequests);
             this.Controls.Add(this.btnProducts);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Home";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

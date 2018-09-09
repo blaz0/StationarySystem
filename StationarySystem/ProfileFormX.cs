@@ -33,7 +33,7 @@ namespace StationarySystem
                     DataRow dr = dt.Rows[0];
                     // Display values                    
                     txtFName.Text = dr["fullname"].ToString();
-                    txtID.Text = dr["userid"].ToString();
+                    txtPhoneNo.Text = dr["userid"].ToString();
                     txtEmail.Text = dr["emailAddress"].ToString();
                     txtCC.Text = dr["costCentre"].ToString();
 
@@ -69,16 +69,19 @@ namespace StationarySystem
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+            txtEmail.ReadOnly = true;
             //txtEmail.Text = "MaxineK@bigpond.net.au";
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
+            txtID.ReadOnly = true;
             //txtID.Text = "4";
         }
 
         private void txtCC_TextChanged(object sender, EventArgs e)
         {
+            txtCC.ReadOnly = true;
             //txtCC.Text = "FDAB1004";
         }
 
@@ -112,6 +115,46 @@ namespace StationarySystem
         private void lblFullName_Click(object sender, EventArgs e)
         {
             lblFullName.TextAlign = ContentAlignment.MiddleLeft;
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNickname_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNickname_TextChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
