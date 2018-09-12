@@ -79,13 +79,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sepdbDataSet.cs">
-      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    <Compile Include="sepdb_SQL.cs">
+      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </Compile>
-    <Compile Include="sepdbDataSet.Designer.cs">
+    <Compile Include="sepdb_SQL.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="Home.resx">
@@ -118,16 +118,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="sepdbDataSet.xsc">
-      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    <None Include="sepdb_SQL.xsc">
+      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </None>
-    <None Include="sepdbDataSet.xsd">
+    <None Include="sepdb_SQL.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sepdbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>sepdb_SQL.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="sepdbDataSet.xss">
-      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    <None Include="sepdb_SQL.xss">
+      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

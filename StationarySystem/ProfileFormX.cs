@@ -14,6 +14,8 @@ namespace StationarySystem
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sepdb_SQL.users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             // TODO: This line of code loads data into the 'sepdbDataSet3.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet1.users);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -22,9 +24,9 @@ namespace StationarySystem
 
             try
             {
-                sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
+                sepdb_SQLTableAdapters.usersTableAdapter user = new sepdb_SQLTableAdapters.usersTableAdapter();
                 //sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
-                sepdbDataSet.usersDataTable dt = user.GetDataByUserId(userIDparam);
+                sepdb_SQL.usersDataTable dt = user.GetByUserId(userIDparam);
                 DataColumn fullName = new DataColumn("fullname");
                 fullName.Expression = string.Format("{0}+' '+{1}", "firstName", "lastName");
                 dt.Columns.Add(fullName);
@@ -36,11 +38,11 @@ namespace StationarySystem
                     txtPhoneNo.Text = dr["userid"].ToString();
                     txtEmail.Text = dr["emailAddress"].ToString();
                     txtCC.Text = dr["costCentre"].ToString();
-
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Unablke to retrive user details");
+                    MessageBox.Show("Unable to retrive user details");
                     return;
                 }
             }
@@ -127,7 +129,7 @@ namespace StationarySystem
 
         }
 
-        private void txtFName_TextChanged_1(object sender, EventArgs e)
+        private void txtFullName_TextChanged_1(object sender, EventArgs e)
         {
 
         }
@@ -155,6 +157,23 @@ namespace StationarySystem
         private void txtNickname_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtFName_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Hide();
         }
     }
 }

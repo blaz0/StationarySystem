@@ -2,12 +2,12 @@
 {
 
 
-    partial class sepdbDataSet
+    partial class sepdb_SQL
     {
     }
 }
 
-namespace StationarySystem.sepdbDataSetTableAdapters {
+namespace StationarySystem.sepdb_SQLTableAdapters {
     
     
     public partial class usersTableAdapter {

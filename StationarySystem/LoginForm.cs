@@ -32,8 +32,8 @@ namespace StationarySystem
 
             try
             {
-                sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
-                sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
+                sepdb_SQLTableAdapters.usersTableAdapter user = new sepdb_SQLTableAdapters.usersTableAdapter();
+                sepdb_SQL.usersDataTable dt = user.Login(staffID, staffPassword);
                 if (dt.Rows.Count > 0)
                 {
                     DataRow dr = dt.Rows[0];

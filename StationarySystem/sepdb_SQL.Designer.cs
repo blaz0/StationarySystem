@@ -20,9 +20,9 @@ namespace StationarySystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("sepdbDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("sepdb_SQL")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class sepdbDataSet : global::System.Data.DataSet {
+    public partial class sepdb_SQL : global::System.Data.DataSet {
         
         private usersDataTable tableusers;
         
@@ -30,7 +30,7 @@ namespace StationarySystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public sepdbDataSet() {
+        public sepdb_SQL() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace StationarySystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected sepdbDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected sepdb_SQL(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace StationarySystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            sepdbDataSet cln = ((sepdbDataSet)(base.Clone()));
+            sepdb_SQL cln = ((sepdb_SQL)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace StationarySystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "sepdbDataSet";
+            this.DataSetName = "sepdb_SQL";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/sepdbDataSet.xsd";
+            this.Namespace = "http://tempuri.org/sepdb_SQL.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableusers = new usersDataTable();
@@ -225,7 +225,7 @@ namespace StationarySystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            sepdbDataSet ds = new sepdbDataSet();
+            sepdb_SQL ds = new sepdb_SQL();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -599,7 +599,7 @@ namespace StationarySystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                sepdbDataSet ds = new sepdbDataSet();
+                sepdb_SQL ds = new sepdb_SQL();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -807,7 +807,7 @@ namespace StationarySystem {
         }
     }
 }
-namespace StationarySystem.sepdbDataSetTableAdapters {
+namespace StationarySystem.sepdb_SQLTableAdapters {
     
     
     /// <summary>
@@ -943,7 +943,7 @@ namespace StationarySystem.sepdbDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [users] WHERE (([userId] = @Original_userId) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([emailAddress] = @Original_emailAddress) AND ([phoneNumber] = @Original_phoneNumber) AND ([costCentre] = @Original_costCentre) AND ([nickname] = @Original_nickname))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[users] WHERE (([userId] = @Original_userId) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([emailAddress] = @Original_emailAddress) AND ([phoneNumber] = @Original_phoneNumber) AND ([costCentre] = @Original_costCentre) AND ([nickname] = @Original_nickname))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_firstName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -956,7 +956,7 @@ namespace StationarySystem.sepdbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_nickname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nickname", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [users] ([userId], [firstName], [lastName], [username], [password], [emailAddress], [phoneNumber], [costCentre], [nickname]) VALUES (@userId, @firstName, @lastName, @username, @password, @emailAddress, @phoneNumber, @costCentre, @nickname);
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[users] ([userId], [firstName], [lastName], [username], [password], [emailAddress], [phoneNumber], [costCentre], [nickname]) VALUES (@userId, @firstName, @lastName, @username, @password, @emailAddress, @phoneNumber, @costCentre, @nickname);
 SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumber, costCentre, nickname FROM users WHERE (userId = @userId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -970,7 +970,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@nickname", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "nickname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [users] SET [userId] = @userId, [firstName] = @firstName, [lastName] = @lastName, [username] = @username, [password] = @password, [emailAddress] = @emailAddress, [phoneNumber] = @phoneNumber, [costCentre] = @costCentre, [nickname] = @nickname WHERE (([userId] = @Original_userId) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([emailAddress] = @Original_emailAddress) AND ([phoneNumber] = @Original_phoneNumber) AND ([costCentre] = @Original_costCentre) AND ([nickname] = @Original_nickname));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[users] SET [userId] = @userId, [firstName] = @firstName, [lastName] = @lastName, [username] = @username, [password] = @password, [emailAddress] = @emailAddress, [phoneNumber] = @phoneNumber, [costCentre] = @costCentre, [nickname] = @nickname WHERE (([userId] = @Original_userId) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([emailAddress] = @Original_emailAddress) AND ([phoneNumber] = @Original_phoneNumber) AND ([costCentre] = @Original_costCentre) AND ([nickname] = @Original_nickname));
 SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumber, costCentre, nickname FROM users WHERE (userId = @userId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -997,7 +997,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::StationarySystem.Properties.Settings.Default.sepdbConnectionStringMS;
+            this._connection.ConnectionString = global::StationarySystem.Properties.Settings.Default.sepdb_SQL;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1007,7 +1007,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumber" +
-                ", costCentre, nickname FROM users";
+                ", costCentre, nickname FROM dbo.users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -1029,7 +1029,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(sepdbDataSet.usersDataTable dataTable) {
+        public virtual int Fill(sepdb_SQL.usersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1042,9 +1042,9 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual sepdbDataSet.usersDataTable GetData() {
+        public virtual sepdb_SQL.usersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            sepdbDataSet.usersDataTable dataTable = new sepdbDataSet.usersDataTable();
+            sepdb_SQL.usersDataTable dataTable = new sepdb_SQL.usersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1053,10 +1053,10 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual sepdbDataSet.usersDataTable GetDataByUserId(int userId) {
+        public virtual sepdb_SQL.usersDataTable GetByUserId(int userId) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(userId));
-            sepdbDataSet.usersDataTable dataTable = new sepdbDataSet.usersDataTable();
+            sepdb_SQL.usersDataTable dataTable = new sepdb_SQL.usersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1065,7 +1065,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual sepdbDataSet.usersDataTable Login(string username, string password) {
+        public virtual sepdb_SQL.usersDataTable Login(string username, string password) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((username == null)) {
                 throw new global::System.ArgumentNullException("username");
@@ -1079,7 +1079,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(password));
             }
-            sepdbDataSet.usersDataTable dataTable = new sepdbDataSet.usersDataTable();
+            sepdb_SQL.usersDataTable dataTable = new sepdb_SQL.usersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1087,14 +1087,14 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(sepdbDataSet.usersDataTable dataTable) {
+        public virtual int Update(sepdb_SQL.usersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(sepdbDataSet dataSet) {
+        public virtual int Update(sepdb_SQL dataSet) {
             return this.Adapter.Update(dataSet, "users");
         }
         
@@ -1507,7 +1507,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(sepdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(sepdb_SQL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1526,7 +1526,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(sepdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(sepdb_SQL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1544,7 +1544,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(sepdbDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(sepdb_SQL dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._usersTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.users.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1586,7 +1586,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(sepdbDataSet dataSet) {
+        public virtual int UpdateAll(sepdb_SQL dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
