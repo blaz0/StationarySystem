@@ -93,10 +93,9 @@
             // 
             this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Location = new System.Drawing.Point(75, 132);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(200, 288);
+            this.utsLogo.Size = new System.Drawing.Size(100, 150);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
@@ -110,9 +109,8 @@
             this.panel1.Controls.Add(this.btnProfile);
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1225);
+            this.panel1.Size = new System.Drawing.Size(250, 737);
             this.panel1.TabIndex = 8;
             // 
             // btnSystemSettings
@@ -122,10 +120,9 @@
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 473);
             this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
+            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "System Settings";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
@@ -137,10 +134,9 @@
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 427);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
+            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -153,10 +149,9 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 637);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Location = new System.Drawing.Point(0, 381);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(500, 77);
+            this.btnProfile.Size = new System.Drawing.Size(250, 40);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -170,10 +165,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Location = new System.Drawing.Point(0, 335);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(500, 77);
+            this.btnHome.Size = new System.Drawing.Size(250, 40);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -184,27 +178,25 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.0073F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.9927F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 466F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 234F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(638, 433);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(319, 225);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.967033F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 92.03297F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1836, 700);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(970, 364);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(1375, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(738, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(455, 55);
+            this.label3.Size = new System.Drawing.Size(229, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Price per item";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,10 +205,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(924, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(496, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(439, 55);
+            this.label2.Size = new System.Drawing.Size(236, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Stock";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -225,10 +216,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(6, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(906, 55);
+            this.label1.Size = new System.Drawing.Size(487, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Product Name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -237,10 +227,9 @@
             // 
             this.ProductsLbl.AutoSize = true;
             this.ProductsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsLbl.Location = new System.Drawing.Point(618, 71);
-            this.ProductsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ProductsLbl.Location = new System.Drawing.Point(309, 37);
             this.ProductsLbl.Name = "ProductsLbl";
-            this.ProductsLbl.Size = new System.Drawing.Size(423, 108);
+            this.ProductsLbl.Size = new System.Drawing.Size(214, 55);
             this.ProductsLbl.TabIndex = 10;
             this.ProductsLbl.Text = "Products";
             // 
@@ -248,10 +237,9 @@
             // 
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchBox.Location = new System.Drawing.Point(638, 231);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.SearchBox.Location = new System.Drawing.Point(319, 120);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(1196, 55);
+            this.SearchBox.Size = new System.Drawing.Size(600, 31);
             this.SearchBox.TabIndex = 11;
             this.SearchBox.Text = "Search for products";
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
@@ -259,9 +247,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2420, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(1301, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 95);
+            this.pictureBox2.Size = new System.Drawing.Size(50, 49);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
@@ -269,15 +258,15 @@
             // 
             // ProductsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2564, 1225);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.ProductsLbl);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ProductsForm";
             this.Text = "Products";
             this.Load += new System.EventHandler(this.ProductsForm_Load);
