@@ -15,9 +15,9 @@ namespace StationarySystem
         private void Profile_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'sepdb_SQL.users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.sepdb_SQL.users);
+            //this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             // TODO: This line of code loads data into the 'sepdbDataSet3.users' table. You can move, or remove it, as needed.
-            //this.usersTableAdapter.Fill(this.sepdbDataSet1.users);
+            this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             // TODO: This line of code loads data into the 'sepdbDataSet2.user' table. You can move, or remove it, as needed
@@ -35,10 +35,11 @@ namespace StationarySystem
                     DataRow dr = dt.Rows[0];
                     // Display values                    
                     txtFName.Text = dr["fullname"].ToString();
-                    txtPhoneNo.Text = dr["userid"].ToString();
+                    txtID.Text = dr["userid"].ToString();
                     txtEmail.Text = dr["emailAddress"].ToString();
                     txtCC.Text = dr["costCentre"].ToString();
-                    
+                    txtPhoneNo.Text = dr["phoneNumber"].ToString();
+                    txtNickname.Text = dr["nickname"].ToString();
                 }
                 else
                 {
@@ -107,7 +108,8 @@ namespace StationarySystem
 
         private void loginToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-                    }
+
+        }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -175,5 +177,34 @@ namespace StationarySystem
             homepage.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCC_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void profilePicture_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        
     }
 }

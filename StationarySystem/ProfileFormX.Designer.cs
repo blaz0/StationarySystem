@@ -42,10 +42,11 @@ namespace StationarySystem
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.profilePicture = new System.Windows.Forms.PictureBox();
             this.txtNickname = new System.Windows.Forms.TextBox();
-            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdb_SQL = new StationarySystem.sepdb_SQL();
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCC = new System.Windows.Forms.Label();
@@ -58,12 +59,15 @@ namespace StationarySystem
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHome
@@ -96,6 +100,7 @@ namespace StationarySystem
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnNotifications
             // 
@@ -137,6 +142,7 @@ namespace StationarySystem
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1225);
             this.panel1.TabIndex = 0;
@@ -147,6 +153,7 @@ namespace StationarySystem
             this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -154,39 +161,45 @@ namespace StationarySystem
             this.utsLogo.TabStop = false;
             this.utsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // pictureBox2
+            // profilePicture
             // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1279, 408);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.profilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
+            this.profilePicture.Location = new System.Drawing.Point(1182, 198);
+            this.profilePicture.Margin = new System.Windows.Forms.Padding(6);
+            this.profilePicture.Name = "profilePicture";
+            this.profilePicture.Size = new System.Drawing.Size(150, 150);
+            this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profilePicture.TabIndex = 5;
+            this.profilePicture.TabStop = false;
             // 
             // txtNickname
             // 
             this.txtNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "nickname", true));
+            this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "nickname", true));
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNickname.Location = new System.Drawing.Point(251, 3);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.ReadOnly = true;
-            this.txtNickname.Size = new System.Drawing.Size(207, 37);
+            this.txtNickname.Size = new System.Drawing.Size(406, 37);
             this.txtNickname.TabIndex = 8;
             this.txtNickname.Text = "insert nickname here";
             this.txtNickname.TextChanged += new System.EventHandler(this.txtNickname_TextChanged_1);
             // 
-            // usersBindingSource2
+            // usersBindingSource
             // 
-            this.usersBindingSource2.DataMember = "users";
-            this.usersBindingSource2.DataSource = this.sepdb_SQL;
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.sepdb_SQL;
             // 
             // sepdb_SQL
             // 
             this.sepdb_SQL.DataSetName = "sepdb_SQL";
             this.sepdb_SQL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdb_SQL;
             // 
             // txtEmail
             // 
@@ -196,7 +209,7 @@ namespace StationarySystem
             this.txtEmail.Location = new System.Drawing.Point(251, 45);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(207, 37);
+            this.txtEmail.Size = new System.Drawing.Size(406, 37);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "insert email here";
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged_1);
@@ -271,7 +284,7 @@ namespace StationarySystem
             this.txtPhoneNo.Location = new System.Drawing.Point(251, 90);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
-            this.txtPhoneNo.Size = new System.Drawing.Size(207, 37);
+            this.txtPhoneNo.Size = new System.Drawing.Size(406, 37);
             this.txtPhoneNo.TabIndex = 8;
             this.txtPhoneNo.Text = "insert phone no. here";
             // 
@@ -283,7 +296,7 @@ namespace StationarySystem
             this.txtID.Location = new System.Drawing.Point(251, 133);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(209, 37);
+            this.txtID.Size = new System.Drawing.Size(406, 37);
             this.txtID.TabIndex = 8;
             this.txtID.Text = "insert ID no. here";
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged_1);
@@ -296,16 +309,17 @@ namespace StationarySystem
             this.txtCC.Location = new System.Drawing.Point(251, 175);
             this.txtCC.Name = "txtCC";
             this.txtCC.ReadOnly = true;
-            this.txtCC.Size = new System.Drawing.Size(207, 37);
+            this.txtCC.Size = new System.Drawing.Size(406, 37);
             this.txtCC.TabIndex = 8;
             this.txtCC.Text = "insert cost centre here";
+            this.txtCC.TextChanged += new System.EventHandler(this.txtCC_TextChanged_1);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.20238F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.79762F));
             this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtCC, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 3);
@@ -316,7 +330,8 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.lblID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblCC, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(597, 389);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(931, 548);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
@@ -324,23 +339,36 @@ namespace StationarySystem
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(496, 209);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(667, 209);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // txtFName
             // 
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txtFName.Location = new System.Drawing.Point(735, 343);
+            this.txtFName.Location = new System.Drawing.Point(931, 378);
             this.txtFName.Name = "txtFName";
             this.txtFName.ReadOnly = true;
-            this.txtFName.Size = new System.Drawing.Size(248, 68);
+            this.txtFName.Size = new System.Drawing.Size(657, 68);
             this.txtFName.TabIndex = 6;
             this.txtFName.Text = "txtFName";
+            this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged_1);
             // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(2420, 25);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 95);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // ProfileFormX
             // 
@@ -348,22 +376,26 @@ namespace StationarySystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2560, 1225);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txtFName);
             this.Controls.Add(this.btnNotifications);
             this.Controls.Add(this.btnSystemSettings);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.profilePicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "ProfileFormX";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Profile_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,7 +409,7 @@ namespace StationarySystem
         private System.Windows.Forms.Button btnSystemSettings;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox profilePicture;
         private TextBox txtNickname;
         private TextBox txtEmail;
         private Label label1;
@@ -393,6 +425,8 @@ namespace StationarySystem
         private BindingSource usersBindingSource2;
         private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
         private TextBox txtFName;
+        private PictureBox pictureBox3;
+        private BindingSource usersBindingSource;
     }
     
 }

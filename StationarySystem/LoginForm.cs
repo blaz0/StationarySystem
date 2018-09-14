@@ -43,7 +43,7 @@ namespace StationarySystem
                     Home homepage = new Home();
                     //Form1 profile = new Form1();
                     profile.userIDparam = userID;
-                    homepage.Show();
+                    profile.Show();
                     this.Hide();
                 }
                 else
