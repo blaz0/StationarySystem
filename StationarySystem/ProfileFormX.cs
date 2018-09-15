@@ -25,7 +25,7 @@ namespace StationarySystem
             try
             {
                 sepdb_SQLTableAdapters.usersTableAdapter user = new sepdb_SQLTableAdapters.usersTableAdapter();
-                //sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
+                //debugging -> sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
                 sepdb_SQL.usersDataTable dt = user.GetByUserId(userIDparam);
                 DataColumn fullName = new DataColumn("fullname");
                 fullName.Expression = string.Format("{0}+' '+{1}", "firstName", "lastName");
@@ -123,7 +123,7 @@ namespace StationarySystem
 
         private void lblEmail_Click(object sender, EventArgs e)
         {
-
+            lblEmail.TextAlign = ContentAlignment.MiddleRight;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -143,7 +143,7 @@ namespace StationarySystem
 
         private void txtNickname_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void txtID_TextChanged_1(object sender, EventArgs e)

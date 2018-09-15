@@ -165,20 +165,22 @@ namespace StationarySystem
             // 
             this.profilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
-            this.profilePicture.Location = new System.Drawing.Point(1182, 198);
+            this.profilePicture.Location = new System.Drawing.Point(1412, 198);
             this.profilePicture.Margin = new System.Windows.Forms.Padding(6);
             this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(150, 150);
+            this.profilePicture.Size = new System.Drawing.Size(300, 300);
             this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePicture.TabIndex = 5;
             this.profilePicture.TabStop = false;
             // 
             // txtNickname
             // 
+            this.txtNickname.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtNickname.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "nickname", true));
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNickname.Location = new System.Drawing.Point(251, 3);
+            this.txtNickname.Location = new System.Drawing.Point(306, 9);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.ReadOnly = true;
             this.txtNickname.Size = new System.Drawing.Size(406, 37);
@@ -203,10 +205,13 @@ namespace StationarySystem
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtEmail.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "emailAddress", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(251, 45);
+            this.txtEmail.Location = new System.Drawing.Point(306, 64);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(406, 37);
@@ -216,10 +221,10 @@ namespace StationarySystem
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 172);
+            this.label1.Location = new System.Drawing.Point(104, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 37);
             this.label1.TabIndex = 12;
@@ -229,10 +234,10 @@ namespace StationarySystem
             // 
             // lblCC
             // 
-            this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCC.AutoSize = true;
             this.lblCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCC.Location = new System.Drawing.Point(33, 132);
+            this.lblCC.Location = new System.Drawing.Point(119, 174);
             this.lblCC.Name = "lblCC";
             this.lblCC.Size = new System.Drawing.Size(181, 37);
             this.lblCC.TabIndex = 7;
@@ -241,10 +246,10 @@ namespace StationarySystem
             // 
             // lblID
             // 
-            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(3, 90);
+            this.lblID.Location = new System.Drawing.Point(58, 119);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(242, 37);
             this.lblID.TabIndex = 5;
@@ -253,10 +258,10 @@ namespace StationarySystem
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(71, 46);
+            this.lblEmail.Location = new System.Drawing.Point(194, 64);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(106, 37);
             this.lblEmail.TabIndex = 3;
@@ -266,22 +271,27 @@ namespace StationarySystem
             // 
             // lblFullName
             // 
-            this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFullName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblFullName.AutoSize = true;
+            this.lblFullName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(39, 2);
+            this.lblFullName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblFullName.Location = new System.Drawing.Point(131, 9);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(169, 37);
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Nickname:";
+            this.lblFullName.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lblFullName.Click += new System.EventHandler(this.lblFullName_Click);
             // 
             // txtPhoneNo
             // 
+            this.txtPhoneNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtPhoneNo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "phoneNumber", true));
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPhoneNo.Location = new System.Drawing.Point(251, 90);
+            this.txtPhoneNo.Location = new System.Drawing.Point(306, 119);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
             this.txtPhoneNo.Size = new System.Drawing.Size(406, 37);
@@ -290,10 +300,12 @@ namespace StationarySystem
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtID.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "userId", true));
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtID.Location = new System.Drawing.Point(251, 133);
+            this.txtID.Location = new System.Drawing.Point(306, 174);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(406, 37);
@@ -303,10 +315,13 @@ namespace StationarySystem
             // 
             // txtCC
             // 
+            this.txtCC.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCC.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtCC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCC.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "costCentre", true));
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCC.Location = new System.Drawing.Point(251, 175);
+            this.txtCC.Location = new System.Drawing.Point(306, 229);
             this.txtCC.Name = "txtCC";
             this.txtCC.ReadOnly = true;
             this.txtCC.Size = new System.Drawing.Size(406, 37);
@@ -320,7 +335,6 @@ namespace StationarySystem
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.20238F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.79762F));
-            this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtCC, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtPhoneNo, 1, 2);
@@ -330,26 +344,30 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.lblID, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblCC, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(931, 548);
+            this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
+            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1258, 637);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.83721F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.16279F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(667, 209);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 275);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // txtFName
             // 
+            this.txtFName.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txtFName.Location = new System.Drawing.Point(931, 378);
+            this.txtFName.Location = new System.Drawing.Point(1237, 548);
             this.txtFName.Name = "txtFName";
             this.txtFName.ReadOnly = true;
-            this.txtFName.Size = new System.Drawing.Size(657, 68);
+            this.txtFName.Size = new System.Drawing.Size(657, 61);
             this.txtFName.TabIndex = 6;
             this.txtFName.Text = "txtFName";
             this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

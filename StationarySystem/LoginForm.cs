@@ -52,12 +52,16 @@ namespace StationarySystem
                     //PasswordTF.Clear();
                     MessageBox.Show("Login details incorrect.");
                     StaffIDTF.Focus();
+                    StaffIDTF.Text = "";
+                    PasswordTF.Text = "";
                     return;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                StaffIDTF.Text = "";
+                PasswordTF.Text = "";
                 return; 
             }
             //Create SqlConnection
