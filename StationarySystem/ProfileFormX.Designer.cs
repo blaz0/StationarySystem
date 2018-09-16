@@ -36,12 +36,6 @@ namespace StationarySystem
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileFormX));
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnNotifications = new System.Windows.Forms.Button();
-            this.btnSystemSettings = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.utsLogo = new System.Windows.Forms.PictureBox();
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,106 +54,21 @@ namespace StationarySystem
             this.txtFName = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
+            this.btnSystemSettings = new System.Windows.Forms.Button();
+            this.btnNotifications = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
+            this.utsLogo = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnHome
-            // 
-            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(500, 77);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = true;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // btnProfile
-            // 
-            this.btnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnProfile.BackColor = System.Drawing.Color.Teal;
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 637);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(500, 77);
-            this.btnProfile.TabIndex = 1;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = false;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
-            // 
-            // btnNotifications
-            // 
-            this.btnNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNotifications.BackColor = System.Drawing.Color.Black;
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
-            this.btnNotifications.TabIndex = 2;
-            this.btnNotifications.Text = "Notifications";
-            this.btnNotifications.UseVisualStyleBackColor = false;
-            // 
-            // btnSystemSettings
-            // 
-            this.btnSystemSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSystemSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSystemSettings.FlatAppearance.BorderSize = 0;
-            this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
-            this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
-            this.btnSystemSettings.TabIndex = 3;
-            this.btnSystemSettings.Text = "System Settings";
-            this.btnSystemSettings.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.utsLogo);
-            this.panel1.Controls.Add(this.btnProfile);
-            this.panel1.Controls.Add(this.btnHome);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1225);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // utsLogo
-            // 
-            this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
-            this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(200, 288);
-            this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.utsLogo.TabIndex = 4;
-            this.utsLogo.TabStop = false;
-            this.utsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // profilePicture
             // 
@@ -388,6 +297,97 @@ namespace StationarySystem
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // btnSystemSettings
+            // 
+            this.btnSystemSettings.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSystemSettings.BackColor = System.Drawing.Color.Black;
+            this.btnSystemSettings.FlatAppearance.BorderSize = 0;
+            this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSystemSettings.Name = "btnSystemSettings";
+            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
+            this.btnSystemSettings.TabIndex = 3;
+            this.btnSystemSettings.Text = "System Settings";
+            this.btnSystemSettings.UseVisualStyleBackColor = false;
+            // 
+            // btnNotifications
+            // 
+            this.btnNotifications.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNotifications.BackColor = System.Drawing.Color.Black;
+            this.btnNotifications.FlatAppearance.BorderSize = 0;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotifications.ForeColor = System.Drawing.Color.White;
+            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
+            this.btnNotifications.TabIndex = 2;
+            this.btnNotifications.Text = "Notifications";
+            this.btnNotifications.UseVisualStyleBackColor = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(0, 548);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(500, 77);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = true;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // btnProfile
+            // 
+            this.btnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnProfile.BackColor = System.Drawing.Color.Teal;
+            this.btnProfile.FlatAppearance.BorderSize = 0;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProfile.ForeColor = System.Drawing.Color.White;
+            this.btnProfile.Location = new System.Drawing.Point(0, 637);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(500, 77);
+            this.btnProfile.TabIndex = 1;
+            this.btnProfile.Text = "Profile";
+            this.btnProfile.UseVisualStyleBackColor = false;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            // 
+            // utsLogo
+            // 
+            this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
+            this.utsLogo.Location = new System.Drawing.Point(150, 158);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
+            this.utsLogo.Name = "utsLogo";
+            this.utsLogo.Size = new System.Drawing.Size(200, 288);
+            this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.utsLogo.TabIndex = 4;
+            this.utsLogo.TabStop = false;
+            this.utsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.utsLogo);
+            this.panel1.Controls.Add(this.btnProfile);
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(500, 1225);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // ProfileFormX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -405,8 +405,6 @@ namespace StationarySystem
             this.Name = "ProfileFormX";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Profile_Load);
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).EndInit();
@@ -414,19 +412,14 @@ namespace StationarySystem
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnNotifications;
-        private System.Windows.Forms.Button btnSystemSettings;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox utsLogo;
         private System.Windows.Forms.PictureBox profilePicture;
         private TextBox txtNickname;
         private TextBox txtEmail;
@@ -445,6 +438,12 @@ namespace StationarySystem
         private TextBox txtFName;
         private PictureBox pictureBox3;
         private BindingSource usersBindingSource;
+        private Button btnSystemSettings;
+        private Button btnNotifications;
+        private Button btnHome;
+        private Button btnProfile;
+        private PictureBox utsLogo;
+        private Panel panel1;
     }
     
 }
