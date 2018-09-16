@@ -64,38 +64,7 @@ namespace StationarySystem
                 PasswordTF.Text = "";
                 return; 
             }
-            //Create SqlConnection
-            //SqlConnection con = new SqlConnection(@"server=localhost;uid=root;pwd=password;persistsecurityinfo=True;database=sepdb");
-            //con.Open();
-            //SqlCommand cmd = new SqlCommand("Select * from user where username=@username and password=@password", con);
-            //cmd.Parameters.AddWithValue("@username", staffID);
-            //cmd.Parameters.AddWithValue("@password", staffPassword);
-            //SqlDataReader rdr = cmd.ExecuteReader();
-
-            //rdr.Read();
-            //rdr.Close();
-            //Testing
-                //System.Windows.MessageBox.Show(rdr[0].ToString());
-                //System.Windows.MessageBox.Show(rdr[1].ToString());
-                //System.Windows.MessageBox.Show(rdr[2].ToString());
-                //System.Windows.MessageBox.Show(rdr[3].ToString());
-
-            //MySqlDataAdapter adapt = new MySqlDataAdapter(cmd);
-            //DataSet ds = new DataSet();
-            //adapt.Fill(ds);
-            //con.Close();
-            //int count = ds.Tables[0].Rows.Count;
-
-            //if (count == 1)
-           // {
-             //   this.Hide();
-               // //ProfileFormX profile = new ProfileFormX();
-               // Form1 profile = new Form1();
-               // profile.Show();
-          //  }
-            //else
-            {
-            }
+           
         }
 
         private void PasswordTF_TextChanged(object sender, EventArgs e)

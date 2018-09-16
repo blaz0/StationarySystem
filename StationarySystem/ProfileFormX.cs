@@ -174,6 +174,7 @@ namespace StationarySystem
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
+            homepage.userIDparam = userIDparam;
             homepage.Show();
             this.Hide();
         }

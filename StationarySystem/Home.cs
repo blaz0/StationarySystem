@@ -12,6 +12,7 @@ namespace StationarySystem
 {
     public partial class Home : Form
     {
+        public int userIDparam = 0;
         public Home()
         {
             InitializeComponent();
@@ -32,9 +33,7 @@ namespace StationarySystem
             //int userID = int.Parse(dr["userid"].ToString());
             //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ProfileFormX profile = new ProfileFormX();
-            //Home homepage = new Home();
-            //Form1 profile = new Form1();
-            //profile.userIDparam = userID;
+            profile.userIDparam = userIDparam;
             profile.Show();
             this.Hide();
         }
@@ -68,6 +67,33 @@ namespace StationarySystem
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
             this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Hide();
+        }
+
+        private void utsLogo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSystemSettings_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
