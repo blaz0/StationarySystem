@@ -1,6 +1,6 @@
 ﻿namespace StationarySystem
 {
-    partial class RequestsForm
+    partial class CreateStationeryRequestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
-            this.clearSearchBtn = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStationeryRequestForm));
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdb_SQL();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -40,18 +39,24 @@
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.detailsBtn = new System.Windows.Forms.Button();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.productTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.productTableAdapter();
             this.tableAdapterManager = new StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager();
             this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchBtn = new System.Windows.Forms.PictureBox();
-            this.SearchBox = new System.Windows.Forms.TextBox();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.RequestsLbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ProductsLbl = new System.Windows.Forms.Label();
+            this.groupOrder = new System.Windows.Forms.GroupBox();
+            this.productName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.qty = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -59,32 +64,17 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            this.groupOrder.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clearSearchBtn
-            // 
-            this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
-            this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(971, 118);
-            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.clearSearchBtn.Name = "clearSearchBtn";
-            this.clearSearchBtn.Size = new System.Drawing.Size(242, 34);
-            this.clearSearchBtn.TabIndex = 30;
-            this.clearSearchBtn.Text = "Clear Search";
-            this.clearSearchBtn.UseVisualStyleBackColor = false;
-            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
             // 
             // productBindingSource
             // 
             this.productBindingSource.DataMember = "product";
             this.productBindingSource.DataSource = this.sepdbDataSet;
             this.productBindingSource.Filter = "";
-            this.productBindingSource.CurrentChanged += new System.EventHandler(this.productBindingSource_CurrentChanged);
             // 
             // sepdbDataSet
             // 
@@ -171,22 +161,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 741);
             this.panel1.TabIndex = 28;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // detailsBtn
+            // submitBtn
             // 
-            this.detailsBtn.BackColor = System.Drawing.Color.Teal;
-            this.detailsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.detailsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.detailsBtn.ForeColor = System.Drawing.Color.White;
-            this.detailsBtn.Location = new System.Drawing.Point(971, 682);
-            this.detailsBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.detailsBtn.Name = "detailsBtn";
-            this.detailsBtn.Size = new System.Drawing.Size(242, 34);
-            this.detailsBtn.TabIndex = 27;
-            this.detailsBtn.Text = "View Request Details";
-            this.detailsBtn.UseVisualStyleBackColor = false;
-            this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);
+            this.submitBtn.BackColor = System.Drawing.Color.Teal;
+            this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
+            this.submitBtn.Location = new System.Drawing.Point(1009, 410);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(199, 34);
+            this.submitBtn.TabIndex = 27;
+            this.submitBtn.Text = "Submit";
+            this.submitBtn.UseVisualStyleBackColor = false;
             // 
             // productTableAdapter
             // 
@@ -207,65 +195,11 @@
             // 
             this.usersBindingSource2.DataMember = "users";
             this.usersBindingSource2.DataSource = this.sepdbDataSet;
-            this.usersBindingSource2.CurrentChanged += new System.EventHandler(this.usersBindingSource2_CurrentChanged);
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataSource = this.sepdbDataSet;
             this.usersBindingSource.Position = 0;
-            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
-            // 
-            // searchBtn
-            // 
-            this.searchBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(930, 120);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(28, 30);
-            this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchBtn.TabIndex = 25;
-            this.searchBtn.TabStop = false;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
-            // 
-            // SearchBox
-            // 
-            this.SearchBox.AllowDrop = true;
-            this.SearchBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.SearchBox.ForeColor = System.Drawing.Color.Gray;
-            this.SearchBox.HideSelection = false;
-            this.SearchBox.Location = new System.Drawing.Point(325, 120);
-            this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(596, 30);
-            this.SearchBox.TabIndex = 22;
-            this.SearchBox.Text = "Search requests";
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "users";
-            this.usersBindingSource1.DataSource = this.sepdbDataSet;
-            this.usersBindingSource1.CurrentChanged += new System.EventHandler(this.usersBindingSource1_CurrentChanged);
-            // 
-            // RequestsLbl
-            // 
-            this.RequestsLbl.AutoSize = true;
-            this.RequestsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestsLbl.Location = new System.Drawing.Point(315, 37);
-            this.RequestsLbl.Name = "RequestsLbl";
-            this.RequestsLbl.Size = new System.Drawing.Size(305, 55);
-            this.RequestsLbl.TabIndex = 21;
-            this.RequestsLbl.Text = "My Requests";
-            this.RequestsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(325, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(888, 488);
-            this.dataGridView1.TabIndex = 31;
             // 
             // pictureBox1
             // 
@@ -277,24 +211,147 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // RequestsForm
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.sepdbDataSet;
+            // 
+            // ProductsLbl
+            // 
+            this.ProductsLbl.AutoSize = true;
+            this.ProductsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductsLbl.Location = new System.Drawing.Point(315, 37);
+            this.ProductsLbl.Name = "ProductsLbl";
+            this.ProductsLbl.Size = new System.Drawing.Size(591, 55);
+            this.ProductsLbl.TabIndex = 21;
+            this.ProductsLbl.Text = "Create Stationery Request";
+            // 
+            // groupOrder
+            // 
+            this.groupOrder.Controls.Add(this.textBox2);
+            this.groupOrder.Controls.Add(this.textBox1);
+            this.groupOrder.Controls.Add(this.label4);
+            this.groupOrder.Controls.Add(this.label3);
+            this.groupOrder.Controls.Add(this.label2);
+            this.groupOrder.Controls.Add(this.qty);
+            this.groupOrder.Controls.Add(this.label1);
+            this.groupOrder.Controls.Add(this.productName);
+            this.groupOrder.Location = new System.Drawing.Point(325, 117);
+            this.groupOrder.Name = "groupOrder";
+            this.groupOrder.Size = new System.Drawing.Size(883, 277);
+            this.groupOrder.TabIndex = 29;
+            this.groupOrder.TabStop = false;
+            this.groupOrder.Text = "Your Order";
+            // 
+            // productName
+            // 
+            this.productName.AutoSize = true;
+            this.productName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productName.Location = new System.Drawing.Point(45, 71);
+            this.productName.Name = "productName";
+            this.productName.Size = new System.Drawing.Size(148, 25);
+            this.productName.TabIndex = 0;
+            this.productName.Text = "Product Name";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Product Description";
+            // 
+            // qty
+            // 
+            this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty.Location = new System.Drawing.Point(379, 70);
+            this.qty.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.qty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.qty.Name = "qty";
+            this.qty.Size = new System.Drawing.Size(63, 26);
+            this.qty.TabIndex = 2;
+            this.qty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(330, 72);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 24);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Qty:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(547, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 24);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Price per item:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(574, 228);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Total Price:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(684, 75);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 19);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "priceperitem";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Black;
+            this.textBox2.Location = new System.Drawing.Point(684, 231);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 19);
+            this.textBox2.TabIndex = 7;
+            this.textBox2.Text = "totalprice";
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // CreateStationeryRequest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.clearSearchBtn);
+            this.Controls.Add(this.groupOrder);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.detailsBtn);
-            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.SearchBox);
-            this.Controls.Add(this.RequestsLbl);
-            this.Name = "RequestsForm";
-            this.Text = "RequestsForm";
+            this.Controls.Add(this.ProductsLbl);
+            this.Name = "CreateStationeryRequest";
+            this.Text = "CreateStationeryRequest";
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -302,18 +359,17 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            this.groupOrder.ResumeLayout(false);
+            this.groupOrder.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button clearSearchBtn;
         private System.Windows.Forms.BindingSource productBindingSource;
         private sepdb_SQL sepdbDataSet;
         private System.Windows.Forms.ErrorProvider errorProvider1;
@@ -323,17 +379,23 @@
         private System.Windows.Forms.Button btnNotifications;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button detailsBtn;
-        private System.Windows.Forms.PictureBox searchBtn;
-        private System.Windows.Forms.TextBox SearchBox;
-        private System.Windows.Forms.Label RequestsLbl;
+        private System.Windows.Forms.Button submitBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label ProductsLbl;
         private sepdb_SQLTableAdapters.productTableAdapter productTableAdapter;
         private sepdb_SQLTableAdapters.TableAdapterManager tableAdapterManager;
         private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupOrder;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown qty;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label productName;
     }
 }
