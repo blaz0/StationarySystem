@@ -2127,7 +2127,7 @@ SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT productID, supplierID, name, description, stock, case when stock = 0 then " +
@@ -2138,9 +2138,17 @@ SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT productID, supplierID, name, description, stock, case when stock = 0 then " +
                 "\'Out of Stock!\' else convert (varchar, stock) end as stockLevel, price \r\nFROM db" +
-                "o.product\r\nWHERE (name=@name)";
+                "o.product\r\nWHERE (name = @name) AND (price = @price)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@price", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 0, "price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT productID, supplierID, name, description, stock, case when stock = 0 then " +
+                "\'Out of Stock!\' else convert (varchar, stock) end as stockLevel, price \r\nFROM db" +
+                "o.product\r\nWHERE (name=@name)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2171,8 +2179,26 @@ SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual sepdb_SQL.productDataTable GetByProductName(string name) {
+        public virtual sepdb_SQL.productDataTable CreateRequest(string name, decimal price) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((name == null)) {
+                throw new global::System.ArgumentNullException("name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(name));
+            }
+            this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(price));
+            sepdb_SQL.productDataTable dataTable = new sepdb_SQL.productDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual sepdb_SQL.productDataTable GetByProductName(string name) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }

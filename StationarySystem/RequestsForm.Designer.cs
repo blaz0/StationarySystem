@@ -47,11 +47,12 @@
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.searchBtn = new System.Windows.Forms.PictureBox();
+            this.logOutBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.RequestsLbl = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.requestDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -60,9 +61,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // clearSearchBtn
@@ -70,10 +72,10 @@
             this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
             this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(971, 118);
-            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.clearSearchBtn.Location = new System.Drawing.Point(1942, 227);
+            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearSearchBtn.Name = "clearSearchBtn";
-            this.clearSearchBtn.Size = new System.Drawing.Size(242, 34);
+            this.clearSearchBtn.Size = new System.Drawing.Size(484, 65);
             this.clearSearchBtn.TabIndex = 30;
             this.clearSearchBtn.Text = "Clear Search";
             this.clearSearchBtn.UseVisualStyleBackColor = false;
@@ -98,9 +100,10 @@
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(75, 82);
+            this.utsLogo.Location = new System.Drawing.Point(150, 158);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(100, 150);
+            this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
@@ -111,9 +114,10 @@
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 423);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
+            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "System Settings";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
@@ -124,9 +128,10 @@
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 377);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
+            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -137,9 +142,10 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 331);
+            this.btnProfile.Location = new System.Drawing.Point(0, 637);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(250, 40);
+            this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
@@ -151,9 +157,10 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 285);
+            this.btnHome.Location = new System.Drawing.Point(0, 548);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(250, 40);
+            this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -168,8 +175,9 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 741);
+            this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -179,10 +187,10 @@
             this.detailsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.detailsBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.detailsBtn.ForeColor = System.Drawing.Color.White;
-            this.detailsBtn.Location = new System.Drawing.Point(971, 682);
-            this.detailsBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.detailsBtn.Location = new System.Drawing.Point(1942, 924);
+            this.detailsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.detailsBtn.Name = "detailsBtn";
-            this.detailsBtn.Size = new System.Drawing.Size(242, 34);
+            this.detailsBtn.Size = new System.Drawing.Size(484, 65);
             this.detailsBtn.TabIndex = 27;
             this.detailsBtn.Text = "View Request Details";
             this.detailsBtn.UseVisualStyleBackColor = false;
@@ -219,14 +227,38 @@
             // 
             this.searchBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(930, 120);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.searchBtn.Location = new System.Drawing.Point(1860, 231);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(28, 30);
+            this.searchBtn.Size = new System.Drawing.Size(54, 56);
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchBtn.TabIndex = 25;
             this.searchBtn.TabStop = false;
             this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
+            this.logOutBtn.Location = new System.Drawing.Point(2432, 25);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(100, 100);
+            this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutBtn.TabIndex = 24;
+            this.logOutBtn.TabStop = false;
+            this.logOutBtn.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(2614, 21);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // SearchBox
             // 
@@ -235,9 +267,10 @@
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchBox.HideSelection = false;
-            this.SearchBox.Location = new System.Drawing.Point(325, 120);
+            this.SearchBox.Location = new System.Drawing.Point(650, 231);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(596, 30);
+            this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 22;
             this.SearchBox.Text = "Search requests";
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
@@ -252,47 +285,39 @@
             // 
             this.RequestsLbl.AutoSize = true;
             this.RequestsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestsLbl.Location = new System.Drawing.Point(315, 37);
+            this.RequestsLbl.Location = new System.Drawing.Point(630, 71);
+            this.RequestsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RequestsLbl.Name = "RequestsLbl";
-            this.RequestsLbl.Size = new System.Drawing.Size(305, 55);
+            this.RequestsLbl.Size = new System.Drawing.Size(603, 108);
             this.RequestsLbl.TabIndex = 21;
             this.RequestsLbl.Text = "My Requests";
             this.RequestsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
             // 
-            // dataGridView1
+            // requestDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(325, 175);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(888, 488);
-            this.dataGridView1.TabIndex = 31;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1216, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.requestDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.requestDataGrid.Location = new System.Drawing.Point(650, 337);
+            this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.requestDataGrid.Name = "requestDataGrid";
+            this.requestDataGrid.Size = new System.Drawing.Size(1776, 540);
+            this.requestDataGrid.TabIndex = 31;
             // 
             // RequestsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(2564, 1399);
+            this.Controls.Add(this.requestDataGrid);
             this.Controls.Add(this.clearSearchBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.detailsBtn);
             this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.logOutBtn);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.RequestsLbl);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "RequestsForm";
             this.Text = "RequestsForm";
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
@@ -303,9 +328,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,6 +351,8 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button detailsBtn;
         private System.Windows.Forms.PictureBox searchBtn;
+        private System.Windows.Forms.PictureBox logOutBtn;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label RequestsLbl;
         private sepdb_SQLTableAdapters.productTableAdapter productTableAdapter;
@@ -333,7 +361,6 @@
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView requestDataGrid;
     }
 }

@@ -94,8 +94,8 @@ namespace StationarySystem
             // LoginBtn
             // 
             this.LoginBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.LoginBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.BackColor = System.Drawing.Color.Teal;
+            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.Location = new System.Drawing.Point(295, 361);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(6);
