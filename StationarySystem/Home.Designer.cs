@@ -181,9 +181,10 @@
             this.btnRequests.Name = "btnRequests";
             this.btnRequests.Size = new System.Drawing.Size(600, 250);
             this.btnRequests.TabIndex = 9;
-            this.btnRequests.Text = "My Requests";
+            this.btnRequests.Text = "Requests";
             this.btnRequests.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRequests.UseVisualStyleBackColor = false;
+            this.btnRequests.Click += new System.EventHandler(this.btnRequests_Click);
             // 
             // btnOrders
             // 
@@ -195,7 +196,7 @@
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(600, 250);
             this.btnOrders.TabIndex = 10;
-            this.btnOrders.Text = "My Orders";
+            this.btnOrders.Text = "Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOrders.UseVisualStyleBackColor = false;
             // 
@@ -230,6 +231,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 13;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox4
             // 

@@ -26,5 +26,15 @@ namespace StationarySystem
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void ProductsLbl_Click(object sender, EventArgs e)
+        {}
     }
 }

@@ -244,7 +244,9 @@ namespace StationarySystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
+            statRequest.Show();
+            this.Hide();
         }
     }
 }

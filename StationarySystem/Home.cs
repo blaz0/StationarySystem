@@ -95,5 +95,19 @@ namespace StationarySystem
         {
 
         }
+
+        private void btnRequests_Click(object sender, EventArgs e)
+        {
+            RequestsForm requests = new RequestsForm();
+            requests.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            RequestsForm requests = new RequestsForm();
+            requests.Show();
+            this.Hide();
+        }
     }
 }

@@ -193,7 +193,7 @@
             this.detailsBtn.Name = "detailsBtn";
             this.detailsBtn.Size = new System.Drawing.Size(484, 65);
             this.detailsBtn.TabIndex = 27;
-            this.detailsBtn.Text = "View Request Details";
+            this.detailsBtn.Text = "Cancel My Request";
             this.detailsBtn.UseVisualStyleBackColor = false;
             this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);
             // 
