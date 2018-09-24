@@ -91,6 +91,11 @@
     <Compile Include="RequestsForm.Designer.cs">
       <DependentUpon>RequestsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="sepdbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="sepdb_Azure.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +146,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sepdbDataSet.xsc">
+      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sepdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sepdbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sepdbDataSet.xss">
+      <DependentUpon>sepdbDataSet.xsd</DependentUpon>
+    </None>
     <None Include="sepdb_Azure.xsc">
       <DependentUpon>sepdb_Azure.xsd</DependentUpon>
     </None>

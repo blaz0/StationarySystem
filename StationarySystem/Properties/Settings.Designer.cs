@@ -60,7 +60,28 @@ namespace StationarySystem.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;password=password;database=sepdb")]
-                
+        public string sepdbDataSource {
+            get {
+                return ((string)(this["sepdbDataSource"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;User ID=sa;Password=" +
+            "password")]
+        public string sepdb_SQL {
+            get {
+                return ((string)(this["sepdb_SQL"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;Persist Security Inf" +
+            "o=True;User ID=sa;Password=password")]
         public string sepdbConnectionStringMS {
             get {
                 return ((string)(this["sepdbConnectionStringMS"]));
@@ -74,6 +95,17 @@ namespace StationarySystem.Properties {
         public string sepdb_AzureConnection {
             get {
                 return ((string)(this["sepdb_AzureConnection"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sepdb.database.windows.net;Initial Catalog=sepdb;User ID=sepdb;Passwo" +
+            "rd=P@ssw0rd")]
+        public string sepdb_Azure1 {
+            get {
+                return ((string)(this["sepdb_Azure1"]));
             }
         }
     }
