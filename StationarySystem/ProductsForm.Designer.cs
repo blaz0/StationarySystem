@@ -51,13 +51,13 @@
             this.stockLevelDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdbDataSet = new StationarySystem.sepdb_SQL();
-            this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.tableAdapterManager = new StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager();
+            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.productTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.productTableAdapter();
+            this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.detailsBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
@@ -252,7 +252,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // usersBindingSource1
@@ -549,11 +549,11 @@
 
         #endregion
 
-        private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private sepdb_SQL sepdbDataSet;
+        private sepdbDataSet sepdbDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource2;
-        private sepdb_SQLTableAdapters.TableAdapterManager tableAdapterManager;
+        private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.Label ProductsLbl;
         private System.Windows.Forms.TextBox SearchBox;
@@ -562,7 +562,7 @@
         private System.Windows.Forms.PictureBox searchBtn;
         private System.Windows.Forms.DataGridView productDataGrid;
         private System.Windows.Forms.BindingSource productBindingSource;
-        private sepdb_SQLTableAdapters.productTableAdapter productTableAdapter;
+        private sepdbDataSetTableAdapters.productTableAdapter productTableAdapter;
         private System.Windows.Forms.Button detailsBtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;

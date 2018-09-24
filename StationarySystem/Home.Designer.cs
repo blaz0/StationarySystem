@@ -43,14 +43,14 @@
             this.productPic = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.sepdbDataSet = new StationarySystem.sepdb_SQL();
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
-            this.tableAdapterManager = new StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager();
-            this.tableAdapterManager1 = new StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager();
-            this.usersTableAdapter1 = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager1 = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
+            this.usersTableAdapter1 = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdbDataSet1 = new StationarySystem.sepdb_SQL();
+            this.sepdbDataSet1 = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
@@ -261,14 +261,14 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.productTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.usersTableAdapter = this.usersTableAdapter1;
             // 
             // usersTableAdapter1
@@ -331,14 +331,14 @@
 
         #endregion
 
-        private sepdb_SQL sepdbDataSet;
+        private sepdbDataSet sepdbDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
-        private sepdb_SQLTableAdapters.TableAdapterManager tableAdapterManager;
-        private sepdb_SQLTableAdapters.TableAdapterManager tableAdapterManager1;
-        private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter1;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
+        private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter1;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private sepdb_SQL sepdbDataSet1;
+        private sepdbDataSet sepdbDataSet1;
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.PictureBox utsLogo;

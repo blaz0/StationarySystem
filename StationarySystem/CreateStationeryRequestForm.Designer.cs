@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStationeryRequestForm));
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdbDataSet = new StationarySystem.sepdb_SQL();
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
@@ -40,9 +40,9 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.submitBtn = new System.Windows.Forms.Button();
-            this.productTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.productTableAdapter();
-            this.tableAdapterManager = new StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager();
-            this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
+            this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
+            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -190,7 +190,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdb_SQLTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // usersTableAdapter
@@ -391,7 +391,7 @@
 
         #endregion
         private System.Windows.Forms.BindingSource productBindingSource;
-        private sepdb_SQL sepdbDataSet;
+        private sepdbDataSet sepdbDataSet;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;
@@ -402,9 +402,9 @@
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label ProductsLbl;
-        private sepdb_SQLTableAdapters.productTableAdapter productTableAdapter;
-        private sepdb_SQLTableAdapters.TableAdapterManager tableAdapterManager;
-        private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
+        private sepdbDataSetTableAdapters.productTableAdapter productTableAdapter;
+        private sepdbDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.BindingSource usersBindingSource2;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource1;

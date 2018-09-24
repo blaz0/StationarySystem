@@ -96,19 +96,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sepdbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="sepdb_Azure.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>sepdb_Azure.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="sepdb_SQL.cs">
-      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="sepdb_SQL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="CreateStationeryRequestForm.resx">
       <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
@@ -156,28 +143,6 @@
     </None>
     <None Include="sepdbDataSet.xss">
       <DependentUpon>sepdbDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="sepdb_Azure.xsc">
-      <DependentUpon>sepdb_Azure.xsd</DependentUpon>
-    </None>
-    <None Include="sepdb_Azure.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sepdb_Azure.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="sepdb_Azure.xss">
-      <DependentUpon>sepdb_Azure.xsd</DependentUpon>
-    </None>
-    <None Include="sepdb_SQL.xsc">
-      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
-    </None>
-    <None Include="sepdb_SQL.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>sepdb_SQL.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="sepdb_SQL.xss">
-      <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

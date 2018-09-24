@@ -25,9 +25,9 @@ namespace StationarySystem
 
             try
             {
-                sepdb_SQLTableAdapters.usersTableAdapter user = new sepdb_SQLTableAdapters.usersTableAdapter();
+                sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
                 //debugging -> sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
-                sepdb_SQL.usersDataTable dt = user.GetByUserId(userIDparam);
+                sepdbDataSet.usersDataTable dt = user.GetByUserId(userIDparam);
                 DataColumn fullName = new DataColumn("fullname");
                 fullName.Expression = string.Format("{0}+' '+{1}", "firstName", "lastName");
                 dt.Columns.Add(fullName);

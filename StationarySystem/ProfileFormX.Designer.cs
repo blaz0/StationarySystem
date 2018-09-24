@@ -39,7 +39,7 @@ namespace StationarySystem
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.txtNickname = new System.Windows.Forms.TextBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdb_SQL = new StationarySystem.sepdb_SQL();
+            this.sepdb_SQL = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace StationarySystem
             this.txtCC = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtFName = new System.Windows.Forms.TextBox();
-            this.usersTableAdapter = new StationarySystem.sepdb_SQLTableAdapters.usersTableAdapter();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
@@ -432,9 +432,9 @@ namespace StationarySystem
         private TextBox txtID;
         private TextBox txtCC;
         private TableLayoutPanel tableLayoutPanel1;
-        private sepdb_SQL sepdb_SQL;
+        private sepdbDataSet sepdb_SQL;
         private BindingSource usersBindingSource2;
-        private sepdb_SQLTableAdapters.usersTableAdapter usersTableAdapter;
+        private sepdbDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private TextBox txtFName;
         private PictureBox pictureBox3;
         private BindingSource usersBindingSource;
