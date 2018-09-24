@@ -62,9 +62,11 @@ namespace StationarySystem
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void logOutBtn_Click(object sender, EventArgs e)
         {
-
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -90,6 +92,13 @@ namespace StationarySystem
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Hide();
         }
     }
 }

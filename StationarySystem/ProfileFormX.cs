@@ -7,6 +7,7 @@ namespace StationarySystem
 {
     public partial class ProfileFormX : Form
     {
+        //public int userIDparam = 0;
         public ProfileFormX()
         {
             InitializeComponent();
@@ -188,7 +189,10 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-
+            ProfileFormX profile = new ProfileFormX();
+            profile.userIDparam = userIDparam;
+            profile.Show();
+            this.Hide();
         }
 
         private void txtCC_TextChanged_1(object sender, EventArgs e)

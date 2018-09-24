@@ -80,11 +80,21 @@ namespace StationarySystem.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;Persist Security Info=True;User" +
-            " ID=sa;Password=password")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-OR82G7O\\SQLEXPRESS;Initial Catalog=sepdb;Persist Security Inf" +
+            "o=True;User ID=sa;Password=password")]
         public string sepdbConnectionStringMS {
             get {
                 return ((string)(this["sepdbConnectionStringMS"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=sep2018.database.windows.net;Initial Catalog=sepdb;User ID=julia")]
+        public string sepdb_AzureConnection {
+            get {
+                return ((string)(this["sepdb_AzureConnection"]));
             }
         }
     }
