@@ -51,6 +51,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateStationeryRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateStationeryRequestForm.Designer.cs">
+      <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
       <DependentUpon>sepdb_SQL.xsd</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="CreateStationeryRequestForm.resx">
+      <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
