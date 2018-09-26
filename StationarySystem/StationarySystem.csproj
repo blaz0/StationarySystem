@@ -122,11 +122,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sepdbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Test.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Test.feature</DependentUpon>
-    </Compile>
     <Compile Include="User.cs" />
     <EmbeddedResource Include="CreateStationeryRequestForm.resx">
       <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
