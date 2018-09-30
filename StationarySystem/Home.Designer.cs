@@ -220,6 +220,7 @@
             this.productPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.productPic.TabIndex = 12;
             this.productPic.TabStop = false;
+            this.productPic.Tag = "";
             this.productPic.Click += new System.EventHandler(this.productPic_Click);
             // 
             // pictureBox3

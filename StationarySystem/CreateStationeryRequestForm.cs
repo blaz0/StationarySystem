@@ -12,6 +12,7 @@ namespace StationarySystem
 {
     public partial class CreateStationeryRequestForm : Form
     {
+        int userIDparam = 0;
         public CreateStationeryRequestForm()
         {
             InitializeComponent();
@@ -36,5 +37,30 @@ namespace StationarySystem
 
         private void ProductsLbl_Click(object sender, EventArgs e)
         {}
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Hide();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profile = new ProfileFormX();
+            profile.userIDparam = userIDparam;
+            profile.Show();
+            this.Hide();
+        }
+
+        private void productName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,18 @@ namespace StationarySystem
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
 
+            //if (userIDparam != 1)
+            //{
+            //    detailsDataGrid.Visible = false;
+            //    detailsBtn.Visible = false;
+            //}
+            //else
+            //{
+            //    detailsDataGrid.Visible = true;
+            //    detailsBtn.Visible = true;
+            //    detailsBtn.Enabled = true;
+            //}
+
             foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
             {
                 productDataGrid.Rows[r.Index].Selected = false;
@@ -206,7 +218,6 @@ namespace StationarySystem
 
         private void productBindingSource_CurrentChanged(object sender, EventArgs e)
         {
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
