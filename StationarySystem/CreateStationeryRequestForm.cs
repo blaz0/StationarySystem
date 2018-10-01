@@ -48,7 +48,6 @@ namespace StationarySystem
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ProfileFormX profile = new ProfileFormX();
-            profile.userIDparam = userIDparam;
             profile.Show();
             this.Hide();
         }

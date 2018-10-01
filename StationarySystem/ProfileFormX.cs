@@ -15,53 +15,20 @@ namespace StationarySystem
 
         private void Profile_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'sepdb_SQL.users' table. You can move, or remove it, as needed.
-            //this.usersTableAdapter.Fill(this.sepdb_SQL.users);
-            // TODO: This line of code loads data into the 'sepdbDataSet3.users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             // TODO: This line of code loads data into the 'sepdbDataSet2.user' table. You can move, or remove it, as needed
-
-            try
-            {
-                sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
-                //debugging -> sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
-                sepdbDataSet.usersDataTable dt = user.GetByUserId(userIDparam);
-                DataColumn fullName = new DataColumn("fullname");
-                fullName.Expression = string.Format("{0}+' '+{1}", "firstName", "lastName");
-                dt.Columns.Add(fullName);
-                if (dt.Rows.Count > 0)
-                {
-                    DataRow dr = dt.Rows[0];
-                    // Display values                    
-                    txtFName.Text = dr["fullname"].ToString();
-                    txtID.Text = dr["userid"].ToString();
-                    txtEmail.Text = dr["emailAddress"].ToString();
-                    txtCC.Text = dr["costCentre"].ToString();
-                    txtPhoneNo.Text = dr["phoneNumber"].ToString();
-                    txtNickname.Text = dr["nickname"].ToString();
-                }
-                else
-                {
-                    MessageBox.Show("Unable to retrive user details");
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-        }
-
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-            //SqlConnection con = new SqlConnection(@"server=localhost;uid=sa;pwd=password; persistsecurityinfo=True;database=sepdb");
-            //SqlCommand cmd = new SqlCommand("Select * from user where username=@username", con);
-
-            //txtName.Text = "Maxine Koh";
+            sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
+            //debugging -> sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
+            User loggedInUser = Program.getCurrentUser();
+            // Display values                    
+            txtFName.Text = loggedInUser.firstName;
+            txtID.Text = loggedInUser.id.ToString();
+            txtEmail.Text = loggedInUser.emailAddress;
+            txtCC.Text = loggedInUser.costCentre;
+            txtPhoneNo.Text = loggedInUser.phoneNo;
+            txtNickname.Text = loggedInUser.nickname;
         }
 
         private void txtFName_TextChanged(object sender, EventArgs e)
@@ -102,21 +69,6 @@ namespace StationarySystem
 
         }
 
-        private void usersBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void lblFullName_Click(object sender, EventArgs e)
         {
             lblFullName.TextAlign = ContentAlignment.MiddleLeft;
@@ -130,24 +82,22 @@ namespace StationarySystem
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
-            homepage.userIDparam = userIDparam;
             homepage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ProfileFormX profile = new ProfileFormX();
-            profile.userIDparam = userIDparam;
             profile.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

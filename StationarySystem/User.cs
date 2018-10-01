@@ -17,7 +17,8 @@ namespace StationarySystem
         public string phoneNo { get; set; }
         public string costCentre { get; set; }
         public string nickname { get; set; }
-
+        public string fullname { get { return firstName + " " + lastName; } }
+        
         public User()
         { }
 

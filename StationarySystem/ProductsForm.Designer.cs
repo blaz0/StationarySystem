@@ -111,7 +111,7 @@
             this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 11;
             this.SearchBox.Text = "Search for products";
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
+            
             // 
             // pictureBox1
             // 
@@ -182,7 +182,7 @@
             this.productDataGrid.Size = new System.Drawing.Size(1776, 401);
             this.productDataGrid.TabIndex = 15;
             this.productDataGrid.TabStop = false;
-            this.productDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.productDataGrid_CellContentClick);
+            
             // 
             // panel1
             // 

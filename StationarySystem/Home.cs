@@ -33,61 +33,50 @@ namespace StationarySystem
             //int userID = int.Parse(dr["userid"].ToString());
             //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ProfileFormX profile = new ProfileFormX();
-            profile.userIDparam = userIDparam;
             profile.Show();
-            this.Hide();
-        }
-
-        private void Home_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void orderTable_Paint(object sender, PaintEventArgs e)
-        {
-
+            this.Close();
         }
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void productPic_Click(object sender, EventArgs e)
         {
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
             homepage.Show();
-            this.Hide();
+            this.Close();
         }
         
         private void btnRequests_Click(object sender, EventArgs e)
         {
             RequestsForm requests = new RequestsForm();
             requests.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             RequestsForm requests = new RequestsForm();
             requests.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

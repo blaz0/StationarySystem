@@ -6,7 +6,7 @@ namespace StationarySystem
 {
     partial class ProfileFormX
     {
-        public int userIDparam = 0;
+        //public int userIDparam = 0;
 
         /// <summary>
         /// Required designer variable.

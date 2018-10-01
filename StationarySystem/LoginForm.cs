@@ -36,15 +36,20 @@ namespace StationarySystem
                 sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
                 if (dt.Rows.Count > 0)
                 {
+                    User loggedInUser = Program.getCurrentUser();
                     DataRow dr = dt.Rows[0];
-                    int userID = int.Parse(dr["userid"].ToString());
-                    Program.getCurrentUser().
+                    loggedInUser.id = int.Parse(dr["userid"].ToString());
+                    loggedInUser.firstName = dr["firstname"].ToString();
+                    loggedInUser.lastName = dr["lastname"].ToString();
+                    loggedInUser.emailAddress = dr["emailAddress"].ToString();
+                    loggedInUser.phoneNo = dr["phoneNumber"].ToString();
+                    loggedInUser.costCentre = dr["costCentre"].ToString();
+                    loggedInUser.nickname = dr["nickname"].ToString();
                     //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ProfileFormX profile = new ProfileFormX();
+                    //ProfileFormX profile = new ProfileFormX();
                     Home homepage = new Home();
                     //Form1 profile = new Form1();
-                    profile.userIDparam = userID;
-                    profile.Show();
+                    homepage.Show();
                     this.Hide();
                 }
                 else
