@@ -11,6 +11,17 @@ namespace StationarySystem
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+
+        private static User currentUser = null;
+        public static User getCurrentUser()
+        {
+            if (currentUser == null)
+            {
+                currentUser = new User();
+            }
+            return currentUser;
+        }
+
         [STAThread]
         static void Main()
         {

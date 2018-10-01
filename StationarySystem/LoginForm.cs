@@ -38,6 +38,7 @@ namespace StationarySystem
                 {
                     DataRow dr = dt.Rows[0];
                     int userID = int.Parse(dr["userid"].ToString());
+                    Program.getCurrentUser().
                     //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ProfileFormX profile = new ProfileFormX();
                     Home homepage = new Home();

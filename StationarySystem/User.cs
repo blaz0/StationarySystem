@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace StationarySystem
 {
-
     class User
     {
         private int id;
@@ -18,7 +17,10 @@ namespace StationarySystem
         private string phoneNo;
         private string costCentre;
         private string nickname;
-        
+
+        public User()
+        { }
+
         public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname)
         {
             this.id = id;
