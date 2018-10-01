@@ -24,7 +24,7 @@ namespace StationarySystem
             User loggedInUser = Program.getCurrentUser();
             // Display values                    
             txtFName.Text = loggedInUser.fullname;
-            txtID.Text = loggedInUser.id.ToString();
+            txtID.Text = loggedInUser.userId.ToString();
             txtEmail.Text = loggedInUser.emailAddress;
             txtCC.Text = loggedInUser.costCentre;
             txtPhoneNo.Text = loggedInUser.phoneNo;

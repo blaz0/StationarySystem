@@ -25,7 +25,7 @@ namespace StationarySystem
             // TODO: This line of code loads data into the 'sepdbDataSet.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet.users);
             welcomeTxt.Text = "Welcome " + loggedInUser.firstName;
-            if (loggedInUser.id == 1)
+            if (loggedInUser.userId == 1)
             {
                 btnNotification.Visible = true;
                 notifyPicture.Visible = true;

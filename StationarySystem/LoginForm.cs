@@ -38,7 +38,7 @@ namespace StationarySystem
                 {
                     User loggedInUser = Program.getCurrentUser();
                     DataRow dr = dt.Rows[0];
-                    loggedInUser.id = int.Parse(dr["userid"].ToString());
+                    loggedInUser.userId = int.Parse(dr["userid"].ToString());
                     loggedInUser.firstName = dr["firstname"].ToString();
                     loggedInUser.lastName = dr["lastname"].ToString();
                     loggedInUser.emailAddress = dr["emailAddress"].ToString();

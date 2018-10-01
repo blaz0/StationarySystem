@@ -8,7 +8,7 @@ namespace StationarySystem
 {
     class User
     {
-        public int id { get; set; }
+        public int userId { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public int username { get; set; }
@@ -24,7 +24,7 @@ namespace StationarySystem
 
         public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname)
         {
-            this.id = id;
+            this.userId = id;
             this.firstName = firstName;
             this.lastName = lastName;
             this.username = username;
@@ -37,7 +37,7 @@ namespace StationarySystem
 
         public int GetId()
         {
-            return id;
+            return userId;
         }
         public string GetFirstName()
         {

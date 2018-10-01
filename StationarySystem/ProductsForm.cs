@@ -29,7 +29,7 @@ namespace StationarySystem
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
 
-            if (loggedInUser.id == 1)
+            if (loggedInUser.userId == 1)
             {
                 detailsDataGrid.Visible = true;
             }
