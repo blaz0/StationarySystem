@@ -96,7 +96,7 @@ namespace StationarySystem
             this.txtNickname.Size = new System.Drawing.Size(406, 37);
             this.txtNickname.TabIndex = 8;
             this.txtNickname.Text = "insert nickname here";
-            this.txtNickname.TextChanged += new System.EventHandler(this.txtNickname_TextChanged_1);
+            
             // 
             // usersBindingSource
             // 
@@ -128,7 +128,7 @@ namespace StationarySystem
             this.txtEmail.Size = new System.Drawing.Size(406, 37);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "insert email here";
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged_1);
+            
             // 
             // label1
             // 
@@ -142,7 +142,7 @@ namespace StationarySystem
             this.label1.TabIndex = 12;
             this.label1.Text = "Cost Centre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // lblCC
             // 
@@ -229,7 +229,7 @@ namespace StationarySystem
             this.txtID.Size = new System.Drawing.Size(406, 37);
             this.txtID.TabIndex = 8;
             this.txtID.Text = "insert ID no. here";
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged_1);
+            
             // 
             // txtCC
             // 
@@ -246,7 +246,7 @@ namespace StationarySystem
             this.txtCC.Size = new System.Drawing.Size(406, 37);
             this.txtCC.TabIndex = 8;
             this.txtCC.Text = "insert cost centre here";
-            this.txtCC.TextChanged += new System.EventHandler(this.txtCC_TextChanged_1);
+            
             // 
             // tableLayoutPanel1
             // 
@@ -276,7 +276,7 @@ namespace StationarySystem
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 280);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
+            
             // 
             // txtFName
             // 
@@ -291,7 +291,6 @@ namespace StationarySystem
             this.txtFName.TabIndex = 6;
             this.txtFName.Text = "txtFName";
             this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtFName.TextChanged += new System.EventHandler(this.txtFName_TextChanged_1);
             // 
             // usersTableAdapter
             // 
@@ -323,7 +322,6 @@ namespace StationarySystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1395);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -397,7 +395,6 @@ namespace StationarySystem
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
-            this.utsLogo.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // ProfileFormX
             // 

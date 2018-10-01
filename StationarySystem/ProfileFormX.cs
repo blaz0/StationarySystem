@@ -127,51 +127,6 @@ namespace StationarySystem
             lblEmail.TextAlign = ContentAlignment.MiddleRight;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFullName_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNickname_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void txtID_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmail_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNickname_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtFName_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
@@ -193,21 +148,6 @@ namespace StationarySystem
             profile.userIDparam = userIDparam;
             profile.Show();
             this.Hide();
-        }
-
-        private void txtCC_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void profilePicture_Click(object sender, EventArgs e)
-        {
-           
         }
     }
 }
