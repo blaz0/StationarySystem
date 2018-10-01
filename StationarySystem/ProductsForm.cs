@@ -78,13 +78,6 @@ namespace StationarySystem
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            LoginForm loginPage = new LoginForm();
-            loginPage.Show();
-            this.Hide();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             LoginForm loginPage = new LoginForm();
@@ -160,58 +153,13 @@ namespace StationarySystem
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            productDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-            try
-            {
-                //sepdb_SQLTableAdapters.productTableAdapter product = new sepdb_SQLTableAdapters.productTableAdapter();
-                //sepdb_SQL.productDataTable dt = product.GetByProductName(searchValue);
-
-                bool valueResult = false;
-                foreach (DataGridViewRow row in productDataGrid.Rows)
-                {
-                    for (int i = 0; i < row.Cells.Count; i++)
-                    {
-                        if (row.Cells[i].Value != null && row.Cells[i].Value.ToString().Equals(searchValue))
-                        {
-                            int rowIndex = row.Index;
-                            productDataGrid.Rows[rowIndex].Selected = true;
-                            valueResult = true;
-                            break;
-                        }
-                    }
-                }
-                if (!valueResult)
-                {
-                    MessageBox.Show("Unable to find " + SearchBox.Text, "Not found");
-                    return;
-                }
-
-                foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
-                {
-                    if ((r.Cells[0].Value).ToString().ToUpper().Contains(searchValue.ToUpper()))
-                    {
-                        productDataGrid.Rows[r.Index].Visible = true;
-                        productDataGrid.Rows[r.Index].Selected = false;
-                    }
-                    else
-                    {
-                        productDataGrid.CurrentCell = null;
-                        productDataGrid.Rows[r.Index].Visible = false;
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-                //exception handling displayed in message box
-                MessageBox.Show(ex.Message);
-                return;
-            }
+            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; 
+            //productDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;            
         }
         
         private void clearSearchBtn_Click(object sender, EventArgs e)
         {
+            productBindingSource.Filter = null;
             /*foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
             {
                 productDataGrid.Rows[r.Index].Visible = true;
