@@ -26,6 +26,8 @@ namespace StationarySystem
 
         private void ProductsForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sepdbDataSet.productDetail' table. You can move, or remove it, as needed.
+            this.productDetailTableAdapter.Fill(this.sepdbDataSet.productDetail);
             // TODO: This line of code loads data into the 'sepdbDataSet.product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.sepdbDataSet.product);
             // TODO: This line of code loads data into the 'sepdbDataSet.product' table. You can move, or remove it, as needed.
