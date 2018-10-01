@@ -22,8 +22,9 @@ CREATE TABLE dbo.requestedstationery(
 	requestID int NOT NULL,
 	productID int NOT NULL,
 	quantity int NOT NULL,
-PRIMARY KEY CLUSTERED 
-(requestID ASC, productID ASC)) ON PRIMARY
+	PRIMARY KEY (requestID)
+	PRIMARY KEY (productID)
+	)
 GO
 
 ALTER TABLE dbo.requestedstationery  WITH CHECK ADD  CONSTRAINT reqstatFKproduct FOREIGN KEY(productID)
