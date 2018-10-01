@@ -24,8 +24,8 @@ CREATE TABLE dbo.stationeryrequest(
 	productID int NOT NULL,
 	requestDate date NOT NULL,
 	status varchar(20) NOT NULL,
-PRIMARY KEY CLUSTERED 
-(requestID ASC)) ON PRIMARY
+	PRIMARY KEY (requestID)
+	)
 GO
 
 ALTER TABLE dbo.stationeryrequest  WITH CHECK ADD  CONSTRAINT statreqFKproduct FOREIGN KEY(productID)
