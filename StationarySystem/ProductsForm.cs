@@ -244,5 +244,10 @@ namespace StationarySystem
             statRequest.Show();
             this.Hide();
         }
+
+        private void productDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

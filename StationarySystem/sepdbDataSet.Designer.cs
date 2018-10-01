@@ -368,6 +368,8 @@ namespace StationarySystem {
             
             private global::System.Data.DataColumn columnprice;
             
+            private global::System.Data.DataColumn columnstockLevel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public productDataTable() {
@@ -451,6 +453,14 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn stockLevelColumn {
+                get {
+                    return this.columnstockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -486,7 +496,7 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public productRow AddproductRow(int productID, int supplierID, string name, string description, int stock, decimal price) {
+            public productRow AddproductRow(int productID, int supplierID, string name, string description, int stock, decimal price, string stockLevel) {
                 productRow rowproductRow = ((productRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         productID,
@@ -494,7 +504,8 @@ namespace StationarySystem {
                         name,
                         description,
                         stock,
-                        price};
+                        price,
+                        stockLevel};
                 rowproductRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowproductRow);
                 return rowproductRow;
@@ -530,6 +541,7 @@ namespace StationarySystem {
                 this.columndescription = base.Columns["description"];
                 this.columnstock = base.Columns["stock"];
                 this.columnprice = base.Columns["price"];
+                this.columnstockLevel = base.Columns["stockLevel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -547,6 +559,8 @@ namespace StationarySystem {
                 base.Columns.Add(this.columnstock);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
+                this.columnstockLevel = new global::System.Data.DataColumn("stockLevel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstockLevel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnproductID}, true));
                 this.columnproductID.AllowDBNull = false;
@@ -558,6 +572,8 @@ namespace StationarySystem {
                 this.columndescription.MaxLength = 100;
                 this.columnstock.AllowDBNull = false;
                 this.columnprice.AllowDBNull = false;
+                this.columnstockLevel.ReadOnly = true;
+                this.columnstockLevel.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1089,6 +1105,8 @@ namespace StationarySystem {
             
             private global::System.Data.DataColumn columnprice;
             
+            private global::System.Data.DataColumn columnstockLevel;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public productDetailDataTable() {
@@ -1172,6 +1190,14 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn stockLevelColumn {
+                get {
+                    return this.columnstockLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1207,7 +1233,7 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public productDetailRow AddproductDetailRow(productRow parentproductRowByproduct_details_relation, int supplierID, string name, string description, int stock, decimal price) {
+            public productDetailRow AddproductDetailRow(productRow parentproductRowByproduct_details_relation, int supplierID, string name, string description, int stock, decimal price, string stockLevel) {
                 productDetailRow rowproductDetailRow = ((productDetailRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1215,7 +1241,8 @@ namespace StationarySystem {
                         name,
                         description,
                         stock,
-                        price};
+                        price,
+                        stockLevel};
                 if ((parentproductRowByproduct_details_relation != null)) {
                     columnValuesArray[0] = parentproductRowByproduct_details_relation[0];
                 }
@@ -1254,6 +1281,7 @@ namespace StationarySystem {
                 this.columndescription = base.Columns["description"];
                 this.columnstock = base.Columns["stock"];
                 this.columnprice = base.Columns["price"];
+                this.columnstockLevel = base.Columns["stockLevel"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1271,6 +1299,8 @@ namespace StationarySystem {
                 base.Columns.Add(this.columnstock);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
+                this.columnstockLevel = new global::System.Data.DataColumn("stockLevel", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstockLevel);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnproductID}, true));
                 this.columnproductID.AllowDBNull = false;
@@ -1282,6 +1312,8 @@ namespace StationarySystem {
                 this.columndescription.MaxLength = 100;
                 this.columnstock.AllowDBNull = false;
                 this.columnprice.AllowDBNull = false;
+                this.columnstockLevel.ReadOnly = true;
+                this.columnstockLevel.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1486,6 +1518,34 @@ namespace StationarySystem {
                 set {
                     this[this.tableproduct.priceColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string stockLevel {
+                get {
+                    try {
+                        return ((string)(this[this.tableproduct.stockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'stockLevel\' in table \'product\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableproduct.stockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsstockLevelNull() {
+                return this.IsNull(this.tableproduct.stockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetstockLevelNull() {
+                this[this.tableproduct.stockLevelColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1696,6 +1756,22 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string stockLevel {
+                get {
+                    try {
+                        return ((string)(this[this.tableproductDetail.stockLevelColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'stockLevel\' in table \'productDetail\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableproductDetail.stockLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public productRow productRow {
                 get {
                     return ((productRow)(this.GetParentRow(this.Table.ParentRelations["product_details_relation"])));
@@ -1703,6 +1779,18 @@ namespace StationarySystem {
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["product_details_relation"]);
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsstockLevelNull() {
+                return this.IsNull(this.tableproductDetail.stockLevelColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetstockLevelNull() {
+                this[this.tableproductDetail.stockLevelColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1939,6 +2027,7 @@ namespace StationarySystem.sepdbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("stock", "stock");
             tableMapping.ColumnMappings.Add("price", "price");
+            tableMapping.ColumnMappings.Add("stockLevel", "stockLevel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1956,7 +2045,7 @@ namespace StationarySystem.sepdbDataSetTableAdapters {
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[product] ([productID], [supplierID], [name], [description], [stock], [price]) VALUES (@productID, @supplierID, @name, @description, @stock, @price);
-SELECT productID, supplierID, name, description, stock, price FROM product WHERE (productID = @productID)";
+SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN 'Out of Stock!' ELSE CONVERT (varchar , stock) END AS stockLevel, price FROM product WHERE (productID = @productID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1967,7 +2056,7 @@ SELECT productID, supplierID, name, description, stock, price FROM product WHERE
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[product] SET [productID] = @productID, [supplierID] = @supplierID, [name] = @name, [description] = @description, [stock] = @stock, [price] = @price WHERE (([productID] = @Original_productID) AND ([supplierID] = @Original_supplierID) AND ([name] = @Original_name) AND ([description] = @Original_description) AND ([stock] = @Original_stock) AND ([price] = @Original_price));
-SELECT productID, supplierID, name, description, stock, price FROM product WHERE (productID = @productID)";
+SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN 'Out of Stock!' ELSE CONVERT (varchar , stock) END AS stockLevel, price FROM product WHERE (productID = @productID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1996,7 +2085,9 @@ SELECT productID, supplierID, name, description, stock, price FROM product WHERE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT productID, supplierID, name, description, stock, price FROM dbo.product";
+            this._commandCollection[0].CommandText = "SELECT productID, supplierID, name, description, stock, case when stock = 0 then " +
+                "\'Out of Stock!\' else convert (varchar, stock) end as stockLevel ,price FROM dbo." +
+                "product";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -2922,6 +3013,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
             tableMapping.ColumnMappings.Add("description", "description");
             tableMapping.ColumnMappings.Add("stock", "stock");
             tableMapping.ColumnMappings.Add("price", "price");
+            tableMapping.ColumnMappings.Add("stockLevel", "stockLevel");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -2939,7 +3031,7 @@ SELECT userId, firstName, lastName, username, password, emailAddress, phoneNumbe
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[product] ([productID], [supplierID], [name], [description], [stock], [price]) VALUES (@productID, @supplierID, @name, @description, @stock, @price);
-SELECT productID, supplierID, name, description, stock, price FROM product WHERE (productID = @productID)";
+SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN 'Out of Stock!' ELSE CONVERT (varchar , stock) END AS stockLevel, price FROM product WHERE (productID = @productID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2950,7 +3042,7 @@ SELECT productID, supplierID, name, description, stock, price FROM product WHERE
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[product] SET [productID] = @productID, [supplierID] = @supplierID, [name] = @name, [description] = @description, [stock] = @stock, [price] = @price WHERE (([productID] = @Original_productID) AND ([supplierID] = @Original_supplierID) AND ([name] = @Original_name) AND ([description] = @Original_description) AND ([stock] = @Original_stock) AND ([price] = @Original_price));
-SELECT productID, supplierID, name, description, stock, price FROM product WHERE (productID = @productID)";
+SELECT productID, supplierID, name, description, stock, CASE WHEN stock = 0 THEN 'Out of Stock!' ELSE CONVERT (varchar , stock) END AS stockLevel, price FROM product WHERE (productID = @productID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@supplierID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "supplierID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -2979,7 +3071,9 @@ SELECT productID, supplierID, name, description, stock, price FROM product WHERE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT productID, supplierID, name, description, stock, price FROM dbo.product";
+            this._commandCollection[0].CommandText = "SELECT productID, supplierID, name, description, stock, case when stock = 0 then " +
+                "\'Out of Stock!\' else convert (varchar, stock) end as stockLevel ,price FROM dbo." +
+                "product";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
