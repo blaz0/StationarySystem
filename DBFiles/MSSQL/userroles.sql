@@ -18,5 +18,5 @@ CREATE TABLE userroles (
 )
 GO
 
-INSERT INTO userroles VALUES (1,'Stationery Manager'),(2,'System Admin'),(3,'User'),(4,'User'),(5,'User');
+INSERT INTO userroles VALUES (1,'Stationery Manager'),(2,'User'),(3,'User'),(4,'System Admin'),(5,'User');
 GO
