@@ -44,7 +44,7 @@ namespace StationarySystem
             //    detailsBtn.Enabled = true;
             //}
 
-            foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
+            /*foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
             {
                 productDataGrid.Rows[r.Index].Selected = false;
                 productDataGrid.Rows[r.Index].ReadOnly = true;
@@ -53,7 +53,7 @@ namespace StationarySystem
             {
                 detailsDataGrid.Rows[r.Index].Selected = false;
                 detailsDataGrid.Rows[r.Index].ReadOnly = true;
-            }
+            }*/
 
         }
 
@@ -90,29 +90,21 @@ namespace StationarySystem
             this.Hide();
         }
 
-        private void productDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {}
-
-        private void productDataGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+       private void productDataGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (Convert.ToDecimal(productDataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) >= 0.00M)// && !string.IsNullOrWhiteSpace(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
+            /*if (Convert.ToDecimal(productDataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value) >= 0.00M)// && !string.IsNullOrWhiteSpace(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString()))
             {
                 productDataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = new DataGridViewCellStyle { ForeColor = Color.Orange, BackColor = Color.Blue };
             }
             else
             {
                 productDataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Style = productDataGrid.DefaultCellStyle;
-            }
-        }
-
-        private void productDetailsGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            }*/
         }
 
         private void detailsBtn_Click(object sender, EventArgs e)
         {
-            string searchValue = SearchBox.Text;
+            /*string searchValue = SearchBox.Text;
             detailsDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             try
@@ -160,7 +152,7 @@ namespace StationarySystem
                 //exception handling displayed in message box
                 MessageBox.Show(ex.Message);
                 return;
-            }
+            }*/
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
@@ -215,19 +207,10 @@ namespace StationarySystem
                 return;
             }
         }
-
-        private void productBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+        
         private void clearSearchBtn_Click(object sender, EventArgs e)
         {
-            foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
+            /*foreach (System.Windows.Forms.DataGridViewRow r in productDataGrid.Rows)
             {
                 productDataGrid.Rows[r.Index].Visible = true;
             }
@@ -235,7 +218,7 @@ namespace StationarySystem
             {
                 detailsDataGrid.Rows[r.Index].Visible = true;
             }
-            SearchBox.Text = "Search for products";
+            SearchBox.Text = "Search for products";*/
         }
 
         private void btnHome_Click_1(object sender, EventArgs e)
