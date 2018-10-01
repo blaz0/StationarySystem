@@ -79,14 +79,14 @@
             this.clearSearchBtn.TabIndex = 30;
             this.clearSearchBtn.Text = "Clear Search";
             this.clearSearchBtn.UseVisualStyleBackColor = false;
-            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
+            
             // 
             // productBindingSource
             // 
             this.productBindingSource.DataMember = "product";
             this.productBindingSource.DataSource = this.sepdbDataSet;
             this.productBindingSource.Filter = "";
-            this.productBindingSource.CurrentChanged += new System.EventHandler(this.productBindingSource_CurrentChanged);
+            
             // 
             // sepdbDataSet
             // 
@@ -180,7 +180,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 28;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // detailsBtn
             // 
@@ -195,7 +195,6 @@
             this.detailsBtn.TabIndex = 27;
             this.detailsBtn.Text = "Cancel My Request";
             this.detailsBtn.UseVisualStyleBackColor = false;
-            this.detailsBtn.Click += new System.EventHandler(this.detailsBtn_Click);
             // 
             // productTableAdapter
             // 
@@ -204,6 +203,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
@@ -216,13 +216,11 @@
             // 
             this.usersBindingSource2.DataMember = "users";
             this.usersBindingSource2.DataSource = this.sepdbDataSet;
-            this.usersBindingSource2.CurrentChanged += new System.EventHandler(this.usersBindingSource2_CurrentChanged);
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataSource = this.sepdbDataSet;
             this.usersBindingSource.Position = 0;
-            this.usersBindingSource.CurrentChanged += new System.EventHandler(this.usersBindingSource_CurrentChanged);
             // 
             // searchBtn
             // 
@@ -235,7 +233,6 @@
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchBtn.TabIndex = 25;
             this.searchBtn.TabStop = false;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // logOutBtn
             // 
@@ -259,7 +256,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 23;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // SearchBox
             // 
@@ -274,13 +270,11 @@
             this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 22;
             this.SearchBox.Text = "Search requests";
-            this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             // 
             // usersBindingSource1
             // 
             this.usersBindingSource1.DataMember = "users";
             this.usersBindingSource1.DataSource = this.sepdbDataSet;
-            this.usersBindingSource1.CurrentChanged += new System.EventHandler(this.usersBindingSource1_CurrentChanged);
             // 
             // RequestsLbl
             // 
@@ -292,7 +286,6 @@
             this.RequestsLbl.Size = new System.Drawing.Size(603, 108);
             this.RequestsLbl.TabIndex = 21;
             this.RequestsLbl.Text = "My Requests";
-            this.RequestsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
             // 
             // requestDataGrid
             // 
@@ -321,6 +314,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RequestsForm";
             this.Text = "RequestsForm";
+            this.Load += new System.EventHandler(this.RequestsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

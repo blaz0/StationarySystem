@@ -16,50 +16,10 @@ namespace StationarySystem
         {
             InitializeComponent();
         }
-
-        private void ProductsLbl_Click(object sender, EventArgs e)
+        private void RequestsForm_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void detailsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void detailsBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource2_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -69,36 +29,13 @@ namespace StationarySystem
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearSearchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
             homepage.Show();
             this.Hide();
         }
+
+        
     }
 }

@@ -31,6 +31,8 @@ namespace StationarySystem
                 notifyPicture.Visible = true;
                 btnSettings.Visible = true;
                 settingsPicture.Visible = true;
+                approveReqBtn.Visible = true;
+                okPicture.Visible = true;
             }
             else
             {
@@ -38,6 +40,8 @@ namespace StationarySystem
                 notifyPicture.Visible = false;
                 btnSettings.Visible = false;
                 settingsPicture.Visible = false;
+                approveReqBtn.Visible = false;
+                okPicture.Visible = false;
             }
         }
 
@@ -102,6 +106,11 @@ namespace StationarySystem
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
+        }
+
+        private void approveReqBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

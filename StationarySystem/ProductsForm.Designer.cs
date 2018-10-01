@@ -35,9 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -56,12 +55,6 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.detailsDataGrid = new System.Windows.Forms.DataGridView();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.createRequestBtn = new System.Windows.Forms.Button();
@@ -72,6 +65,12 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.productDetailTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productDetailTableAdapter();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).BeginInit();
@@ -346,14 +345,14 @@
             this.dataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn1});
             this.detailsDataGrid.DataSource = this.detailsBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.detailsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.detailsDataGrid.DefaultCellStyle = dataGridViewCellStyle7;
             this.detailsDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.detailsDataGrid.Location = new System.Drawing.Point(638, 855);
@@ -370,54 +369,6 @@
             this.detailsDataGrid.Size = new System.Drawing.Size(1776, 205);
             this.detailsDataGrid.TabIndex = 19;
             this.detailsDataGrid.TabStop = false;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn1
-            // 
-            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn1.HeaderText = "Product Name";
-            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
-            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // descriptionDataGridViewTextBoxColumn
-            // 
-            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
-            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Product Description";
-            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
-            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // supplierIDDataGridViewTextBoxColumn
-            // 
-            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "supplierID";
-            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier ID";
-            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
-            this.supplierIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "stockLevel";
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Number of Stock";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn1
-            // 
-            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.priceDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
-            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
-            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // detailsBindingSource
             // 
@@ -487,6 +438,51 @@
             // 
             this.productDetailTableAdapter.ClearBeforeFill = true;
             // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Product Name";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Product Description";
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // supplierIDDataGridViewTextBoxColumn
+            // 
+            this.supplierIDDataGridViewTextBoxColumn.DataPropertyName = "supplierID";
+            this.supplierIDDataGridViewTextBoxColumn.HeaderText = "Supplier ID";
+            this.supplierIDDataGridViewTextBoxColumn.Name = "supplierIDDataGridViewTextBoxColumn";
+            this.supplierIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "stockLevel";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Number of Stock";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn1
+            // 
+            this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.priceDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
+            this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -554,14 +550,14 @@
         private System.Windows.Forms.Button createRequestBtn;
         private System.Windows.Forms.BindingSource detailsBindingSource;
         private sepdbDataSetTableAdapters.productDetailTableAdapter productDetailTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
     }
 }
