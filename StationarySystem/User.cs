@@ -8,15 +8,15 @@ namespace StationarySystem
 {
     class User
     {
-        private int id;
-        private string firstName;
-        private string lastName;
-        private int username;
-        private string password;
-        private string emailAddress;
-        private string phoneNo;
-        private string costCentre;
-        private string nickname;
+        public int id { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int username { get; set; }
+        public string password { get; set; }
+        public string emailAddress { get; set; }
+        public string phoneNo { get; set; }
+        public string costCentre { get; set; }
+        public string nickname { get; set; }
 
         public User()
         { }
