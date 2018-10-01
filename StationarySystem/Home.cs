@@ -75,27 +75,7 @@ namespace StationarySystem
             homepage.Show();
             this.Hide();
         }
-
-        private void utsLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnNotifications_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSystemSettings_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void btnRequests_Click(object sender, EventArgs e)
         {
             RequestsForm requests = new RequestsForm();

@@ -79,7 +79,7 @@
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
-            this.utsLogo.Click += new System.EventHandler(this.utsLogo_Click);
+            
             // 
             // panel1
             // 
@@ -95,7 +95,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 890);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // btnSystemSettings
             // 
@@ -110,7 +110,7 @@
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "System Settings";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
-            this.btnSystemSettings.Click += new System.EventHandler(this.btnSystemSettings_Click);
+            
             // 
             // btnNotifications
             // 
@@ -125,7 +125,7 @@
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            
             // 
             // btnProfile
             // 
