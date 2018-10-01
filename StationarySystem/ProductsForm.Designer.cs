@@ -35,7 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -111,7 +113,6 @@
             this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 11;
             this.SearchBox.Text = "Search for products";
-            
             // 
             // pictureBox1
             // 
@@ -328,6 +329,14 @@
             this.detailsDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.detailsDataGrid.CausesValidation = false;
             this.detailsDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detailsDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.detailsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.detailsDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.productIDDataGridViewTextBoxColumn,
@@ -337,6 +346,14 @@
             this.dataGridViewTextBoxColumn1,
             this.priceDataGridViewTextBoxColumn1});
             this.detailsDataGrid.DataSource = this.detailsBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.detailsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.detailsDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.detailsDataGrid.Location = new System.Drawing.Point(638, 855);
@@ -385,9 +402,9 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "stockLevel";
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn1.HeaderText = "Number of Stock";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -395,9 +412,9 @@
             // priceDataGridViewTextBoxColumn1
             // 
             this.priceDataGridViewTextBoxColumn1.DataPropertyName = "price";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.priceDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.priceDataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle7;
             this.priceDataGridViewTextBoxColumn1.HeaderText = "Price";
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
             this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
@@ -433,7 +450,7 @@
             this.createRequestBtn.TabIndex = 21;
             this.createRequestBtn.Text = "Create Stationery Request";
             this.createRequestBtn.UseVisualStyleBackColor = false;
-            this.createRequestBtn.Click += new System.EventHandler(this.button1_Click);
+            this.createRequestBtn.Click += new System.EventHandler(this.createRequestBtn_Click_1);
             // 
             // usersTableAdapter
             // 
@@ -537,14 +554,14 @@
         private System.Windows.Forms.Button createRequestBtn;
         private System.Windows.Forms.BindingSource detailsBindingSource;
         private sepdbDataSetTableAdapters.productDetailTableAdapter productDetailTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockLevel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockLevel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
     }
 }
