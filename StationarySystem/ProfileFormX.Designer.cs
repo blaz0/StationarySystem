@@ -72,7 +72,6 @@ namespace StationarySystem
             // 
             // profilePicture
             // 
-            this.profilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
             this.profilePicture.Location = new System.Drawing.Point(1351, 134);
             this.profilePicture.Margin = new System.Windows.Forms.Padding(6);

@@ -372,6 +372,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnProfile2
             // 
@@ -386,6 +387,7 @@
             this.btnProfile2.Text = "View Profile";
             this.btnProfile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProfile2.UseVisualStyleBackColor = false;
+            this.btnProfile2.Click += new System.EventHandler(this.btnProfile2_Click);
             // 
             // Home
             // 

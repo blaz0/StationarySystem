@@ -43,10 +43,6 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
-            //sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
-            //DataRow dr = dt.Rows[0];
-            //int userID = int.Parse(dr["userid"].ToString());
-            //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -91,6 +87,20 @@ namespace StationarySystem
         {
             RequestsForm requests = new RequestsForm();
             requests.Show();
+            this.Close();
+        }
+
+        private void btnProfile2_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
             this.Close();
         }
     }

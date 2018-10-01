@@ -89,7 +89,7 @@
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -117,7 +117,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -131,7 +131,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 637);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
@@ -147,7 +147,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
@@ -165,7 +165,7 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 28;
@@ -177,7 +177,7 @@
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
             this.submitBtn.Location = new System.Drawing.Point(2018, 788);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(398, 65);
             this.submitBtn.TabIndex = 27;
@@ -191,6 +191,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
@@ -213,7 +214,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2432, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -236,7 +237,6 @@
             this.ProductsLbl.Size = new System.Drawing.Size(1171, 108);
             this.ProductsLbl.TabIndex = 21;
             this.ProductsLbl.Text = "Create Stationery Request";
-            this.ProductsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
             // 
             // groupOrder
             // 
@@ -249,9 +249,9 @@
             this.groupOrder.Controls.Add(this.label1);
             this.groupOrder.Controls.Add(this.productName);
             this.groupOrder.Location = new System.Drawing.Point(650, 225);
-            this.groupOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
             this.groupOrder.Name = "groupOrder";
-            this.groupOrder.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
             this.groupOrder.Size = new System.Drawing.Size(1766, 533);
             this.groupOrder.TabIndex = 29;
             this.groupOrder.TabStop = false;
@@ -263,12 +263,11 @@
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
             this.textBox2.Location = new System.Drawing.Point(1368, 444);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(6);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 37);
             this.textBox2.TabIndex = 7;
             this.textBox2.Text = "totalprice";
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -276,7 +275,7 @@
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(1368, 144);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 37);
             this.textBox1.TabIndex = 6;
@@ -319,7 +318,7 @@
             // 
             this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty.Location = new System.Drawing.Point(758, 135);
-            this.qty.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.qty.Margin = new System.Windows.Forms.Padding(6);
             this.qty.Maximum = new decimal(new int[] {
             999,
             0,
@@ -359,7 +358,6 @@
             this.productName.Size = new System.Drawing.Size(286, 48);
             this.productName.TabIndex = 0;
             this.productName.Text = "Product Name";
-            this.productName.Click += new System.EventHandler(this.productName_Click);
             // 
             // CreateStationeryRequestForm
             // 
@@ -372,7 +370,7 @@
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ProductsLbl);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateStationeryRequestForm";
             this.Text = "CreateStationeryRequest";
             this.Load += new System.EventHandler(this.CreateStationeryRequestForm_Load);

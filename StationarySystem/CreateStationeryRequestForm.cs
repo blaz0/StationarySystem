@@ -12,49 +12,34 @@ namespace StationarySystem
 {
     public partial class CreateStationeryRequestForm : Form
     {
-        int userIDparam = 0;
-        public CreateStationeryRequestForm()
+        public CreateStationeryRequestForm() => InitializeComponent();
+
+        private void CreateStationeryRequest_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
+            User loggedInUser = Program.getCurrentUser();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+            private void pictureBox1_Click(object sender, EventArgs e)
         {
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
-            this.Hide();
+            this.Close();
         }
-
-        private void ProductsLbl_Click(object sender, EventArgs e)
-        {}
-
+        
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
             homepage.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
-            this.Hide();
-        }
-
-        private void productName_Click(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
 
         private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
