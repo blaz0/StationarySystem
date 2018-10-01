@@ -41,6 +41,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.productDataGrid = new System.Windows.Forms.DataGridView();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
@@ -49,11 +54,15 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.detailsDataGrid = new System.Windows.Forms.DataGridView();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.createRequestBtn = new System.Windows.Forms.Button();
-            this.detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -61,25 +70,16 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.productDetailTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productDetailTableAdapter();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplierIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
@@ -182,7 +182,51 @@
             this.productDataGrid.Size = new System.Drawing.Size(1776, 401);
             this.productDataGrid.TabIndex = 15;
             this.productDataGrid.TabStop = false;
-            
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name of Product";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stockLevel
+            // 
+            this.stockLevel.DataPropertyName = "stockLevel";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.stockLevel.DefaultCellStyle = dataGridViewCellStyle2;
+            this.stockLevel.HeaderText = "Number of Stock";
+            this.stockLevel.Name = "stockLevel";
+            this.stockLevel.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 100;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.sepdbDataSet;
+            this.productBindingSource.Filter = "";
+            // 
+            // sepdbDataSet
+            // 
+            this.sepdbDataSet.DataSetName = "sepdbDataSet";
+            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -310,119 +354,6 @@
             this.detailsDataGrid.TabIndex = 19;
             this.detailsDataGrid.TabStop = false;
             // 
-            // clearSearchBtn
-            // 
-            this.clearSearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
-            this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(1930, 226);
-            this.clearSearchBtn.Name = "clearSearchBtn";
-            this.clearSearchBtn.Size = new System.Drawing.Size(484, 66);
-            this.clearSearchBtn.TabIndex = 20;
-            this.clearSearchBtn.Text = "Clear Search";
-            this.clearSearchBtn.UseVisualStyleBackColor = false;
-            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
-            // 
-            // createRequestBtn
-            // 
-            this.createRequestBtn.BackColor = System.Drawing.Color.Teal;
-            this.createRequestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.createRequestBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.createRequestBtn.ForeColor = System.Drawing.Color.White;
-            this.createRequestBtn.Location = new System.Drawing.Point(638, 751);
-            this.createRequestBtn.Name = "createRequestBtn";
-            this.createRequestBtn.Size = new System.Drawing.Size(530, 66);
-            this.createRequestBtn.TabIndex = 21;
-            this.createRequestBtn.Text = "Create Stationery Request";
-            this.createRequestBtn.UseVisualStyleBackColor = false;
-            this.createRequestBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // detailsBindingSource
-            // 
-            this.detailsBindingSource.DataMember = "product_details_relation";
-            this.detailsBindingSource.DataSource = this.productBindingSource;
-            // 
-            // sepdbDataSet
-            // 
-            this.sepdbDataSet.DataSetName = "sepdbDataSet";
-            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.sepdbDataSet;
-            this.productBindingSource.Filter = "";
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = this.sepdbDataSet;
-            this.usersBindingSource.Position = 0;
-            // 
-            // usersBindingSource2
-            // 
-            this.usersBindingSource2.DataMember = "users";
-            this.usersBindingSource2.DataSource = this.sepdbDataSet;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.productDetailTableAdapter = null;
-            this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "users";
-            this.usersBindingSource1.DataSource = this.sepdbDataSet;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // productDetailTableAdapter
-            // 
-            this.productDetailTableAdapter.ClearBeforeFill = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.nameDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name of Product";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // stockLevel
-            // 
-            this.stockLevel.DataPropertyName = "stockLevel";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.stockLevel.DefaultCellStyle = dataGridViewCellStyle2;
-            this.stockLevel.HeaderText = "Number of Stock";
-            this.stockLevel.Name = "stockLevel";
-            this.stockLevel.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.priceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
@@ -471,6 +402,74 @@
             this.priceDataGridViewTextBoxColumn1.Name = "priceDataGridViewTextBoxColumn1";
             this.priceDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
+            // detailsBindingSource
+            // 
+            this.detailsBindingSource.DataMember = "product_details_relation";
+            this.detailsBindingSource.DataSource = this.productBindingSource;
+            // 
+            // clearSearchBtn
+            // 
+            this.clearSearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
+            this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
+            this.clearSearchBtn.Location = new System.Drawing.Point(1930, 226);
+            this.clearSearchBtn.Name = "clearSearchBtn";
+            this.clearSearchBtn.Size = new System.Drawing.Size(484, 66);
+            this.clearSearchBtn.TabIndex = 20;
+            this.clearSearchBtn.Text = "Clear Search";
+            this.clearSearchBtn.UseVisualStyleBackColor = false;
+            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
+            // 
+            // createRequestBtn
+            // 
+            this.createRequestBtn.BackColor = System.Drawing.Color.Teal;
+            this.createRequestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.createRequestBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.createRequestBtn.ForeColor = System.Drawing.Color.White;
+            this.createRequestBtn.Location = new System.Drawing.Point(638, 751);
+            this.createRequestBtn.Name = "createRequestBtn";
+            this.createRequestBtn.Size = new System.Drawing.Size(530, 66);
+            this.createRequestBtn.TabIndex = 21;
+            this.createRequestBtn.Text = "Create Stationery Request";
+            this.createRequestBtn.UseVisualStyleBackColor = false;
+            this.createRequestBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = this.sepdbDataSet;
+            this.usersBindingSource.Position = 0;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdbDataSet;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.productDetailTableAdapter = null;
+            this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.sepdbDataSet;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // productDetailTableAdapter
+            // 
+            this.productDetailTableAdapter.ClearBeforeFill = true;
+            // 
             // ProductsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -494,13 +493,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.detailsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();

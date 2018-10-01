@@ -57,9 +57,9 @@ namespace StationarySystem
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.utsLogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
@@ -74,10 +74,10 @@ namespace StationarySystem
             // 
             this.profilePicture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
-            this.profilePicture.Location = new System.Drawing.Point(1426, 123);
-            this.profilePicture.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.profilePicture.Location = new System.Drawing.Point(1351, 134);
+            this.profilePicture.Margin = new System.Windows.Forms.Padding(6);
             this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(300, 300);
+            this.profilePicture.Size = new System.Drawing.Size(420, 420);
             this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePicture.TabIndex = 5;
             this.profilePicture.TabStop = false;
@@ -90,13 +90,12 @@ namespace StationarySystem
             this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "nickname", true));
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtNickname.Location = new System.Drawing.Point(307, 9);
-            this.txtNickname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNickname.Margin = new System.Windows.Forms.Padding(4);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.ReadOnly = true;
             this.txtNickname.Size = new System.Drawing.Size(406, 37);
             this.txtNickname.TabIndex = 8;
             this.txtNickname.Text = "insert nickname here";
-            
             // 
             // usersBindingSource
             // 
@@ -122,13 +121,12 @@ namespace StationarySystem
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "emailAddress", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtEmail.Location = new System.Drawing.Point(307, 65);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(406, 37);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "insert email here";
-            
             // 
             // label1
             // 
@@ -142,7 +140,6 @@ namespace StationarySystem
             this.label1.TabIndex = 12;
             this.label1.Text = "Cost Centre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            
             // 
             // lblCC
             // 
@@ -208,7 +205,7 @@ namespace StationarySystem
             this.txtPhoneNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "phoneNumber", true));
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtPhoneNo.Location = new System.Drawing.Point(307, 121);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
             this.txtPhoneNo.Size = new System.Drawing.Size(406, 37);
@@ -223,13 +220,12 @@ namespace StationarySystem
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "userId", true));
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtID.Location = new System.Drawing.Point(307, 177);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(406, 37);
             this.txtID.TabIndex = 8;
             this.txtID.Text = "insert ID no. here";
-            
             // 
             // txtCC
             // 
@@ -240,13 +236,12 @@ namespace StationarySystem
             this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "costCentre", true));
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtCC.Location = new System.Drawing.Point(307, 233);
-            this.txtCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtCC.Name = "txtCC";
             this.txtCC.ReadOnly = true;
             this.txtCC.Size = new System.Drawing.Size(406, 37);
             this.txtCC.TabIndex = 8;
             this.txtCC.Text = "insert cost centre here";
-            
             // 
             // tableLayoutPanel1
             // 
@@ -266,7 +261,7 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1258, 637);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
@@ -276,7 +271,6 @@ namespace StationarySystem
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(816, 280);
             this.tableLayoutPanel1.TabIndex = 0;
-            
             // 
             // txtFName
             // 
@@ -284,7 +278,7 @@ namespace StationarySystem
             this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.txtFName.Location = new System.Drawing.Point(1236, 548);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFName.Name = "txtFName";
             this.txtFName.ReadOnly = true;
             this.txtFName.Size = new System.Drawing.Size(656, 61);
@@ -300,7 +294,7 @@ namespace StationarySystem
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(2420, 25);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 94);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -318,7 +312,7 @@ namespace StationarySystem
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1395);
             this.panel1.TabIndex = 0;
@@ -329,7 +323,7 @@ namespace StationarySystem
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(-6, 910);
+            this.button1.Location = new System.Drawing.Point(-6, 900);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(500, 77);
@@ -343,13 +337,25 @@ namespace StationarySystem
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(-6, 821);
+            this.button2.Location = new System.Drawing.Point(0, 811);
             this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(500, 77);
             this.button2.TabIndex = 5;
             this.button2.Text = "Notifications";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // utsLogo
+            // 
+            this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
+            this.utsLogo.Location = new System.Drawing.Point(150, 243);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
+            this.utsLogo.Name = "utsLogo";
+            this.utsLogo.Size = new System.Drawing.Size(200, 288);
+            this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.utsLogo.TabIndex = 4;
+            this.utsLogo.TabStop = false;
             // 
             // btnProfile
             // 
@@ -384,18 +390,6 @@ namespace StationarySystem
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // utsLogo
-            // 
-            this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(150, 243);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
-            this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(200, 288);
-            this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.utsLogo.TabIndex = 4;
-            this.utsLogo.TabStop = false;
-            // 
             // ProfileFormX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -408,7 +402,7 @@ namespace StationarySystem
             this.Controls.Add(this.profilePicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ProfileFormX";
             this.Text = "My Profile";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

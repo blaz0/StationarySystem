@@ -23,7 +23,7 @@ namespace StationarySystem
             //debugging -> sepdbDataSet.usersDataTable dt = user.Login("12875795", "julia");
             User loggedInUser = Program.getCurrentUser();
             // Display values                    
-            txtFName.Text = loggedInUser.firstName;
+            txtFName.Text = loggedInUser.fullname;
             txtID.Text = loggedInUser.id.ToString();
             txtEmail.Text = loggedInUser.emailAddress;
             txtCC.Text = loggedInUser.costCentre;

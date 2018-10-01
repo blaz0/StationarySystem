@@ -27,6 +27,16 @@ namespace StationarySystem
             // TODO: This line of code loads data into the 'sepdbDataSet.product' table. You can move, or remove it, as needed.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
+            User loggedInUser = Program.getCurrentUser();
+
+            if (loggedInUser.id == 1)
+            {
+                detailsDataGrid.Visible = true;
+            }
+            else
+            {
+                detailsDataGrid.Visible = false;
+            }
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -86,6 +96,5 @@ namespace StationarySystem
             statRequest.Show();
             this.Close();
         }
-
     }
 }

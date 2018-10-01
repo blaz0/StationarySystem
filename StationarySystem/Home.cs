@@ -12,7 +12,6 @@ namespace StationarySystem
 {
     public partial class Home : Form
     {
-        public int userIDparam = 0;
         public Home()
         {
             InitializeComponent();
@@ -22,8 +21,24 @@ namespace StationarySystem
         {
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
+            User loggedInUser = Program.getCurrentUser();
             // TODO: This line of code loads data into the 'sepdbDataSet.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet.users);
+            welcomeTxt.Text = "Welcome " + loggedInUser.firstName;
+            if (loggedInUser.id == 1)
+            {
+                btnNotification.Visible = true;
+                notifyPicture.Visible = true;
+                btnSettings.Visible = true;
+                settingsPicture.Visible = true;
+            }
+            else
+            {
+                btnNotification.Visible = false;
+                notifyPicture.Visible = false;
+                btnSettings.Visible = false;
+                settingsPicture.Visible = false;
+            }
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
