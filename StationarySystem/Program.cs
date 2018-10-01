@@ -22,6 +22,16 @@ namespace StationarySystem
             return currentUser;
         }
 
+        private static Product currentProduct = null;
+        public static Product getCurrentProduct()
+        {
+            if (currentProduct == null)
+            {
+                currentProduct = new Product();
+            }
+            return currentProduct;
+        }
+
         [STAThread]
         static void Main()
         {

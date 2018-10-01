@@ -92,6 +92,18 @@ namespace StationarySystem
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Product selectedProduct = Program.getCurrentProduct();
+            if (productDataGrid.SelectedCells.Count > 0)
+            {
+                /*int selectedrowindex = productDataGrid.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = productDataGrid.Rows[selectedrowindex];
+                string selectedCell = Convert.ToString(selectedRow.Cells["name"].Value);*/
+                string selectedCellName = productDataGrid.CurrentRow.Cells[0].Value.ToString();
+                string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+                selectedProduct.name = selectedCellName;
+                selectedProduct.price = Convert.ToInt32(selectedCellPrice);
+            }
+
             CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
             statRequest.Show();
             this.Close();

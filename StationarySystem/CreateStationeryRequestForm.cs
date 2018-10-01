@@ -14,11 +14,17 @@ namespace StationarySystem
     {
         public CreateStationeryRequestForm() => InitializeComponent();
 
-        private void CreateStationeryRequest_Load(object sender, EventArgs e)
+        private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
         {
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
+            userIDTxt.Text = "User ID: " + loggedInUser.userId.ToString();
+            Product selectedProduct = Program.getCurrentProduct();
+            productNameTxt.Text = selectedProduct.name;
+            priceTxt.Text = "$" + selectedProduct.price.ToString() + ".00";
+            int qtyCount = Convert.ToInt32(qty.Value);
+            totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";
         }
 
             private void pictureBox1_Click(object sender, EventArgs e)
@@ -42,9 +48,19 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
+        private void refreshBtn_Click(object sender, EventArgs e)
         {
+            int qtyCount = Convert.ToInt32(qty.Value);
+            Product selectedProduct = Program.getCurrentProduct();
+            totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";
+        }
 
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Product Request Submitted.");
+            Home homepage = new Home();
+            homepage.Show();
+            this.Close();
         }
     }
 }
