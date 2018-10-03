@@ -39,7 +39,6 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnRequests = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.productPic = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -62,9 +61,9 @@
             this.btnProfile2 = new System.Windows.Forms.Button();
             this.okPicture = new System.Windows.Forms.PictureBox();
             this.approveReqBtn = new System.Windows.Forms.Button();
+            this.logoutBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -78,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // utsLogo
@@ -209,18 +209,6 @@
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOrders.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2420, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // productPic
             // 
             this.productPic.Image = ((System.Drawing.Image)(resources.GetObject("productPic.Image")));
@@ -314,9 +302,9 @@
             this.welcomeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeTxt.Location = new System.Drawing.Point(544, 56);
             this.welcomeTxt.Name = "welcomeTxt";
-            this.welcomeTxt.Size = new System.Drawing.Size(1237, 145);
+            this.welcomeTxt.Size = new System.Drawing.Size(1717, 145);
             this.welcomeTxt.TabIndex = 15;
-            this.welcomeTxt.Text = "Welcome + first name of user";
+            this.welcomeTxt.Text = "Welcome [first name of user]";
             // 
             // btnNotification
             // 
@@ -347,7 +335,7 @@
             this.btnSettings.BackColor = System.Drawing.Color.Black;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(1820, 628);
+            this.btnSettings.Location = new System.Drawing.Point(544, 955);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(600, 250);
@@ -359,7 +347,7 @@
             // settingsPicture
             // 
             this.settingsPicture.Image = ((System.Drawing.Image)(resources.GetObject("settingsPicture.Image")));
-            this.settingsPicture.Location = new System.Drawing.Point(2048, 665);
+            this.settingsPicture.Location = new System.Drawing.Point(772, 992);
             this.settingsPicture.Name = "settingsPicture";
             this.settingsPicture.Size = new System.Drawing.Size(140, 140);
             this.settingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -369,9 +357,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1409, 665);
+            this.pictureBox1.Location = new System.Drawing.Point(1398, 670);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -395,7 +383,7 @@
             // okPicture
             // 
             this.okPicture.Image = ((System.Drawing.Image)(resources.GetObject("okPicture.Image")));
-            this.okPicture.Location = new System.Drawing.Point(771, 999);
+            this.okPicture.Location = new System.Drawing.Point(2047, 670);
             this.okPicture.Name = "okPicture";
             this.okPicture.Size = new System.Drawing.Size(140, 140);
             this.okPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -407,7 +395,7 @@
             this.approveReqBtn.BackColor = System.Drawing.Color.Black;
             this.approveReqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.approveReqBtn.ForeColor = System.Drawing.Color.White;
-            this.approveReqBtn.Location = new System.Drawing.Point(544, 954);
+            this.approveReqBtn.Location = new System.Drawing.Point(1820, 625);
             this.approveReqBtn.Margin = new System.Windows.Forms.Padding(6);
             this.approveReqBtn.Name = "approveReqBtn";
             this.approveReqBtn.Size = new System.Drawing.Size(600, 250);
@@ -416,6 +404,18 @@
             this.approveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.approveReqBtn.UseVisualStyleBackColor = false;
             this.approveReqBtn.Click += new System.EventHandler(this.approveReqBtn_Click);
+            // 
+            // logoutBtn
+            // 
+            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
+            this.logoutBtn.Location = new System.Drawing.Point(2420, 25);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(100, 100);
+            this.logoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logoutBtn.TabIndex = 11;
+            this.logoutBtn.TabStop = false;
+            this.logoutBtn.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // Home
             // 
@@ -435,7 +435,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.productPic);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnRequests);
             this.Controls.Add(this.panel1);
@@ -446,7 +446,6 @@
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -460,6 +459,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,7 +486,6 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnRequests;
         private System.Windows.Forms.Button btnOrders;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox productPic;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
@@ -499,5 +498,6 @@
         private System.Windows.Forms.Button btnProfile2;
         private System.Windows.Forms.PictureBox okPicture;
         private System.Windows.Forms.Button approveReqBtn;
+        private System.Windows.Forms.PictureBox logoutBtn;
     }
 }

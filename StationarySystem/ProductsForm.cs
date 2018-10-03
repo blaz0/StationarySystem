@@ -95,15 +95,16 @@ namespace StationarySystem
             Product selectedProduct = Program.getCurrentProduct();
             if (productDataGrid.SelectedCells.Count > 0)
             {
-                string selectedCellName = productDataGrid.CurrentRow.Cells[0].Value.ToString();
-                string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
-                selectedProduct.name = selectedCellName;
-                selectedProduct.price = Convert.ToInt32(selectedCellPrice);
+                string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString();
+                //string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+                selectedProduct.productid = Convert.ToInt32(selectedCellID);
+                //selectedProduct.price = Convert.ToInt32(selectedCellPrice);
 
                 CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
                 statRequest.Show();
                 this.Close();
             }
         }
+
     }
 }

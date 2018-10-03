@@ -21,10 +21,22 @@ namespace StationarySystem
             User loggedInUser = Program.getCurrentUser();
             userIDTxt.Text = "User ID: " + loggedInUser.userId.ToString();
             Product selectedProduct = Program.getCurrentProduct();
+
+            sepdbDataSet.productDataTable dt = productTableAdapter.GetDataByProductID(selectedProduct.productid);
+            DataRow dr = dt.Rows[0];
+            selectedProduct.productid = int.Parse(dr["productID"].ToString());
+            selectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
+            selectedProduct.name = dr["name"].ToString();
+            selectedProduct.description = dr["description"].ToString();
+            selectedProduct.stock = int.Parse(dr["stock"].ToString());
+            selectedProduct.price = int.Parse(dr["price"].ToString());
+            selectedProduct.stockLevel = dr["stockLevel"].ToString();
+            
             productNameTxt.Text = selectedProduct.name;
             priceTxt.Text = "$" + selectedProduct.price.ToString() + ".00";
             int qtyCount = Convert.ToInt32(qty.Value);
             totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";
+            descriptionTxt.Text = selectedProduct.description;
         }
 
             private void pictureBox1_Click(object sender, EventArgs e)

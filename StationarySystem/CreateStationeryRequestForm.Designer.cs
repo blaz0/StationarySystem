@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStationeryRequestForm));
+            System.Windows.Forms.Label nameLabel;
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -58,6 +59,9 @@
             this.productNameTxt = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.userIDTxt = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.descriptionTxt = new System.Windows.Forms.TextBox();
+            nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -177,10 +181,10 @@
             this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(1806, 855);
+            this.refreshBtn.Location = new System.Drawing.Point(1942, 855);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(610, 65);
+            this.refreshBtn.Size = new System.Drawing.Size(474, 65);
             this.refreshBtn.TabIndex = 27;
             this.refreshBtn.Text = "Refresh Total Price";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -193,9 +197,17 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.orderedproductsTableAdapter = null;
+            this.tableAdapterManager.product1TableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.requestedstationeryTableAdapter = null;
+            this.tableAdapterManager.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager.supplierorderTableAdapter = null;
+            this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.userrolesTableAdapter = null;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // usersTableAdapter
@@ -242,6 +254,9 @@
             // 
             // groupOrder
             // 
+            this.groupOrder.Controls.Add(this.descriptionTxt);
+            this.groupOrder.Controls.Add(nameLabel);
+            this.groupOrder.Controls.Add(this.nameTextBox);
             this.groupOrder.Controls.Add(this.totalPriceTxt);
             this.groupOrder.Controls.Add(this.priceTxt);
             this.groupOrder.Controls.Add(this.label4);
@@ -253,19 +268,21 @@
             this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
             this.groupOrder.Name = "groupOrder";
             this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
-            this.groupOrder.Size = new System.Drawing.Size(1766, 533);
+            this.groupOrder.Size = new System.Drawing.Size(1766, 567);
             this.groupOrder.TabIndex = 29;
             this.groupOrder.TabStop = false;
             this.groupOrder.Text = "Your Order";
             // 
             // totalPriceTxt
             // 
+            this.totalPriceTxt.BackColor = System.Drawing.SystemColors.Window;
             this.totalPriceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalPriceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.totalPriceTxt.ForeColor = System.Drawing.Color.Black;
             this.totalPriceTxt.Location = new System.Drawing.Point(1497, 416);
             this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.totalPriceTxt.Name = "totalPriceTxt";
+            this.totalPriceTxt.ReadOnly = true;
             this.totalPriceTxt.Size = new System.Drawing.Size(200, 73);
             this.totalPriceTxt.TabIndex = 7;
             this.totalPriceTxt.Text = "$0.00";
@@ -274,13 +291,13 @@
             // 
             this.priceTxt.BackColor = System.Drawing.SystemColors.Window;
             this.priceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.priceTxt.ForeColor = System.Drawing.Color.Black;
-            this.priceTxt.Location = new System.Drawing.Point(1488, 142);
+            this.priceTxt.Location = new System.Drawing.Point(1484, 136);
             this.priceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.ReadOnly = true;
-            this.priceTxt.Size = new System.Drawing.Size(200, 37);
+            this.priceTxt.Size = new System.Drawing.Size(220, 43);
             this.priceTxt.TabIndex = 6;
             this.priceTxt.Text = "priceperitem";
             // 
@@ -298,7 +315,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label3.Location = new System.Drawing.Point(1214, 136);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
@@ -344,6 +361,7 @@
             // productNameTxt
             // 
             this.productNameTxt.AutoSize = true;
+            this.productNameTxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
             this.productNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productNameTxt.Location = new System.Drawing.Point(90, 137);
             this.productNameTxt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
@@ -358,10 +376,10 @@
             this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(1806, 954);
+            this.submitBtn.Location = new System.Drawing.Point(1942, 954);
             this.submitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(610, 65);
+            this.submitBtn.Size = new System.Drawing.Size(474, 65);
             this.submitBtn.TabIndex = 30;
             this.submitBtn.Text = "Submit Product Request";
             this.submitBtn.UseVisualStyleBackColor = false;
@@ -380,6 +398,32 @@
             this.userIDTxt.Size = new System.Drawing.Size(200, 37);
             this.userIDTxt.TabIndex = 8;
             this.userIDTxt.Text = "user ID";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Location = new System.Drawing.Point(195, 416);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new System.Drawing.Size(71, 25);
+            nameLabel.TabIndex = 7;
+            nameLabel.Text = "name:";
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(272, 413);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
+            this.nameTextBox.TabIndex = 8;
+            // 
+            // descriptionTxt
+            // 
+            this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionTxt.Location = new System.Drawing.Point(100, 224);
+            this.descriptionTxt.Name = "descriptionTxt";
+            this.descriptionTxt.Size = new System.Drawing.Size(419, 24);
+            this.descriptionTxt.TabIndex = 9;
+            this.descriptionTxt.Text = "product description";
             // 
             // CreateStationeryRequestForm
             // 
@@ -444,5 +488,7 @@
         private System.Windows.Forms.Label productNameTxt;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.TextBox userIDTxt;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox descriptionTxt;
     }
 }
