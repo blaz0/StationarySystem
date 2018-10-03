@@ -19,7 +19,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE dbo.stationeryrequest(
-	requestID int NOT NULL,
+	ID int identity(1,1) NOT NULL PRIMARY KEY CLUSTERED,
+	requestID AS 'ID-' + RIGHT('00000000' + CAST(ID as VARCHAR(8)),8) PERSISTED,
+	/*requestID int NOT NULL,*/
 	userID int NOT NULL,
 	productID int NOT NULL,
 	requestDate date NOT NULL,
