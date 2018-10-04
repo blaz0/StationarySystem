@@ -19,9 +19,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE dbo.stationeryrequest(
-	DECLARE @requestID uniqueidentifier
-	SET @requestID = NEWID(),
-	/*requestID int NOT NULL,*/
+	requestID int IDENTITY NOT NULL,
 	userID int NOT NULL,
 	productID int NOT NULL,
 	requestDate date NOT NULL,
