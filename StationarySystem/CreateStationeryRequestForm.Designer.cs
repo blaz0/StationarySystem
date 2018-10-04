@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStationeryRequestForm));
-            System.Windows.Forms.Label nameLabel;
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -50,6 +49,7 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.groupOrder = new System.Windows.Forms.GroupBox();
+            this.descriptionTxt = new System.Windows.Forms.TextBox();
             this.totalPriceTxt = new System.Windows.Forms.TextBox();
             this.priceTxt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,9 +59,6 @@
             this.productNameTxt = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.userIDTxt = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.descriptionTxt = new System.Windows.Forms.TextBox();
-            nameLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -255,8 +252,6 @@
             // groupOrder
             // 
             this.groupOrder.Controls.Add(this.descriptionTxt);
-            this.groupOrder.Controls.Add(nameLabel);
-            this.groupOrder.Controls.Add(this.nameTextBox);
             this.groupOrder.Controls.Add(this.totalPriceTxt);
             this.groupOrder.Controls.Add(this.priceTxt);
             this.groupOrder.Controls.Add(this.label4);
@@ -272,6 +267,15 @@
             this.groupOrder.TabIndex = 29;
             this.groupOrder.TabStop = false;
             this.groupOrder.Text = "Your Order";
+            // 
+            // descriptionTxt
+            // 
+            this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.descriptionTxt.Location = new System.Drawing.Point(100, 224);
+            this.descriptionTxt.Name = "descriptionTxt";
+            this.descriptionTxt.Size = new System.Drawing.Size(419, 24);
+            this.descriptionTxt.TabIndex = 9;
+            this.descriptionTxt.Text = "product description";
             // 
             // totalPriceTxt
             // 
@@ -399,32 +403,6 @@
             this.userIDTxt.TabIndex = 8;
             this.userIDTxt.Text = "user ID";
             // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Location = new System.Drawing.Point(195, 416);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new System.Drawing.Size(71, 25);
-            nameLabel.TabIndex = 7;
-            nameLabel.Text = "name:";
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(272, 413);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
-            this.nameTextBox.TabIndex = 8;
-            // 
-            // descriptionTxt
-            // 
-            this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionTxt.Location = new System.Drawing.Point(100, 224);
-            this.descriptionTxt.Name = "descriptionTxt";
-            this.descriptionTxt.Size = new System.Drawing.Size(419, 24);
-            this.descriptionTxt.TabIndex = 9;
-            this.descriptionTxt.Text = "product description";
-            // 
             // CreateStationeryRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -487,8 +465,7 @@
         private System.Windows.Forms.NumericUpDown qty;
         private System.Windows.Forms.Label productNameTxt;
         private System.Windows.Forms.Button submitBtn;
-        private System.Windows.Forms.TextBox userIDTxt;
-        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox descriptionTxt;
+        private System.Windows.Forms.TextBox userIDTxt;
     }
 }

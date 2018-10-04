@@ -69,6 +69,16 @@ namespace StationarySystem
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            Product selectedProduct = Program.getCurrentProduct();
+            int userid = Convert.ToInt32(userIDTxt.Text);
+            int productid = selectedProduct.productid;
+            sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
+            //statReq.SubmittedStatReq(6, userid, productid, "03/10/2018", "Submitted");
+
+            DataRow workRow = sepdbDataSet.requestedstationery.NewRow();
+            workRow[""]
+
+
             MessageBox.Show("Product Request Submitted.");
             Home homepage = new Home();
             homepage.Show();
