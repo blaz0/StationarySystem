@@ -1912,6 +1912,19 @@
   <metadata name="btnHome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="editBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4gkBECcRjqck2gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFOSURBVEhL
+        1ZW7LgRhHEc30ZAolW4voPYeSm+go5AoqBQSWjphQ69Wk6ATjbjrhJIHwDk7+SffbuzcdhR7kpP9djL7
+        ++W7zE5rQEZwFS/wC+/xCGdxYCbxCn/wGtdwB5/RsgWsjeFPaPieFxLG0FlYMuOFqkT4I+6iJcuYMooP
+        eND5VoEpjHCLZAv/KtnG22xYDsNd3zQ8OMXeEvfkMxsWkxe+hN94iWmJG3+WDfMpE+4ySSyXG+/nCuYy
+        jWXDg9h4j7DPSV8Mf8Eq4d7n/R6E3t90MbzhPnmvWCfcvfJA9GV4w+UO3/FfwifQc2uQgUFRuAfBA1HI
+        PFpwglHSWLgsogXjaKDBjYXLBn5kww4GW5guV4R7ECqFSxt9p6bETCxJw2u9oc7xOBt2ESWertrh8ob+
+        81niTFyufZRNvMHa4eIzYIkzOcR1nMMGaLV+AUdziJkL1R0eAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
