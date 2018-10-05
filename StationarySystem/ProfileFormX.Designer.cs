@@ -397,12 +397,13 @@ namespace StationarySystem
             this.editBtn.BackColor = System.Drawing.Color.Transparent;
             this.editBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editBtn.BackgroundImage")));
             this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.editBtn.Location = new System.Drawing.Point(1803, 499);
+            this.editBtn.Location = new System.Drawing.Point(1803, 463);
             this.editBtn.Margin = new System.Windows.Forms.Padding(6);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(59, 53);
+            this.editBtn.Size = new System.Drawing.Size(102, 89);
             this.editBtn.TabIndex = 9;
             this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
             // cancelBtn
             // 
@@ -415,6 +416,7 @@ namespace StationarySystem
             this.cancelBtn.TabIndex = 10;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
             // saveBtn
             // 

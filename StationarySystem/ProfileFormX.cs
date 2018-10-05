@@ -29,45 +29,12 @@ namespace StationarySystem
             txtCC.Text = loggedInUser.costCentre;
             txtPhoneNo.Text = loggedInUser.phoneNo;
             txtNickname.Text = loggedInUser.nickname;
+
+            cancelBtn.Visible = false;
+            saveBtn.Visible = false;
         }
 
-        private void txtFName_TextChanged(object sender, EventArgs e)
-        {
-            txtFName.ReadOnly = true;
-            //txtFName.Text = "Maxine Koh";
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            txtEmail.ReadOnly = true;
-            //txtEmail.Text = "MaxineK@bigpond.net.au";
-        }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-            txtID.ReadOnly = true;
-            //txtID.Text = "4";
-        }
-
-        private void txtCC_TextChanged(object sender, EventArgs e)
-        {
-            txtCC.ReadOnly = true;
-            //txtCC.Text = "FDAB1004";
-        }
-
-        private void loginToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-//                this.usersTableAdapter.Login(this.sepdbDataSet.users, usernameToolStripTextBox.Text, passwordToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+        
 
         private void lblFullName_Click(object sender, EventArgs e)
         {
@@ -94,6 +61,23 @@ namespace StationarySystem
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            this.cancelBtn.Visible = true;
+            this.saveBtn.Visible = true;
+            this.txtEmail.ReadOnly = false;
+            this.txtPhoneNo.ReadOnly = false;
+            this.txtEmail.BackColor = Color.LightGray;
+            this.txtPhoneNo.BackColor = Color.LightGray;
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
         {
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
