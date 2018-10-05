@@ -38,6 +38,11 @@ namespace StationarySystem
             this.Hide();
         }
 
-        
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profilePage = new ProfileFormX();
+            profilePage.Show();
+            this.Close();
+        }
     }
 }

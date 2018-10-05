@@ -61,7 +61,7 @@
             this.btnProfile2 = new System.Windows.Forms.Button();
             this.okPicture = new System.Windows.Forms.PictureBox();
             this.approveReqBtn = new System.Windows.Forms.Button();
-            this.logoutBtn = new System.Windows.Forms.PictureBox();
+            this.logOutBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productPic)).BeginInit();
@@ -77,7 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // utsLogo
@@ -259,16 +259,30 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.orderedproductsTableAdapter = null;
+            this.tableAdapterManager.product1TableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.requestedstationeryTableAdapter = null;
+            this.tableAdapterManager.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager.supplierorderTableAdapter = null;
+            this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.invoiceTableAdapter = null;
+            this.tableAdapterManager1.orderedproductsTableAdapter = null;
+            this.tableAdapterManager1.product1TableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
+            this.tableAdapterManager1.requestedstationeryTableAdapter = null;
+            this.tableAdapterManager1.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager1.supplierorderTableAdapter = null;
+            this.tableAdapterManager1.supplierTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.usersTableAdapter = this.usersTableAdapter1;
             // 
@@ -403,19 +417,19 @@
             this.approveReqBtn.Text = "Approve / Deny Requests";
             this.approveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.approveReqBtn.UseVisualStyleBackColor = false;
-            this.approveReqBtn.Click += new System.EventHandler(this.approveReqBtn_Click);
             // 
-            // logoutBtn
+            // logOutBtn
             // 
-            this.logoutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logoutBtn.Image")));
-            this.logoutBtn.Location = new System.Drawing.Point(2420, 25);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(100, 100);
-            this.logoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.logoutBtn.TabIndex = 11;
-            this.logoutBtn.TabStop = false;
-            this.logoutBtn.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
+            this.logOutBtn.Location = new System.Drawing.Point(2432, 25);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(100, 100);
+            this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutBtn.TabIndex = 25;
+            this.logOutBtn.TabStop = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // Home
             // 
@@ -423,6 +437,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2550, 1302);
+            this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.okPicture);
             this.Controls.Add(this.approveReqBtn);
             this.Controls.Add(this.pictureBox1);
@@ -435,7 +450,6 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.productPic);
-            this.Controls.Add(this.logoutBtn);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnRequests);
             this.Controls.Add(this.panel1);
@@ -459,7 +473,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.logoutBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,6 +512,6 @@
         private System.Windows.Forms.Button btnProfile2;
         private System.Windows.Forms.PictureBox okPicture;
         private System.Windows.Forms.Button approveReqBtn;
-        private System.Windows.Forms.PictureBox logoutBtn;
+        private System.Windows.Forms.PictureBox logOutBtn;
     }
 }

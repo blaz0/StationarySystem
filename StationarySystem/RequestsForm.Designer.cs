@@ -55,11 +55,11 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -144,6 +144,7 @@
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -331,35 +332,35 @@
             // 
             this.stationeryrequestTableAdapter.ClearBeforeFill = true;
             // 
-            // statusDataGridViewTextBoxColumn
+            // requestIDDataGridViewTextBoxColumn
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            // 
-            // requestDateDataGridViewTextBoxColumn
-            // 
-            this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
-            this.requestDateDataGridViewTextBoxColumn.HeaderText = "requestDate";
-            this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "productID";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
+            this.requestIDDataGridViewTextBoxColumn.HeaderText = "Request ID";
+            this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             // 
-            // requestIDDataGridViewTextBoxColumn
+            // productIDDataGridViewTextBoxColumn
             // 
-            this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
-            this.requestIDDataGridViewTextBoxColumn.HeaderText = "requestID";
-            this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            // 
+            // requestDateDataGridViewTextBoxColumn
+            // 
+            this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
+            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Product Request Date";
+            this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status of Stationery Request";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
             // RequestsForm
             // 

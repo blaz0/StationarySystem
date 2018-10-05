@@ -108,9 +108,11 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void approveReqBtn_Click(object sender, EventArgs e)
+        private void logOutBtn_Click(object sender, EventArgs e)
         {
-
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Hide();
         }
     }
 }
