@@ -33,19 +33,7 @@ namespace StationarySystem
             cancelBtn.Visible = false;
             saveBtn.Visible = false;
         }
-
-        
-
-        private void lblFullName_Click(object sender, EventArgs e)
-        {
-            lblFullName.TextAlign = ContentAlignment.MiddleLeft;
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-            lblEmail.TextAlign = ContentAlignment.MiddleRight;
-        }
-
+                
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
@@ -79,6 +67,18 @@ namespace StationarySystem
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
+            usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text));
+            selectedUser.emailAddress = txtEmail.Text;
+            selectedUser.phoneNo = txtPhoneNo.Text;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();

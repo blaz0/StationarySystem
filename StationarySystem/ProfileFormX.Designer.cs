@@ -181,7 +181,6 @@ namespace StationarySystem
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblFullName
             // 
@@ -197,7 +196,6 @@ namespace StationarySystem
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Nickname:";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.lblFullName.Click += new System.EventHandler(this.lblFullName_Click);
             // 
             // txtPhoneNo
             // 
@@ -429,6 +427,7 @@ namespace StationarySystem
             this.saveBtn.TabIndex = 11;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // ProfileFormX
             // 
