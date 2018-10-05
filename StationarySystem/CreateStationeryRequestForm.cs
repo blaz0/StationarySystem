@@ -19,7 +19,6 @@ namespace StationarySystem
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
-            userIDTxt.Text = "User ID: " + loggedInUser.userId.ToString();
             Product selectedProduct = Program.getCurrentProduct();
 
             sepdbDataSet.productDataTable dt = productTableAdapter.GetDataByProductID(selectedProduct.productid);
@@ -70,14 +69,22 @@ namespace StationarySystem
         private void submitBtn_Click(object sender, EventArgs e)
         {
             Product selectedProduct = Program.getCurrentProduct();
-            int userid = Convert.ToInt32(userIDTxt.Text);
-            int productid = selectedProduct.productid;
+            User selectedUser = Program.getCurrentUser();
+            
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            //statReq.SubmittedStatReq(6, userid, productid, "03/10/2018", "Submitted");
+            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted");
+            
+                //SubmittedStatReq(6, userid, productid, "03/10/2018", "Submitted");
 
-            DataRow workRow = sepdbDataSet.requestedstationery.NewRow();
-            workRow[""]
+            /*DataRow workRow = sepdbDataSet.Tables["stationeryrequest"].NewRow();
+            workRow["userID"] = selectedUser.userId;
+            workRow["productID"] = selectedProduct.productid;
+            workRow["requestDate"] = DateTime.Today;
+            workRow["status"] = "Submitted";
 
+            sepdbDataSet.Tables["stationeryrequest"].Rows.Add(workRow);*/
+
+            
 
             MessageBox.Show("Product Request Submitted.");
             Home homepage = new Home();

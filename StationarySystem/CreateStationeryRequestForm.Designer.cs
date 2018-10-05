@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStationeryRequestForm));
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
@@ -40,13 +38,7 @@
             this.btnHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.refreshBtn = new System.Windows.Forms.Button();
-            this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
-            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
-            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
-            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.groupOrder = new System.Windows.Forms.GroupBox();
             this.descriptionTxt = new System.Windows.Forms.TextBox();
@@ -58,30 +50,26 @@
             this.qty = new System.Windows.Forms.NumericUpDown();
             this.productNameTxt = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
-            this.userIDTxt = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sepdbDataSet = new StationarySystem.sepdbDataSet();
+            this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
+            this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.groupOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.sepdbDataSet;
-            this.productBindingSource.Filter = "";
-            // 
-            // sepdbDataSet
-            // 
-            this.sepdbDataSet.DataSetName = "sepdbDataSet";
-            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // errorProvider1
             // 
@@ -187,40 +175,6 @@
             this.refreshBtn.UseVisualStyleBackColor = false;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.invoiceTableAdapter = null;
-            this.tableAdapterManager.orderedproductsTableAdapter = null;
-            this.tableAdapterManager.product1TableAdapter = null;
-            this.tableAdapterManager.productDetailTableAdapter = null;
-            this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.requestedstationeryTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
-            this.tableAdapterManager.supplierorderTableAdapter = null;
-            this.tableAdapterManager.supplierTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.userrolesTableAdapter = null;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // usersBindingSource2
-            // 
-            this.usersBindingSource2.DataMember = "users";
-            this.usersBindingSource2.DataSource = this.sepdbDataSet;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = this.sepdbDataSet;
-            this.usersBindingSource.Position = 0;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -232,11 +186,6 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "users";
-            this.usersBindingSource1.DataSource = this.sepdbDataSet;
             // 
             // ProductsLbl
             // 
@@ -389,19 +338,55 @@
             this.submitBtn.UseVisualStyleBackColor = false;
             this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
-            // userIDTxt
+            // productBindingSource
             // 
-            this.userIDTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.userIDTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.userIDTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userIDTxt.ForeColor = System.Drawing.Color.Black;
-            this.userIDTxt.Location = new System.Drawing.Point(650, 213);
-            this.userIDTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.userIDTxt.Name = "userIDTxt";
-            this.userIDTxt.ReadOnly = true;
-            this.userIDTxt.Size = new System.Drawing.Size(200, 37);
-            this.userIDTxt.TabIndex = 8;
-            this.userIDTxt.Text = "user ID";
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.sepdbDataSet;
+            this.productBindingSource.Filter = "";
+            // 
+            // sepdbDataSet
+            // 
+            this.sepdbDataSet.DataSetName = "sepdbDataSet";
+            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.orderedproductsTableAdapter = null;
+            this.tableAdapterManager.product1TableAdapter = null;
+            this.tableAdapterManager.productDetailTableAdapter = null;
+            this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.requestedstationeryTableAdapter = null;
+            this.tableAdapterManager.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager.supplierorderTableAdapter = null;
+            this.tableAdapterManager.supplierTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdbDataSet;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = this.sepdbDataSet;
+            this.usersBindingSource.Position = 0;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.sepdbDataSet;
             // 
             // CreateStationeryRequestForm
             // 
@@ -409,7 +394,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2564, 1399);
-            this.Controls.Add(this.userIDTxt);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupOrder);
             this.Controls.Add(this.panel1);
@@ -420,18 +404,18 @@
             this.Name = "CreateStationeryRequestForm";
             this.Text = "CreateStationeryRequest";
             this.Load += new System.EventHandler(this.CreateStationeryRequestForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.groupOrder.ResumeLayout(false);
             this.groupOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,6 +450,5 @@
         private System.Windows.Forms.Label productNameTxt;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.TextBox descriptionTxt;
-        private System.Windows.Forms.TextBox userIDTxt;
     }
 }
