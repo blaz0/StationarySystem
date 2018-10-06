@@ -1,6 +1,6 @@
 ﻿namespace StationarySystem
 {
-    partial class ApproveRequestForm
+    partial class EditRequestForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveRequestForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditRequestForm));
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.qty = new System.Windows.Forms.NumericUpDown();
             this.productNameTxt = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
@@ -53,20 +54,17 @@
             this.btnNotifications = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.refreshBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.groupOrder = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.cancelLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qty)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.groupOrder.SuspendLayout();
@@ -174,10 +172,9 @@
             this.ProductsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductsLbl.Location = new System.Drawing.Point(321, 37);
             this.ProductsLbl.Name = "ProductsLbl";
-            this.ProductsLbl.Size = new System.Drawing.Size(626, 55);
+            this.ProductsLbl.Size = new System.Drawing.Size(528, 55);
             this.ProductsLbl.TabIndex = 31;
-            this.ProductsLbl.Text = "Approve Stationery Request";
-            this.ProductsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
+            this.ProductsLbl.Text = "Edit Stationery Request";
             // 
             // label4
             // 
@@ -208,6 +205,29 @@
             this.label2.Size = new System.Drawing.Size(43, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Qty:";
+            // 
+            // qty
+            // 
+            this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qty.Location = new System.Drawing.Point(379, 70);
+            this.qty.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.qty.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.qty.Name = "qty";
+            this.qty.Size = new System.Drawing.Size(63, 26);
+            this.qty.TabIndex = 2;
+            this.qty.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // productNameTxt
             // 
@@ -297,120 +317,73 @@
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
             // 
-            // refreshBtn
+            // saveBtn
             // 
-            this.refreshBtn.BackColor = System.Drawing.Color.Teal;
-            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(1064, 446);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(150, 34);
-            this.refreshBtn.TabIndex = 33;
-            this.refreshBtn.Text = "Approve";
-            this.refreshBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.BackColor = System.Drawing.Color.Teal;
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(1064, 446);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(150, 34);
+            this.saveBtn.TabIndex = 33;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
             // 
             // groupOrder
             // 
-            this.groupOrder.Controls.Add(this.label1);
             this.groupOrder.Controls.Add(this.descriptionTxt);
             this.groupOrder.Controls.Add(this.totalPriceTxt);
             this.groupOrder.Controls.Add(this.priceTxt);
             this.groupOrder.Controls.Add(this.label4);
             this.groupOrder.Controls.Add(this.label3);
             this.groupOrder.Controls.Add(this.label2);
+            this.groupOrder.Controls.Add(this.qty);
             this.groupOrder.Controls.Add(this.productNameTxt);
             this.groupOrder.Location = new System.Drawing.Point(331, 146);
             this.groupOrder.Name = "groupOrder";
             this.groupOrder.Size = new System.Drawing.Size(883, 295);
             this.groupOrder.TabIndex = 35;
             this.groupOrder.TabStop = false;
-            this.groupOrder.Text = "Request";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(379, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 24);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "<qty>";
+            this.groupOrder.Text = "Your Order";
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // button1
+            // cancelLbl
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(910, 446);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 34);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Reject";
-            this.button1.UseVisualStyleBackColor = false;
+            this.cancelLbl.AutoSize = true;
+            this.cancelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelLbl.Location = new System.Drawing.Point(963, 451);
+            this.cancelLbl.Name = "cancelLbl";
+            this.cancelLbl.Size = new System.Drawing.Size(79, 25);
+            this.cancelLbl.TabIndex = 38;
+            this.cancelLbl.Text = "Cancel";
             // 
-            // cancel
-            // 
-            this.cancel.AutoSize = true;
-            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(814, 451);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(79, 25);
-            this.cancel.TabIndex = 37;
-            this.cancel.Text = "Cancel";
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(331, 554);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(883, 147);
-            this.textBox1.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(326, 526);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(114, 25);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Comments";
-            // 
-            // ApproveRequestForm
+            // EditRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cancelLbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ProductsLbl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.refreshBtn);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.groupOrder);
-            this.Name = "ApproveRequestForm";
-            this.Text = "ApproveRequestForm";
-            this.Load += new System.EventHandler(this.ApproveRequestForm_Load);
+            this.Name = "EditRequestForm";
+            this.Text = "EditRequestForm";
+            this.Load += new System.EventHandler(this.EditRequestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qty)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             this.groupOrder.ResumeLayout(false);
@@ -439,6 +412,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown qty;
         private System.Windows.Forms.Label productNameTxt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;
@@ -446,13 +420,9 @@
         private System.Windows.Forms.Button btnNotifications;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button refreshBtn;
+        private System.Windows.Forms.Button saveBtn;
         private System.Windows.Forms.GroupBox groupOrder;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label cancel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label cancelLbl;
     }
 }

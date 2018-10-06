@@ -10,36 +10,26 @@ using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class ApproveRequestForm : Form
+    public partial class EditRequestForm : Form
     {
-        public ApproveRequestForm()
+        public EditRequestForm()
         {
             InitializeComponent();
         }
 
-        private void ProductsLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cancel_Click(object sender, EventArgs e)
+        private void EditRequestForm_Load(object sender, EventArgs e)
         {
 
         }
 
         private void OnMouseEnter(object sender, EventArgs e)
         {
-            cancel.Font = new Font(cancel.Font, FontStyle.Underline);
+            cancelLbl.Font = new Font(cancelLbl.Font, FontStyle.Underline);
         }
 
         private void OnMouseLeave(object sender, EventArgs e)
         {
-            cancel.Font = new Font(cancel.Font, FontStyle.Regular);
-        }
-
-        private void ApproveRequestForm_Load(object sender, EventArgs e)
-        {
-
+            cancelLbl.Font = new Font(cancelLbl.Font, FontStyle.Regular);
         }
     }
 }
