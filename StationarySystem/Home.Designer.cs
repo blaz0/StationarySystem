@@ -263,7 +263,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.requestedstationeryTableAdapter = null;
             this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
@@ -277,7 +276,6 @@
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
-            this.tableAdapterManager1.requestedstationeryTableAdapter = null;
             this.tableAdapterManager1.stationeryrequestTableAdapter = null;
             this.tableAdapterManager1.supplierorderTableAdapter = null;
             this.tableAdapterManager1.supplierTableAdapter = null;

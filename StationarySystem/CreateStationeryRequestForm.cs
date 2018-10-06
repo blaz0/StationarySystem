@@ -70,12 +70,12 @@ namespace StationarySystem
         {
             Product selectedProduct = Program.getCurrentProduct();
             User selectedUser = Program.getCurrentUser();
+            int quantity = Convert.ToInt32(qty.Value);
+            int totalPrice = Convert.ToInt32(quantity * selectedProduct.price);
             
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted");
-
-            sepdbDataSetTableAdapters.requestedstationeryTableAdapter reqStat = new sepdbDataSetTableAdapters.requestedstationeryTableAdapter();
-
+            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted", quantity, totalPrice);
+            
             /*DataRow workRow = sepdbDataSet.Tables["stationeryrequest"].NewRow();
             workRow["userID"] = selectedUser.userId;
             workRow["productID"] = selectedProduct.productid;
@@ -83,7 +83,7 @@ namespace StationarySystem
             workRow["status"] = "Submitted";
             sepdbDataSet.Tables["stationeryrequest"].Rows.Add(workRow);*/
 
-            MessageBox.Show("Product Request Submitted.");
+            MessageBox.Show("Your Product Request has been Submitted.");
             Home homepage = new Home();
             homepage.Show();
             this.Close();
