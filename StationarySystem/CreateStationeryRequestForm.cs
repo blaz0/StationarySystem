@@ -74,6 +74,8 @@ namespace StationarySystem
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted");
 
+            sepdbDataSetTableAdapters.requestedstationeryTableAdapter reqStat = new sepdbDataSetTableAdapters.requestedstationeryTableAdapter();
+
             /*DataRow workRow = sepdbDataSet.Tables["stationeryrequest"].NewRow();
             workRow["userID"] = selectedUser.userId;
             workRow["productID"] = selectedProduct.productid;
