@@ -183,7 +183,7 @@
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(1942, 924);
+            this.cancelBtn.Location = new System.Drawing.Point(1942, 1108);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(484, 65);
@@ -203,6 +203,7 @@
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchBtn.TabIndex = 25;
             this.searchBtn.TabStop = false;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // logOutBtn
             // 
@@ -239,7 +240,7 @@
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 22;
-            this.SearchBox.Text = "Search requests";
+            this.SearchBox.Text = "Search requests by product";
             // 
             // RequestsLbl
             // 
@@ -260,6 +261,7 @@
             this.requestDataGrid.AllowUserToResizeRows = false;
             this.requestDataGrid.AutoGenerateColumns = false;
             this.requestDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.requestDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
             this.requestDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.requestDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.requestIDDataGridViewTextBoxColumn,
@@ -271,8 +273,11 @@
             this.requestDataGrid.Location = new System.Drawing.Point(650, 337);
             this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.requestDataGrid.Name = "requestDataGrid";
+            this.requestDataGrid.ReadOnly = true;
             this.requestDataGrid.RowHeadersVisible = false;
-            this.requestDataGrid.Size = new System.Drawing.Size(1776, 540);
+            this.requestDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.requestDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.requestDataGrid.Size = new System.Drawing.Size(1776, 722);
             this.requestDataGrid.TabIndex = 31;
             // 
             // requestIDDataGridViewTextBoxColumn
@@ -280,30 +285,35 @@
             this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
             this.requestIDDataGridViewTextBoxColumn.HeaderText = "Request ID";
             this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
+            this.requestIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
             this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // requestDateDataGridViewTextBoxColumn
             // 
             this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
             this.requestDateDataGridViewTextBoxColumn.HeaderText = "Product Request Date";
             this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
+            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status of Stationery Request";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stationeryrequestBindingSource
             // 

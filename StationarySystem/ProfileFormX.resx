@@ -903,6 +903,12 @@
   <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 146</value>
   </metadata>
+  <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 146</value>
+  </metadata>
+  <metadata name="sepdb_SQL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1526, 17</value>
+  </metadata>
   <metadata name="sepdb_SQL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1526, 17</value>
   </metadata>
@@ -1059,6 +1065,12 @@
         RQzlCDq07Z+GuSc6CBuNg9FB2GgcjA7CRuNgdBA2Gofi7dv/Bxg2K7h0Z5b4AAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="btnProfile.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnHome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="utsLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATwAAAG4CAYAAADYJFvIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAd

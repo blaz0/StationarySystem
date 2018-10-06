@@ -91,7 +91,7 @@ namespace StationarySystem
             this.txtNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "nickname", true));
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNickname.Location = new System.Drawing.Point(316, 9);
+            this.txtNickname.Location = new System.Drawing.Point(272, 9);
             this.txtNickname.Margin = new System.Windows.Forms.Padding(4);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.ReadOnly = true;
@@ -122,7 +122,7 @@ namespace StationarySystem
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "emailAddress", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(316, 65);
+            this.txtEmail.Location = new System.Drawing.Point(272, 65);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
@@ -135,7 +135,7 @@ namespace StationarySystem
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 234);
+            this.label1.Location = new System.Drawing.Point(68, 234);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(196, 37);
@@ -148,7 +148,7 @@ namespace StationarySystem
             this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCC.AutoSize = true;
             this.lblCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCC.Location = new System.Drawing.Point(127, 177);
+            this.lblCC.Location = new System.Drawing.Point(83, 177);
             this.lblCC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCC.Name = "lblCC";
             this.lblCC.Size = new System.Drawing.Size(181, 37);
@@ -161,7 +161,7 @@ namespace StationarySystem
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(66, 121);
+            this.lblID.Location = new System.Drawing.Point(22, 121);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(242, 37);
@@ -174,7 +174,7 @@ namespace StationarySystem
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(202, 65);
+            this.lblEmail.Location = new System.Drawing.Point(158, 65);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(106, 37);
@@ -189,7 +189,7 @@ namespace StationarySystem
             this.lblFullName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblFullName.Location = new System.Drawing.Point(139, 9);
+            this.lblFullName.Location = new System.Drawing.Point(95, 9);
             this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(169, 37);
@@ -204,7 +204,7 @@ namespace StationarySystem
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "phoneNumber", true));
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPhoneNo.Location = new System.Drawing.Point(316, 121);
+            this.txtPhoneNo.Location = new System.Drawing.Point(272, 121);
             this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
@@ -219,7 +219,7 @@ namespace StationarySystem
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "userId", true));
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtID.Location = new System.Drawing.Point(316, 177);
+            this.txtID.Location = new System.Drawing.Point(272, 177);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
@@ -235,7 +235,7 @@ namespace StationarySystem
             this.txtCC.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "costCentre", true));
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCC.Location = new System.Drawing.Point(316, 234);
+            this.txtCC.Location = new System.Drawing.Point(272, 234);
             this.txtCC.Margin = new System.Windows.Forms.Padding(4);
             this.txtCC.Name = "txtCC";
             this.txtCC.ReadOnly = true;
@@ -247,8 +247,8 @@ namespace StationarySystem
             // 
             this.tableLayoutPanel1.AutoSize = true;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.20238F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.79762F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.11236F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.88764F));
             this.tableLayoutPanel1.Controls.Add(this.txtCC, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.txtID, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtPhoneNo, 1, 2);
@@ -260,7 +260,7 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1264, 633);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(1306, 633);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -269,7 +269,7 @@ namespace StationarySystem
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(839, 281);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(890, 281);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtFName

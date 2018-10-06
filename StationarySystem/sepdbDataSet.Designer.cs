@@ -44,9 +44,9 @@ namespace StationarySystem {
         
         private userrolesDataTable tableuserroles;
         
-        private global::System.Data.DataRelation relationproduct_details_relation;
-        
         private global::System.Data.DataRelation relationreqstatFKproduct;
+        
+        private global::System.Data.DataRelation relationproduct_details_relation;
         
         private global::System.Data.DataRelation relationreqstatFKproduct1;
         
@@ -428,8 +428,8 @@ namespace StationarySystem {
                     this.tableuserroles.InitVars();
                 }
             }
-            this.relationproduct_details_relation = this.Relations["product_details_relation"];
             this.relationreqstatFKproduct = this.Relations["reqstatFKproduct"];
+            this.relationproduct_details_relation = this.Relations["product_details_relation"];
             this.relationreqstatFKproduct1 = this.Relations["reqstatFKproduct1"];
             this.relationreqstatFKstationeryrequest = this.Relations["reqstatFKstationeryrequest"];
             this.relationstatreqFKproduct = this.Relations["statreqFKproduct"];
@@ -467,14 +467,22 @@ namespace StationarySystem {
             base.Tables.Add(this.tablesupplierorder);
             this.tableuserroles = new userrolesDataTable();
             base.Tables.Add(this.tableuserroles);
-            this.relationproduct_details_relation = new global::System.Data.DataRelation("product_details_relation", new global::System.Data.DataColumn[] {
+            global::System.Data.ForeignKeyConstraint fkc;
+            fkc = new global::System.Data.ForeignKeyConstraint("reqstatFKproduct", new global::System.Data.DataColumn[] {
                         this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableproductDetail.productIDColumn}, false);
-            this.Relations.Add(this.relationproduct_details_relation);
+                        this.tablerequestedstationery.productIDColumn});
+            this.tablerequestedstationery.Constraints.Add(fkc);
+            fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
+            fkc.DeleteRule = global::System.Data.Rule.Cascade;
+            fkc.UpdateRule = global::System.Data.Rule.None;
             this.relationreqstatFKproduct = new global::System.Data.DataRelation("reqstatFKproduct", new global::System.Data.DataColumn[] {
                         this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablerequestedstationery.productIDColumn}, false);
             this.Relations.Add(this.relationreqstatFKproduct);
+            this.relationproduct_details_relation = new global::System.Data.DataRelation("product_details_relation", new global::System.Data.DataColumn[] {
+                        this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableproductDetail.productIDColumn}, false);
+            this.Relations.Add(this.relationproduct_details_relation);
             this.relationreqstatFKproduct1 = new global::System.Data.DataRelation("reqstatFKproduct1", new global::System.Data.DataColumn[] {
                         this.tableproductDetail.productIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablerequestedstationery.productIDColumn}, false);
@@ -3985,23 +3993,23 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public productDetailRow[] GetproductDetailRows() {
-                if ((this.Table.ChildRelations["product_details_relation"] == null)) {
-                    return new productDetailRow[0];
-                }
-                else {
-                    return ((productDetailRow[])(base.GetChildRows(this.Table.ChildRelations["product_details_relation"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public requestedstationeryRow[] GetrequestedstationeryRows() {
                 if ((this.Table.ChildRelations["reqstatFKproduct"] == null)) {
                     return new requestedstationeryRow[0];
                 }
                 else {
                     return ((requestedstationeryRow[])(base.GetChildRows(this.Table.ChildRelations["reqstatFKproduct"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public productDetailRow[] GetproductDetailRows() {
+                if ((this.Table.ChildRelations["product_details_relation"] == null)) {
+                    return new productDetailRow[0];
+                }
+                else {
+                    return ((productDetailRow[])(base.GetChildRows(this.Table.ChildRelations["product_details_relation"])));
                 }
             }
             
