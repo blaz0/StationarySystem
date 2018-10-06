@@ -18,7 +18,12 @@ namespace StationarySystem
         }
         private void RequestsForm_Load(object sender, EventArgs e)
         {
+            User selectedUser = Program.getCurrentUser();
+            int findUserID = selectedUser.userId;
+            stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
             // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
+            saveBtn.Visible = false;
+            cancelBtn2.Visible = false;
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
@@ -49,9 +54,9 @@ namespace StationarySystem
         {
             User selectedUser = Program.getCurrentUser();
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
-            int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
-            string requestStatus = requestDataGrid.CurrentRow.Cells[4].Value.ToString();
-            string requestedDate = requestDataGrid.CurrentRow.Cells[3].Value.ToString();
+            //int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
+            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            //string requestedDate = requestDataGrid.CurrentRow.Cells[3].Value.ToString();
 
             if (requestStatus == "Submitted")
             {
@@ -77,6 +82,43 @@ namespace StationarySystem
         {
             string searchValue = SearchBox.Text;
             stationeryrequestBindingSource.Filter = "productID LIKE '*" + searchValue + "*'";
+        }
+        
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            if (requestStatus == "Submitted")
+            {
+                cancelBtn.Enabled = false;
+                saveBtn.Visible = true;
+                cancelBtn2.Visible = true;
+
+                /*this.requestDataGrid.CurrentRow.Cells[4].ReadOnly = false;*/
+                
+                /*DataGridViewCell cell = requestDataGrid[4, ];
+                requestDataGrid.CurrentCell = cell;
+                requestDataGrid.BeginEdit(true);*/
+
+                //int selectedQuantity = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
+            }
+            else
+            {
+                MessageBox.Show("Sorry, this request cannot be edited.");
+            }
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+            this.Close();
+        }
+
+        private void cancelBtn2_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+            this.Close();
         }
     }
 }

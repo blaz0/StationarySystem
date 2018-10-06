@@ -7277,7 +7277,7 @@ SELECT requestID, userID, productID, requestDate, status, quantity, totalPrice F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int SubmitStatReq(int userID, int productID, string requestDate, string status, int quantity, int totalPrice) {
+        public virtual int SubmitStatReq(int userID, int productID, string requestDate, string status, global::System.Nullable<int> quantity, int totalPrice) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((int)(userID));
             command.Parameters[1].Value = ((int)(productID));
@@ -7293,7 +7293,12 @@ SELECT requestID, userID, productID, requestDate, status, quantity, totalPrice F
             else {
                 command.Parameters[3].Value = ((string)(status));
             }
-            command.Parameters[4].Value = ((int)(quantity));
+            if ((quantity.HasValue == true)) {
+                command.Parameters[4].Value = ((int)(quantity.Value));
+            }
+            else {
+                command.Parameters[4].Value = global::System.DBNull.Value;
+            }
             command.Parameters[5].Value = ((int)(totalPrice));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 

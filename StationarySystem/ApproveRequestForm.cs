@@ -17,24 +17,61 @@ namespace StationarySystem
             InitializeComponent();
         }
 
-        private void ProductsLbl_Click(object sender, EventArgs e)
+        private void ApproveRequestForm_Load(object sender, EventArgs e)
         {
-
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void cancel_Click(object sender, EventArgs e)
         {
-
+            ApproveRequestForm form = new ApproveRequestForm();
+            form.Show();
+            this.Close();
         }
-
-        private void OnMouseEnter(object sender, EventArgs e)
+        
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            cancel.Font = new Font(cancel.Font, FontStyle.Underline);
+            Home homepage = new Home();
+            homepage.Show();
+            this.Close();
         }
 
-        private void OnMouseLeave(object sender, EventArgs e)
+        private void btnProfile_Click(object sender, EventArgs e)
         {
-            cancel.Font = new Font(cancel.Font, FontStyle.Regular);
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
         }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to approve this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // user clicked yes
+                
+            }
+            else
+            {
+                // user clicked no
+                //nothing happens, return to "My Requests" page
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to reject this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // user clicked yes
+
+            }
+            else
+            {
+                // user clicked no
+                //nothing happens, return to "My Requests" page
+            }
+        }
+
+        
     }
 }

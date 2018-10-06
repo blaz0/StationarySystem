@@ -122,7 +122,7 @@
             // 
             this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.descriptionTxt.Location = new System.Drawing.Point(100, 223);
-            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(4);
             this.descriptionTxt.Name = "descriptionTxt";
             this.descriptionTxt.Size = new System.Drawing.Size(420, 24);
             this.descriptionTxt.TabIndex = 9;
@@ -135,7 +135,7 @@
             this.totalPriceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.totalPriceTxt.ForeColor = System.Drawing.Color.Black;
             this.totalPriceTxt.Location = new System.Drawing.Point(1496, 415);
-            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.totalPriceTxt.Name = "totalPriceTxt";
             this.totalPriceTxt.ReadOnly = true;
             this.totalPriceTxt.Size = new System.Drawing.Size(200, 73);
@@ -149,7 +149,7 @@
             this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.priceTxt.ForeColor = System.Drawing.Color.Black;
             this.priceTxt.Location = new System.Drawing.Point(1484, 137);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.priceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.ReadOnly = true;
             this.priceTxt.Size = new System.Drawing.Size(220, 43);
@@ -160,7 +160,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2614, 21);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,7 +177,6 @@
             this.ProductsLbl.Size = new System.Drawing.Size(1240, 108);
             this.ProductsLbl.TabIndex = 31;
             this.ProductsLbl.Text = "Approve Stationery Request";
-            this.ProductsLbl.Click += new System.EventHandler(this.ProductsLbl_Click);
             // 
             // label4
             // 
@@ -234,7 +233,7 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 34;
@@ -243,7 +242,7 @@
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +256,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -271,7 +270,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -285,12 +284,13 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 637);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnHome
             // 
@@ -300,12 +300,13 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // refreshBtn
             // 
@@ -314,12 +315,13 @@
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.refreshBtn.ForeColor = System.Drawing.Color.White;
             this.refreshBtn.Location = new System.Drawing.Point(2128, 858);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(300, 65);
             this.refreshBtn.TabIndex = 33;
             this.refreshBtn.Text = "Approve";
             this.refreshBtn.UseVisualStyleBackColor = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // groupOrder
             // 
@@ -332,9 +334,9 @@
             this.groupOrder.Controls.Add(this.label2);
             this.groupOrder.Controls.Add(this.productNameTxt);
             this.groupOrder.Location = new System.Drawing.Point(662, 281);
-            this.groupOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
             this.groupOrder.Name = "groupOrder";
-            this.groupOrder.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
             this.groupOrder.Size = new System.Drawing.Size(1766, 567);
             this.groupOrder.TabIndex = 35;
             this.groupOrder.TabStop = false;
@@ -362,12 +364,13 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1820, 858);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 65);
             this.button1.TabIndex = 36;
             this.button1.Text = "Reject";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cancel
             // 
@@ -394,9 +397,10 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.groupOrder);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ApproveRequestForm";
             this.Text = "ApproveRequestForm";
+            this.Load += new System.EventHandler(this.ApproveRequestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();

@@ -126,5 +126,18 @@ namespace StationarySystem
             this.Hide();
         }
 
+        private void okPicture_Click(object sender, EventArgs e)
+        {
+            ApproveRequestForm approve = new ApproveRequestForm();
+            approve.Show();
+            this.Close();
+        }
+
+        private void approveReqBtn_Click(object sender, EventArgs e)
+        {
+            ApproveRequestForm approve = new ApproveRequestForm();
+            approve.Show();
+            this.Close();
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.utsLogo = new System.Windows.Forms.PictureBox();
@@ -63,6 +63,9 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             this.sepdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
+            this.cancelBtn2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -186,7 +189,7 @@
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(1942, 1091);
+            this.cancelBtn.Location = new System.Drawing.Point(1942, 949);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(484, 65);
@@ -264,14 +267,14 @@
             this.totalPrice,
             this.statusDataGridViewTextBoxColumn});
             this.requestDataGrid.DataSource = this.stationeryrequestBindingSource;
+            this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.requestDataGrid.Location = new System.Drawing.Point(650, 337);
             this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.requestDataGrid.Name = "requestDataGrid";
-            this.requestDataGrid.ReadOnly = true;
             this.requestDataGrid.RowHeadersVisible = false;
             this.requestDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.requestDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.requestDataGrid.Size = new System.Drawing.Size(1776, 722);
+            this.requestDataGrid.Size = new System.Drawing.Size(1776, 588);
             this.requestDataGrid.TabIndex = 31;
             // 
             // requestIDDataGridViewTextBoxColumn
@@ -279,21 +282,18 @@
             this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
             this.requestIDDataGridViewTextBoxColumn.HeaderText = "Request ID";
             this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
-            this.requestIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
             this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // requestDateDataGridViewTextBoxColumn
@@ -301,31 +301,27 @@
             this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
             this.requestDateDataGridViewTextBoxColumn.HeaderText = "Request Date";
             this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
-            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quantity
             // 
             this.quantity.DataPropertyName = "quantity";
             this.quantity.HeaderText = "Quantity";
             this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
             // 
             // totalPrice
             // 
             this.totalPrice.DataPropertyName = "totalPrice";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle3;
             this.totalPrice.HeaderText = "Total Price";
             this.totalPrice.Name = "totalPrice";
-            this.totalPrice.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stationeryrequestBindingSource
             // 
@@ -388,13 +384,60 @@
             this.sepdbDataSetBindingSource.DataSource = this.sepdbDataSet;
             this.sepdbDataSetBindingSource.Position = 0;
             // 
+            // editBtn
+            // 
+            this.editBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.editBtn.BackColor = System.Drawing.Color.Transparent;
+            this.editBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editBtn.BackgroundImage")));
+            this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.editBtn.Location = new System.Drawing.Point(1849, 949);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(65, 65);
+            this.editBtn.TabIndex = 32;
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.BackColor = System.Drawing.Color.Teal;
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(1942, 1042);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(219, 65);
+            this.saveBtn.TabIndex = 33;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // cancelBtn2
+            // 
+            this.cancelBtn2.BackColor = System.Drawing.Color.Teal;
+            this.cancelBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cancelBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.cancelBtn2.ForeColor = System.Drawing.Color.White;
+            this.cancelBtn2.Location = new System.Drawing.Point(2207, 1042);
+            this.cancelBtn2.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelBtn2.Name = "cancelBtn2";
+            this.cancelBtn2.Size = new System.Drawing.Size(219, 65);
+            this.cancelBtn2.TabIndex = 34;
+            this.cancelBtn2.Text = "Cancel";
+            this.cancelBtn2.UseVisualStyleBackColor = false;
+            this.cancelBtn2.Click += new System.EventHandler(this.cancelBtn2_Click);
+            // 
             // RequestsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2658, 1399);
+            this.ClientSize = new System.Drawing.Size(2564, 1399);
+            this.Controls.Add(this.cancelBtn2);
+            this.Controls.Add(this.saveBtn);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.requestDataGrid);
             this.Controls.Add(this.clearSearchBtn);
             this.Controls.Add(this.panel1);
@@ -450,7 +493,6 @@
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.DataGridView requestDataGrid;
         private System.Windows.Forms.BindingSource stationeryrequestBindingSource;
-        private sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
         private System.Windows.Forms.BindingSource sepdbDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
@@ -459,5 +501,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button editBtn;
+        private System.Windows.Forms.Button cancelBtn2;
+        private System.Windows.Forms.Button saveBtn;
+        public sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
     }
 }
