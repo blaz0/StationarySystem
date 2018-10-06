@@ -479,6 +479,18 @@ WHERE [requestID] = @Original_requestID</CommandText>
                   </DbCommand>
                 </DeleteCommand>
               </DbSource>
+              <DbSource ConnectionRef="sepdb_Azure1 (Settings)" DbObjectType="Unknown" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByProductID" GetMethodModifier="Public" GetMethodName="GetDataByProductID" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByProductID" UserSourceName="GetDataByProductID">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT s.requestID, s.userID, s.productID, s.requestDate, s.status, s.quantity, s.totalPrice, p.name, p.description 
+FROM stationeryrequest s
+INNER JOIN product p
+ON s.productID = p.productID 
+ORDER BY s.requestID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
               <DbSource ConnectionRef="sepdb_Azure1 (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="SubmitStatReq" Modifier="Public" Name="SubmitStatReq" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="SubmitStatReq">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">

@@ -15,6 +15,8 @@ namespace StationarySystem
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
+            loadingCircle1.Visible = false;
             this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
@@ -36,6 +38,7 @@ namespace StationarySystem
                 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             Home homepage = new Home();
             homepage.Show();
             this.Close();
@@ -43,6 +46,7 @@ namespace StationarySystem
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
@@ -50,6 +54,7 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -57,6 +62,7 @@ namespace StationarySystem
 
         private void editBtn_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             this.cancelBtn.Visible = true;
             this.saveBtn.Visible = true;
             this.txtEmail.ReadOnly = false;
@@ -67,6 +73,7 @@ namespace StationarySystem
 
         private void cancelBtn_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -74,6 +81,7 @@ namespace StationarySystem
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             User selectedUser = Program.getCurrentUser();
             sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
             usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text));

@@ -40,6 +40,7 @@ namespace StationarySystem
             this.LoginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loadingCircle = new CircularProgressBar.CircularProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +117,6 @@ namespace StationarySystem
             this.label1.Size = new System.Drawing.Size(222, 85);
             this.label1.TabIndex = 5;
             this.label1.Text = "Login";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -129,6 +129,38 @@ namespace StationarySystem
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // loadingCircle
+            // 
+            this.loadingCircle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle.AnimationSpeed = 500;
+            this.loadingCircle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle.InnerMargin = 2;
+            this.loadingCircle.InnerWidth = -1;
+            this.loadingCircle.Location = new System.Drawing.Point(520, 369);
+            this.loadingCircle.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle.Name = "loadingCircle";
+            this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle.OuterMargin = -35;
+            this.loadingCircle.OuterWidth = 26;
+            this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle.ProgressWidth = 20;
+            this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle.StartAngle = 270;
+            this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle.SubscriptText = "";
+            this.loadingCircle.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle.SuperscriptText = "";
+            this.loadingCircle.TabIndex = 7;
+            this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            // 
             // LoginForm
             // 
             this.AcceptButton = this.LoginBtn;
@@ -136,6 +168,7 @@ namespace StationarySystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(768, 513);
+            this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginBtn);
@@ -161,7 +194,7 @@ namespace StationarySystem
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             LoginBtn.Enabled = false;
-
+            loadingCircle.Visible = false;
         }
         //void calculate()
         //{
@@ -183,5 +216,6 @@ namespace StationarySystem
         public System.Windows.Forms.TextBox StaffIDTF;
         private Label label1;
         private PictureBox pictureBox1;
+        private CircularProgressBar.CircularProgressBar loadingCircle;
     }
 }

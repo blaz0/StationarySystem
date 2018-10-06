@@ -19,6 +19,7 @@ namespace StationarySystem
 
         private void Homepage_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
@@ -47,6 +48,7 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -54,6 +56,7 @@ namespace StationarySystem
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
             this.Close();
@@ -61,6 +64,7 @@ namespace StationarySystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
@@ -68,6 +72,7 @@ namespace StationarySystem
 
         private void productPic_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
             this.Close();
@@ -75,6 +80,7 @@ namespace StationarySystem
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             Home homepage = new Home();
             homepage.Show();
             this.Close();
@@ -82,6 +88,7 @@ namespace StationarySystem
         
         private void btnRequests_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             RequestsForm requests = new RequestsForm();
             requests.Show();
             this.Close();
@@ -89,6 +96,7 @@ namespace StationarySystem
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             RequestsForm requests = new RequestsForm();
             requests.Show();
             this.Close();
@@ -96,6 +104,7 @@ namespace StationarySystem
 
         private void btnProfile2_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -103,6 +112,7 @@ namespace StationarySystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -110,14 +120,11 @@ namespace StationarySystem
 
         private void logOutBtn_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Hide();
         }
 
-        private void welcomeTxt_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
