@@ -77,6 +77,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApprovePopup.Designer.cs">
+      <DependentUpon>ApprovePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveRequestForm.Designer.cs">
+      <DependentUpon>ApproveRequestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="CreateStationeryRequestForm.cs">
       <SubType>Form</SubType>
@@ -112,6 +124,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RejectPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RejectPopup.Designer.cs">
+      <DependentUpon>RejectPopup.cs</DependentUpon>
+    </Compile>
     <Compile Include="RequestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +145,12 @@
       <DependentUpon>sepdbDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="ApprovePopup.resx">
+      <DependentUpon>ApprovePopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveRequestForm.resx">
+      <DependentUpon>ApproveRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateStationeryRequestForm.resx">
       <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +175,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RejectPopup.resx">
+      <DependentUpon>RejectPopup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RequestsForm.resx">
       <DependentUpon>RequestsForm.cs</DependentUpon>
     </EmbeddedResource>

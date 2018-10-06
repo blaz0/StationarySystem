@@ -114,5 +114,10 @@ namespace StationarySystem
             loginPage.Show();
             this.Hide();
         }
+
+        private void welcomeTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

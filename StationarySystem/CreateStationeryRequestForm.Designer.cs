@@ -49,9 +49,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.qty = new System.Windows.Forms.NumericUpDown();
             this.productNameTxt = new System.Windows.Forms.Label();
-            this.submitBtn = new System.Windows.Forms.Button();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
+            this.submitBtn = new System.Windows.Forms.Button();
             this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.tableAdapterManager = new StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager();
             this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
@@ -78,10 +78,9 @@
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
+            this.utsLogo.Location = new System.Drawing.Point(75, 82);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(200, 288);
+            this.utsLogo.Size = new System.Drawing.Size(100, 150);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
@@ -92,10 +91,9 @@
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 813);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 423);
             this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
+            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "System Settings";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
@@ -106,10 +104,9 @@
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 377);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
+            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Notifications";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -120,10 +117,9 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 637);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
+            this.btnProfile.Location = new System.Drawing.Point(0, 331);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(500, 77);
+            this.btnProfile.Size = new System.Drawing.Size(250, 40);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
@@ -136,10 +132,9 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
+            this.btnHome.Location = new System.Drawing.Point(0, 285);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(500, 77);
+            this.btnHome.Size = new System.Drawing.Size(250, 40);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -155,9 +150,8 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1399);
+            this.panel1.Size = new System.Drawing.Size(250, 741);
             this.panel1.TabIndex = 28;
             // 
             // refreshBtn
@@ -166,10 +160,10 @@
             this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(1942, 855);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.refreshBtn.Location = new System.Drawing.Point(971, 445);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(474, 65);
+            this.refreshBtn.Size = new System.Drawing.Size(237, 34);
             this.refreshBtn.TabIndex = 27;
             this.refreshBtn.Text = "Refresh Total Price";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -178,10 +172,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2432, 25);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(1301, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 52);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -191,10 +185,9 @@
             // 
             this.ProductsLbl.AutoSize = true;
             this.ProductsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsLbl.Location = new System.Drawing.Point(630, 71);
-            this.ProductsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.ProductsLbl.Location = new System.Drawing.Point(315, 37);
             this.ProductsLbl.Name = "ProductsLbl";
-            this.ProductsLbl.Size = new System.Drawing.Size(1171, 108);
+            this.ProductsLbl.Size = new System.Drawing.Size(591, 55);
             this.ProductsLbl.TabIndex = 21;
             this.ProductsLbl.Text = "Create Stationery Request";
             // 
@@ -208,11 +201,9 @@
             this.groupOrder.Controls.Add(this.label2);
             this.groupOrder.Controls.Add(this.qty);
             this.groupOrder.Controls.Add(this.productNameTxt);
-            this.groupOrder.Location = new System.Drawing.Point(650, 280);
-            this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
+            this.groupOrder.Location = new System.Drawing.Point(325, 146);
             this.groupOrder.Name = "groupOrder";
-            this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
-            this.groupOrder.Size = new System.Drawing.Size(1766, 567);
+            this.groupOrder.Size = new System.Drawing.Size(883, 295);
             this.groupOrder.TabIndex = 29;
             this.groupOrder.TabStop = false;
             this.groupOrder.Text = "Your Order";
@@ -220,9 +211,10 @@
             // descriptionTxt
             // 
             this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionTxt.Location = new System.Drawing.Point(100, 224);
+            this.descriptionTxt.Location = new System.Drawing.Point(50, 116);
+            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.descriptionTxt.Name = "descriptionTxt";
-            this.descriptionTxt.Size = new System.Drawing.Size(419, 24);
+            this.descriptionTxt.Size = new System.Drawing.Size(210, 13);
             this.descriptionTxt.TabIndex = 9;
             this.descriptionTxt.Text = "product description";
             // 
@@ -232,11 +224,10 @@
             this.totalPriceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.totalPriceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.totalPriceTxt.ForeColor = System.Drawing.Color.Black;
-            this.totalPriceTxt.Location = new System.Drawing.Point(1497, 416);
-            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.totalPriceTxt.Location = new System.Drawing.Point(748, 216);
             this.totalPriceTxt.Name = "totalPriceTxt";
             this.totalPriceTxt.ReadOnly = true;
-            this.totalPriceTxt.Size = new System.Drawing.Size(200, 73);
+            this.totalPriceTxt.Size = new System.Drawing.Size(100, 37);
             this.totalPriceTxt.TabIndex = 7;
             this.totalPriceTxt.Text = "$0.00";
             // 
@@ -246,11 +237,10 @@
             this.priceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.priceTxt.ForeColor = System.Drawing.Color.Black;
-            this.priceTxt.Location = new System.Drawing.Point(1484, 136);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.priceTxt.Location = new System.Drawing.Point(742, 71);
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.ReadOnly = true;
-            this.priceTxt.Size = new System.Drawing.Size(220, 43);
+            this.priceTxt.Size = new System.Drawing.Size(110, 22);
             this.priceTxt.TabIndex = 6;
             this.priceTxt.Text = "priceperitem";
             // 
@@ -258,10 +248,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label4.Location = new System.Drawing.Point(1143, 416);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(572, 216);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(356, 73);
+            this.label4.Size = new System.Drawing.Size(179, 37);
             this.label4.TabIndex = 5;
             this.label4.Text = "Total Price:";
             // 
@@ -269,10 +258,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(1214, 136);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Location = new System.Drawing.Point(607, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 44);
+            this.label3.Size = new System.Drawing.Size(131, 24);
             this.label3.TabIndex = 4;
             this.label3.Text = "Price per item:";
             // 
@@ -280,18 +268,16 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(660, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(330, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 44);
+            this.label2.Size = new System.Drawing.Size(43, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Qty:";
             // 
             // qty
             // 
             this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qty.Location = new System.Drawing.Point(758, 135);
-            this.qty.Margin = new System.Windows.Forms.Padding(6);
+            this.qty.Location = new System.Drawing.Point(379, 70);
             this.qty.Maximum = new decimal(new int[] {
             999,
             0,
@@ -303,7 +289,7 @@
             0,
             0});
             this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(126, 44);
+            this.qty.Size = new System.Drawing.Size(63, 26);
             this.qty.TabIndex = 2;
             this.qty.Value = new decimal(new int[] {
             1,
@@ -316,27 +302,11 @@
             this.productNameTxt.AutoSize = true;
             this.productNameTxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
             this.productNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNameTxt.Location = new System.Drawing.Point(90, 137);
-            this.productNameTxt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.productNameTxt.Location = new System.Drawing.Point(45, 71);
             this.productNameTxt.Name = "productNameTxt";
-            this.productNameTxt.Size = new System.Drawing.Size(286, 48);
+            this.productNameTxt.Size = new System.Drawing.Size(148, 25);
             this.productNameTxt.TabIndex = 0;
             this.productNameTxt.Text = "Product Name";
-            // 
-            // submitBtn
-            // 
-            this.submitBtn.BackColor = System.Drawing.Color.Teal;
-            this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.submitBtn.ForeColor = System.Drawing.Color.White;
-            this.submitBtn.Location = new System.Drawing.Point(1942, 954);
-            this.submitBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.submitBtn.Name = "submitBtn";
-            this.submitBtn.Size = new System.Drawing.Size(474, 65);
-            this.submitBtn.TabIndex = 30;
-            this.submitBtn.Text = "Submit Product Request";
-            this.submitBtn.UseVisualStyleBackColor = false;
-            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // productBindingSource
             // 
@@ -348,6 +318,21 @@
             // 
             this.sepdbDataSet.DataSetName = "sepdbDataSet";
             this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // submitBtn
+            // 
+            this.submitBtn.BackColor = System.Drawing.Color.Teal;
+            this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.submitBtn.ForeColor = System.Drawing.Color.White;
+            this.submitBtn.Location = new System.Drawing.Point(971, 496);
+            this.submitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.submitBtn.Name = "submitBtn";
+            this.submitBtn.Size = new System.Drawing.Size(237, 34);
+            this.submitBtn.TabIndex = 30;
+            this.submitBtn.Text = "Submit Product Request";
+            this.submitBtn.UseVisualStyleBackColor = false;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // productTableAdapter
             // 
@@ -365,7 +350,6 @@
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // usersTableAdapter
@@ -389,17 +373,16 @@
             // 
             // CreateStationeryRequestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2564, 1399);
+            this.ClientSize = new System.Drawing.Size(1362, 741);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.groupOrder);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ProductsLbl);
-            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateStationeryRequestForm";
             this.Text = "CreateStationeryRequest";
             this.Load += new System.EventHandler(this.CreateStationeryRequestForm_Load);
