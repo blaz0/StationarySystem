@@ -44,5 +44,20 @@ namespace StationarySystem
             profilePage.Show();
             this.Close();
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            if (MessageBox.Show("Are you sure you want to cancel this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // user clicked yes
+
+            }
+            else
+            {
+                // user clicked no
+                //nothing happens, return to "My Requests" page
+            }
+        }
     }
 }

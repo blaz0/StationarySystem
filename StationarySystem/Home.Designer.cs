@@ -261,7 +261,6 @@
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.invoiceTableAdapter = null;
             this.tableAdapterManager.orderedproductsTableAdapter = null;
-            this.tableAdapterManager.product1TableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
             this.tableAdapterManager.requestedstationeryTableAdapter = null;
@@ -276,7 +275,6 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.invoiceTableAdapter = null;
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
-            this.tableAdapterManager1.product1TableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
             this.tableAdapterManager1.requestedstationeryTableAdapter = null;
@@ -325,7 +323,7 @@
             this.btnNotification.BackColor = System.Drawing.Color.Black;
             this.btnNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotification.ForeColor = System.Drawing.Color.White;
-            this.btnNotification.Location = new System.Drawing.Point(544, 625);
+            this.btnNotification.Location = new System.Drawing.Point(1820, 625);
             this.btnNotification.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotification.Name = "btnNotification";
             this.btnNotification.Size = new System.Drawing.Size(600, 250);
@@ -337,7 +335,7 @@
             // notifyPicture
             // 
             this.notifyPicture.Image = ((System.Drawing.Image)(resources.GetObject("notifyPicture.Image")));
-            this.notifyPicture.Location = new System.Drawing.Point(771, 662);
+            this.notifyPicture.Location = new System.Drawing.Point(2047, 662);
             this.notifyPicture.Name = "notifyPicture";
             this.notifyPicture.Size = new System.Drawing.Size(140, 140);
             this.notifyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -397,7 +395,7 @@
             // okPicture
             // 
             this.okPicture.Image = ((System.Drawing.Image)(resources.GetObject("okPicture.Image")));
-            this.okPicture.Location = new System.Drawing.Point(2047, 670);
+            this.okPicture.Location = new System.Drawing.Point(771, 670);
             this.okPicture.Name = "okPicture";
             this.okPicture.Size = new System.Drawing.Size(140, 140);
             this.okPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -409,7 +407,7 @@
             this.approveReqBtn.BackColor = System.Drawing.Color.Black;
             this.approveReqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.approveReqBtn.ForeColor = System.Drawing.Color.White;
-            this.approveReqBtn.Location = new System.Drawing.Point(1820, 625);
+            this.approveReqBtn.Location = new System.Drawing.Point(544, 625);
             this.approveReqBtn.Margin = new System.Windows.Forms.Padding(6);
             this.approveReqBtn.Name = "approveReqBtn";
             this.approveReqBtn.Size = new System.Drawing.Size(600, 250);
@@ -420,7 +418,6 @@
             // 
             // logOutBtn
             // 
-            this.logOutBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
             this.logOutBtn.Location = new System.Drawing.Point(2432, 25);
             this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
