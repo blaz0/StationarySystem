@@ -57,7 +57,7 @@ namespace StationarySystem
                 if (MessageBox.Show("Are you sure you want to cancel this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // user clicked yes
-                    this.stationeryrequestTableAdapter.CancelStatReq(selectedRequestID, selectedProductID, "Submitted");
+                    
                     this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
             }
                 else

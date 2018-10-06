@@ -44,8 +44,6 @@ namespace StationarySystem {
         
         private userrolesDataTable tableuserroles;
         
-        private global::System.Data.DataRelation relationreqstatFKproduct;
-        
         private global::System.Data.DataRelation relationproduct_details_relation;
         
         private global::System.Data.DataRelation relationreqstatFKproduct1;
@@ -428,7 +426,6 @@ namespace StationarySystem {
                     this.tableuserroles.InitVars();
                 }
             }
-            this.relationreqstatFKproduct = this.Relations["reqstatFKproduct"];
             this.relationproduct_details_relation = this.Relations["product_details_relation"];
             this.relationreqstatFKproduct1 = this.Relations["reqstatFKproduct1"];
             this.relationreqstatFKstationeryrequest = this.Relations["reqstatFKstationeryrequest"];
@@ -475,10 +472,6 @@ namespace StationarySystem {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.Cascade;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            this.relationreqstatFKproduct = new global::System.Data.DataRelation("reqstatFKproduct", new global::System.Data.DataColumn[] {
-                        this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablerequestedstationery.productIDColumn}, false);
-            this.Relations.Add(this.relationreqstatFKproduct);
             this.relationproduct_details_relation = new global::System.Data.DataRelation("product_details_relation", new global::System.Data.DataColumn[] {
                         this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableproductDetail.productIDColumn}, false);
@@ -2463,7 +2456,7 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public requestedstationeryRow AddrequestedstationeryRow(stationeryrequestRow parentstationeryrequestRowByreqstatFKstationeryrequest, productRow parentproductRowByreqstatFKproduct, int quantity) {
+            public requestedstationeryRow AddrequestedstationeryRow(stationeryrequestRow parentstationeryrequestRowByreqstatFKstationeryrequest, productDetailRow parentproductDetailRowByreqstatFKproduct1, int quantity) {
                 requestedstationeryRow rowrequestedstationeryRow = ((requestedstationeryRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2472,8 +2465,8 @@ namespace StationarySystem {
                 if ((parentstationeryrequestRowByreqstatFKstationeryrequest != null)) {
                     columnValuesArray[0] = parentstationeryrequestRowByreqstatFKstationeryrequest[0];
                 }
-                if ((parentproductRowByreqstatFKproduct != null)) {
-                    columnValuesArray[1] = parentproductRowByreqstatFKproduct[0];
+                if ((parentproductDetailRowByreqstatFKproduct1 != null)) {
+                    columnValuesArray[1] = parentproductDetailRowByreqstatFKproduct1[0];
                 }
                 rowrequestedstationeryRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowrequestedstationeryRow);
@@ -3993,17 +3986,6 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public requestedstationeryRow[] GetrequestedstationeryRows() {
-                if ((this.Table.ChildRelations["reqstatFKproduct"] == null)) {
-                    return new requestedstationeryRow[0];
-                }
-                else {
-                    return ((requestedstationeryRow[])(base.GetChildRows(this.Table.ChildRelations["reqstatFKproduct"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public productDetailRow[] GetproductDetailRows() {
                 if ((this.Table.ChildRelations["product_details_relation"] == null)) {
                     return new productDetailRow[0];
@@ -4476,17 +4458,6 @@ namespace StationarySystem {
                 }
                 set {
                     this[this.tablerequestedstationery.quantityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public productRow productRow {
-                get {
-                    return ((productRow)(this.GetParentRow(this.Table.ParentRelations["reqstatFKproduct"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["reqstatFKproduct"]);
                 }
             }
             
@@ -7720,11 +7691,13 @@ SELECT requestID, userID, productID, requestDate, status FROM stationeryrequest 
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "DELETE FROM [dbo].[stationeryrequest] \r\nWHERE (([requestID] = @Original_requestID" +
-                ") AND ([productID] = @Original_productID) AND ([status] = @Original_status))";
+                ") AND ([productID] = @Original_productID) ";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "requestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_productID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requestID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_productID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requestDate", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "requestDate", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_status", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
             this._commandCollection[2].CommandText = "INSERT INTO [dbo].[stationeryrequest] ([userID], [productID], [requestDate], [sta" +
@@ -7904,15 +7877,17 @@ SELECT requestID, userID, productID, requestDate, status FROM stationeryrequest 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int CancelStatReq(int Original_requestID, int Original_productID, string Original_status) {
+        public virtual int DeleteRequest(int Original_requestID, int Original_userID, int Original_productID, System.DateTime Original_requestDate, string Original_status) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
             command.Parameters[0].Value = ((int)(Original_requestID));
-            command.Parameters[1].Value = ((int)(Original_productID));
+            command.Parameters[1].Value = ((int)(Original_userID));
+            command.Parameters[2].Value = ((int)(Original_productID));
+            command.Parameters[3].Value = ((System.DateTime)(Original_requestDate));
             if ((Original_status == null)) {
                 throw new global::System.ArgumentNullException("Original_status");
             }
             else {
-                command.Parameters[2].Value = ((string)(Original_status));
+                command.Parameters[4].Value = ((string)(Original_status));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
