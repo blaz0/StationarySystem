@@ -44,5 +44,37 @@ namespace StationarySystem
             profilePage.Show();
             this.Close();
         }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+            int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
+            string requestStatus = requestDataGrid.CurrentRow.Cells[4].Value.ToString();
+
+            if (requestStatus == "Submitted")
+            {
+                if (MessageBox.Show("Are you sure you want to cancel this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // user clicked yes
+                    this.stationeryrequestTableAdapter.CancelStatReq(selectedRequestID, selectedProductID, "Submitted");
+                }
+                else
+                {
+                    // user clicked no
+                    //nothing happens, return to "My Requests" page
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sorry, this request cannot be cancelled.");
+            }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string searchValue = SearchBox.Text;
+            stationeryrequestBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
+        }
     }
 }
