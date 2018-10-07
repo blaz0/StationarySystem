@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -64,8 +64,7 @@
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             this.sepdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editBtn = new System.Windows.Forms.Button();
-            this.saveBtn = new System.Windows.Forms.Button();
-            this.cancelBtn2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
@@ -311,9 +310,9 @@
             // totalPrice
             // 
             this.totalPrice.DataPropertyName = "totalPrice";
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle4;
             this.totalPrice.HeaderText = "Total Price";
             this.totalPrice.Name = "totalPrice";
             // 
@@ -398,35 +397,11 @@
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
-            // saveBtn
+            // contextMenuStrip1
             // 
-            this.saveBtn.BackColor = System.Drawing.Color.Teal;
-            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(1942, 1042);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(219, 65);
-            this.saveBtn.TabIndex = 33;
-            this.saveBtn.Text = "Save";
-            this.saveBtn.UseVisualStyleBackColor = false;
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // cancelBtn2
-            // 
-            this.cancelBtn2.BackColor = System.Drawing.Color.Teal;
-            this.cancelBtn2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cancelBtn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.cancelBtn2.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn2.Location = new System.Drawing.Point(2207, 1042);
-            this.cancelBtn2.Margin = new System.Windows.Forms.Padding(4);
-            this.cancelBtn2.Name = "cancelBtn2";
-            this.cancelBtn2.Size = new System.Drawing.Size(219, 65);
-            this.cancelBtn2.TabIndex = 34;
-            this.cancelBtn2.Text = "Cancel";
-            this.cancelBtn2.UseVisualStyleBackColor = false;
-            this.cancelBtn2.Click += new System.EventHandler(this.cancelBtn2_Click);
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // RequestsForm
             // 
@@ -435,8 +410,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2564, 1399);
-            this.Controls.Add(this.cancelBtn2);
-            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.requestDataGrid);
             this.Controls.Add(this.clearSearchBtn);
@@ -502,8 +475,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button editBtn;
-        private System.Windows.Forms.Button cancelBtn2;
-        private System.Windows.Forms.Button saveBtn;
         public sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

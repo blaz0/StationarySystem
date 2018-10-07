@@ -54,8 +54,8 @@
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.welcomeTxt = new System.Windows.Forms.TextBox();
-            this.btnNotification = new System.Windows.Forms.Button();
-            this.notifyPicture = new System.Windows.Forms.PictureBox();
+            this.btnStockLevel = new System.Windows.Forms.Button();
+            this.stockPicture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.settingsPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
@@ -351,29 +351,29 @@
             this.welcomeTxt.TabIndex = 15;
             this.welcomeTxt.Text = "Welcome [first name of user]";
             // 
-            // btnNotification
+            // btnStockLevel
             // 
-            this.btnNotification.BackColor = System.Drawing.Color.Black;
-            this.btnNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotification.ForeColor = System.Drawing.Color.White;
-            this.btnNotification.Location = new System.Drawing.Point(1820, 625);
-            this.btnNotification.Margin = new System.Windows.Forms.Padding(6);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(600, 250);
-            this.btnNotification.TabIndex = 16;
-            this.btnNotification.Text = "Notifications";
-            this.btnNotification.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnStockLevel.BackColor = System.Drawing.Color.Black;
+            this.btnStockLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockLevel.ForeColor = System.Drawing.Color.White;
+            this.btnStockLevel.Location = new System.Drawing.Point(1820, 625);
+            this.btnStockLevel.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStockLevel.Name = "btnStockLevel";
+            this.btnStockLevel.Size = new System.Drawing.Size(600, 250);
+            this.btnStockLevel.TabIndex = 16;
+            this.btnStockLevel.Text = "Stock Levels";
+            this.btnStockLevel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStockLevel.UseVisualStyleBackColor = false;
             // 
-            // notifyPicture
+            // stockPicture
             // 
-            this.notifyPicture.Image = ((System.Drawing.Image)(resources.GetObject("notifyPicture.Image")));
-            this.notifyPicture.Location = new System.Drawing.Point(2047, 662);
-            this.notifyPicture.Name = "notifyPicture";
-            this.notifyPicture.Size = new System.Drawing.Size(140, 140);
-            this.notifyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.notifyPicture.TabIndex = 17;
-            this.notifyPicture.TabStop = false;
+            this.stockPicture.Image = ((System.Drawing.Image)(resources.GetObject("stockPicture.Image")));
+            this.stockPicture.Location = new System.Drawing.Point(2053, 678);
+            this.stockPicture.Name = "stockPicture";
+            this.stockPicture.Size = new System.Drawing.Size(140, 132);
+            this.stockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stockPicture.TabIndex = 17;
+            this.stockPicture.TabStop = false;
             // 
             // btnSettings
             // 
@@ -476,8 +476,8 @@
             this.Controls.Add(this.btnProfile2);
             this.Controls.Add(this.settingsPicture);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.notifyPicture);
-            this.Controls.Add(this.btnNotification);
+            this.Controls.Add(this.stockPicture);
+            this.Controls.Add(this.btnStockLevel);
             this.Controls.Add(this.welcomeTxt);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -501,7 +501,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
@@ -536,8 +536,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox welcomeTxt;
-        private System.Windows.Forms.Button btnNotification;
-        private System.Windows.Forms.PictureBox notifyPicture;
+        private System.Windows.Forms.Button btnStockLevel;
+        private System.Windows.Forms.PictureBox stockPicture;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox settingsPicture;
         private System.Windows.Forms.PictureBox pictureBox1;

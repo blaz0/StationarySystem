@@ -26,10 +26,19 @@ namespace StationarySystem
             // TODO: This line of code loads data into the 'sepdbDataSet.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.sepdbDataSet.users);
             welcomeTxt.Text = "Welcome " + loggedInUser.firstName;
-            if (loggedInUser.userId == 1 || loggedInUser.userId == 4)
+            if (loggedInUser.userId == 1)
             {
-                btnNotification.Visible = true;
-                notifyPicture.Visible = true;
+                btnStockLevel.Visible = true;
+                stockPicture.Visible = true;
+                btnSettings.Visible = false;
+                settingsPicture.Visible = false;
+                approveReqBtn.Visible = true;
+                okPicture.Visible = true;
+            }
+            else if (loggedInUser.userId == 4)
+            {
+                btnStockLevel.Visible = true;
+                stockPicture.Visible = true;
                 btnSettings.Visible = true;
                 settingsPicture.Visible = true;
                 approveReqBtn.Visible = true;
@@ -37,8 +46,8 @@ namespace StationarySystem
             }
             else
             {
-                btnNotification.Visible = false;
-                notifyPicture.Visible = false;
+                btnStockLevel.Visible = false;
+                stockPicture.Visible = false;
                 btnSettings.Visible = false;
                 settingsPicture.Visible = false;
                 approveReqBtn.Visible = false;
@@ -128,16 +137,32 @@ namespace StationarySystem
 
         private void okPicture_Click(object sender, EventArgs e)
         {
-            ApproveRequestForm approve = new ApproveRequestForm();
-            approve.Show();
-            this.Close();
+            User selectedUser = Program.getCurrentUser();
+            if (selectedUser.userId == 4)
+            {
+                MessageBox.Show("You do not have access to this button.");
+            }
+            else
+            {
+                ApproveRequestForm approve = new ApproveRequestForm();
+                approve.Show();
+                this.Close();
+            }
         }
 
         private void approveReqBtn_Click(object sender, EventArgs e)
         {
-            ApproveRequestForm approve = new ApproveRequestForm();
-            approve.Show();
-            this.Close();
+            User selectedUser = Program.getCurrentUser();
+            if (selectedUser.userId == 4)
+            {
+                MessageBox.Show("You do not have access to this button.");
+            }
+            else
+            {
+                ApproveRequestForm approve = new ApproveRequestForm();
+                approve.Show();
+                this.Close();
+            }
         }
     }
 }

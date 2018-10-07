@@ -22,8 +22,6 @@ namespace StationarySystem
             int findUserID = selectedUser.userId;
             stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
             // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
-            saveBtn.Visible = false;
-            cancelBtn2.Visible = false;
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
@@ -89,17 +87,23 @@ namespace StationarySystem
             string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
             if (requestStatus == "Submitted")
             {
+                Product selectedProduct = Program.getCurrentProduct();
+                string selectedCellID = requestDataGrid.CurrentRow.Cells[2].Value.ToString();
+                selectedProduct.productid = Convert.ToInt32(selectedCellID);
+                requestDataGrid.Enabled = false;
                 cancelBtn.Enabled = false;
-                saveBtn.Visible = true;
-                cancelBtn2.Visible = true;
+                UpdateRequest update = new UpdateRequest();
+                update.Show();
 
-                /*this.requestDataGrid.CurrentRow.Cells[4].ReadOnly = false;*/
-                
-                /*DataGridViewCell cell = requestDataGrid[4, ];
-                requestDataGrid.CurrentCell = cell;
-                requestDataGrid.BeginEdit(true);*/
-
-                //int selectedQuantity = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
+                sepdbDataSet.stationeryrequestDataTable dt = stationeryrequestTableAdapter.GetDataByProductID();
+                DataRow dr = dt.Rows[0];
+                selectedProduct.productid = int.Parse(dr["productID"].ToString());
+                selectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
+                selectedProduct.name = dr["name"].ToString();
+                selectedProduct.description = dr["description"].ToString();
+                selectedProduct.stock = int.Parse(dr["stock"].ToString());
+                selectedProduct.price = int.Parse(dr["price"].ToString());
+                selectedProduct.stockLevel = dr["stockLevel"].ToString();
             }
             else
             {
@@ -107,18 +111,5 @@ namespace StationarySystem
             }
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
-        {
-            RequestsForm form = new RequestsForm();
-            form.Show();
-            this.Close();
-        }
-
-        private void cancelBtn2_Click(object sender, EventArgs e)
-        {
-            RequestsForm form = new RequestsForm();
-            form.Show();
-            this.Close();
-        }
     }
 }

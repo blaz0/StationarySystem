@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveRequestForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -38,27 +39,27 @@
             this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.descriptionTxt = new System.Windows.Forms.TextBox();
-            this.totalPriceTxt = new System.Windows.Forms.TextBox();
-            this.priceTxt = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ProductsLbl = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.productNameTxt = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.refreshBtn = new System.Windows.Forms.Button();
-            this.groupOrder = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.approveBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.cancel = new System.Windows.Forms.Label();
+            this.rejectBtn = new System.Windows.Forms.Button();
+            this.requestDataGrid = new System.Windows.Forms.DataGridView();
+            this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
@@ -67,8 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
-            this.groupOrder.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // usersBindingSource1
@@ -118,44 +120,6 @@
             this.usersBindingSource.DataSource = this.sepdbDataSet;
             this.usersBindingSource.Position = 0;
             // 
-            // descriptionTxt
-            // 
-            this.descriptionTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.descriptionTxt.Location = new System.Drawing.Point(100, 223);
-            this.descriptionTxt.Margin = new System.Windows.Forms.Padding(4);
-            this.descriptionTxt.Name = "descriptionTxt";
-            this.descriptionTxt.Size = new System.Drawing.Size(420, 24);
-            this.descriptionTxt.TabIndex = 9;
-            this.descriptionTxt.Text = "product description";
-            // 
-            // totalPriceTxt
-            // 
-            this.totalPriceTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.totalPriceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.totalPriceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.totalPriceTxt.ForeColor = System.Drawing.Color.Black;
-            this.totalPriceTxt.Location = new System.Drawing.Point(1496, 415);
-            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.totalPriceTxt.Name = "totalPriceTxt";
-            this.totalPriceTxt.ReadOnly = true;
-            this.totalPriceTxt.Size = new System.Drawing.Size(200, 73);
-            this.totalPriceTxt.TabIndex = 7;
-            this.totalPriceTxt.Text = "$0.00";
-            // 
-            // priceTxt
-            // 
-            this.priceTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.priceTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.priceTxt.ForeColor = System.Drawing.Color.Black;
-            this.priceTxt.Location = new System.Drawing.Point(1484, 137);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.priceTxt.Name = "priceTxt";
-            this.priceTxt.ReadOnly = true;
-            this.priceTxt.Size = new System.Drawing.Size(220, 43);
-            this.priceTxt.TabIndex = 6;
-            this.priceTxt.Text = "priceperitem";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -177,51 +141,6 @@
             this.ProductsLbl.Size = new System.Drawing.Size(1240, 108);
             this.ProductsLbl.TabIndex = 31;
             this.ProductsLbl.Text = "Approve Stationery Request";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.label4.Location = new System.Drawing.Point(1144, 415);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(356, 73);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Total Price:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.label3.Location = new System.Drawing.Point(1214, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(267, 44);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Price per item:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(660, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 44);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Qty:";
-            // 
-            // productNameTxt
-            // 
-            this.productNameTxt.AutoSize = true;
-            this.productNameTxt.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productBindingSource, "name", true));
-            this.productNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.productNameTxt.Location = new System.Drawing.Point(90, 137);
-            this.productNameTxt.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.productNameTxt.Name = "productNameTxt";
-            this.productNameTxt.Size = new System.Drawing.Size(286, 48);
-            this.productNameTxt.TabIndex = 0;
-            this.productNameTxt.Text = "Product Name";
             // 
             // panel1
             // 
@@ -308,81 +227,130 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // refreshBtn
+            // approveBtn
             // 
-            this.refreshBtn.BackColor = System.Drawing.Color.Teal;
-            this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.refreshBtn.ForeColor = System.Drawing.Color.White;
-            this.refreshBtn.Location = new System.Drawing.Point(2128, 858);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(300, 65);
-            this.refreshBtn.TabIndex = 33;
-            this.refreshBtn.Text = "Approve";
-            this.refreshBtn.UseVisualStyleBackColor = false;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
-            // 
-            // groupOrder
-            // 
-            this.groupOrder.Controls.Add(this.label1);
-            this.groupOrder.Controls.Add(this.descriptionTxt);
-            this.groupOrder.Controls.Add(this.totalPriceTxt);
-            this.groupOrder.Controls.Add(this.priceTxt);
-            this.groupOrder.Controls.Add(this.label4);
-            this.groupOrder.Controls.Add(this.label3);
-            this.groupOrder.Controls.Add(this.label2);
-            this.groupOrder.Controls.Add(this.productNameTxt);
-            this.groupOrder.Location = new System.Drawing.Point(662, 281);
-            this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
-            this.groupOrder.Name = "groupOrder";
-            this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
-            this.groupOrder.Size = new System.Drawing.Size(1766, 567);
-            this.groupOrder.TabIndex = 35;
-            this.groupOrder.TabStop = false;
-            this.groupOrder.Text = "Request";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(758, 138);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 44);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "<qty>";
+            this.approveBtn.BackColor = System.Drawing.Color.Teal;
+            this.approveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.approveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.approveBtn.ForeColor = System.Drawing.Color.White;
+            this.approveBtn.Location = new System.Drawing.Point(2136, 1014);
+            this.approveBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.approveBtn.Name = "approveBtn";
+            this.approveBtn.Size = new System.Drawing.Size(300, 65);
+            this.approveBtn.TabIndex = 33;
+            this.approveBtn.Text = "Approve";
+            this.approveBtn.UseVisualStyleBackColor = false;
+            this.approveBtn.Click += new System.EventHandler(this.approveBtn_Click);
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // button1
+            // rejectBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.Teal;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1820, 858);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 65);
-            this.button1.TabIndex = 36;
-            this.button1.Text = "Reject";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.rejectBtn.BackColor = System.Drawing.Color.Teal;
+            this.rejectBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rejectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.rejectBtn.ForeColor = System.Drawing.Color.White;
+            this.rejectBtn.Location = new System.Drawing.Point(1828, 1014);
+            this.rejectBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.rejectBtn.Name = "rejectBtn";
+            this.rejectBtn.Size = new System.Drawing.Size(300, 65);
+            this.rejectBtn.TabIndex = 36;
+            this.rejectBtn.Text = "Reject";
+            this.rejectBtn.UseVisualStyleBackColor = false;
+            this.rejectBtn.Click += new System.EventHandler(this.rejectBtn_Click);
             // 
-            // cancel
+            // requestDataGrid
             // 
-            this.cancel.AutoSize = true;
-            this.cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancel.Location = new System.Drawing.Point(1628, 867);
-            this.cancel.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(150, 48);
-            this.cancel.TabIndex = 37;
-            this.cancel.Text = "Cancel";
-            this.cancel.Click += new System.EventHandler(this.cancel_Click);
+            this.requestDataGrid.AllowUserToAddRows = false;
+            this.requestDataGrid.AllowUserToDeleteRows = false;
+            this.requestDataGrid.AllowUserToResizeColumns = false;
+            this.requestDataGrid.AllowUserToResizeRows = false;
+            this.requestDataGrid.AutoGenerateColumns = false;
+            this.requestDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.requestDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.requestDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.requestDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.requestIDDataGridViewTextBoxColumn,
+            this.userIDDataGridViewTextBoxColumn,
+            this.productIDDataGridViewTextBoxColumn,
+            this.quantity,
+            this.totalPrice,
+            this.requestDateDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.requestDataGrid.DataSource = this.stationeryrequestBindingSource;
+            this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.requestDataGrid.Location = new System.Drawing.Point(660, 214);
+            this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
+            this.requestDataGrid.Name = "requestDataGrid";
+            this.requestDataGrid.ReadOnly = true;
+            this.requestDataGrid.RowHeadersVisible = false;
+            this.requestDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.requestDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.requestDataGrid.Size = new System.Drawing.Size(1776, 747);
+            this.requestDataGrid.TabIndex = 37;
+            // 
+            // requestIDDataGridViewTextBoxColumn
+            // 
+            this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
+            this.requestIDDataGridViewTextBoxColumn.HeaderText = "Request ID";
+            this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
+            this.requestIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // userIDDataGridViewTextBoxColumn
+            // 
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.DataPropertyName = "totalPrice";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            this.totalPrice.HeaderText = "Total Price";
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.ReadOnly = true;
+            // 
+            // requestDateDataGridViewTextBoxColumn
+            // 
+            this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
+            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Request Date";
+            this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
+            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // stationeryrequestBindingSource
+            // 
+            this.stationeryrequestBindingSource.DataMember = "stationeryrequest";
+            this.stationeryrequestBindingSource.DataSource = this.sepdbDataSet;
+            // 
+            // stationeryrequestTableAdapter
+            // 
+            this.stationeryrequestTableAdapter.ClearBeforeFill = true;
             // 
             // ApproveRequestForm
             // 
@@ -390,13 +358,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2564, 1399);
-            this.Controls.Add(this.cancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.requestDataGrid);
+            this.Controls.Add(this.rejectBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ProductsLbl);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.refreshBtn);
-            this.Controls.Add(this.groupOrder);
+            this.Controls.Add(this.approveBtn);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ApproveRequestForm";
             this.Text = "ApproveRequestForm";
@@ -409,9 +376,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
-            this.groupOrder.ResumeLayout(false);
-            this.groupOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -427,26 +394,26 @@
         private sepdbDataSetTableAdapters.productTableAdapter productTableAdapter;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private System.Windows.Forms.TextBox descriptionTxt;
-        private System.Windows.Forms.TextBox totalPriceTxt;
-        private System.Windows.Forms.TextBox priceTxt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label ProductsLbl;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label productNameTxt;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;
         private System.Windows.Forms.Button btnSystemSettings;
         private System.Windows.Forms.Button btnNotifications;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button refreshBtn;
-        private System.Windows.Forms.GroupBox groupOrder;
+        private System.Windows.Forms.Button approveBtn;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label cancel;
+        private System.Windows.Forms.Button rejectBtn;
+        private System.Windows.Forms.DataGridView requestDataGrid;
+        private System.Windows.Forms.BindingSource stationeryrequestBindingSource;
+        private sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requestIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requestDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
     }
 }
