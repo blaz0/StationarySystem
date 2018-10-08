@@ -10,25 +10,18 @@ using System.Windows.Forms;
 
 namespace StationarySystem
 {
-    public partial class RejectPopup : Form
+    public partial class UpdateRequest : Form
     {
-        public RejectPopup()
+        public UpdateRequest()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void UpdateRequest_Load(object sender, EventArgs e)
         {
+            Product selectedProduct = Program.getCurrentProduct();
+            productID.Text = selectedProduct.name;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
 
         }
     }

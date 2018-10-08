@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -41,7 +42,6 @@
             this.cancelBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.PictureBox();
             this.logOutBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.RequestsLbl = new System.Windows.Forms.Label();
             this.requestDataGrid = new System.Windows.Forms.DataGridView();
@@ -49,6 +49,8 @@
             this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
@@ -60,12 +62,14 @@
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
+            this.sepdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.editBtn = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
@@ -73,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // clearSearchBtn
@@ -183,7 +188,7 @@
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(1942, 1108);
+            this.cancelBtn.Location = new System.Drawing.Point(1942, 949);
             this.cancelBtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(484, 65);
@@ -216,17 +221,6 @@
             this.logOutBtn.TabIndex = 24;
             this.logOutBtn.TabStop = false;
             this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2614, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 94);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
             // 
             // SearchBox
             // 
@@ -268,16 +262,18 @@
             this.userIDDataGridViewTextBoxColumn,
             this.productIDDataGridViewTextBoxColumn,
             this.requestDateDataGridViewTextBoxColumn,
+            this.quantity,
+            this.totalPrice,
             this.statusDataGridViewTextBoxColumn});
             this.requestDataGrid.DataSource = this.stationeryrequestBindingSource;
+            this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.requestDataGrid.Location = new System.Drawing.Point(650, 337);
             this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.requestDataGrid.Name = "requestDataGrid";
-            this.requestDataGrid.ReadOnly = true;
             this.requestDataGrid.RowHeadersVisible = false;
             this.requestDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.requestDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.requestDataGrid.Size = new System.Drawing.Size(1776, 722);
+            this.requestDataGrid.Size = new System.Drawing.Size(1776, 588);
             this.requestDataGrid.TabIndex = 31;
             // 
             // requestIDDataGridViewTextBoxColumn
@@ -285,35 +281,46 @@
             this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
             this.requestIDDataGridViewTextBoxColumn.HeaderText = "Request ID";
             this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
-            this.requestIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIDDataGridViewTextBoxColumn
             // 
             this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
             this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
             this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
             this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
             this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // requestDateDataGridViewTextBoxColumn
             // 
             this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
-            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Product Request Date";
+            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Request Date";
             this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
-            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.DataPropertyName = "totalPrice";
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle4;
+            this.totalPrice.HeaderText = "Total Price";
+            this.totalPrice.Name = "totalPrice";
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status of Stationery Request";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // stationeryrequestBindingSource
             // 
@@ -342,7 +349,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.requestedstationeryTableAdapter = null;
             this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
@@ -372,19 +378,45 @@
             // 
             this.stationeryrequestTableAdapter.ClearBeforeFill = true;
             // 
+            // sepdbDataSetBindingSource
+            // 
+            this.sepdbDataSetBindingSource.DataSource = this.sepdbDataSet;
+            this.sepdbDataSetBindingSource.Position = 0;
+            // 
+            // editBtn
+            // 
+            this.editBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.editBtn.BackColor = System.Drawing.Color.Transparent;
+            this.editBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editBtn.BackgroundImage")));
+            this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.editBtn.Location = new System.Drawing.Point(1849, 949);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(65, 65);
+            this.editBtn.TabIndex = 32;
+            this.editBtn.UseVisualStyleBackColor = false;
+            this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // RequestsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2564, 1399);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.requestDataGrid);
             this.Controls.Add(this.clearSearchBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.logOutBtn);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.RequestsLbl);
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -396,7 +428,6 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
@@ -404,6 +435,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,7 +456,6 @@
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.PictureBox searchBtn;
         private System.Windows.Forms.PictureBox logOutBtn;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Label RequestsLbl;
         private sepdbDataSetTableAdapters.productTableAdapter productTableAdapter;
@@ -435,11 +466,16 @@
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.DataGridView requestDataGrid;
         private System.Windows.Forms.BindingSource stationeryrequestBindingSource;
-        private sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
+        private System.Windows.Forms.BindingSource sepdbDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button editBtn;
+        public sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

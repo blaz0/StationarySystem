@@ -14,13 +14,13 @@ namespace StationarySystem
         {
             InitializeComponent();
         }
-
+        
         //On Login button click
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             string staffID = StaffIDTF.Text;
             string staffPassword = PasswordTF.Text;
-
+            loadingCircle.Visible = true;
 
             // Check for missing ID - later disable login button until values is filled
             if (string.IsNullOrEmpty(StaffIDTF.Text))
@@ -60,6 +60,7 @@ namespace StationarySystem
                     StaffIDTF.Focus();
                     StaffIDTF.Text = "";
                     PasswordTF.Text = "";
+                    loadingCircle.Visible = false;
                     return;
                 }
             }
@@ -87,11 +88,6 @@ namespace StationarySystem
             {
                 LoginBtn.Enabled = true;
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
 
         }
     }

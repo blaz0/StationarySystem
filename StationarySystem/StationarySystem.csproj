@@ -1,7 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\NUnit.3.11.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" />
-  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" />
   <Import Project="..\packages\SpecRun.Runner.1.8.2\build\SpecRun.Runner.props" Condition="Exists('..\packages\SpecRun.Runner.1.8.2\build\SpecRun.Runner.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -38,18 +36,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    <Reference Include="CircularProgressBar, Version=2.6.6823.24527, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.6.6823.24527\lib\net35-client\CircularProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.11.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.11.0\lib\net45\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.0.5797.27534, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -83,25 +78,22 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApprovePopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ApprovePopup.Designer.cs">
-      <DependentUpon>ApprovePopup.cs</DependentUpon>
-    </Compile>
     <Compile Include="ApproveRequestForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApproveRequestForm.Designer.cs">
       <DependentUpon>ApproveRequestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditRequestForm.cs">
+    <Compile Include="UpdateRequest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditRequestForm.Designer.cs">
-      <DependentUpon>EditRequestForm.cs</DependentUpon>
+    <Compile Include="UpdateRequest.Designer.cs">
+      <DependentUpon>UpdateRequest.cs</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="CreateStationeryRequestForm.cs">
@@ -138,12 +130,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RejectPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RejectPopup.Designer.cs">
-      <DependentUpon>RejectPopup.cs</DependentUpon>
-    </Compile>
     <Compile Include="RequestsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,19 +144,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sepdbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TestCases.cs" />
     <Compile Include="User.cs" />
-    <EmbeddedResource Include="ApprovePopup.resx">
-      <DependentUpon>ApprovePopup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ApproveRequestForm.resx">
       <DependentUpon>ApproveRequestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateStationeryRequestForm.resx">
       <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditRequestForm.resx">
-      <DependentUpon>EditRequestForm.cs</DependentUpon>
+    <EmbeddedResource Include="UpdateRequest.resx">
+      <DependentUpon>UpdateRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -193,9 +175,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RejectPopup.resx">
-      <DependentUpon>RejectPopup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="RequestsForm.resx">
       <DependentUpon>RequestsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -241,10 +220,6 @@
     <Error Condition="!Exists('..\packages\SpecFlow.2.4.0\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.0\build\SpecFlow.targets'))" />
     <Error Condition="!Exists('..\packages\SpecRun.Runner.1.8.2\build\SpecRun.Runner.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.Runner.1.8.2\build\SpecRun.Runner.props'))" />
     <Error Condition="!Exists('..\packages\SpecRun.SpecFlow.2-4-0.1.8.2\build\SpecRun.SpecFlow.2-4-0.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecRun.SpecFlow.2-4-0.1.8.2\build\SpecRun.SpecFlow.2-4-0.targets'))" />
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props'))" />
-    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets'))" />
-    <Error Condition="!Exists('..\packages\NUnit.3.11.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.11.0\build\NUnit.props'))" />
   </Target>
   <Import Project="..\packages\SpecRun.SpecFlow.2-4-0.1.8.2\build\SpecRun.SpecFlow.2-4-0.targets" Condition="Exists('..\packages\SpecRun.SpecFlow.2-4-0.1.8.2\build\SpecRun.SpecFlow.2-4-0.targets')" />
-  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
 </Project>

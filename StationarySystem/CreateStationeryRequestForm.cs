@@ -16,6 +16,8 @@ namespace StationarySystem
 
         private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
+            loadingCircle1.Visible = false;
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
@@ -40,6 +42,7 @@ namespace StationarySystem
 
             private void pictureBox1_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
@@ -47,6 +50,7 @@ namespace StationarySystem
         
         private void btnHome_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             Home homepage = new Home();
             homepage.Show();
             this.Close();
@@ -54,6 +58,7 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -68,12 +73,15 @@ namespace StationarySystem
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             Product selectedProduct = Program.getCurrentProduct();
             User selectedUser = Program.getCurrentUser();
+            int quantity = Convert.ToInt32(qty.Value);
+            int totalPrice = Convert.ToInt32(quantity * selectedProduct.price);
             
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted");
-
+            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted", quantity, totalPrice);
+            
             /*DataRow workRow = sepdbDataSet.Tables["stationeryrequest"].NewRow();
             workRow["userID"] = selectedUser.userId;
             workRow["productID"] = selectedProduct.productid;
@@ -81,9 +89,9 @@ namespace StationarySystem
             workRow["status"] = "Submitted";
             sepdbDataSet.Tables["stationeryrequest"].Rows.Add(workRow);*/
 
-            MessageBox.Show("Product Request Submitted.");
-            Home homepage = new Home();
-            homepage.Show();
+            MessageBox.Show("Your Product Request has been Submitted.");
+            ProductsForm productform = new ProductsForm();
+            productform.Show();
             this.Close();
         }
     }

@@ -63,6 +63,8 @@ namespace StationarySystem
             this.editBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
+            this.loadingCircle = new CircularProgressBar.CircularProgressBar();
+            this.loadingCircle1 = new CircularProgressBar.CircularProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
@@ -126,7 +128,7 @@ namespace StationarySystem
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(406, 37);
+            this.txtEmail.Size = new System.Drawing.Size(606, 37);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "insert email here";
             // 
@@ -208,7 +210,7 @@ namespace StationarySystem
             this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
-            this.txtPhoneNo.Size = new System.Drawing.Size(406, 37);
+            this.txtPhoneNo.Size = new System.Drawing.Size(606, 37);
             this.txtPhoneNo.TabIndex = 8;
             this.txtPhoneNo.Text = "insert phone no. here";
             // 
@@ -305,6 +307,7 @@ namespace StationarySystem
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.loadingCircle1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.utsLogo);
@@ -347,7 +350,6 @@ namespace StationarySystem
             // 
             // utsLogo
             // 
-            this.utsLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 242);
             this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
@@ -359,7 +361,6 @@ namespace StationarySystem
             // 
             // btnProfile
             // 
-            this.btnProfile.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnProfile.BackColor = System.Drawing.Color.Teal;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -376,7 +377,6 @@ namespace StationarySystem
             // 
             // btnHome
             // 
-            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -429,12 +429,77 @@ namespace StationarySystem
             this.saveBtn.UseVisualStyleBackColor = false;
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
+            // loadingCircle
+            // 
+            this.loadingCircle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle.AnimationSpeed = 500;
+            this.loadingCircle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle.InnerMargin = 2;
+            this.loadingCircle.InnerWidth = -1;
+            this.loadingCircle.Location = new System.Drawing.Point(1762, 950);
+            this.loadingCircle.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle.Name = "loadingCircle";
+            this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle.OuterMargin = -35;
+            this.loadingCircle.OuterWidth = 26;
+            this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle.ProgressWidth = 20;
+            this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle.StartAngle = 270;
+            this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle.SubscriptText = "";
+            this.loadingCircle.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle.SuperscriptText = "";
+            this.loadingCircle.TabIndex = 12;
+            this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            // 
+            // loadingCircle1
+            // 
+            this.loadingCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle1.AnimationSpeed = 500;
+            this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle1.InnerMargin = 2;
+            this.loadingCircle1.InnerWidth = -1;
+            this.loadingCircle1.Location = new System.Drawing.Point(418, 471);
+            this.loadingCircle1.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle1.Name = "loadingCircle1";
+            this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle1.OuterMargin = -35;
+            this.loadingCircle1.OuterWidth = 26;
+            this.loadingCircle1.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle1.ProgressWidth = 20;
+            this.loadingCircle1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle1.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle1.StartAngle = 270;
+            this.loadingCircle1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle1.SubscriptText = "";
+            this.loadingCircle1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle1.SuperscriptText = "";
+            this.loadingCircle1.TabIndex = 13;
+            this.loadingCircle1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            // 
             // ProfileFormX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2560, 1395);
+            this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.editBtn);
@@ -491,6 +556,8 @@ namespace StationarySystem
         private Button editBtn;
         private Button cancelBtn;
         private Button saveBtn;
+        private CircularProgressBar.CircularProgressBar loadingCircle;
+        private CircularProgressBar.CircularProgressBar loadingCircle1;
     }
     
 }

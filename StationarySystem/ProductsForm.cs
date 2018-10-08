@@ -93,16 +93,24 @@ namespace StationarySystem
         private void createRequestBtn_Click_1(object sender, EventArgs e)
         {
             Product selectedProduct = Program.getCurrentProduct();
-            if (productDataGrid.SelectedCells.Count > 0)
+            string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+            if (selectedstock == "Out of Stock!")
             {
-                string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString();
-                //string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
-                selectedProduct.productid = Convert.ToInt32(selectedCellID);
-                //selectedProduct.price = Convert.ToInt32(selectedCellPrice);
+                MessageBox.Show("Sorry, this product is currently unavailable.");
+            }
+            else
+            {
+                if (productDataGrid.SelectedCells.Count > 0)
+                {
+                    string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString();
+                    //string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+                    selectedProduct.productid = Convert.ToInt32(selectedCellID);
+                    //selectedProduct.price = Convert.ToInt32(selectedCellPrice);
 
-                CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
-                statRequest.Show();
-                this.Close();
+                    CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
+                    statRequest.Show();
+                    this.Close();
+                }
             }
         }
 

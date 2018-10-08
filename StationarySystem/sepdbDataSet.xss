@@ -8,17 +8,16 @@
   <Shapes>
     <Shape ID="DesignTable:product" ZOrder="6" X="497" Y="686" Height="405" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="287" />
     <Shape ID="DesignTable:users" ZOrder="5" X="1791" Y="64" Height="510" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="357" />
-    <Shape ID="DesignTable:productDetail" ZOrder="2" X="1744" Y="733" Height="335" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="252" />
-    <Shape ID="DesignTable:invoice" ZOrder="9" X="-2" Y="195" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:orderedproducts" ZOrder="10" X="190" Y="67" Height="90" Width="231" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:requestedstationery" ZOrder="3" X="1390" Y="937" Height="237" Width="246" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="154" />
-    <Shape ID="DesignTable:stationeryrequest" ZOrder="7" X="691" Y="181" Height="437" Width="343" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="252" />
+    <Shape ID="DesignTable:productDetail" ZOrder="3" X="1744" Y="733" Height="335" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="252" />
+    <Shape ID="DesignTable:invoice" ZOrder="8" X="-2" Y="195" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:orderedproducts" ZOrder="9" X="190" Y="67" Height="90" Width="231" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:stationeryrequest" ZOrder="1" X="691" Y="181" Height="440" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="219" />
     <Shape ID="DesignTable:supplier" ZOrder="4" X="268" Y="69" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:supplierorder" ZOrder="18" X="411" Y="248" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
-    <Shape ID="DesignTable:userroles" ZOrder="8" X="1162" Y="252" Height="115" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="111" />
+    <Shape ID="DesignTable:supplierorder" ZOrder="15" X="411" Y="248" Height="90" Width="158" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="0" />
+    <Shape ID="DesignTable:userroles" ZOrder="7" X="1162" Y="252" Height="115" Width="196" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="111" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:product_details_relation" ZOrder="19" LineWidth="11">
+    <Connector ID="DesignRelation:product_details_relation" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>797</X>
@@ -30,35 +29,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:reqstatFKproduct1" ZOrder="17" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>1744</X>
-          <Y>1047</Y>
-        </Point>
-        <Point>
-          <X>1636</X>
-          <Y>1047</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:reqstatFKstationeryrequest" ZOrder="16" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>1009</X>
-          <Y>618</Y>
-        </Point>
-        <Point>
-          <X>1009</X>
-          <Y>954</Y>
-        </Point>
-        <Point>
-          <X>1390</X>
-          <Y>954</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:statreqFKproduct" ZOrder="15" LineWidth="11">
+    <Connector ID="DesignRelation:statreqFKproduct" ZOrder="14" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>744</X>
@@ -66,39 +37,39 @@
         </Point>
         <Point>
           <X>744</X>
-          <Y>618</Y>
+          <Y>621</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:statreqFKproduct1" ZOrder="14" LineWidth="11">
+    <Connector ID="DesignRelation:statreqFKproduct1" ZOrder="13" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1744</X>
           <Y>750</Y>
         </Point>
         <Point>
-          <X>1017</X>
+          <X>991</X>
           <Y>750</Y>
         </Point>
         <Point>
-          <X>1017</X>
-          <Y>618</Y>
+          <X>991</X>
+          <Y>621</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:statreqFKuser" ZOrder="13" LineWidth="11">
+    <Connector ID="DesignRelation:statreqFKuser" ZOrder="12" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1791</X>
           <Y>261</Y>
         </Point>
         <Point>
-          <X>1034</X>
+          <X>991</X>
           <Y>261</Y>
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:suporderFKuser" ZOrder="12" LineWidth="11">
+    <Connector ID="DesignRelation:suporderFKuser" ZOrder="11" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1791</X>
@@ -110,7 +81,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:userRolesFKuser" ZOrder="11" LineWidth="11">
+    <Connector ID="DesignRelation:userRolesFKuser" ZOrder="10" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>1791</X>
@@ -119,18 +90,6 @@
         <Point>
           <X>1358</X>
           <Y>309</Y>
-        </Point>
-      </RoutePoints>
-    </Connector>
-    <Connector ID="DesignRelation:reqstatFKproduct" ZOrder="1" LineWidth="11">
-      <RoutePoints>
-        <Point>
-          <X>797</X>
-          <Y>994</Y>
-        </Point>
-        <Point>
-          <X>1390</X>
-          <Y>994</Y>
         </Point>
       </RoutePoints>
     </Connector>

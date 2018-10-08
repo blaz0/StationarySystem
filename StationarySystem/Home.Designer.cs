@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.loadingCircle = new CircularProgressBar.CircularProgressBar();
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -53,8 +54,8 @@
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.welcomeTxt = new System.Windows.Forms.TextBox();
-            this.btnNotification = new System.Windows.Forms.Button();
-            this.notifyPicture = new System.Windows.Forms.PictureBox();
+            this.btnStockLevel = new System.Windows.Forms.Button();
+            this.stockPicture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.settingsPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
@@ -94,6 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.loadingCircle);
             this.panel1.Controls.Add(this.utsLogo);
             this.panel1.Controls.Add(this.btnSystemSettings);
             this.panel1.Controls.Add(this.btnNotifications);
@@ -105,6 +107,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1302);
             this.panel1.TabIndex = 7;
+            // 
+            // loadingCircle
+            // 
+            this.loadingCircle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle.AnimationSpeed = 500;
+            this.loadingCircle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle.InnerMargin = 2;
+            this.loadingCircle.InnerWidth = -1;
+            this.loadingCircle.Location = new System.Drawing.Point(421, 466);
+            this.loadingCircle.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle.Name = "loadingCircle";
+            this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle.OuterMargin = -35;
+            this.loadingCircle.OuterWidth = 26;
+            this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle.ProgressWidth = 20;
+            this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle.StartAngle = 270;
+            this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle.SubscriptText = "";
+            this.loadingCircle.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle.SuperscriptText = "";
+            this.loadingCircle.TabIndex = 26;
+            this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle.Value = 68;
             // 
             // btnSystemSettings
             // 
@@ -263,7 +298,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.requestedstationeryTableAdapter = null;
             this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
@@ -277,7 +311,6 @@
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
-            this.tableAdapterManager1.requestedstationeryTableAdapter = null;
             this.tableAdapterManager1.stationeryrequestTableAdapter = null;
             this.tableAdapterManager1.supplierorderTableAdapter = null;
             this.tableAdapterManager1.supplierTableAdapter = null;
@@ -318,29 +351,29 @@
             this.welcomeTxt.TabIndex = 15;
             this.welcomeTxt.Text = "Welcome [first name of user]";
             // 
-            // btnNotification
+            // btnStockLevel
             // 
-            this.btnNotification.BackColor = System.Drawing.Color.Black;
-            this.btnNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotification.ForeColor = System.Drawing.Color.White;
-            this.btnNotification.Location = new System.Drawing.Point(1820, 625);
-            this.btnNotification.Margin = new System.Windows.Forms.Padding(6);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(600, 250);
-            this.btnNotification.TabIndex = 16;
-            this.btnNotification.Text = "Notifications";
-            this.btnNotification.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnStockLevel.BackColor = System.Drawing.Color.Black;
+            this.btnStockLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockLevel.ForeColor = System.Drawing.Color.White;
+            this.btnStockLevel.Location = new System.Drawing.Point(1820, 625);
+            this.btnStockLevel.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStockLevel.Name = "btnStockLevel";
+            this.btnStockLevel.Size = new System.Drawing.Size(600, 250);
+            this.btnStockLevel.TabIndex = 16;
+            this.btnStockLevel.Text = "Stock Levels";
+            this.btnStockLevel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStockLevel.UseVisualStyleBackColor = false;
             // 
-            // notifyPicture
+            // stockPicture
             // 
-            this.notifyPicture.Image = ((System.Drawing.Image)(resources.GetObject("notifyPicture.Image")));
-            this.notifyPicture.Location = new System.Drawing.Point(2047, 662);
-            this.notifyPicture.Name = "notifyPicture";
-            this.notifyPicture.Size = new System.Drawing.Size(140, 140);
-            this.notifyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.notifyPicture.TabIndex = 17;
-            this.notifyPicture.TabStop = false;
+            this.stockPicture.Image = ((System.Drawing.Image)(resources.GetObject("stockPicture.Image")));
+            this.stockPicture.Location = new System.Drawing.Point(2053, 678);
+            this.stockPicture.Name = "stockPicture";
+            this.stockPicture.Size = new System.Drawing.Size(140, 132);
+            this.stockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stockPicture.TabIndex = 17;
+            this.stockPicture.TabStop = false;
             // 
             // btnSettings
             // 
@@ -401,6 +434,7 @@
             this.okPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.okPicture.TabIndex = 23;
             this.okPicture.TabStop = false;
+            this.okPicture.Click += new System.EventHandler(this.okPicture_Click);
             // 
             // approveReqBtn
             // 
@@ -415,6 +449,7 @@
             this.approveReqBtn.Text = "Approve / Deny Requests";
             this.approveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.approveReqBtn.UseVisualStyleBackColor = false;
+            this.approveReqBtn.Click += new System.EventHandler(this.approveReqBtn_Click);
             // 
             // logOutBtn
             // 
@@ -441,8 +476,8 @@
             this.Controls.Add(this.btnProfile2);
             this.Controls.Add(this.settingsPicture);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.notifyPicture);
-            this.Controls.Add(this.btnNotification);
+            this.Controls.Add(this.stockPicture);
+            this.Controls.Add(this.btnStockLevel);
             this.Controls.Add(this.welcomeTxt);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -466,7 +501,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
@@ -501,8 +536,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox welcomeTxt;
-        private System.Windows.Forms.Button btnNotification;
-        private System.Windows.Forms.PictureBox notifyPicture;
+        private System.Windows.Forms.Button btnStockLevel;
+        private System.Windows.Forms.PictureBox stockPicture;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox settingsPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -510,5 +545,6 @@
         private System.Windows.Forms.PictureBox okPicture;
         private System.Windows.Forms.Button approveReqBtn;
         private System.Windows.Forms.PictureBox logOutBtn;
+        private CircularProgressBar.CircularProgressBar loadingCircle;
     }
 }
