@@ -38,9 +38,6 @@ namespace StationarySystem
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProfileFormX));
             this.profilePicture = new System.Windows.Forms.PictureBox();
             this.txtNickname = new System.Windows.Forms.TextBox();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sepdb_SQL = new StationarySystem.sepdbDataSet();
-            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblCC = new System.Windows.Forms.Label();
@@ -52,7 +49,6 @@ namespace StationarySystem
             this.txtCC = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.txtFName = new System.Windows.Forms.TextBox();
-            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.loadingCircle1 = new CircularProgressBar.CircularProgressBar();
@@ -65,14 +61,18 @@ namespace StationarySystem
             this.cancelBtn = new System.Windows.Forms.Button();
             this.saveBtn = new System.Windows.Forms.Button();
             this.loadingCircle = new CircularProgressBar.CircularProgressBar();
+            this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sepdb_SQL = new StationarySystem.sepdbDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // profilePicture
@@ -99,21 +99,6 @@ namespace StationarySystem
             this.txtNickname.Size = new System.Drawing.Size(271, 23);
             this.txtNickname.TabIndex = 8;
             this.txtNickname.Text = "insert nickname here";
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.sepdb_SQL;
-            // 
-            // sepdb_SQL
-            // 
-            this.sepdb_SQL.DataSetName = "sepdb_SQL";
-            this.sepdb_SQL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource2
-            // 
-            this.usersBindingSource2.DataMember = "users";
-            this.usersBindingSource2.DataSource = this.sepdb_SQL;
             // 
             // txtEmail
             // 
@@ -277,10 +262,6 @@ namespace StationarySystem
             this.txtFName.Text = "txtFName";
             this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
@@ -319,7 +300,7 @@ namespace StationarySystem
             this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle1.InnerMargin = 2;
             this.loadingCircle1.InnerWidth = -1;
-            this.loadingCircle1.Location = new System.Drawing.Point(279, 380);
+            this.loadingCircle1.Location = new System.Drawing.Point(276, 247);
             this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle1.MarqueeAnimationSpeed = 2000;
             this.loadingCircle1.Name = "loadingCircle1";
@@ -341,6 +322,7 @@ namespace StationarySystem
             this.loadingCircle1.TabIndex = 13;
             this.loadingCircle1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.loadingCircle1.Value = 68;
+            this.loadingCircle1.Click += new System.EventHandler(this.loadingCircle1_Click);
             // 
             // button1
             // 
@@ -489,6 +471,25 @@ namespace StationarySystem
             this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.loadingCircle.Value = 68;
             // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdb_SQL;
+            // 
+            // sepdb_SQL
+            // 
+            this.sepdb_SQL.DataSetName = "sepdb_SQL";
+            this.sepdb_SQL.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.sepdb_SQL;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
             // ProfileFormX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -510,14 +511,14 @@ namespace StationarySystem
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Profile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdb_SQL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

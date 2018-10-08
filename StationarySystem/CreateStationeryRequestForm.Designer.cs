@@ -114,9 +114,7 @@
             this.btnNotifications.Size = new System.Drawing.Size(333, 49);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Products";
-            this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
-            // 
+            this.btnNotifications.UseVisualStyleBackColor = true;            // 
             // btnProfile
             // 
             this.btnProfile.FlatAppearance.BorderSize = 0;
@@ -175,7 +173,7 @@
             this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle1.InnerMargin = 2;
             this.loadingCircle1.InnerWidth = -1;
-            this.loadingCircle1.Location = new System.Drawing.Point(276, 138);
+            this.loadingCircle1.Location = new System.Drawing.Point(276, 247);
             this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle1.MarqueeAnimationSpeed = 2000;
             this.loadingCircle1.Name = "loadingCircle1";

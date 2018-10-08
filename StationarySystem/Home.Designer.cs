@@ -119,7 +119,7 @@
             this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle.InnerMargin = 2;
             this.loadingCircle.InnerWidth = -1;
-            this.loadingCircle.Location = new System.Drawing.Point(281, 409);
+            this.loadingCircle.Location = new System.Drawing.Point(276, 247);
             this.loadingCircle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle.MarqueeAnimationSpeed = 2000;
             this.loadingCircle.Name = "loadingCircle";

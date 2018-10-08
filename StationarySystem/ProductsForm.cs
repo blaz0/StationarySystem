@@ -20,6 +20,7 @@ namespace StationarySystem
         
         private void ProductsForm_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
             // TODO: This line of code loads data into the 'sepdbDataSet.productDetail' table. You can move, or remove it, as needed.
             this.productDetailTableAdapter.Fill(this.sepdbDataSet.productDetail);
             // TODO: This line of code loads data into the 'sepdbDataSet.product' table. You can move, or remove it, as needed.
@@ -44,6 +45,7 @@ namespace StationarySystem
             Home homepage = new Home();
             homepage.Show();
             this.Close();
+            loadingCircle.Visible = true;
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -55,6 +57,7 @@ namespace StationarySystem
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
+            loadingCircle.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -62,18 +65,21 @@ namespace StationarySystem
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
+            loadingCircle.Visible = true;
         }
 
        private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; 
-                        
+            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
+            loadingCircle.Visible = true;
+
         }
         
         private void clearSearchBtn_Click(object sender, EventArgs e)
         {
             productBindingSource.Filter = null;
+            loadingCircle.Visible = true;
         }
 
         private void btnHome_Click_1(object sender, EventArgs e)
@@ -81,6 +87,7 @@ namespace StationarySystem
             Home homepage = new Home();
             homepage.Show();
             this.Close();
+            loadingCircle.Visible = true;
         }
 
         private void btnProfile_Click_1(object sender, EventArgs e)
@@ -88,12 +95,14 @@ namespace StationarySystem
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
+            loadingCircle.Visible = true;
         }
 
         private void createRequestBtn_Click_1(object sender, EventArgs e)
         {
             Product selectedProduct = Program.getCurrentProduct();
             string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+            loadingCircle.Visible = true;
             if (selectedstock == "Out of Stock!")
             {
                 MessageBox.Show("Sorry, this product is currently unavailable.");
@@ -113,6 +122,5 @@ namespace StationarySystem
                 }
             }
         }
-
     }
 }
