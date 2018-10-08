@@ -54,6 +54,8 @@ namespace StationarySystem
                 // user clicked yes
                 Product selectedProduct = Program.getCurrentProduct();
                 int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+                int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[3].Value);
+
                 stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
                 ApproveRequestForm approve = new ApproveRequestForm();
                 approve.Show();
