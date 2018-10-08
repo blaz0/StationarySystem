@@ -93,6 +93,9 @@ namespace StationarySystem
             }
         }
 
-        
+        private void requestDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
