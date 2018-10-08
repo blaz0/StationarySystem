@@ -323,7 +323,6 @@ namespace StationarySystem
             // 
             // loadingCircle1
             // 
-            this.loadingCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loadingCircle1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
             this.loadingCircle1.AnimationSpeed = 500;
             this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
