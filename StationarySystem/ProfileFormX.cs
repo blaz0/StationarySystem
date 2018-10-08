@@ -91,5 +91,15 @@ namespace StationarySystem
             profile.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loadingCircle1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

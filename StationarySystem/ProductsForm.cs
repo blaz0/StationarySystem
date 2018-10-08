@@ -44,6 +44,7 @@ namespace StationarySystem
             Home homepage = new Home();
             homepage.Show();
             this.Close();
+            
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -67,8 +68,8 @@ namespace StationarySystem
        private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; 
-                        
+            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
+
         }
         
         private void clearSearchBtn_Click(object sender, EventArgs e)
@@ -113,6 +114,5 @@ namespace StationarySystem
                 }
             }
         }
-
     }
 }

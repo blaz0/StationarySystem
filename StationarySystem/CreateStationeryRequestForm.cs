@@ -94,5 +94,6 @@ namespace StationarySystem
             productform.Show();
             this.Close();
         }
+
     }
 }

@@ -44,8 +44,6 @@ namespace StationarySystem {
         
         private global::System.Data.DataRelation relationproduct_details_relation;
         
-        private global::System.Data.DataRelation relationstatreqFKproduct;
-        
         private global::System.Data.DataRelation relationstatreqFKproduct1;
         
         private global::System.Data.DataRelation relationstatreqFKuser;
@@ -53,6 +51,8 @@ namespace StationarySystem {
         private global::System.Data.DataRelation relationsuporderFKuser;
         
         private global::System.Data.DataRelation relationuserRolesFKuser;
+        
+        private global::System.Data.DataRelation relationstatreqFKproduct;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -399,11 +399,11 @@ namespace StationarySystem {
                 }
             }
             this.relationproduct_details_relation = this.Relations["product_details_relation"];
-            this.relationstatreqFKproduct = this.Relations["statreqFKproduct"];
             this.relationstatreqFKproduct1 = this.Relations["statreqFKproduct1"];
             this.relationstatreqFKuser = this.Relations["statreqFKuser"];
             this.relationsuporderFKuser = this.Relations["suporderFKuser"];
             this.relationuserRolesFKuser = this.Relations["userRolesFKuser"];
+            this.relationstatreqFKproduct = this.Relations["statreqFKproduct"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -436,10 +436,6 @@ namespace StationarySystem {
                         this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableproductDetail.productIDColumn}, false);
             this.Relations.Add(this.relationproduct_details_relation);
-            this.relationstatreqFKproduct = new global::System.Data.DataRelation("statreqFKproduct", new global::System.Data.DataColumn[] {
-                        this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tablestationeryrequest.productIDColumn}, false);
-            this.Relations.Add(this.relationstatreqFKproduct);
             this.relationstatreqFKproduct1 = new global::System.Data.DataRelation("statreqFKproduct1", new global::System.Data.DataColumn[] {
                         this.tableproductDetail.productIDColumn}, new global::System.Data.DataColumn[] {
                         this.tablestationeryrequest.productIDColumn}, false);
@@ -456,6 +452,10 @@ namespace StationarySystem {
                         this.tableusers.userIdColumn}, new global::System.Data.DataColumn[] {
                         this.tableuserroles.userIDColumn}, false);
             this.Relations.Add(this.relationuserRolesFKuser);
+            this.relationstatreqFKproduct = new global::System.Data.DataRelation("statreqFKproduct", new global::System.Data.DataColumn[] {
+                        this.tableproduct.productIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tablestationeryrequest.productIDColumn}, false);
+            this.Relations.Add(this.relationstatreqFKproduct);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2439,7 +2439,7 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public stationeryrequestRow AddstationeryrequestRow(int requestID, usersRow parentusersRowBystatreqFKuser, productRow parentproductRowBystatreqFKproduct, string status, System.DateTime requestDate, int quantity, decimal totalPrice) {
+            public stationeryrequestRow AddstationeryrequestRow(int requestID, usersRow parentusersRowBystatreqFKuser, productDetailRow parentproductDetailRowBystatreqFKproduct1, string status, System.DateTime requestDate, int quantity, decimal totalPrice) {
                 stationeryrequestRow rowstationeryrequestRow = ((stationeryrequestRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         requestID,
@@ -2452,8 +2452,8 @@ namespace StationarySystem {
                 if ((parentusersRowBystatreqFKuser != null)) {
                     columnValuesArray[1] = parentusersRowBystatreqFKuser[0];
                 }
-                if ((parentproductRowBystatreqFKproduct != null)) {
-                    columnValuesArray[2] = parentproductRowBystatreqFKproduct[0];
+                if ((parentproductDetailRowBystatreqFKproduct1 != null)) {
+                    columnValuesArray[2] = parentproductDetailRowBystatreqFKproduct1[0];
                 }
                 rowstationeryrequestRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstationeryrequestRow);
@@ -4182,17 +4182,6 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public productRow productRow {
-                get {
-                    return ((productRow)(this.GetParentRow(this.Table.ParentRelations["statreqFKproduct"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["statreqFKproduct"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public productDetailRow productDetailRow {
                 get {
                     return ((productDetailRow)(this.GetParentRow(this.Table.ParentRelations["statreqFKproduct1"])));
@@ -4210,6 +4199,17 @@ namespace StationarySystem {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["statreqFKuser"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public productRow productRow {
+                get {
+                    return ((productRow)(this.GetParentRow(this.Table.ParentRelations["statreqFKproduct"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["statreqFKproduct"]);
                 }
             }
             

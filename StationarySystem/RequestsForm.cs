@@ -19,9 +19,13 @@ namespace StationarySystem
         private void RequestsForm_Load(object sender, EventArgs e)
         {
             User selectedUser = Program.getCurrentUser();
+            Product selectedProduct = Program.getCurrentProduct();
             int findUserID = selectedUser.userId;
             stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
             // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
+            this.stationeryrequestTableAdapter.GetDataByProductID();
+           
+
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;

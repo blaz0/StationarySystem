@@ -19,6 +19,7 @@ namespace StationarySystem
 
         private void ApproveRequestForm_Load(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = false;
             string selectedStatus = "Submitted";
             stationeryrequestBindingSource.Filter = "status LIKE '*" + selectedStatus + "*'";
             if (this.stationeryrequestTableAdapter == null)
@@ -38,6 +39,7 @@ namespace StationarySystem
             Home homepage = new Home();
             homepage.Show();
             this.Close();
+            loadingCircle1.Visible = true;
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -45,6 +47,7 @@ namespace StationarySystem
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
+            loadingCircle1.Visible = true;
         }
 
         private void approveBtn_Click(object sender, EventArgs e)
@@ -54,15 +57,19 @@ namespace StationarySystem
                 // user clicked yes
                 Product selectedProduct = Program.getCurrentProduct();
                 int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+                int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[3].Value);
+
                 stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
                 ApproveRequestForm approve = new ApproveRequestForm();
                 approve.Show();
                 this.Close();
+                loadingCircle1.Visible = true;
             }
             else
             {
                 // user clicked no
                 //nothing happens, return to "My Requests" page
+                loadingCircle1.Visible = true;
             }
         }
 
@@ -76,11 +83,13 @@ namespace StationarySystem
                 ApproveRequestForm approve = new ApproveRequestForm();
                 approve.Show();
                 this.Close();
+                loadingCircle1.Visible = true;
             }
             else
             {
                 // user clicked no
                 //nothing happens, return to "My Requests" page
+                loadingCircle1.Visible = true;
             }
         }
 
