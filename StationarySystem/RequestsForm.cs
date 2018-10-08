@@ -102,7 +102,7 @@ namespace StationarySystem
                 sepdbDataSet.stationeryrequestDataTable dt = stationeryrequestTableAdapter.GetDataByProductID();
                 DataRow dr = dt.Rows[0];
                 selectedProduct.productid = int.Parse(dr["productID"].ToString());
-               lectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
+                selectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
                 selectedProduct.name = dr["name"].ToString();
                 selectedProduct.description = dr["description"].ToString();
                 selectedProduct.stock = int.Parse(dr["stock"].ToString());
