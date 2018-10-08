@@ -18,6 +18,7 @@ namespace StationarySystem
         }
         private void RequestsForm_Load(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = false;
             User selectedUser = Program.getCurrentUser();
             Product selectedProduct = Program.getCurrentProduct();
             int findUserID = selectedUser.userId;
@@ -36,6 +37,7 @@ namespace StationarySystem
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Hide();
+            loadingCircle1.Visible = true;
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace StationarySystem
             Home homepage = new Home();
             homepage.Show();
             this.Hide();
+            loadingCircle1.Visible = true;
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
@@ -50,6 +53,7 @@ namespace StationarySystem
             ProfileFormX profilePage = new ProfileFormX();
             profilePage.Show();
             this.Close();
+            loadingCircle1.Visible = true;
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)
@@ -59,6 +63,7 @@ namespace StationarySystem
             //int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
             string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
             //string requestedDate = requestDataGrid.CurrentRow.Cells[3].Value.ToString();
+            loadingCircle1.Visible = true;
 
             if (requestStatus == "Submitted")
             {
@@ -84,11 +89,13 @@ namespace StationarySystem
         {
             string searchValue = SearchBox.Text;
             stationeryrequestBindingSource.Filter = "productID LIKE '*" + searchValue + "*'";
+            loadingCircle1.Visible = true;
         }
         
         private void editBtn_Click(object sender, EventArgs e)
         {
             string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            loadingCircle1.Visible = true;
             if (requestStatus == "Submitted")
             {
                 Product selectedProduct = Program.getCurrentProduct();

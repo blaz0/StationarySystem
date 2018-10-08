@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveRequestForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -60,6 +60,7 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
+            this.loadingCircle1 = new CircularProgressBar.CircularProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
@@ -146,6 +147,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.loadingCircle1);
             this.panel1.Controls.Add(this.utsLogo);
             this.panel1.Controls.Add(this.btnSystemSettings);
             this.panel1.Controls.Add(this.btnNotifications);
@@ -328,9 +330,9 @@
             // totalPrice
             // 
             this.totalPrice.DataPropertyName = "totalPrice";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle7;
             this.totalPrice.HeaderText = "Total Price";
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.ReadOnly = true;
@@ -357,6 +359,40 @@
             // stationeryrequestTableAdapter
             // 
             this.stationeryrequestTableAdapter.ClearBeforeFill = true;
+            // 
+            // loadingCircle1
+            // 
+            this.loadingCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle1.AnimationSpeed = 500;
+            this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle1.InnerMargin = 2;
+            this.loadingCircle1.InnerWidth = -1;
+            this.loadingCircle1.Location = new System.Drawing.Point(276, 247);
+            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2);
+            this.loadingCircle1.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle1.Name = "loadingCircle1";
+            this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle1.OuterMargin = -35;
+            this.loadingCircle1.OuterWidth = 26;
+            this.loadingCircle1.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle1.ProgressWidth = 20;
+            this.loadingCircle1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle1.Size = new System.Drawing.Size(39, 38);
+            this.loadingCircle1.StartAngle = 270;
+            this.loadingCircle1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle1.SubscriptText = "";
+            this.loadingCircle1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle1.SuperscriptText = "";
+            this.loadingCircle1.TabIndex = 33;
+            this.loadingCircle1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle1.Value = 68;
             // 
             // ApproveRequestForm
             // 
@@ -421,5 +457,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private CircularProgressBar.CircularProgressBar loadingCircle1;
     }
 }

@@ -96,5 +96,10 @@ namespace StationarySystem
         {
 
         }
+
+        private void loadingCircle1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
