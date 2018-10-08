@@ -15,6 +15,8 @@ namespace StationarySystem
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
+            loadingCircle1.Visible = false;
             this.usersTableAdapter.Fill(this.sepdb_SQL.users);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
@@ -29,58 +31,14 @@ namespace StationarySystem
             txtCC.Text = loggedInUser.costCentre;
             txtPhoneNo.Text = loggedInUser.phoneNo;
             txtNickname.Text = loggedInUser.nickname;
+
+            cancelBtn.Visible = false;
+            saveBtn.Visible = false;
         }
-
-        private void txtFName_TextChanged(object sender, EventArgs e)
-        {
-            txtFName.ReadOnly = true;
-            //txtFName.Text = "Maxine Koh";
-
-        }
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
-        {
-            txtEmail.ReadOnly = true;
-            //txtEmail.Text = "MaxineK@bigpond.net.au";
-        }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
-        {
-            txtID.ReadOnly = true;
-            //txtID.Text = "4";
-        }
-
-        private void txtCC_TextChanged(object sender, EventArgs e)
-        {
-            txtCC.ReadOnly = true;
-            //txtCC.Text = "FDAB1004";
-        }
-
-        private void loginToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-//                this.usersTableAdapter.Login(this.sepdbDataSet.users, usernameToolStripTextBox.Text, passwordToolStripTextBox.Text);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void lblFullName_Click(object sender, EventArgs e)
-        {
-            lblFullName.TextAlign = ContentAlignment.MiddleLeft;
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-            lblEmail.TextAlign = ContentAlignment.MiddleRight;
-        }
-
+                
         private void btnHome_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             Home homepage = new Home();
             homepage.Show();
             this.Close();
@@ -88,6 +46,7 @@ namespace StationarySystem
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
@@ -95,6 +54,39 @@ namespace StationarySystem
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            loadingCircle1.Visible = true;
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
+        }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            loadingCircle1.Visible = true;
+            this.cancelBtn.Visible = true;
+            this.saveBtn.Visible = true;
+            this.txtEmail.ReadOnly = false;
+            this.txtPhoneNo.ReadOnly = false;
+            this.txtEmail.BackColor = Color.LightGray;
+            this.txtPhoneNo.BackColor = Color.LightGray;
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            loadingCircle.Visible = true;
+            ProfileFormX profile = new ProfileFormX();
+            profile.Show();
+            this.Close();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            loadingCircle.Visible = true;
+            User selectedUser = Program.getCurrentUser();
+            sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
+            usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text));
+            selectedUser.emailAddress = txtEmail.Text;
+            selectedUser.phoneNo = txtPhoneNo.Text;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();

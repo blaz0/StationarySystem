@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.loadingCircle = new CircularProgressBar.CircularProgressBar();
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
@@ -39,7 +40,6 @@
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnRequests = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.productPic = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -54,15 +54,17 @@
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.welcomeTxt = new System.Windows.Forms.TextBox();
-            this.btnNotification = new System.Windows.Forms.Button();
-            this.notifyPicture = new System.Windows.Forms.PictureBox();
+            this.btnStockLevel = new System.Windows.Forms.Button();
+            this.stockPicture = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.settingsPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnProfile2 = new System.Windows.Forms.Button();
+            this.okPicture = new System.Windows.Forms.PictureBox();
+            this.approveReqBtn = new System.Windows.Forms.Button();
+            this.logOutBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -72,9 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // utsLogo
@@ -91,6 +95,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.loadingCircle);
             this.panel1.Controls.Add(this.utsLogo);
             this.panel1.Controls.Add(this.btnSystemSettings);
             this.panel1.Controls.Add(this.btnNotifications);
@@ -100,8 +105,41 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 890);
+            this.panel1.Size = new System.Drawing.Size(500, 1302);
             this.panel1.TabIndex = 7;
+            // 
+            // loadingCircle
+            // 
+            this.loadingCircle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle.AnimationSpeed = 500;
+            this.loadingCircle.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle.InnerMargin = 2;
+            this.loadingCircle.InnerWidth = -1;
+            this.loadingCircle.Location = new System.Drawing.Point(421, 466);
+            this.loadingCircle.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle.Name = "loadingCircle";
+            this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle.OuterMargin = -35;
+            this.loadingCircle.OuterWidth = 26;
+            this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle.ProgressWidth = 20;
+            this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle.StartAngle = 270;
+            this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle.SubscriptText = "";
+            this.loadingCircle.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle.SuperscriptText = "";
+            this.loadingCircle.TabIndex = 26;
+            this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle.Value = 68;
             // 
             // btnSystemSettings
             // 
@@ -206,18 +244,6 @@
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnOrders.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2420, 25);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 11;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // productPic
             // 
             this.productPic.Image = ((System.Drawing.Image)(resources.GetObject("productPic.Image")));
@@ -268,16 +294,26 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager.supplierorderTableAdapter = null;
+            this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.invoiceTableAdapter = null;
+            this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
+            this.tableAdapterManager1.stationeryrequestTableAdapter = null;
+            this.tableAdapterManager1.supplierorderTableAdapter = null;
+            this.tableAdapterManager1.supplierTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager1.usersTableAdapter = this.usersTableAdapter1;
             // 
@@ -311,40 +347,40 @@
             this.welcomeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeTxt.Location = new System.Drawing.Point(544, 56);
             this.welcomeTxt.Name = "welcomeTxt";
-            this.welcomeTxt.Size = new System.Drawing.Size(1237, 145);
+            this.welcomeTxt.Size = new System.Drawing.Size(1717, 145);
             this.welcomeTxt.TabIndex = 15;
-            this.welcomeTxt.Text = "Welcome + first name of user";
+            this.welcomeTxt.Text = "Welcome [first name of user]";
             // 
-            // btnNotification
+            // btnStockLevel
             // 
-            this.btnNotification.BackColor = System.Drawing.Color.Black;
-            this.btnNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotification.ForeColor = System.Drawing.Color.White;
-            this.btnNotification.Location = new System.Drawing.Point(544, 625);
-            this.btnNotification.Margin = new System.Windows.Forms.Padding(6);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(600, 250);
-            this.btnNotification.TabIndex = 16;
-            this.btnNotification.Text = "Notifications";
-            this.btnNotification.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnStockLevel.BackColor = System.Drawing.Color.Black;
+            this.btnStockLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStockLevel.ForeColor = System.Drawing.Color.White;
+            this.btnStockLevel.Location = new System.Drawing.Point(1820, 625);
+            this.btnStockLevel.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStockLevel.Name = "btnStockLevel";
+            this.btnStockLevel.Size = new System.Drawing.Size(600, 250);
+            this.btnStockLevel.TabIndex = 16;
+            this.btnStockLevel.Text = "Stock Levels";
+            this.btnStockLevel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnStockLevel.UseVisualStyleBackColor = false;
             // 
-            // notifyPicture
+            // stockPicture
             // 
-            this.notifyPicture.Image = ((System.Drawing.Image)(resources.GetObject("notifyPicture.Image")));
-            this.notifyPicture.Location = new System.Drawing.Point(771, 662);
-            this.notifyPicture.Name = "notifyPicture";
-            this.notifyPicture.Size = new System.Drawing.Size(140, 140);
-            this.notifyPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.notifyPicture.TabIndex = 17;
-            this.notifyPicture.TabStop = false;
+            this.stockPicture.Image = ((System.Drawing.Image)(resources.GetObject("stockPicture.Image")));
+            this.stockPicture.Location = new System.Drawing.Point(2053, 678);
+            this.stockPicture.Name = "stockPicture";
+            this.stockPicture.Size = new System.Drawing.Size(140, 132);
+            this.stockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.stockPicture.TabIndex = 17;
+            this.stockPicture.TabStop = false;
             // 
             // btnSettings
             // 
             this.btnSettings.BackColor = System.Drawing.Color.Black;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(1820, 628);
+            this.btnSettings.Location = new System.Drawing.Point(544, 955);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(600, 250);
@@ -356,7 +392,7 @@
             // settingsPicture
             // 
             this.settingsPicture.Image = ((System.Drawing.Image)(resources.GetObject("settingsPicture.Image")));
-            this.settingsPicture.Location = new System.Drawing.Point(2048, 665);
+            this.settingsPicture.Location = new System.Drawing.Point(772, 992);
             this.settingsPicture.Name = "settingsPicture";
             this.settingsPicture.Size = new System.Drawing.Size(140, 140);
             this.settingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -366,9 +402,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1409, 654);
+            this.pictureBox1.Location = new System.Drawing.Point(1398, 670);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 140);
+            this.pictureBox1.Size = new System.Drawing.Size(157, 145);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -389,23 +425,63 @@
             this.btnProfile2.UseVisualStyleBackColor = false;
             this.btnProfile2.Click += new System.EventHandler(this.btnProfile2_Click);
             // 
+            // okPicture
+            // 
+            this.okPicture.Image = ((System.Drawing.Image)(resources.GetObject("okPicture.Image")));
+            this.okPicture.Location = new System.Drawing.Point(771, 670);
+            this.okPicture.Name = "okPicture";
+            this.okPicture.Size = new System.Drawing.Size(140, 140);
+            this.okPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.okPicture.TabIndex = 23;
+            this.okPicture.TabStop = false;
+            this.okPicture.Click += new System.EventHandler(this.okPicture_Click);
+            // 
+            // approveReqBtn
+            // 
+            this.approveReqBtn.BackColor = System.Drawing.Color.Black;
+            this.approveReqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.approveReqBtn.ForeColor = System.Drawing.Color.White;
+            this.approveReqBtn.Location = new System.Drawing.Point(544, 625);
+            this.approveReqBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.approveReqBtn.Name = "approveReqBtn";
+            this.approveReqBtn.Size = new System.Drawing.Size(600, 250);
+            this.approveReqBtn.TabIndex = 22;
+            this.approveReqBtn.Text = "Approve / Deny Requests";
+            this.approveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.approveReqBtn.UseVisualStyleBackColor = false;
+            this.approveReqBtn.Click += new System.EventHandler(this.approveReqBtn_Click);
+            // 
+            // logOutBtn
+            // 
+            this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
+            this.logOutBtn.Location = new System.Drawing.Point(2432, 25);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.logOutBtn.Name = "logOutBtn";
+            this.logOutBtn.Size = new System.Drawing.Size(100, 100);
+            this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.logOutBtn.TabIndex = 25;
+            this.logOutBtn.TabStop = false;
+            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2550, 890);
+            this.ClientSize = new System.Drawing.Size(2550, 1302);
+            this.Controls.Add(this.logOutBtn);
+            this.Controls.Add(this.okPicture);
+            this.Controls.Add(this.approveReqBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnProfile2);
             this.Controls.Add(this.settingsPicture);
             this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.notifyPicture);
-            this.Controls.Add(this.btnNotification);
+            this.Controls.Add(this.stockPicture);
+            this.Controls.Add(this.btnStockLevel);
             this.Controls.Add(this.welcomeTxt);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.productPic);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnOrders);
             this.Controls.Add(this.btnRequests);
             this.Controls.Add(this.panel1);
@@ -416,7 +492,6 @@
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -426,9 +501,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.notifyPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,16 +532,19 @@
         private System.Windows.Forms.Button btnProducts;
         private System.Windows.Forms.Button btnRequests;
         private System.Windows.Forms.Button btnOrders;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox productPic;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox welcomeTxt;
-        private System.Windows.Forms.Button btnNotification;
-        private System.Windows.Forms.PictureBox notifyPicture;
+        private System.Windows.Forms.Button btnStockLevel;
+        private System.Windows.Forms.PictureBox stockPicture;
         private System.Windows.Forms.Button btnSettings;
         private System.Windows.Forms.PictureBox settingsPicture;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnProfile2;
+        private System.Windows.Forms.PictureBox okPicture;
+        private System.Windows.Forms.Button approveReqBtn;
+        private System.Windows.Forms.PictureBox logOutBtn;
+        private CircularProgressBar.CircularProgressBar loadingCircle;
     }
 }

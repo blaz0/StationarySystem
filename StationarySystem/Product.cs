@@ -9,14 +9,14 @@ namespace StationarySystem
     class Product
     {
         public int productid { get; set; }
-        public int supplierid{ get; set; }
-        public string lastName { get; set; }
-        public int username { get; set; }
-        public string password { get; set; }
-        public string emailAddress { get; set; }
-        public string phoneNo { get; set; }
-        public string costCentre { get; set; }
-        public string nickname { get; set; }
+        public int supplierid { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public int stock { get; set; }
+        public int price { get; set; }
+        public string stockLevel { get; set; }
         
+        public Product()
+        { }
     }
 }

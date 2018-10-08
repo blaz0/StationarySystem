@@ -16,50 +16,15 @@ namespace StationarySystem
         {
             InitializeComponent();
         }
-
-        private void ProductsLbl_Click(object sender, EventArgs e)
+        private void RequestsForm_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void detailsDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void detailsBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource2_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void productDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void searchBtn_Click(object sender, EventArgs e)
-        {
-
+            User selectedUser = Program.getCurrentUser();
+            int findUserID = selectedUser.userId;
+            stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
+            // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
+            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
+            MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void logOutBtn_Click(object sender, EventArgs e)
@@ -69,36 +34,82 @@ namespace StationarySystem
             this.Hide();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SearchBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersBindingSource1_CurrentChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clearSearchBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             Home homepage = new Home();
             homepage.Show();
             this.Hide();
         }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            ProfileFormX profilePage = new ProfileFormX();
+            profilePage.Show();
+            this.Close();
+        }
+
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+            //int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
+            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            //string requestedDate = requestDataGrid.CurrentRow.Cells[3].Value.ToString();
+
+            if (requestStatus == "Submitted")
+            {
+                if (MessageBox.Show("Are you sure you want to cancel this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // user clicked yes
+                    this.stationeryrequestTableAdapter.DeleteByRequestID(selectedRequestID);
+                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
+                }
+                else
+                {
+                    // user clicked no
+                    //nothing happens, return to "My Requests" page
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sorry, this request cannot be cancelled.");
+            }
+        }
+
+        private void searchBtn_Click(object sender, EventArgs e)
+        {
+            string searchValue = SearchBox.Text;
+            stationeryrequestBindingSource.Filter = "productID LIKE '*" + searchValue + "*'";
+        }
+        
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            if (requestStatus == "Submitted")
+            {
+                Product selectedProduct = Program.getCurrentProduct();
+                string selectedCellID = requestDataGrid.CurrentRow.Cells[2].Value.ToString();
+                selectedProduct.productid = Convert.ToInt32(selectedCellID);
+                requestDataGrid.Enabled = false;
+                cancelBtn.Enabled = false;
+                UpdateRequest update = new UpdateRequest();
+                update.Show();
+
+                sepdbDataSet.stationeryrequestDataTable dt = stationeryrequestTableAdapter.GetDataByProductID();
+                DataRow dr = dt.Rows[0];
+                selectedProduct.productid = int.Parse(dr["productID"].ToString());
+                selectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
+                selectedProduct.name = dr["name"].ToString();
+                selectedProduct.description = dr["description"].ToString();
+                selectedProduct.stock = int.Parse(dr["stock"].ToString());
+                selectedProduct.price = int.Parse(dr["price"].ToString());
+                selectedProduct.stockLevel = dr["stockLevel"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("Sorry, this request cannot be edited.");
+            }
+        }
+
     }
 }

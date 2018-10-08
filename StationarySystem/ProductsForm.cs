@@ -90,11 +90,29 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void createRequestBtn_Click_1(object sender, EventArgs e)
         {
-            CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
-            statRequest.Show();
-            this.Close();
+            Product selectedProduct = Program.getCurrentProduct();
+            string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+            if (selectedstock == "Out of Stock!")
+            {
+                MessageBox.Show("Sorry, this product is currently unavailable.");
+            }
+            else
+            {
+                if (productDataGrid.SelectedCells.Count > 0)
+                {
+                    string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString();
+                    //string selectedCellPrice = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+                    selectedProduct.productid = Convert.ToInt32(selectedCellID);
+                    //selectedProduct.price = Convert.ToInt32(selectedCellPrice);
+
+                    CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm();
+                    statRequest.Show();
+                    this.Close();
+                }
+            }
         }
+
     }
 }

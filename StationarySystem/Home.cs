@@ -19,6 +19,7 @@ namespace StationarySystem
 
         private void Homepage_Load(object sender, EventArgs e)
         {
+            loadingCircle.Visible = false;
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             User loggedInUser = Program.getCurrentUser();
@@ -27,22 +28,36 @@ namespace StationarySystem
             welcomeTxt.Text = "Welcome " + loggedInUser.firstName;
             if (loggedInUser.userId == 1)
             {
-                btnNotification.Visible = true;
-                notifyPicture.Visible = true;
+                btnStockLevel.Visible = true;
+                stockPicture.Visible = true;
+                btnSettings.Visible = false;
+                settingsPicture.Visible = false;
+                approveReqBtn.Visible = true;
+                okPicture.Visible = true;
+            }
+            else if (loggedInUser.userId == 4)
+            {
+                btnStockLevel.Visible = true;
+                stockPicture.Visible = true;
                 btnSettings.Visible = true;
                 settingsPicture.Visible = true;
+                approveReqBtn.Visible = true;
+                okPicture.Visible = true;
             }
             else
             {
-                btnNotification.Visible = false;
-                notifyPicture.Visible = false;
+                btnStockLevel.Visible = false;
+                stockPicture.Visible = false;
                 btnSettings.Visible = false;
                 settingsPicture.Visible = false;
+                approveReqBtn.Visible = false;
+                okPicture.Visible = false;
             }
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -50,6 +65,7 @@ namespace StationarySystem
 
         private void btnProducts_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
             this.Close();
@@ -57,6 +73,7 @@ namespace StationarySystem
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
@@ -64,6 +81,7 @@ namespace StationarySystem
 
         private void productPic_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProductsForm allproducts = new ProductsForm();
             allproducts.Show();
             this.Close();
@@ -71,6 +89,7 @@ namespace StationarySystem
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             Home homepage = new Home();
             homepage.Show();
             this.Close();
@@ -78,6 +97,7 @@ namespace StationarySystem
         
         private void btnRequests_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             RequestsForm requests = new RequestsForm();
             requests.Show();
             this.Close();
@@ -85,6 +105,7 @@ namespace StationarySystem
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             RequestsForm requests = new RequestsForm();
             requests.Show();
             this.Close();
@@ -92,6 +113,7 @@ namespace StationarySystem
 
         private void btnProfile2_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
@@ -99,9 +121,48 @@ namespace StationarySystem
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            loadingCircle.Visible = true;
             ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
+        }
+
+        private void logOutBtn_Click(object sender, EventArgs e)
+        {
+            loadingCircle.Visible = true;
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void okPicture_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            if (selectedUser.userId == 4)
+            {
+                MessageBox.Show("You do not have access to this button.");
+            }
+            else
+            {
+                ApproveRequestForm approve = new ApproveRequestForm();
+                approve.Show();
+                this.Close();
+            }
+        }
+
+        private void approveReqBtn_Click(object sender, EventArgs e)
+        {
+            User selectedUser = Program.getCurrentUser();
+            if (selectedUser.userId == 4)
+            {
+                MessageBox.Show("You do not have access to this button.");
+            }
+            else
+            {
+                ApproveRequestForm approve = new ApproveRequestForm();
+                approve.Show();
+                this.Close();
+            }
         }
     }
 }
