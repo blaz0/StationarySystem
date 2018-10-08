@@ -94,5 +94,10 @@ namespace StationarySystem
             productform.Show();
             this.Close();
         }
+
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
