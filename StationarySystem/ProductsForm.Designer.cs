@@ -108,9 +108,9 @@
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchBox.HideSelection = false;
             this.SearchBox.Location = new System.Drawing.Point(638, 231);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(1212, 53);
+            this.SearchBox.Size = new System.Drawing.Size(1241, 53);
             this.SearchBox.TabIndex = 11;
             this.SearchBox.Text = "Search for products";
             // 
@@ -118,7 +118,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2261, 39);
+            this.pictureBox1.Location = new System.Drawing.Point(2290, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -131,7 +131,7 @@
             this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.searchBtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(1870, 231);
+            this.searchBtn.Location = new System.Drawing.Point(1899, 231);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(60, 60);
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -171,7 +171,7 @@
             this.productDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.productDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.productDataGrid.Location = new System.Drawing.Point(638, 312);
-            this.productDataGrid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.productDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.productDataGrid.MultiSelect = false;
             this.productDataGrid.Name = "productDataGrid";
             this.productDataGrid.ReadOnly = true;
@@ -181,7 +181,7 @@
             this.productDataGrid.RowTemplate.Height = 33;
             this.productDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.productDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productDataGrid.Size = new System.Drawing.Size(1723, 402);
+            this.productDataGrid.Size = new System.Drawing.Size(1752, 402);
             this.productDataGrid.TabIndex = 15;
             this.productDataGrid.TabStop = false;
             // 
@@ -248,7 +248,7 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1055);
             this.panel1.TabIndex = 18;
@@ -257,7 +257,7 @@
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +271,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 812);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -285,7 +285,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -299,7 +299,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 638);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
@@ -315,7 +315,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
@@ -368,7 +368,7 @@
             this.detailsDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.detailsDataGrid.Location = new System.Drawing.Point(638, 855);
-            this.detailsDataGrid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.detailsDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.detailsDataGrid.MultiSelect = false;
             this.detailsDataGrid.Name = "detailsDataGrid";
             this.detailsDataGrid.ReadOnly = true;
@@ -378,7 +378,7 @@
             this.detailsDataGrid.RowTemplate.Height = 33;
             this.detailsDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.detailsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.detailsDataGrid.Size = new System.Drawing.Size(1723, 150);
+            this.detailsDataGrid.Size = new System.Drawing.Size(1752, 150);
             this.detailsDataGrid.TabIndex = 19;
             this.detailsDataGrid.TabStop = false;
             // 
@@ -438,7 +438,7 @@
             this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
             this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(1962, 225);
+            this.clearSearchBtn.Location = new System.Drawing.Point(1991, 225);
             this.clearSearchBtn.Name = "clearSearchBtn";
             this.clearSearchBtn.Size = new System.Drawing.Size(399, 66);
             this.clearSearchBtn.TabIndex = 20;
@@ -505,7 +505,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2459, 1055);
+            this.ClientSize = new System.Drawing.Size(2488, 1055);
             this.Controls.Add(this.createRequestBtn);
             this.Controls.Add(this.clearSearchBtn);
             this.Controls.Add(this.detailsDataGrid);
@@ -515,7 +515,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.ProductsLbl);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProductsForm";
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
