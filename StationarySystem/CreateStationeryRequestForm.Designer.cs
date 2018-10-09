@@ -101,6 +101,7 @@
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "My Requests";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
+            this.btnSystemSettings.Click += new System.EventHandler(this.btnSystemSettings_Click);
             // 
             // btnNotifications
             // 
@@ -115,6 +116,7 @@
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Products";
             this.btnNotifications.UseVisualStyleBackColor = true;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // btnProfile
             // 

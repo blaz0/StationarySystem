@@ -81,9 +81,8 @@ namespace StationarySystem
 
                     stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
                     stationeryrequestTableAdapter.UpdateStock(reducedAmount, selectedProductID);
-                    ApproveRequestForm approve = new ApproveRequestForm();
-                    approve.Show();
-                    this.Close();
+                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
+                    
                 }
                 else
                 {
@@ -116,8 +115,20 @@ namespace StationarySystem
         }
 
         private void requestDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {}
 
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+            ProductsForm products = new ProductsForm();
+            products.Show();
+            this.Close();
+        }
+
+        private void btnSystemSettings_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+            this.Close();
         }
     }
 }

@@ -319,7 +319,7 @@ namespace StationarySystem
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1642);
+            this.panel1.Size = new System.Drawing.Size(500, 1395);
             this.panel1.TabIndex = 0;
             // 
             // loadingCircle1
@@ -367,6 +367,7 @@ namespace StationarySystem
             this.button1.TabIndex = 6;
             this.button1.Text = "My Requests";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -381,6 +382,7 @@ namespace StationarySystem
             this.button2.TabIndex = 5;
             this.button2.Text = "Products";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // utsLogo
             // 
@@ -503,7 +505,7 @@ namespace StationarySystem
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2880, 1642);
+            this.ClientSize = new System.Drawing.Size(2560, 1395);
             this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);

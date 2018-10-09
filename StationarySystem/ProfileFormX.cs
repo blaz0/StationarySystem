@@ -117,8 +117,20 @@ namespace StationarySystem
         }
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
+        {}
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            
+            ProductsForm products = new ProductsForm();
+            products.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+            this.Close();
         }
     }
 }

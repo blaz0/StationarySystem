@@ -44,6 +44,15 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.rejectBtn = new System.Windows.Forms.Button();
             this.requestDataGrid = new System.Windows.Forms.DataGridView();
+            this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
@@ -54,15 +63,6 @@
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPrice1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
@@ -171,6 +171,7 @@
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "My Requests";
             this.btnSystemSettings.UseVisualStyleBackColor = true;
+            this.btnSystemSettings.Click += new System.EventHandler(this.btnSystemSettings_Click);
             // 
             // btnNotifications
             // 
@@ -185,6 +186,7 @@
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Products";
             this.btnNotifications.UseVisualStyleBackColor = true;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // btnProfile
             // 
@@ -283,61 +285,6 @@
             this.requestDataGrid.Size = new System.Drawing.Size(1701, 747);
             this.requestDataGrid.TabIndex = 37;
             // 
-            // stationeryrequestBindingSource
-            // 
-            this.stationeryrequestBindingSource.DataMember = "stationeryrequest";
-            this.stationeryrequestBindingSource.DataSource = this.sepdbDataSet;
-            // 
-            // sepdbDataSet
-            // 
-            this.sepdbDataSet.DataSetName = "sepdbDataSet";
-            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "users";
-            this.usersBindingSource1.DataSource = this.sepdbDataSet;
-            // 
-            // usersBindingSource2
-            // 
-            this.usersBindingSource2.DataMember = "users";
-            this.usersBindingSource2.DataSource = this.sepdbDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.invoiceTableAdapter = null;
-            this.tableAdapterManager.orderedproductsTableAdapter = null;
-            this.tableAdapterManager.productDetailTableAdapter = null;
-            this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.supplierorderTableAdapter = null;
-            this.tableAdapterManager.supplierTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "product";
-            this.productBindingSource.DataSource = this.sepdbDataSet;
-            this.productBindingSource.Filter = "";
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataSource = this.sepdbDataSet;
-            this.usersBindingSource.Position = 0;
-            // 
-            // stationeryrequestTableAdapter
-            // 
-            this.stationeryrequestTableAdapter.ClearBeforeFill = true;
-            // 
             // requestIDDataGridViewTextBoxColumn
             // 
             this.requestIDDataGridViewTextBoxColumn.DataPropertyName = "requestID";
@@ -402,6 +349,61 @@
             this.stock.HeaderText = "Stock";
             this.stock.Name = "stock";
             this.stock.ReadOnly = true;
+            // 
+            // stationeryrequestBindingSource
+            // 
+            this.stationeryrequestBindingSource.DataMember = "stationeryrequest";
+            this.stationeryrequestBindingSource.DataSource = this.sepdbDataSet;
+            // 
+            // sepdbDataSet
+            // 
+            this.sepdbDataSet.DataSetName = "sepdbDataSet";
+            this.sepdbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.sepdbDataSet;
+            // 
+            // usersBindingSource2
+            // 
+            this.usersBindingSource2.DataMember = "users";
+            this.usersBindingSource2.DataSource = this.sepdbDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.orderedproductsTableAdapter = null;
+            this.tableAdapterManager.productDetailTableAdapter = null;
+            this.tableAdapterManager.productTableAdapter = null;
+            this.tableAdapterManager.supplierorderTableAdapter = null;
+            this.tableAdapterManager.supplierTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "product";
+            this.productBindingSource.DataSource = this.sepdbDataSet;
+            this.productBindingSource.Filter = "";
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataSource = this.sepdbDataSet;
+            this.usersBindingSource.Position = 0;
+            // 
+            // stationeryrequestTableAdapter
+            // 
+            this.stationeryrequestTableAdapter.ClearBeforeFill = true;
             // 
             // ApproveRequestForm
             // 
