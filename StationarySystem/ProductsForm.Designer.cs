@@ -182,7 +182,7 @@
             this.productDataGrid.RowTemplate.Height = 33;
             this.productDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.productDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productDataGrid.Size = new System.Drawing.Size(1752, 402);
+            this.productDataGrid.Size = new System.Drawing.Size(1752, 614);
             this.productDataGrid.TabIndex = 15;
             this.productDataGrid.TabStop = false;
             // 
@@ -251,7 +251,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1055);
+            this.panel1.Size = new System.Drawing.Size(500, 1198);
             this.panel1.TabIndex = 18;
             // 
             // utsLogo
@@ -370,7 +370,7 @@
             this.detailsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.detailsDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.detailsDataGrid.Location = new System.Drawing.Point(638, 855);
+            this.detailsDataGrid.Location = new System.Drawing.Point(638, 1069);
             this.detailsDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.detailsDataGrid.MultiSelect = false;
             this.detailsDataGrid.Name = "detailsDataGrid";
@@ -381,7 +381,7 @@
             this.detailsDataGrid.RowTemplate.Height = 33;
             this.detailsDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.detailsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.detailsDataGrid.Size = new System.Drawing.Size(1752, 150);
+            this.detailsDataGrid.Size = new System.Drawing.Size(1752, 119);
             this.detailsDataGrid.TabIndex = 19;
             this.detailsDataGrid.TabStop = false;
             // 
@@ -457,7 +457,7 @@
             this.createRequestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createRequestBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.createRequestBtn.ForeColor = System.Drawing.Color.White;
-            this.createRequestBtn.Location = new System.Drawing.Point(638, 752);
+            this.createRequestBtn.Location = new System.Drawing.Point(638, 966);
             this.createRequestBtn.Name = "createRequestBtn";
             this.createRequestBtn.Size = new System.Drawing.Size(530, 66);
             this.createRequestBtn.TabIndex = 21;
@@ -509,7 +509,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2488, 1055);
+            this.ClientSize = new System.Drawing.Size(2488, 1198);
             this.Controls.Add(this.createRequestBtn);
             this.Controls.Add(this.clearSearchBtn);
             this.Controls.Add(this.detailsDataGrid);
