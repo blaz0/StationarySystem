@@ -213,6 +213,7 @@ namespace StationarySystem
             this.txtPhoneNo.Size = new System.Drawing.Size(606, 37);
             this.txtPhoneNo.TabIndex = 8;
             this.txtPhoneNo.Text = "insert phone no. here";
+            this.txtPhoneNo.TextChanged += new System.EventHandler(this.txtPhoneNo_TextChanged);
             // 
             // txtID
             // 
@@ -380,7 +381,6 @@ namespace StationarySystem
             this.button2.TabIndex = 5;
             this.button2.Text = "Products";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // utsLogo
             // 

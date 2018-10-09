@@ -22,8 +22,11 @@ namespace StationarySystem
             Product selectedProduct = Program.getCurrentProduct();
             int findUserID = selectedUser.userId;
             stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
+            DataTable mergedTable = stationeryrequestTableAdapter.GetDataByProductID();
+
+
             // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
-            this.stationeryrequestTableAdapter.GetDataByProductID();
+            //this.stationeryrequestTableAdapter.GetDataByProductID();
            
 
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
