@@ -130,5 +130,12 @@ namespace StationarySystem
             form.Show();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
+            this.Close();
+        }
     }
 }
