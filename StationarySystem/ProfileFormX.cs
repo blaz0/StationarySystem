@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.ComponentModel.DataAnnotations;
 
 namespace StationarySystem
 {
@@ -34,6 +35,11 @@ namespace StationarySystem
 
             cancelBtn.Visible = false;
             saveBtn.Visible = false;
+        }
+
+        public bool IsValidEmail(string source)
+        {
+            return new EmailAddressAttribute().IsValid(source);
         }
                 
         private void btnHome_Click(object sender, EventArgs e)
@@ -92,14 +98,22 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void txtPhoneNo_TextChanged(object sender, EventArgs e)
         {
-
+                if (System.Text.RegularExpressions.Regex.IsMatch(txtPhoneNo.Text, "[^0-9]"))
+                {
+                    MessageBox.Show("Please enter only numbers.");
+                    txtPhoneNo.Text = txtPhoneNo.Text.Remove(txtPhoneNo.Text.Length - 1);
+                }
         }
 
-        private void loadingCircle1_Click(object sender, EventArgs e)
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-
+            if(IsValidEmail(txtEmail.Text)== false || txtEmail.Text == null)
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                txtEmail.Text = txtEmail.Text.Remove(txtEmail.Text.Length - 20);
+            }
         }
     }
 }

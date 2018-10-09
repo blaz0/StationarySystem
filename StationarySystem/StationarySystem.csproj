@@ -83,6 +83,7 @@
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
@@ -120,6 +121,7 @@
     <Compile Include="ApproveRequestForm.Designer.cs">
       <DependentUpon>ApproveRequestForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="StationeryRequest.cs" />
     <Compile Include="UpdateRequest.cs">
       <SubType>Form</SubType>
     </Compile>

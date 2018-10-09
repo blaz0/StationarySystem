@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveRequestForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.loadingCircle1 = new CircularProgressBar.CircularProgressBar();
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.btnSystemSettings = new System.Windows.Forms.Button();
             this.btnNotifications = new System.Windows.Forms.Button();
@@ -60,7 +61,6 @@
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            this.loadingCircle1 = new CircularProgressBar.CircularProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
@@ -100,7 +100,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -123,7 +122,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2261, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -155,16 +153,50 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1170);
             this.panel1.TabIndex = 34;
+            // 
+            // loadingCircle1
+            // 
+            this.loadingCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.loadingCircle1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.loadingCircle1.AnimationSpeed = 500;
+            this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
+            this.loadingCircle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.loadingCircle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loadingCircle1.InnerMargin = 2;
+            this.loadingCircle1.InnerWidth = -1;
+            this.loadingCircle1.Location = new System.Drawing.Point(276, 247);
+            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2);
+            this.loadingCircle1.MarqueeAnimationSpeed = 2000;
+            this.loadingCircle1.Name = "loadingCircle1";
+            this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
+            this.loadingCircle1.OuterMargin = -35;
+            this.loadingCircle1.OuterWidth = 26;
+            this.loadingCircle1.ProgressColor = System.Drawing.Color.Teal;
+            this.loadingCircle1.ProgressWidth = 20;
+            this.loadingCircle1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.loadingCircle1.Size = new System.Drawing.Size(39, 38);
+            this.loadingCircle1.StartAngle = 270;
+            this.loadingCircle1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.loadingCircle1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.loadingCircle1.SubscriptText = "";
+            this.loadingCircle1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.loadingCircle1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.loadingCircle1.SuperscriptText = "";
+            this.loadingCircle1.TabIndex = 33;
+            this.loadingCircle1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle1.Value = 68;
             // 
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -178,7 +210,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 812);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -192,7 +224,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -206,7 +238,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 638);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
@@ -222,7 +254,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
@@ -232,8 +264,6 @@
             // 
             // approveBtn
             // 
-            this.approveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.approveBtn.BackColor = System.Drawing.Color.Teal;
             this.approveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.approveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -253,7 +283,6 @@
             // 
             // rejectBtn
             // 
-            this.rejectBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.rejectBtn.BackColor = System.Drawing.Color.Teal;
             this.rejectBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rejectBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -273,8 +302,6 @@
             this.requestDataGrid.AllowUserToDeleteRows = false;
             this.requestDataGrid.AllowUserToResizeColumns = false;
             this.requestDataGrid.AllowUserToResizeRows = false;
-            this.requestDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.requestDataGrid.AutoGenerateColumns = false;
             this.requestDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.requestDataGrid.BackgroundColor = System.Drawing.SystemColors.Window;
@@ -290,7 +317,7 @@
             this.requestDataGrid.DataSource = this.stationeryrequestBindingSource;
             this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.requestDataGrid.Location = new System.Drawing.Point(660, 214);
-            this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.requestDataGrid.Name = "requestDataGrid";
             this.requestDataGrid.ReadOnly = true;
             this.requestDataGrid.RowHeadersVisible = false;
@@ -330,9 +357,9 @@
             // totalPrice
             // 
             this.totalPrice.DataPropertyName = "totalPrice";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle1;
             this.totalPrice.HeaderText = "Total Price";
             this.totalPrice.Name = "totalPrice";
             this.totalPrice.ReadOnly = true;
@@ -360,40 +387,6 @@
             // 
             this.stationeryrequestTableAdapter.ClearBeforeFill = true;
             // 
-            // loadingCircle1
-            // 
-            this.loadingCircle1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.loadingCircle1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
-            this.loadingCircle1.AnimationSpeed = 500;
-            this.loadingCircle1.BackColor = System.Drawing.Color.Transparent;
-            this.loadingCircle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.loadingCircle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.loadingCircle1.InnerMargin = 2;
-            this.loadingCircle1.InnerWidth = -1;
-            this.loadingCircle1.Location = new System.Drawing.Point(276, 247);
-            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2);
-            this.loadingCircle1.MarqueeAnimationSpeed = 2000;
-            this.loadingCircle1.Name = "loadingCircle1";
-            this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
-            this.loadingCircle1.OuterMargin = -35;
-            this.loadingCircle1.OuterWidth = 26;
-            this.loadingCircle1.ProgressColor = System.Drawing.Color.Teal;
-            this.loadingCircle1.ProgressWidth = 20;
-            this.loadingCircle1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.loadingCircle1.Size = new System.Drawing.Size(39, 38);
-            this.loadingCircle1.StartAngle = 270;
-            this.loadingCircle1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.loadingCircle1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.loadingCircle1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
-            this.loadingCircle1.SubscriptText = "";
-            this.loadingCircle1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.loadingCircle1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
-            this.loadingCircle1.SuperscriptText = "";
-            this.loadingCircle1.TabIndex = 33;
-            this.loadingCircle1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.loadingCircle1.Value = 68;
-            // 
             // ApproveRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -406,7 +399,7 @@
             this.Controls.Add(this.ProductsLbl);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.approveBtn);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ApproveRequestForm";
             this.Text = "ApproveRequestForm";
             this.Load += new System.EventHandler(this.ApproveRequestForm_Load);
