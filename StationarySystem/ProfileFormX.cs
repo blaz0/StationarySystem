@@ -93,9 +93,18 @@ namespace StationarySystem
             usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text));
             selectedUser.emailAddress = txtEmail.Text;
             selectedUser.phoneNo = txtPhoneNo.Text;
-            ProfileFormX profile = new ProfileFormX();
-            profile.Show();
-            this.Close();
+
+            if (IsValidEmail(txtEmail.Text) == false || txtEmail.Text == null)
+            {
+                MessageBox.Show("Please enter a valid email address.");
+                //txtEmail.Text = txtEmail.Text.Remove(txtEmail.Text.Length - 20);
+            }
+            else {
+
+                ProfileFormX profile = new ProfileFormX();
+                profile.Show();
+                this.Close();
+            }
         }
 
         private void txtPhoneNo_TextChanged(object sender, EventArgs e)
@@ -109,11 +118,7 @@ namespace StationarySystem
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if(IsValidEmail(txtEmail.Text)== false || txtEmail.Text == null)
-            {
-                MessageBox.Show("Please enter a valid email address.");
-                txtEmail.Text = txtEmail.Text.Remove(txtEmail.Text.Length - 20);
-            }
+            
         }
     }
 }

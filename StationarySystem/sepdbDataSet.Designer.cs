@@ -2319,6 +2319,10 @@ namespace StationarySystem {
             
             private global::System.Data.DataColumn columndescription;
             
+            private global::System.Data.DataColumn columnprice;
+            
+            private global::System.Data.DataColumn columnstock;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public stationeryrequestDataTable() {
@@ -2434,6 +2438,22 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn priceColumn {
+                get {
+                    return this.columnprice;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn stockColumn {
+                get {
+                    return this.columnstock;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2469,7 +2489,7 @@ namespace StationarySystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public stationeryrequestRow AddstationeryrequestRow(int requestID, usersRow parentusersRowBystatreqFKuser, productDetailRow parentproductDetailRowBystatreqFKproduct1, string status, System.DateTime requestDate, int quantity, decimal totalPrice, int totalPrice1, string name, string description) {
+            public stationeryrequestRow AddstationeryrequestRow(int requestID, usersRow parentusersRowBystatreqFKuser, productDetailRow parentproductDetailRowBystatreqFKproduct1, string status, System.DateTime requestDate, int quantity, decimal totalPrice, int totalPrice1, string name, string description, decimal price, int stock) {
                 stationeryrequestRow rowstationeryrequestRow = ((stationeryrequestRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         requestID,
@@ -2481,7 +2501,9 @@ namespace StationarySystem {
                         totalPrice,
                         totalPrice1,
                         name,
-                        description};
+                        description,
+                        price,
+                        stock};
                 if ((parentusersRowBystatreqFKuser != null)) {
                     columnValuesArray[1] = parentusersRowBystatreqFKuser[0];
                 }
@@ -2527,6 +2549,8 @@ namespace StationarySystem {
                 this.columntotalPrice1 = base.Columns["totalPrice1"];
                 this.columnname = base.Columns["name"];
                 this.columndescription = base.Columns["description"];
+                this.columnprice = base.Columns["price"];
+                this.columnstock = base.Columns["stock"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2552,6 +2576,10 @@ namespace StationarySystem {
                 base.Columns.Add(this.columnname);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
+                this.columnprice = new global::System.Data.DataColumn("price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnprice);
+                this.columnstock = new global::System.Data.DataColumn("stock", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstock);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnrequestID}, true));
                 this.columnrequestID.AllowDBNull = false;
@@ -2568,6 +2596,8 @@ namespace StationarySystem {
                 this.columnname.MaxLength = 20;
                 this.columndescription.AllowDBNull = false;
                 this.columndescription.MaxLength = 100;
+                this.columnprice.AllowDBNull = false;
+                this.columnstock.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4254,6 +4284,28 @@ namespace StationarySystem {
                 }
                 set {
                     this[this.tablestationeryrequest.descriptionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal price {
+                get {
+                    return ((decimal)(this[this.tablestationeryrequest.priceColumn]));
+                }
+                set {
+                    this[this.tablestationeryrequest.priceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int stock {
+                get {
+                    return ((int)(this[this.tablestationeryrequest.stockColumn]));
+                }
+                set {
+                    this[this.tablestationeryrequest.stockColumn] = value;
                 }
             }
             
@@ -6997,6 +7049,8 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
             tableMapping.ColumnMappings.Add("totalPrice", "totalPrice1");
             tableMapping.ColumnMappings.Add("name", "name");
             tableMapping.ColumnMappings.Add("description", "description");
+            tableMapping.ColumnMappings.Add("price", "price");
+            tableMapping.ColumnMappings.Add("stock", "stock");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7014,8 +7068,8 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT s.requestID, s.userID, s.productID, s.requestDate, s.status, s.quantity, s" +
-                ".totalPrice, p.name, p.description \r\nFROM stationeryrequest s\r\nINNER JOIN produc" +
-                "t p\r\nON s.productID = p.productID \r\nORDER BY s.requestID";
+                ".totalPrice, p.name, p.description, p.price, p.stock \r\nFROM stationeryrequest s\r" +
+                "\nINNER JOIN product p\r\nON s.productID = p.productID";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
@@ -7024,22 +7078,24 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "requestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT s.requestID, s.userID, s.productID, s.requestDate, s.status, s.quantity, s" +
-                ".totalPrice, p.name, p.description \r\nFROM stationeryrequest s\r\nINNER JOIN produc" +
-                "t p\r\nON s.productID = p.productID \r\nORDER BY s.requestID";
-            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "INSERT INTO [dbo].[stationeryrequest] ([userID], [productID], [requestDate], [sta" +
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[stationeryrequest] ([userID], [productID], [requestDate], [sta" +
                 "tus], [quantity], [totalPrice]) \r\nVALUES (@userID, @productID, @requestDate, @st" +
                 "atus, @quantity, @totalPrice);";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@requestDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "requestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalPrice", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "totalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE stationeryrequest\r\nSET quantity = @quantity, totalPrice = @totalPrice\r\nWHE" +
+                "RE requestID = @Original_requestID";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@productID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "productID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@requestDate", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "requestDate", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@status", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@quantity", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "quantity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalPrice", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "totalPrice", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_requestID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "requestID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
             this._commandCollection[4].CommandText = "UPDATE stationeryrequest\r\nSET status = @status\r\nWHERE requestID = @Original_reque" +
@@ -7076,30 +7132,6 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(sepdbDataSet.stationeryrequestDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual sepdbDataSet.stationeryrequestDataTable GetDataByProductID() {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
-            sepdbDataSet.stationeryrequestDataTable dataTable = new sepdbDataSet.stationeryrequestDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
         public virtual int DeleteByRequestID(int Original_requestID) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
@@ -7126,7 +7158,7 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int SubmitStatReq(int userID, int productID, string requestDate, string status, int quantity, int totalPrice) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             command.Parameters[0].Value = ((int)(userID));
             command.Parameters[1].Value = ((int)(productID));
             if ((requestDate == null)) {
@@ -7143,6 +7175,32 @@ SELECT orderID, productID, quantity, totalPrice FROM orderedproducts WHERE (orde
             }
             command.Parameters[4].Value = ((int)(quantity));
             command.Parameters[5].Value = ((int)(totalPrice));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int UpdateQuantity(int quantity, int totalPrice, int Original_requestID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            command.Parameters[0].Value = ((int)(quantity));
+            command.Parameters[1].Value = ((int)(totalPrice));
+            command.Parameters[2].Value = ((int)(Original_requestID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {

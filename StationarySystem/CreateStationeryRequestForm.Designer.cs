@@ -335,7 +335,7 @@
             this.qty.Location = new System.Drawing.Point(758, 134);
             this.qty.Margin = new System.Windows.Forms.Padding(6);
             this.qty.Maximum = new decimal(new int[] {
-            999,
+            50,
             0,
             0,
             0});
