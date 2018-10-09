@@ -49,37 +49,40 @@ namespace StationarySystem
             this.Close();
             loadingCircle1.Visible = true;
         }
-
-        private static int subtractQuantity(int originalQty, int amount)
-        {
-            return originalQty - amount;
-        }
-
+        
         private void approveBtn_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to approve this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+            int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
+            int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
+            int stock = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
+            int reducedAmount = Product.subtractQuantity(stock, selectedAmount);
+
+            if(stock == 0)
             {
-                // user clicked yes
-                //Product selectedProduct = Program.getCurrentProduct();
-                int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
-                int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
-                int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
-                int stock = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
-
-                int reducedAmount = subtractQuantity(stock, selectedAmount);
-
-                stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
-                stationeryrequestTableAdapter.UpdateStock(reducedAmount, selectedProductID);
-                ApproveRequestForm approve = new ApproveRequestForm();
-                approve.Show();
-                this.Close();
+                MessageBox.Show("There is no more stock for this product.");
             }
             else
             {
-                // user clicked no
-                //nothing happens, return to "My Requests" page
-                loadingCircle1.Visible = true;
+                if (MessageBox.Show("Are you sure you want to approve this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    // user clicked yes
+                    //Product selectedProduct = Program.getCurrentProduct();
+
+                    stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
+                    stationeryrequestTableAdapter.UpdateStock(reducedAmount, selectedProductID);
+                    ApproveRequestForm approve = new ApproveRequestForm();
+                    approve.Show();
+                    this.Close();
+                }
+                else
+                {
+                    // user clicked no
+                    //nothing happens, return to "My Requests" page
+                    loadingCircle1.Visible = true;
+                }
             }
+            
         }
 
         private void rejectBtn_Click(object sender, EventArgs e)

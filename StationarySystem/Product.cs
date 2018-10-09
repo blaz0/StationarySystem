@@ -19,4 +19,9 @@ namespace StationarySystem
         public Product()
         { }
     }
+
+    public static int subtractQuantity(int originalQty, int amount)
+    {
+        return originalQty - amount;
+    }
 }
