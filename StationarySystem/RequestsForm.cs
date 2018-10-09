@@ -18,15 +18,20 @@ namespace StationarySystem
         }
         private void RequestsForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sepdbDataSet1.stationeryrequest' table. You can move, or remove it, as needed.
+            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest);
             User selectedUser = Program.getCurrentUser();
             Product selectedProduct = Program.getCurrentProduct();
             int findUserID = selectedUser.userId;
-            stationeryrequestBindingSource.Filter = "Convert([userID], System.String) LIKE '*" + findUserID + "*'";
-            // TODO: This line of code loads data into the 'sepdbDataSet.stationeryrequest' table. You can move, or remove it, as needed.
-            this.stationeryrequestTableAdapter.GetDataByProductID();
-           
+            stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
+            //DataTable mergedTable = stationeryrequestTableAdapter.GetDataByProductID();
 
-            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
+            saveBtn.Visible = false;
+            cancelLbl.Visible = false;
+            qty.Visible = false;
+            quantityLbl.Visible = false;
+
+            //this.stationeryrequestTableAdapter.FillBy(this.sepdbDataSet.stationeryrequest);
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
         }
@@ -57,7 +62,7 @@ namespace StationarySystem
             User selectedUser = Program.getCurrentUser();
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
             //int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
-            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString();
             //string requestedDate = requestDataGrid.CurrentRow.Cells[3].Value.ToString();
 
             if (requestStatus == "Submitted")
@@ -83,12 +88,12 @@ namespace StationarySystem
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            stationeryrequestBindingSource.Filter = "productID LIKE '*" + searchValue + "*'";
+            stationeryrequestBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
         }
         
         private void editBtn_Click(object sender, EventArgs e)
         {
-            string requestStatus = requestDataGrid.CurrentRow.Cells[6].Value.ToString();
+            string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString();
             if (requestStatus == "Submitted")
             {
                 Product selectedProduct = Program.getCurrentProduct();
@@ -96,18 +101,11 @@ namespace StationarySystem
                 selectedProduct.productid = Convert.ToInt32(selectedCellID);
                 requestDataGrid.Enabled = false;
                 cancelBtn.Enabled = false;
-                UpdateRequest update = new UpdateRequest();
-                update.Show();
+                saveBtn.Visible = true;
+                cancelLbl.Visible = true;
+                qty.Visible = true;
+                quantityLbl.Visible = true;
 
-                sepdbDataSet.stationeryrequestDataTable dt = stationeryrequestTableAdapter.GetDataByProductID();
-                DataRow dr = dt.Rows[0];
-                selectedProduct.productid = int.Parse(dr["productID"].ToString());
-                selectedProduct.supplierid = int.Parse(dr["supplierID"].ToString());
-                selectedProduct.name = dr["name"].ToString();
-                selectedProduct.description = dr["description"].ToString();
-                selectedProduct.stock = int.Parse(dr["stock"].ToString());
-                selectedProduct.price = int.Parse(dr["price"].ToString());
-                selectedProduct.stockLevel = dr["stockLevel"].ToString();
             }
             else
             {
@@ -115,5 +113,32 @@ namespace StationarySystem
             }
         }
 
+        private void cancelLbl_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to update the quantity?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                // user clicked yes
+                int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+                int productPrice = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
+                int quantity = Convert.ToInt32(qty.Value);
+                int totalPrice = (quantity * productPrice);
+
+                stationeryrequestTableAdapter.UpdateQuantity(quantity, totalPrice, selectedRequestID);
+                RequestsForm form = new RequestsForm();
+                form.Show();
+                this.Close();
+            }
+            else
+            {
+                // user clicked no
+                //nothing happens, return to "My Requests" page
+            }
+        }
     }
 }

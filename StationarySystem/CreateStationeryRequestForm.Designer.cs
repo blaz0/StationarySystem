@@ -81,7 +81,7 @@
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -95,7 +95,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 812);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -109,7 +109,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -123,7 +123,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 638);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
@@ -139,7 +139,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
@@ -158,7 +158,7 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1113);
             this.panel1.TabIndex = 28;
@@ -197,7 +197,6 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.refreshBtn.BackColor = System.Drawing.Color.Teal;
             this.refreshBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -213,7 +212,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(2261, 39);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -237,8 +235,6 @@
             // 
             // groupOrder
             // 
-            this.groupOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupOrder.Controls.Add(this.descriptionTxt);
             this.groupOrder.Controls.Add(this.totalPriceTxt);
             this.groupOrder.Controls.Add(this.priceTxt);
@@ -248,9 +244,9 @@
             this.groupOrder.Controls.Add(this.qty);
             this.groupOrder.Controls.Add(this.productNameTxt);
             this.groupOrder.Location = new System.Drawing.Point(650, 281);
-            this.groupOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Margin = new System.Windows.Forms.Padding(6);
             this.groupOrder.Name = "groupOrder";
-            this.groupOrder.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.groupOrder.Padding = new System.Windows.Forms.Padding(6);
             this.groupOrder.Size = new System.Drawing.Size(1766, 567);
             this.groupOrder.TabIndex = 29;
             this.groupOrder.TabStop = false;
@@ -262,7 +258,7 @@
             this.descriptionTxt.Location = new System.Drawing.Point(100, 223);
             this.descriptionTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.descriptionTxt.Name = "descriptionTxt";
-            this.descriptionTxt.Size = new System.Drawing.Size(420, 24);
+            this.descriptionTxt.Size = new System.Drawing.Size(784, 24);
             this.descriptionTxt.TabIndex = 9;
             this.descriptionTxt.Text = "product description";
             // 
@@ -274,7 +270,7 @@
             this.totalPriceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.totalPriceTxt.ForeColor = System.Drawing.Color.Black;
             this.totalPriceTxt.Location = new System.Drawing.Point(1496, 416);
-            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.totalPriceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.totalPriceTxt.Name = "totalPriceTxt";
             this.totalPriceTxt.ReadOnly = true;
             this.totalPriceTxt.Size = new System.Drawing.Size(200, 73);
@@ -289,7 +285,7 @@
             this.priceTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.priceTxt.ForeColor = System.Drawing.Color.Black;
             this.priceTxt.Location = new System.Drawing.Point(1484, 138);
-            this.priceTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.priceTxt.Margin = new System.Windows.Forms.Padding(6);
             this.priceTxt.Name = "priceTxt";
             this.priceTxt.ReadOnly = true;
             this.priceTxt.Size = new System.Drawing.Size(220, 43);
@@ -337,9 +333,9 @@
             this.qty.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qty.Location = new System.Drawing.Point(758, 134);
-            this.qty.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.qty.Margin = new System.Windows.Forms.Padding(6);
             this.qty.Maximum = new decimal(new int[] {
-            999,
+            50,
             0,
             0,
             0});
@@ -382,7 +378,6 @@
             // 
             // submitBtn
             // 
-            this.submitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.submitBtn.BackColor = System.Drawing.Color.Teal;
             this.submitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
@@ -407,7 +402,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -478,7 +472,7 @@
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ProductsLbl);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateStationeryRequestForm";
             this.Text = "CreateStationeryRequest";
             this.Load += new System.EventHandler(this.CreateStationeryRequestForm_Load);

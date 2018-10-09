@@ -19,4 +19,14 @@ namespace StationarySystem
         public Product()
         { }
     }
+
+    public static int subtractQuantity(int originalQty, int amount)
+    {
+        return originalQty - amount;
+    }
+
+    public static int addQuantity(int originalQty, int amount)
+    {
+        return originalQty + amount;
+    }
 }
