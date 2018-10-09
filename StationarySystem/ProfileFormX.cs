@@ -109,7 +109,7 @@ namespace StationarySystem
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            if(IsValidEmail(txtEmail.ToString())== false)
+            if(IsValidEmail(txtEmail.Text)== false || txtEmail.Text == null)
             {
                 MessageBox.Show("Please enter a valid email address.");
                 txtEmail.Text = txtEmail.Text.Remove(txtEmail.Text.Length - 20);
