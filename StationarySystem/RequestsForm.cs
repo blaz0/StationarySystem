@@ -134,12 +134,27 @@ namespace StationarySystem
                 RequestsForm form = new RequestsForm();
                 form.Show();
                 this.Close();
+                
             }
             else
             {
                 // user clicked no
                 //nothing happens, return to "My Requests" page
             }
+        }
+
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+            ProductsForm products = new ProductsForm();
+            products.Show();
+            this.Close();
+        }
+
+        private void btnSystemSettings_Click(object sender, EventArgs e)
+        {
+            RequestsForm form = new RequestsForm();
+            form.Show();
+            this.Close();
         }
     }
 }
