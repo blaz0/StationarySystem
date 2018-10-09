@@ -128,5 +128,12 @@ namespace StationarySystem
             form.Show();
             this.Close();
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Close();
+        }
     }
 }

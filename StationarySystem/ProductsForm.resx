@@ -315,6 +315,9 @@
   <metadata name="sepdbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>291, 17</value>
   </metadata>
+  <metadata name="sepdbDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>291, 17</value>
+  </metadata>
   <data name="utsLogo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAATwAAAG4CAYAAADYJFvIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAd
@@ -1168,6 +1171,20 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>99</value>
   </metadata>
+  <data name="backBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4gkRCAoHGHVuMwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFrSURBVHhe
+        7ds7SoRBEEXhUUTEBQiGYmRiYOJGfJsbuAgTYwNjAxcxiqKYuA8xF3xkIgp6OvhBhpqame6oau6BbwG3
+        wobuBWoOJ3jCO/pYxVS0gBv8DvjAJlJXxt9icHwn9RFGje+8YhmpGnd85xxpmnR88YgU1YwvLhG+2vFf
+        WEfoasf/4AChaxl/iNBpPKyBHo1H6DQe1kCPxiN0Gg9roEfjETqNhzXQo/EIncbDGujReIRO42EN9Gg8
+        QjfV42dwBWugJ8X40hGsgZ4040vXsEYOk2p8qeYA4d/u/3cMa6gn1RFmcQdrqCfVERbxAGuoR0dAOcI+
+        UqQjkI5ALUfYQ4p0BNIRSEegliPsIkU6AukIpCNQyxF2kKLaI3xDR4COgG2kSEcgHYF0BGo5whZSpCNQ
+        7RE+sYYU1R7hAmmqOcI9UjXpEc6QrnGP8IIlpGzUEd6wgdQNO0L5Mpt+fNc8TvGM7vv8Chrq9f4Apxs6
+        yqD4XsgAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
