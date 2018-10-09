@@ -49,14 +49,24 @@ namespace StationarySystem
             this.Close();
             loadingCircle1.Visible = true;
         }
-        
+
+        public static int subtractQuantity(int originalQty, int amount)
+        {
+            return originalQty - amount;
+        }
+
+        public static int addQuantity(int originalQty, int amount)
+        {
+            return originalQty + amount;
+        }
+
         private void approveBtn_Click(object sender, EventArgs e)
         {
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
             int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
             int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
             int stock = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
-            int reducedAmount = Product.subtractQuantity(stock, selectedAmount);
+            int reducedAmount = subtractQuantity(stock, selectedAmount);
 
             if(stock == 0)
             {

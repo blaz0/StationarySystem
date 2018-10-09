@@ -71,7 +71,7 @@ namespace StationarySystem
                 {
                     // user clicked yes
                     this.stationeryrequestTableAdapter.DeleteByRequestID(selectedRequestID);
-                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
+                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest);
                 }
                 else
                 {
@@ -83,6 +83,7 @@ namespace StationarySystem
             {
                 MessageBox.Show("Sorry, this request cannot be cancelled.");
             }
+
         }
 
         private void searchBtn_Click(object sender, EventArgs e)
