@@ -299,7 +299,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -312,7 +311,6 @@
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
-            this.tableAdapterManager1.stationeryrequestTableAdapter = null;
             this.tableAdapterManager1.supplierorderTableAdapter = null;
             this.tableAdapterManager1.supplierTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

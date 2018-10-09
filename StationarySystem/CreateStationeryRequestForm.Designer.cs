@@ -402,7 +402,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;

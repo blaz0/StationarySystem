@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.utsLogo = new System.Windows.Forms.PictureBox();
@@ -45,8 +45,8 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.RequestsLbl = new System.Windows.Forms.Label();
             this.requestDataGrid = new System.Windows.Forms.DataGridView();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stationeryrequestBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sepdbDataSet1 = new StationarySystem.sepdbDataSet();
             this.stationeryrequestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -59,18 +59,23 @@
             this.stationeryrequestTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             this.sepdbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.editBtn = new System.Windows.Forms.Button();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stationeryrequestBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.requestIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.userIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
@@ -270,11 +275,12 @@
             this.requestIDDataGridViewTextBoxColumn,
             this.userIDDataGridViewTextBoxColumn,
             this.productIDDataGridViewTextBoxColumn,
+            this.name,
             this.requestDateDataGridViewTextBoxColumn,
             this.quantity,
             this.totalPrice,
             this.statusDataGridViewTextBoxColumn});
-            this.requestDataGrid.DataSource = this.stationeryrequestBindingSource1;
+            this.requestDataGrid.DataSource = this.stationeryrequestBindingSource2;
             this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.requestDataGrid.Location = new System.Drawing.Point(650, 338);
             this.requestDataGrid.Margin = new System.Windows.Forms.Padding(6);
@@ -286,22 +292,15 @@
             this.requestDataGrid.Size = new System.Drawing.Size(1711, 588);
             this.requestDataGrid.TabIndex = 31;
             // 
-            // quantity
+            // stationeryrequestBindingSource2
             // 
-            this.quantity.DataPropertyName = "quantity";
-            this.quantity.HeaderText = "Quantity";
-            this.quantity.Name = "quantity";
-            this.quantity.ReadOnly = true;
+            this.stationeryrequestBindingSource2.DataMember = "stationeryrequest";
+            this.stationeryrequestBindingSource2.DataSource = this.sepdbDataSet1;
             // 
-            // totalPrice
+            // sepdbDataSet1
             // 
-            this.totalPrice.DataPropertyName = "totalPrice";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle2;
-            this.totalPrice.HeaderText = "Total Price";
-            this.totalPrice.Name = "totalPrice";
-            this.totalPrice.ReadOnly = true;
+            this.sepdbDataSet1.DataSetName = "sepdbDataSet";
+            this.sepdbDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // stationeryrequestBindingSource
             // 
@@ -330,7 +329,6 @@
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
-            this.tableAdapterManager.stationeryrequestTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -379,34 +377,10 @@
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
             // 
-            // statusDataGridViewTextBoxColumn
+            // stationeryrequestBindingSource1
             // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // requestDateDataGridViewTextBoxColumn
-            // 
-            this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
-            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Request Date";
-            this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
-            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productIDDataGridViewTextBoxColumn
-            // 
-            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
-            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
-            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
-            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // userIDDataGridViewTextBoxColumn
-            // 
-            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
-            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
-            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
-            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stationeryrequestBindingSource1.DataMember = "stationeryrequest";
+            this.stationeryrequestBindingSource1.DataSource = this.sepdbDataSet;
             // 
             // requestIDDataGridViewTextBoxColumn
             // 
@@ -415,10 +389,59 @@
             this.requestIDDataGridViewTextBoxColumn.Name = "requestIDDataGridViewTextBoxColumn";
             this.requestIDDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // stationeryrequestBindingSource1
+            // userIDDataGridViewTextBoxColumn
             // 
-            this.stationeryrequestBindingSource1.DataMember = "stationeryrequest";
-            this.stationeryrequestBindingSource1.DataSource = this.sepdbDataSet;
+            this.userIDDataGridViewTextBoxColumn.DataPropertyName = "userID";
+            this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
+            this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
+            this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productIDDataGridViewTextBoxColumn
+            // 
+            this.productIDDataGridViewTextBoxColumn.DataPropertyName = "productID";
+            this.productIDDataGridViewTextBoxColumn.HeaderText = "Product ID";
+            this.productIDDataGridViewTextBoxColumn.Name = "productIDDataGridViewTextBoxColumn";
+            this.productIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.productIDDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.productIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "name";
+            this.name.HeaderText = "Product Name";
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // requestDateDataGridViewTextBoxColumn
+            // 
+            this.requestDateDataGridViewTextBoxColumn.DataPropertyName = "requestDate";
+            this.requestDateDataGridViewTextBoxColumn.HeaderText = "Request Date";
+            this.requestDateDataGridViewTextBoxColumn.Name = "requestDateDataGridViewTextBoxColumn";
+            this.requestDateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            this.quantity.DataPropertyName = "quantity";
+            this.quantity.HeaderText = "Quantity";
+            this.quantity.Name = "quantity";
+            this.quantity.ReadOnly = true;
+            // 
+            // totalPrice
+            // 
+            this.totalPrice.DataPropertyName = "totalPrice";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.totalPrice.DefaultCellStyle = dataGridViewCellStyle1;
+            this.totalPrice.HeaderText = "Total Price";
+            this.totalPrice.Name = "totalPrice";
+            this.totalPrice.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // RequestsForm
             // 
@@ -446,6 +469,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stationeryrequestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
@@ -485,15 +510,18 @@
         private System.Windows.Forms.DataGridView requestDataGrid;
         private System.Windows.Forms.BindingSource stationeryrequestBindingSource;
         private System.Windows.Forms.BindingSource sepdbDataSetBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.Button editBtn;
         public sepdbDataSetTableAdapters.stationeryrequestTableAdapter stationeryrequestTableAdapter;
+        private System.Windows.Forms.BindingSource stationeryrequestBindingSource1;
+        private sepdbDataSet sepdbDataSet1;
+        private System.Windows.Forms.BindingSource stationeryrequestBindingSource2;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totalPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource stationeryrequestBindingSource1;
     }
 }
