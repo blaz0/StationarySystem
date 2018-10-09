@@ -131,10 +131,10 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Home homepage = new Home();
-            homepage.Show();
+            LoginForm loginPage = new LoginForm();
+            loginPage.Show();
             this.Close();
         }
     }
