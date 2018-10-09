@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestsForm));
             this.clearSearchBtn = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -104,6 +104,7 @@
             this.clearSearchBtn.TabIndex = 30;
             this.clearSearchBtn.Text = "Clear Search";
             this.clearSearchBtn.UseVisualStyleBackColor = false;
+            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
             // 
             // errorProvider1
             // 
@@ -113,7 +114,7 @@
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
             this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
             this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -128,7 +129,7 @@
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
             this.btnSystemSettings.Location = new System.Drawing.Point(0, 812);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
             this.btnSystemSettings.Name = "btnSystemSettings";
             this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
@@ -144,7 +145,7 @@
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
             this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6);
             this.btnNotifications.Name = "btnNotifications";
             this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
@@ -160,7 +161,7 @@
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
             this.btnProfile.Location = new System.Drawing.Point(0, 638);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
@@ -177,7 +178,7 @@
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
@@ -195,7 +196,7 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 1089);
             this.panel1.TabIndex = 28;
@@ -249,7 +250,7 @@
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchBox.HideSelection = false;
             this.SearchBox.Location = new System.Drawing.Point(650, 231);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 22;
@@ -346,9 +347,9 @@
             // totalPrice1
             // 
             this.totalPrice1.DataPropertyName = "totalPrice1";
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.totalPrice1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.totalPrice1.DefaultCellStyle = dataGridViewCellStyle2;
             this.totalPrice1.HeaderText = "Total Price";
             this.totalPrice1.Name = "totalPrice1";
             this.totalPrice1.ReadOnly = true;
@@ -403,7 +404,7 @@
             this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.editBtn.Location = new System.Drawing.Point(1850, 964);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(6);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(64, 66);
             this.editBtn.TabIndex = 32;
@@ -538,7 +539,7 @@
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.RequestsLbl);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "RequestsForm";
             this.Text = "RequestsForm";
             this.Load += new System.EventHandler(this.RequestsForm_Load);

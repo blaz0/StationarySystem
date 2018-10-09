@@ -89,7 +89,7 @@ namespace StationarySystem
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            stationeryrequestBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
+            stationeryrequestBindingSource2.Filter = "name LIKE '*" + searchValue + "*'";
         }
         
         private void editBtn_Click(object sender, EventArgs e)
@@ -157,11 +157,9 @@ namespace StationarySystem
             this.Close();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)
+        private void clearSearchBtn_Click(object sender, EventArgs e)
         {
-            Home homepage = new Home();
-            homepage.Show();
-            this.Close();
+            stationeryrequestBindingSource2.Filter = null;
         }
     }
 }
