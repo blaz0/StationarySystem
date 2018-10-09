@@ -89,7 +89,7 @@ namespace StationarySystem
         private void searchBtn_Click(object sender, EventArgs e)
         {
             string searchValue = SearchBox.Text;
-            stationeryrequestBindingSource.Filter = "name LIKE '*" + searchValue + "*'";
+            stationeryrequestBindingSource2.Filter = "name LIKE '*" + searchValue + "*'";
         }
         
         private void editBtn_Click(object sender, EventArgs e)
@@ -155,6 +155,11 @@ namespace StationarySystem
             RequestsForm form = new RequestsForm();
             form.Show();
             this.Close();
+        }
+
+        private void clearSearchBtn_Click(object sender, EventArgs e)
+        {
+            stationeryrequestBindingSource2.Filter = null;
         }
     }
 }
