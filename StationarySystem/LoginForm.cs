@@ -90,5 +90,10 @@ namespace StationarySystem
             }
 
         }
+
+        private void closeLbl_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
     }
 }

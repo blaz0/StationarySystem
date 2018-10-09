@@ -41,6 +41,7 @@ namespace StationarySystem
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loadingCircle = new CircularProgressBar.CircularProgressBar();
+            this.closeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +141,7 @@ namespace StationarySystem
             this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle.InnerMargin = 2;
             this.loadingCircle.InnerWidth = -1;
-            this.loadingCircle.Location = new System.Drawing.Point(520, 369);
+            this.loadingCircle.Location = new System.Drawing.Point(511, 54);
             this.loadingCircle.MarqueeAnimationSpeed = 2000;
             this.loadingCircle.Name = "loadingCircle";
             this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
@@ -160,6 +161,18 @@ namespace StationarySystem
             this.loadingCircle.SuperscriptText = "";
             this.loadingCircle.TabIndex = 7;
             this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle.Value = 68;
+            // 
+            // closeLbl
+            // 
+            this.closeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.closeLbl.AutoSize = true;
+            this.closeLbl.Location = new System.Drawing.Point(520, 393);
+            this.closeLbl.Name = "closeLbl";
+            this.closeLbl.Size = new System.Drawing.Size(67, 25);
+            this.closeLbl.TabIndex = 9;
+            this.closeLbl.Text = "Close";
+            this.closeLbl.Click += new System.EventHandler(this.closeLbl_Click);
             // 
             // LoginForm
             // 
@@ -168,6 +181,7 @@ namespace StationarySystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(768, 513);
+            this.Controls.Add(this.closeLbl);
             this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -217,5 +231,6 @@ namespace StationarySystem
         private Label label1;
         private PictureBox pictureBox1;
         private CircularProgressBar.CircularProgressBar loadingCircle;
+        private Label closeLbl;
     }
 }
