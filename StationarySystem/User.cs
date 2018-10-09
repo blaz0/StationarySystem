@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StationarySystem
 {
-    class User
+    public class User
     {
         public int userId { get; set; }
         public string firstName { get; set; }
@@ -75,6 +75,13 @@ namespace StationarySystem
         public string GetNickname()
         {
             return nickname;
+        }
+        public bool CheckID (int ID)
+        {
+            if (ID == this.userId)
+                return true;
+            else
+                return false;
         }
     }
 }
