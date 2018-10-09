@@ -49,10 +49,10 @@ namespace StationarySystem
             this.StaffIDLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.StaffIDLbl.AutoSize = true;
             this.StaffIDLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIDLbl.Location = new System.Drawing.Point(111, 166);
-            this.StaffIDLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.StaffIDLbl.Location = new System.Drawing.Point(74, 106);
+            this.StaffIDLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.StaffIDLbl.Name = "StaffIDLbl";
-            this.StaffIDLbl.Size = new System.Drawing.Size(141, 37);
+            this.StaffIDLbl.Size = new System.Drawing.Size(87, 25);
             this.StaffIDLbl.TabIndex = 0;
             this.StaffIDLbl.Text = "Staff ID#";
             // 
@@ -61,10 +61,10 @@ namespace StationarySystem
             this.PasswordLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PasswordLbl.AutoSize = true;
             this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLbl.Location = new System.Drawing.Point(103, 261);
-            this.PasswordLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.PasswordLbl.Location = new System.Drawing.Point(69, 167);
+            this.PasswordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(158, 37);
+            this.PasswordLbl.Size = new System.Drawing.Size(98, 25);
             this.PasswordLbl.TabIndex = 1;
             this.PasswordLbl.Text = "Password";
             // 
@@ -72,11 +72,11 @@ namespace StationarySystem
             // 
             this.StaffIDTF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.StaffIDTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffIDTF.Location = new System.Drawing.Point(295, 166);
-            this.StaffIDTF.Margin = new System.Windows.Forms.Padding(6);
+            this.StaffIDTF.Location = new System.Drawing.Point(197, 106);
+            this.StaffIDTF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.StaffIDTF.MaxLength = 8;
             this.StaffIDTF.Name = "StaffIDTF";
-            this.StaffIDTF.Size = new System.Drawing.Size(304, 44);
+            this.StaffIDTF.Size = new System.Drawing.Size(204, 30);
             this.StaffIDTF.TabIndex = 2;
             this.StaffIDTF.TextChanged += new System.EventHandler(this.StaffIDTF_TextChanged);
             // 
@@ -84,11 +84,11 @@ namespace StationarySystem
             // 
             this.PasswordTF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PasswordTF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTF.Location = new System.Drawing.Point(295, 261);
-            this.PasswordTF.Margin = new System.Windows.Forms.Padding(6);
+            this.PasswordTF.Location = new System.Drawing.Point(197, 167);
+            this.PasswordTF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordTF.Name = "PasswordTF";
             this.PasswordTF.PasswordChar = '*';
-            this.PasswordTF.Size = new System.Drawing.Size(304, 44);
+            this.PasswordTF.Size = new System.Drawing.Size(204, 30);
             this.PasswordTF.TabIndex = 3;
             this.PasswordTF.TextChanged += new System.EventHandler(this.PasswordTF_TextChanged);
             // 
@@ -96,12 +96,13 @@ namespace StationarySystem
             // 
             this.LoginBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.LoginBtn.BackColor = System.Drawing.Color.Teal;
+            this.LoginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(295, 361);
-            this.LoginBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.LoginBtn.Location = new System.Drawing.Point(197, 231);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(200, 77);
+            this.LoginBtn.Size = new System.Drawing.Size(133, 49);
             this.LoginBtn.TabIndex = 4;
             this.LoginBtn.Text = "Login";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -112,9 +113,10 @@ namespace StationarySystem
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F);
-            this.label1.Location = new System.Drawing.Point(273, 41);
+            this.label1.Location = new System.Drawing.Point(182, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 85);
+            this.label1.Size = new System.Drawing.Size(137, 54);
             this.label1.TabIndex = 5;
             this.label1.Text = "Login";
             // 
@@ -122,9 +124,10 @@ namespace StationarySystem
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(118, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(79, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(134, 72);
+            this.pictureBox1.Size = new System.Drawing.Size(89, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -140,7 +143,8 @@ namespace StationarySystem
             this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle.InnerMargin = 2;
             this.loadingCircle.InnerWidth = -1;
-            this.loadingCircle.Location = new System.Drawing.Point(520, 369);
+            this.loadingCircle.Location = new System.Drawing.Point(347, 236);
+            this.loadingCircle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle.MarqueeAnimationSpeed = 2000;
             this.loadingCircle.Name = "loadingCircle";
             this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
@@ -149,7 +153,7 @@ namespace StationarySystem
             this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
             this.loadingCircle.ProgressWidth = 20;
             this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.loadingCircle.Size = new System.Drawing.Size(59, 59);
+            this.loadingCircle.Size = new System.Drawing.Size(39, 38);
             this.loadingCircle.StartAngle = 270;
             this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -160,14 +164,15 @@ namespace StationarySystem
             this.loadingCircle.SuperscriptText = "";
             this.loadingCircle.TabIndex = 7;
             this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.loadingCircle.Value = 68;
             // 
             // LoginForm
             // 
             this.AcceptButton = this.LoginBtn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(768, 513);
+            this.ClientSize = new System.Drawing.Size(512, 328);
             this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -176,7 +181,7 @@ namespace StationarySystem
             this.Controls.Add(this.StaffIDTF);
             this.Controls.Add(this.PasswordLbl);
             this.Controls.Add(this.StaffIDLbl);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UTS: Login";

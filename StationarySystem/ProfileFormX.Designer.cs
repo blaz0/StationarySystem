@@ -78,10 +78,10 @@ namespace StationarySystem
             // profilePicture
             // 
             this.profilePicture.Image = ((System.Drawing.Image)(resources.GetObject("profilePicture.Image")));
-            this.profilePicture.Location = new System.Drawing.Point(1360, 133);
-            this.profilePicture.Margin = new System.Windows.Forms.Padding(6);
+            this.profilePicture.Location = new System.Drawing.Point(907, 85);
+            this.profilePicture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.profilePicture.Name = "profilePicture";
-            this.profilePicture.Size = new System.Drawing.Size(420, 419);
+            this.profilePicture.Size = new System.Drawing.Size(280, 268);
             this.profilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePicture.TabIndex = 5;
             this.profilePicture.TabStop = false;
@@ -93,11 +93,10 @@ namespace StationarySystem
             this.txtNickname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNickname.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource, "nickname", true));
             this.txtNickname.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtNickname.Location = new System.Drawing.Point(272, 9);
-            this.txtNickname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNickname.Location = new System.Drawing.Point(181, 6);
             this.txtNickname.Name = "txtNickname";
             this.txtNickname.ReadOnly = true;
-            this.txtNickname.Size = new System.Drawing.Size(406, 37);
+            this.txtNickname.Size = new System.Drawing.Size(271, 23);
             this.txtNickname.TabIndex = 8;
             this.txtNickname.Text = "insert nickname here";
             // 
@@ -124,11 +123,10 @@ namespace StationarySystem
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "emailAddress", true));
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(272, 65);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Location = new System.Drawing.Point(181, 42);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(606, 37);
+            this.txtEmail.Size = new System.Drawing.Size(404, 23);
             this.txtEmail.TabIndex = 8;
             this.txtEmail.Text = "insert email here";
             // 
@@ -137,10 +135,9 @@ namespace StationarySystem
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(68, 234);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(52, 149);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 37);
+            this.label1.Size = new System.Drawing.Size(123, 25);
             this.label1.TabIndex = 12;
             this.label1.Text = "Cost Centre:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -150,10 +147,9 @@ namespace StationarySystem
             this.lblCC.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblCC.AutoSize = true;
             this.lblCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCC.Location = new System.Drawing.Point(83, 177);
-            this.lblCC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCC.Location = new System.Drawing.Point(64, 113);
             this.lblCC.Name = "lblCC";
-            this.lblCC.Size = new System.Drawing.Size(181, 37);
+            this.lblCC.Size = new System.Drawing.Size(111, 25);
             this.lblCC.TabIndex = 7;
             this.lblCC.Text = "ID Number:";
             this.lblCC.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,10 +159,9 @@ namespace StationarySystem
             this.lblID.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(22, 121);
-            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Location = new System.Drawing.Point(26, 77);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(242, 37);
+            this.lblID.Size = new System.Drawing.Size(149, 25);
             this.lblID.TabIndex = 5;
             this.lblID.Text = "Phone Number:";
             this.lblID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -176,10 +171,9 @@ namespace StationarySystem
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(158, 65);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.Location = new System.Drawing.Point(109, 41);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(106, 37);
+            this.lblEmail.Size = new System.Drawing.Size(66, 25);
             this.lblEmail.TabIndex = 3;
             this.lblEmail.Text = "Email:";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +185,9 @@ namespace StationarySystem
             this.lblFullName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblFullName.Location = new System.Drawing.Point(95, 9);
-            this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFullName.Location = new System.Drawing.Point(70, 5);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(169, 37);
+            this.lblFullName.Size = new System.Drawing.Size(105, 25);
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Nickname:";
             this.lblFullName.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -206,11 +199,10 @@ namespace StationarySystem
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhoneNo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "phoneNumber", true));
             this.txtPhoneNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtPhoneNo.Location = new System.Drawing.Point(272, 121);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhoneNo.Location = new System.Drawing.Point(181, 78);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.ReadOnly = true;
-            this.txtPhoneNo.Size = new System.Drawing.Size(606, 37);
+            this.txtPhoneNo.Size = new System.Drawing.Size(404, 23);
             this.txtPhoneNo.TabIndex = 8;
             this.txtPhoneNo.Text = "insert phone no. here";
             this.txtPhoneNo.TextChanged += new System.EventHandler(this.txtPhoneNo_TextChanged);
@@ -222,11 +214,10 @@ namespace StationarySystem
             this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "userId", true));
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtID.Location = new System.Drawing.Point(272, 177);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.Location = new System.Drawing.Point(181, 114);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(406, 37);
+            this.txtID.Size = new System.Drawing.Size(271, 23);
             this.txtID.TabIndex = 8;
             this.txtID.Text = "insert ID no. here";
             // 
@@ -238,11 +229,10 @@ namespace StationarySystem
             this.txtCC.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtCC.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usersBindingSource2, "costCentre", true));
             this.txtCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCC.Location = new System.Drawing.Point(272, 234);
-            this.txtCC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCC.Location = new System.Drawing.Point(181, 150);
             this.txtCC.Name = "txtCC";
             this.txtCC.ReadOnly = true;
-            this.txtCC.Size = new System.Drawing.Size(406, 37);
+            this.txtCC.Size = new System.Drawing.Size(271, 23);
             this.txtCC.TabIndex = 8;
             this.txtCC.Text = "insert cost centre here";
             // 
@@ -263,16 +253,16 @@ namespace StationarySystem
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.lblFullName, 0, 0);
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(1306, 633);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(871, 405);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(890, 281);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(593, 180);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // txtFName
@@ -280,11 +270,10 @@ namespace StationarySystem
             this.txtFName.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtFName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.txtFName.Location = new System.Drawing.Point(1250, 548);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFName.Location = new System.Drawing.Point(833, 351);
             this.txtFName.Name = "txtFName";
             this.txtFName.ReadOnly = true;
-            this.txtFName.Size = new System.Drawing.Size(656, 61);
+            this.txtFName.Size = new System.Drawing.Size(437, 38);
             this.txtFName.TabIndex = 6;
             this.txtFName.Text = "txtFName";
             this.txtFName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -297,10 +286,9 @@ namespace StationarySystem
             // 
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(2715, 48);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(1810, 31);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 94);
+            this.pictureBox3.Size = new System.Drawing.Size(67, 60);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
@@ -317,9 +305,9 @@ namespace StationarySystem
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1395);
+            this.panel1.Size = new System.Drawing.Size(333, 673);
             this.panel1.TabIndex = 0;
             // 
             // loadingCircle1
@@ -332,7 +320,8 @@ namespace StationarySystem
             this.loadingCircle1.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle1.InnerMargin = 2;
             this.loadingCircle1.InnerWidth = -1;
-            this.loadingCircle1.Location = new System.Drawing.Point(381, 387);
+            this.loadingCircle1.Location = new System.Drawing.Point(254, 248);
+            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle1.MarqueeAnimationSpeed = 2000;
             this.loadingCircle1.Name = "loadingCircle1";
             this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
@@ -341,7 +330,7 @@ namespace StationarySystem
             this.loadingCircle1.ProgressColor = System.Drawing.Color.Teal;
             this.loadingCircle1.ProgressWidth = 20;
             this.loadingCircle1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.loadingCircle1.Size = new System.Drawing.Size(58, 59);
+            this.loadingCircle1.Size = new System.Drawing.Size(39, 38);
             this.loadingCircle1.StartAngle = 270;
             this.loadingCircle1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.loadingCircle1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -356,14 +345,15 @@ namespace StationarySystem
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 812);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Location = new System.Drawing.Point(0, 520);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(500, 77);
+            this.button1.Size = new System.Drawing.Size(333, 49);
             this.button1.TabIndex = 6;
             this.button1.Text = "My Requests";
             this.button1.UseVisualStyleBackColor = true;
@@ -371,14 +361,15 @@ namespace StationarySystem
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 725);
-            this.button2.Margin = new System.Windows.Forms.Padding(6);
+            this.button2.Location = new System.Drawing.Point(0, 464);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(500, 77);
+            this.button2.Size = new System.Drawing.Size(333, 49);
             this.button2.TabIndex = 5;
             this.button2.Text = "Products";
             this.button2.UseVisualStyleBackColor = true;
@@ -387,10 +378,10 @@ namespace StationarySystem
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(150, 158);
-            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
+            this.utsLogo.Location = new System.Drawing.Point(100, 101);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(200, 288);
+            this.utsLogo.Size = new System.Drawing.Size(133, 184);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
@@ -398,14 +389,15 @@ namespace StationarySystem
             // btnProfile
             // 
             this.btnProfile.BackColor = System.Drawing.Color.Teal;
+            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnProfile.FlatAppearance.BorderSize = 0;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 638);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(6);
+            this.btnProfile.Location = new System.Drawing.Point(0, 408);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(500, 77);
+            this.btnProfile.Size = new System.Drawing.Size(333, 49);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = false;
@@ -413,14 +405,14 @@ namespace StationarySystem
             // 
             // btnHome
             // 
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnHome.Location = new System.Drawing.Point(0, 351);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(500, 77);
+            this.btnHome.Size = new System.Drawing.Size(333, 49);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = true;
@@ -433,10 +425,10 @@ namespace StationarySystem
             this.editBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editBtn.BackgroundImage")));
             this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editBtn.Location = new System.Drawing.Point(1792, 486);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.editBtn.Location = new System.Drawing.Point(1195, 311);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(72, 66);
+            this.editBtn.Size = new System.Drawing.Size(48, 42);
             this.editBtn.TabIndex = 9;
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
@@ -444,11 +436,13 @@ namespace StationarySystem
             // cancelBtn
             // 
             this.cancelBtn.BackColor = System.Drawing.Color.Teal;
+            this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(1395, 955);
+            this.cancelBtn.Location = new System.Drawing.Point(930, 611);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(162, 52);
+            this.cancelBtn.Size = new System.Drawing.Size(108, 33);
             this.cancelBtn.TabIndex = 10;
             this.cancelBtn.Text = "Cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -457,11 +451,13 @@ namespace StationarySystem
             // saveBtn
             // 
             this.saveBtn.BackColor = System.Drawing.Color.Teal;
+            this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(1581, 955);
+            this.saveBtn.Location = new System.Drawing.Point(1054, 611);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(162, 52);
+            this.saveBtn.Size = new System.Drawing.Size(108, 33);
             this.saveBtn.TabIndex = 11;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
@@ -478,7 +474,8 @@ namespace StationarySystem
             this.loadingCircle.InnerColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.loadingCircle.InnerMargin = 2;
             this.loadingCircle.InnerWidth = -1;
-            this.loadingCircle.Location = new System.Drawing.Point(1774, 955);
+            this.loadingCircle.Location = new System.Drawing.Point(1183, 611);
+            this.loadingCircle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loadingCircle.MarqueeAnimationSpeed = 2000;
             this.loadingCircle.Name = "loadingCircle";
             this.loadingCircle.OuterColor = System.Drawing.Color.Gray;
@@ -487,7 +484,7 @@ namespace StationarySystem
             this.loadingCircle.ProgressColor = System.Drawing.Color.Teal;
             this.loadingCircle.ProgressWidth = 20;
             this.loadingCircle.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
-            this.loadingCircle.Size = new System.Drawing.Size(58, 59);
+            this.loadingCircle.Size = new System.Drawing.Size(39, 38);
             this.loadingCircle.StartAngle = 270;
             this.loadingCircle.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.loadingCircle.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
@@ -502,10 +499,10 @@ namespace StationarySystem
             // 
             // ProfileFormX
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2560, 1395);
+            this.ClientSize = new System.Drawing.Size(1280, 673);
             this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.cancelBtn);
@@ -516,7 +513,6 @@ namespace StationarySystem
             this.Controls.Add(this.profilePicture);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProfileFormX";
             this.Text = "My Profile";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
