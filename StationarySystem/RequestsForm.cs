@@ -161,5 +161,12 @@ namespace StationarySystem
         {
             stationeryrequestBindingSource2.Filter = null;
         }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Close();
+        }
     }
 }

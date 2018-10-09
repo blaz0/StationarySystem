@@ -135,5 +135,12 @@ namespace StationarySystem
             homepage.Show();
             this.Close();
         }
+
+        private void backBtn_Click_1(object sender, EventArgs e)
+        {
+            Home homepage = new Home();
+            homepage.Show();
+            this.Close();
+        }
     }
 }
