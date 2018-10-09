@@ -24,4 +24,9 @@ namespace StationarySystem
     {
         return originalQty - amount;
     }
+
+    public static int addQuantity(int originalQty, int amount)
+    {
+        return originalQty + amount;
+    }
 }

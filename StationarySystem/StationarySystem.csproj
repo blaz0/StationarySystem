@@ -121,13 +121,6 @@
     <Compile Include="ApproveRequestForm.Designer.cs">
       <DependentUpon>ApproveRequestForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StationeryRequest.cs" />
-    <Compile Include="UpdateRequest.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdateRequest.Designer.cs">
-      <DependentUpon>UpdateRequest.cs</DependentUpon>
-    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="CreateStationeryRequestForm.cs">
       <SubType>Form</SubType>
@@ -183,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateStationeryRequestForm.resx">
       <DependentUpon>CreateStationeryRequestForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateRequest.resx">
-      <DependentUpon>UpdateRequest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
