@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApproveRequestForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -126,7 +126,7 @@
             this.loadingCircle1.InnerMargin = 2;
             this.loadingCircle1.InnerWidth = -1;
             this.loadingCircle1.Location = new System.Drawing.Point(215, 212);
-            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.loadingCircle1.Margin = new System.Windows.Forms.Padding(1);
             this.loadingCircle1.MarqueeAnimationSpeed = 2000;
             this.loadingCircle1.Name = "loadingCircle1";
             this.loadingCircle1.OuterColor = System.Drawing.Color.Gray;
@@ -205,7 +205,7 @@
             // 
             // btnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Teal;
+            this.btnHome.BackColor = System.Drawing.Color.Black;
             this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -322,8 +322,8 @@
             // totalPrice1
             // 
             this.totalPrice1.DataPropertyName = "totalPrice1";
-            dataGridViewCellStyle2.Format = "C2";
-            this.totalPrice1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "C2";
+            this.totalPrice1.DefaultCellStyle = dataGridViewCellStyle1;
             this.totalPrice1.HeaderText = "Total Price";
             this.totalPrice1.Name = "totalPrice1";
             this.totalPrice1.ReadOnly = true;
