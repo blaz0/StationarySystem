@@ -159,7 +159,9 @@ namespace StationarySystem
 
         private void clearSearchBtn_Click(object sender, EventArgs e)
         {
-            stationeryrequestBindingSource2.Filter = null;
+            User selectedUser = Program.getCurrentUser();
+            int findUserID = selectedUser.userId;
+            stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
         }
 
         private void backBtn_Click(object sender, EventArgs e)
