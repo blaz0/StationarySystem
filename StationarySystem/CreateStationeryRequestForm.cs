@@ -115,5 +115,12 @@ namespace StationarySystem
             homepage.Show();
             this.Close();
         }
+
+        private void qty_ValueChanged(object sender, EventArgs e)
+        {
+            int qtyCount = Convert.ToInt32(qty.Value);
+            Product selectedProduct = Program.getCurrentProduct();
+            totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";
+        }
     }
 }
