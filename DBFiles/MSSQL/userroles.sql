@@ -11,10 +11,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE userroles (
-  userID int NOT NULL,
-  role varchar(20) NOT NULL,
-  PRIMARY KEY (userID,role),
-  CONSTRAINT userRolesFKuser FOREIGN KEY (userID) REFERENCES users (userID)
+  roleID int NOT NULL,
+  roleDescription varchar(20) NOT NULL,
+  PRIMARY KEY (roleID)
 )
 GO
 
