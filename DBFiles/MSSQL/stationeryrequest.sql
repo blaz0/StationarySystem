@@ -24,6 +24,8 @@ CREATE TABLE dbo.stationeryrequest(
 	productID int NOT NULL,
 	requestDate date NOT NULL,
 	status varchar(20) NOT NULL,
+	quantity int NOT NULL,
+	totalPrice int NOT NULL,
 	PRIMARY KEY (requestID)
 	)
 GO
