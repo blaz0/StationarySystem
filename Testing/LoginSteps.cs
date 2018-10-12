@@ -5,7 +5,6 @@ namespace Testing
     [Binding]
     public class LoginSteps
     {
-        private User user = new User();
         [Given(@"I have an account in the system")]
         public void GivenIHaveAnAccountInTheSystem(int userID)
         {
