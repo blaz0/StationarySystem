@@ -11,117 +11,140 @@ namespace StationarySystem
         public ProfileFormX() => InitializeComponent();
         private void Profile_Load(object sender, EventArgs e)
         {
-            this.usersTableAdapter.Fill(this.sepdb_SQL.users); //fill table adapter
-            //maximise screen automatically
+            this.usersTableAdapter.Fill(this.sepdb_SQL.users); 
+            // Maximise screen automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            //get current user information
+            // Get current user information.
             sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
-            User loggedInUser = Program.GetCurrentUser(); //using MVC
-            // Display values                    
+            // Using MVC.
+            User loggedInUser = Program.GetCurrentUser(); 
+            // Display values.                 
             TxtFName.Text = loggedInUser.Fullname;
             TxtID.Text = loggedInUser.UserId.ToString();
             TxtEmail.Text = loggedInUser.EmailAddress;
             TxtCC.Text = loggedInUser.CostCentre;
             TxtPhoneNo.Text = loggedInUser.PhoneNo;
             TxtNickname.Text = loggedInUser.Nickname;
-            //editing buttons not visible yet
+            // Editing buttons not visible yet.
             CancelBtn.Visible = false;
             SaveBtn.Visible = false;
         }
 
-        public bool IsValidEmail(string source) //check if email is valid
+        // Check if email is valid.
+        public bool IsValidEmail(string source) 
         {
             return new EmailAddressAttribute().IsValid(source);
         }
-                
-        private void BtnHome_Click(object sender, EventArgs e)  //when home button is clicked
+
+        // When home button is clicked.
+        private void BtnHome_Click(object sender, EventArgs e)  
         {
-            Home homepage = new Home(); //load page
+            // Load page.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
 
-        private void PictureBox3_Click(object sender, EventArgs e) //when logout button is clicked
+        // When logout button is clicked.
+        private void PictureBox3_Click(object sender, EventArgs e) 
         {
-            LoginForm loginPage = new LoginForm(); //load page
+            // Load page.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Close();
         }
 
-        private void BtnProfile_Click(object sender, EventArgs e) //when profile button is clicked
+        // When profile button is clicked
+        private void BtnProfile_Click(object sender, EventArgs e) 
         {
-            ProfileFormX profile = new ProfileFormX(); //load page
+            // Load page.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void EditBtn_Click(object sender, EventArgs e) //when edit button is clicked
+        // When edit button is clicked.
+        private void EditBtn_Click(object sender, EventArgs e) 
         {
-            //show editing buttons
+            // Show editing buttons.
             this.CancelBtn.Visible = true;
             this.SaveBtn.Visible = true;
-            //change readonly status
+            // Change readonly status.
             this.TxtEmail.ReadOnly = false;
             this.TxtPhoneNo.ReadOnly = false;
-            //clearly show user what fields can and cannot be edited
+            // Clearly show user what fields can and cannot be edited.
             this.TxtEmail.BackColor = Color.LightGray;
             this.TxtPhoneNo.BackColor = Color.LightGray;
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e) //when cancel button is clicked
+        // When cancel button is clicked.
+        private void CancelBtn_Click(object sender, EventArgs e) 
         {
-            ProfileFormX profile = new ProfileFormX(); //load page
+            // Load page.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void SaveBtn_Click(object sender, EventArgs e) //when save button is clicked
+        // When save button is clicked.
+        private void SaveBtn_Click(object sender, EventArgs e) 
         {
-            User selectedUser = Program.GetCurrentUser(); //using MVC
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser(); 
             sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
-            usersTable.UpdateUserDetails(TxtEmail.Text, TxtPhoneNo.Text, Convert.ToInt32(TxtID.Text)); //update user details using SQL statement
-            selectedUser.EmailAddress = TxtEmail.Text; //update fields
-            selectedUser.PhoneNo = TxtPhoneNo.Text; //update fields
-
-            if (IsValidEmail(TxtEmail.Text) == false || TxtEmail.Text == null) //check if email is valid
+            // Update user details using SQL statement.
+            usersTable.UpdateUserDetails(TxtEmail.Text, TxtPhoneNo.Text, Convert.ToInt32(TxtID.Text));
+            // Update fields.
+            selectedUser.EmailAddress = TxtEmail.Text; 
+            selectedUser.PhoneNo = TxtPhoneNo.Text;
+            // Check if email is valid.
+            if (IsValidEmail(TxtEmail.Text) == false || TxtEmail.Text == null) 
             {
-                MessageBox.Show("Please enter a valid email address."); //message box
+                MessageBox.Show("Please enter a valid email address."); 
             }
             else {
-
-                ProfileFormX profile = new ProfileFormX(); //load page
+                // Load page.
+                ProfileFormX profile = new ProfileFormX(); 
                 profile.Show();
                 this.Close();
             }
         }
 
-        private void TxtPhoneNo_TextChanged(object sender, EventArgs e) //check if only numbers are entered
+        // Check if only numbers are entered.
+        private void TxtPhoneNo_TextChanged(object sender, EventArgs e) 
         {
                 if (System.Text.RegularExpressions.Regex.IsMatch(TxtPhoneNo.Text, "[^0-9]"))
                 {
                     MessageBox.Show("Please enter only numbers.");
-                    TxtPhoneNo.Text = TxtPhoneNo.Text.Remove(TxtPhoneNo.Text.Length - 1); //remove non-numeric character
+                    // Remove non-numeric character.
+                    TxtPhoneNo.Text = TxtPhoneNo.Text.Remove(TxtPhoneNo.Text.Length - 1); 
                 }
         }
-        
-        private void Button2_Click(object sender, EventArgs e) //when products button is clicked
+
+        // When products button is clicked.
+        private void Button2_Click(object sender, EventArgs e) 
         {
-            ProductsForm products = new ProductsForm();  //load page
+            // Load page.
+            ProductsForm products = new ProductsForm();  
             products.Show();
             this.Close();
         }
 
-        private void Button1_Click(object sender, EventArgs e) //when requests button is clicked
+        // When requests button is clicked.
+        private void Button1_Click(object sender, EventArgs e) 
         {
-            RequestsForm form = new RequestsForm(); //load page
+            // Load page.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
             this.Close();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
+        // When logout button is clicked.
+        private void PictureBox1_Click(object sender, EventArgs e) 
         {
-            LoginForm logout = new LoginForm(); //load page
+            // Load page.
+            LoginForm logout = new LoginForm();
             logout.Show();
             this.Close();
         }

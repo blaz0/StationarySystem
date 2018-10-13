@@ -13,17 +13,18 @@ namespace StationarySystem
     public partial class CreateStationeryRequestForm : Form
     {
         public CreateStationeryRequestForm() => InitializeComponent();
-        private void CreateStationeryRequestForm_Load(object sender, EventArgs e) //what the use will see when the page initially loads
+        private void CreateStationeryRequestForm_Load(object sender, EventArgs e) 
         {
-            //load form
-            loadingCircle.Visible = false; //loading circle not visible
-            LoadingCircle1.Visible = false; //loading circle not visible
-            //maximise window automatically
+            // Load form.
+            // Loading circle not visible.
+            LoadingCircle1.Visible = false; 
+            // Maximise window automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            User loggedInUser = Program.GetCurrentUser(); //using MVC
-            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
-            //updating the Product class
+            // Using MVC.
+            User loggedInUser = Program.GetCurrentUser(); 
+            Product selectedProduct = Program.GetCurrentProduct(); 
+            // Updating the Product class.
             sepdbDataSet.productDataTable dt = productTableAdapter.GetDataByProductID(selectedProduct.productid);
             DataRow dr = dt.Rows[0];
             selectedProduct.productid = int.Parse(dr["productID"].ToString());
@@ -33,73 +34,108 @@ namespace StationarySystem
             selectedProduct.stock = int.Parse(dr["stock"].ToString());
             selectedProduct.price = int.Parse(dr["price"].ToString());
             selectedProduct.stockLevel = dr["stockLevel"].ToString();
-            //updating textfields
+            // Updating textfields.
             ProductNameTxt.Text = selectedProduct.name;
-            PriceTxt.Text = "$" + selectedProduct.price.ToString() + ".00"; //formatting
-            int qtyCount = Convert.ToInt32(Qty.Value); //convert numericupdown to value
-            TotalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";  //formatting
+            // Formatting.
+            PriceTxt.Text = "$" + selectedProduct.price.ToString() + ".00";
+            // Convert numericupdown to value.
+            int qtyCount = Convert.ToInt32(Qty.Value); 
+            // Formatting.
+            TotalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";  
             DescriptionTxt.Text = selectedProduct.description;
         }
-            private void PictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
+
+        // When logout button is clicked.
+        private void PictureBox1_Click(object sender, EventArgs e) 
         {
-            LoadingCircle1.Visible = true; //loading circle visible
-            LoginForm loginPage = new LoginForm(); //load form
+            // Loading circle visible.
+            LoadingCircle1.Visible = true;
+            // Load form.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Close();
         }
-        private void BtnHome_Click(object sender, EventArgs e)  //when home button is clicked
+
+        // When home button is clicked.
+        private void BtnHome_Click(object sender, EventArgs e)  
         {
-            LoadingCircle1.Visible = true;  //loading circle visible
-            Home homepage = new Home(); //load form 
+            // Loading circle visible.
+            LoadingCircle1.Visible = true;
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
-        private void BtnProfile_Click(object sender, EventArgs e)  //when profile button is clicked
+
+        // When profile button is clicked.
+        private void BtnProfile_Click(object sender, EventArgs e)  
         {
-            LoadingCircle1.Visible = true;  //loading circle visible
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Loading circle visible.
+            LoadingCircle1.Visible = true;
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
-        private void SubmitBtn_Click(object sender, EventArgs e) //when submit button is clicked
+
+        // When submit button is clicked.
+        private void SubmitBtn_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true;  //loading circle visible
-            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
-            User selectedUser = Program.GetCurrentUser(); //using MVC
-            int quantity = Convert.ToInt32(Qty.Value); //converting numericupdown to value
+            // Loading circle visible.
+            loadingCircle.Visible = true;
+            // Using MVC.
+            Product selectedProduct = Program.GetCurrentProduct(); 
+            User selectedUser = Program.GetCurrentUser();
+            // Converting numericupdown to value.
+            int quantity = Convert.ToInt32(Qty.Value); 
             int totalPrice = Convert.ToInt32(quantity * selectedProduct.price);
-            //adding a stationery request to the database table by populating with required data
+            // Adding a stationery request to the database table by populating with required data.
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
             statReq.SubmitStatReq(selectedUser.UserId, selectedProduct.productid, DateTime.Today + "", "Submitted", quantity, totalPrice); 
-            //show when request has been submitted
+            // Show when request has been submitted.
             MessageBox.Show("Your Product Request has been Submitted.");
-            ProductsForm productform = new ProductsForm(); //load page
+            // Load form.
+            ProductsForm productform = new ProductsForm(); 
             productform.Show();
             this.Close();
         }
-        private void BtnNotifications_Click(object sender, EventArgs e) //when products button is clicked
+
+        // When products button is clicked.
+        private void BtnNotifications_Click(object sender, EventArgs e) 
         {
-            ProductsForm products = new ProductsForm(); //load page
+            // Load form.
+            ProductsForm products = new ProductsForm(); 
             products.Show();
             this.Close();
         }
-        private void BtnSystemSettings_Click(object sender, EventArgs e) //when requests button is clicked
+
+        // When requests button is clicked.
+        private void BtnSystemSettings_Click(object sender, EventArgs e) 
         {
-            RequestsForm form = new RequestsForm(); //load page
+            // Load form.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
             this.Close();
         }
-        private void BackBtn_Click(object sender, EventArgs e) //when back button is clicked
+
+        // When back button is clicked.
+        private void BackBtn_Click(object sender, EventArgs e) 
         {
-            ProductsForm products = new ProductsForm();  //load page
+            // Load form.
+            ProductsForm products = new ProductsForm(); 
             products.Show();
             this.Close();
         }
-        private void Qty_ValueChanged(object sender, EventArgs e) //automatically update when the numericupdown changes
+
+        // Automatically update when the numericupdown changes.
+        private void Qty_ValueChanged(object sender, EventArgs e) 
         {
-            int qtyCount = Convert.ToInt32(Qty.Value); //convert numericupdown to value
-            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
-            TotalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00"; //ensure appropriate layout to user
+            // Convert numericupdown to value.
+            int qtyCount = Convert.ToInt32(Qty.Value);
+            // Using MVC.
+            Product selectedProduct = Program.GetCurrentProduct(); 
+            // Formatting.
+            TotalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00"; 
         }
     }
 }

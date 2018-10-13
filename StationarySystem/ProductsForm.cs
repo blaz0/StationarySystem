@@ -14,79 +14,101 @@ namespace StationarySystem
     public partial class ProductsForm : Form
     {
         public ProductsForm() => InitializeComponent();
-        private void ProductsForm_Load(object sender, EventArgs e) //contents user sees when form is initially loaded
+
+        private void ProductsForm_Load(object sender, EventArgs e) 
         {
-            //load form
-            //fill tables
-            this.productDetailTableAdapter.Fill(this.sepdbDataSet.productDetail); //only visible to stationery manager
-            this.productTableAdapter.Fill(this.sepdbDataSet.product); //fill product table
-            //maximise  window automatically
+            // Load form.
+            // Fill tables.
+            // Only visible to stationery manager.
+            this.productDetailTableAdapter.Fill(this.sepdbDataSet.productDetail);
+            // Fill product table.
+            this.productTableAdapter.Fill(this.sepdbDataSet.product); 
+            // Maximise window automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            User loggedInUser = Program.GetCurrentUser(); //using MVC
-            if (loggedInUser.UserId == 1) //if stationery manager show extra detailed table
+            // Using MVC.
+            User loggedInUser = Program.GetCurrentUser();
+            // If stationery manager show extra detailed table.
+            if (loggedInUser.UserId == 1) 
             {
                 detailsDataGrid.Visible = true;
             }
-            else //everyone else doesn't see this
+            else 
+            // Everyone else doesn't see this.
             {
                 detailsDataGrid.Visible = false;
             }
         }
 
-        private void BtnHome_Click(object sender, EventArgs e) //when home button is clicked
+        // When home button is clicked.
+        private void BtnHome_Click(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
             
         }
 
-        private void BtnProfile_Click(object sender, EventArgs e) //when profile button is clicked
+        // When profile button is clicked.
+        private void BtnProfile_Click(object sender, EventArgs e) 
         {
-            ProfileFormX profile = new ProfileFormX(); //load form
-            profile.Show();
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             this.Close();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
+        // When logout button is clicked.
+        private void PictureBox1_Click(object sender, EventArgs e) 
         {
-            LoginForm loginPage = new LoginForm(); //load form
+            // Load form.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Close();
         }
 
-       private void SearchBtn_Click(object sender, EventArgs e) //when search button is clicked
+        // When search button is clicked.
+        private void SearchBtn_Click(object sender, EventArgs e) 
         {
             string searchValue = SearchBox.Text;
-            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; //search for matches containing the search value
+            // Search for matches containing the search value.
+            productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; 
 
         }
-        
-        private void ClearSearchBtn_Click(object sender, EventArgs e) //reset search and clear filter
+
+        // Reset search and clear filter.
+        private void ClearSearchBtn_Click(object sender, EventArgs e) 
         {
             productBindingSource.Filter = null;
         }
 
-        private void BtnHome_Click_1(object sender, EventArgs e) //when home button is clicked
+        // When home button is clicked.
+        private void BtnHome_Click_1(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
 
-        private void BtnProfile_Click_1(object sender, EventArgs e) //when profile button is clicked
+        // When profile button is clicked.
+        private void BtnProfile_Click_1(object sender, EventArgs e) 
         {
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void CreateRequestBtn_Click_1(object sender, EventArgs e)  //when create stationery request button is clicked
+        // When create stationery request button is clicked.
+        private void CreateRequestBtn_Click_1(object sender, EventArgs e)  
         {
-            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
-            string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString(); //converting cell to value
-            if (selectedstock == "Out of Stock!") //only allow user to continue if the product is in stock
+            // Using MVC.
+            Product selectedProduct = Program.GetCurrentProduct(); 
+            // Converting cells to values.
+            string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString();
+            // Only allow user to continue if the product is in stock.
+            if (selectedstock == "Out of Stock!") 
             {
                 MessageBox.Show("Sorry, this product is currently unavailable.");
             }
@@ -94,32 +116,40 @@ namespace StationarySystem
             {
                 if (productDataGrid.SelectedCells.Count > 0)
                 {
-                    string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString(); //converting cell to value
-                    selectedProduct.productid = Convert.ToInt32(selectedCellID); //converting cell to value
-                    CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm(); //load form
+                    // Converting cells to values.
+                    string selectedCellID = productDataGrid.CurrentRow.Cells[0].Value.ToString(); 
+                    selectedProduct.productid = Convert.ToInt32(selectedCellID); 
+                    // Load form.
+                    CreateStationeryRequestForm statRequest = new CreateStationeryRequestForm(); 
                     statRequest.Show();
                     this.Close();
                 }
             }
         }
 
-        private void BtnNotifications_Click(object sender, EventArgs e)  //when product button is clicked
+        // When product button is clicked.
+        private void BtnNotifications_Click(object sender, EventArgs e)  
         {
-            ProductsForm products = new ProductsForm(); //load form
+            // Load form.
+            ProductsForm products = new ProductsForm(); 
             products.Show();
             this.Close();
         }
 
-        private void BtnSystemSettings_Click(object sender, EventArgs e)  //when requests button is clicked
+        // When requests button is clicked.
+        private void BtnSystemSettings_Click(object sender, EventArgs e)  
         {
-            RequestsForm form = new RequestsForm(); //load form
+            // Load form.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
             this.Close();
         }
 
-        private void BackBtn_Click_1(object sender, EventArgs e) //when back button is clicked
+        // When back button is clicked.
+        private void BackBtn_Click_1(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }

@@ -16,92 +16,110 @@ namespace StationarySystem
         {
             InitializeComponent();
         }
-        private void RequestsForm_Load(object sender, EventArgs e) //processes to be achieved when the page loads
+        private void RequestsForm_Load(object sender, EventArgs e) 
         {
-            //load page
-            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); //fill datagridview with table data
-            User selectedUser = Program.GetCurrentUser(); //using MVC
-            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
+            // Load form.
+            // Fill datagridview with table data.
+            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); 
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser(); 
+            Product selectedProduct = Program.GetCurrentProduct(); 
             int findUserID = selectedUser.UserId;
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
-            //ensure these buttons are not visible when the page initially loads
+            // Ensure these buttons are not visible when the page initially loads.
             SaveBtn.Visible = false;
             CancelLbl.Visible = false;
             Qty.Visible = false;
             QuantityLbl.Visible = false;
-            //maximise the window automatically
+            // Maximise the window automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
         }
 
-        private void LogOutBtn_Click(object sender, EventArgs e) //when the logout button is clicked
+        // When the logout button is clicked.
+        private void LogOutBtn_Click(object sender, EventArgs e) 
         {
-            LoginForm loginPage = new LoginForm(); //load form
+            // Load form.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Hide();
         }
 
-        private void BtnHome_Click(object sender, EventArgs e) //when the home button is clicked
+        // When the home button is clicked.
+        private void BtnHome_Click(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Hide();
         }
 
-        private void BtnProfile_Click(object sender, EventArgs e) //when the profile button is clicked
+        // When the profile button is clicked.
+        private void BtnProfile_Click(object sender, EventArgs e) 
         {
-            ProfileFormX profilePage = new ProfileFormX(); //load form
+            // Load form.
+            ProfileFormX profilePage = new ProfileFormX(); 
             profilePage.Show();
             this.Close();
         }
 
-        private void CancelBtn_Click(object sender, EventArgs e) //when the cancel request button is clicked
+        // When the cancel request button is clicked.
+        private void CancelBtn_Click(object sender, EventArgs e) 
         {
-            User selectedUser = Program.GetCurrentUser(); //using MVC
-            //convert cells into values
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser(); 
+            // Convert cells into values.
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value); 
             string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString();
 
-            //only allow for a request to be cancelled if the status is "Submitted"
+            // Only allow for a request to be cancelled if the status is "Submitted".
             if (requestStatus == "Submitted")
             {
-                //confirmation button in case the user accidentally/unintentionally clicks the button
+                // Confirmation button in case the user accidentally/unintentionally clicks the button.
                 if (MessageBox.Show("Are you sure you want to cancel this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // user clicked yes
-                    this.stationeryrequestTableAdapter.DeleteByRequestID(selectedRequestID); //delete the request from the database
-                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); //refresh the tableview
+                    // User clicked yes.
+                    // Delete the request from the database.
+                    this.stationeryrequestTableAdapter.DeleteByRequestID(selectedRequestID); 
+                    // Refresh the tableview.
+                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); 
                 }
                 else
                 {
-                    //user clicked no
-                    //the action is cancelled, return to "My Requests" page
+                    // User clicked no.
+                    // The action is cancelled, return to "My Requests" page.
                 }
             }
             else
             {
-                //if the request status is not "Submitted", then display a message box 
+                // If the request status is not "Submitted", then display a message box. 
                 MessageBox.Show("Sorry, this request cannot be cancelled.");
             }
         }
 
-        private void SearchBtn_Click(object sender, EventArgs e) //when the search button is clicked
+        // When the search button is clicked.
+        private void SearchBtn_Click(object sender, EventArgs e) 
         {
             string searchValue = SearchBox.Text;
-            //use a LIKE query to filter the tableview based on the contents of the searchbox
+            // Use a LIKE query to filter the tableview based on the contents of the searchbox.
             stationeryrequestBindingSource2.Filter = "name LIKE '*" + searchValue + "*'";
         }
-        
-        private void EditBtn_Click(object sender, EventArgs e) //when the edit button is clicked
+
+        // When the edit button is clicked.
+        private void EditBtn_Click(object sender, EventArgs e) 
         {
-            string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString(); //gets the current selected row
-            //only allow the request to be edited if the status is "Submitted"
+            // Gets the current selected row.
+            string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString(); 
+            // Only allow the request to be edited if the status is "Submitted".
             if (requestStatus == "Submitted")
             {
-                Product selectedProduct = Program.GetCurrentProduct(); //using MVC
-                string selectedCellID = requestDataGrid.CurrentRow.Cells[2].Value.ToString(); //converting from cell to string
-                selectedProduct.productid = Convert.ToInt32(selectedCellID); //converting to int
-                //disable these buttons when updating the quantity, reduce potential errors
+                // Using MVC.
+                Product selectedProduct = Program.GetCurrentProduct(); 
+                // Converting from cell to string.
+                string selectedCellID = requestDataGrid.CurrentRow.Cells[2].Value.ToString(); 
+                // Converting to int.
+                selectedProduct.productid = Convert.ToInt32(selectedCellID); 
+                // Disable these buttons when updating the quantity, reduce potential errors.
                 requestDataGrid.Enabled = false;
                 CancelBtn.Enabled = false;
                 SaveBtn.Visible = true;
@@ -111,64 +129,77 @@ namespace StationarySystem
             }
             else
             {
-                MessageBox.Show("Sorry, this request cannot be edited."); //display when the status is not "Submitted"
+                // Display when the status is not "Submitted".
+                MessageBox.Show("Sorry, this request cannot be edited."); 
             }
         }
 
-        private void CancelLbl_Click(object sender, EventArgs e) //when the cancel button is clicked
+        // When the cancel button is clicked.
+        private void CancelLbl_Click(object sender, EventArgs e) 
         {
-            RequestsForm form = new RequestsForm(); //load form
+            // Load form.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
         }
 
-        private void SaveBtn_Click(object sender, EventArgs e) //when the save button is clicked
+        // When the save button is clicked.
+        private void SaveBtn_Click(object sender, EventArgs e) 
         {
             if (MessageBox.Show("Are you sure you want to update the quantity?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //user clicked yes
-                //convert the encessary table cells to values
+                // User clicked yes.
+                // Convert the encessary table cells to values.
                 int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
                 int productPrice = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
                 int quantity = Convert.ToInt32(Qty.Value);
                 int totalPrice = (quantity * productPrice);
-                //the database table is updated
+                // The database table is updated.
                 stationeryrequestTableAdapter.UpdateQuantity(quantity, totalPrice, selectedRequestID);
-                RequestsForm form = new RequestsForm(); //reload form
+                // Load form.
+                RequestsForm form = new RequestsForm(); 
                 form.Show();
                 this.Close();
             }
             else
             {
-                //user clicked no
-                //the action is cancelled, return to "My Requests" page
+                // User clicked no.
+                // The action is cancelled, return to "My Requests" page.
             }
         }
 
-        private void BtnNotifications_Click(object sender, EventArgs e) //when the products button in the navigation bar is clicked
+        // When the products button in the navigation bar is clicked.
+        private void BtnNotifications_Click(object sender, EventArgs e) 
         {
-            ProductsForm products = new ProductsForm(); //load form
+            // Load form.
+            ProductsForm products = new ProductsForm(); 
             products.Show();
             this.Close();
         }
 
-        private void BtnSystemSettings_Click(object sender, EventArgs e) //when the requests button in the navigation bar is clicked
+        // When the requests button in the navigation bar is clicked.
+        private void BtnSystemSettings_Click(object sender, EventArgs e) 
         {
-            RequestsForm form = new RequestsForm(); //load form
+            // Load form.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
             this.Close();
         }
 
-        private void ClearSearchBtn_Click(object sender, EventArgs e) //when the clear search button is clicked
+        // When the clear search button is clicked.
+        private void ClearSearchBtn_Click(object sender, EventArgs e) 
         {
-            User selectedUser = Program.GetCurrentUser(); //using MVC
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser(); 
             int findUserID = selectedUser.UserId;
-            //the "clear search" will reset the tableview, but will continue to only show the requests for the user based on their userid
+            // The "clear search" will reset the tableview, but will continue to only show the requests for the user based on their userid.
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
         }
 
-        private void BackBtn_Click(object sender, EventArgs e) //when the back button is clicked
+        // When the back button is clicked.
+        private void BackBtn_Click(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
