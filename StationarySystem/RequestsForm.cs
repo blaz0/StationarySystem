@@ -25,37 +25,37 @@ namespace StationarySystem
             int findUserID = selectedUser.UserId;
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
             //ensure these buttons are not visible when the page initially loads
-            saveBtn.Visible = false;
-            cancelLbl.Visible = false;
-            qty.Visible = false;
-            quantityLbl.Visible = false;
+            SaveBtn.Visible = false;
+            CancelLbl.Visible = false;
+            Qty.Visible = false;
+            QuantityLbl.Visible = false;
             //maximise the window automatically
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
         }
 
-        private void logOutBtn_Click(object sender, EventArgs e) //when the logout button is clicked
+        private void LogOutBtn_Click(object sender, EventArgs e) //when the logout button is clicked
         {
             LoginForm loginPage = new LoginForm(); //load form
             loginPage.Show();
             this.Hide();
         }
 
-        private void btnHome_Click(object sender, EventArgs e) //when the home button is clicked
+        private void BtnHome_Click(object sender, EventArgs e) //when the home button is clicked
         {
             Home homepage = new Home(); //load form
             homepage.Show();
             this.Hide();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e) //when the profile button is clicked
+        private void BtnProfile_Click(object sender, EventArgs e) //when the profile button is clicked
         {
             ProfileFormX profilePage = new ProfileFormX(); //load form
             profilePage.Show();
             this.Close();
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e) //when the cancel request button is clicked
+        private void CancelBtn_Click(object sender, EventArgs e) //when the cancel request button is clicked
         {
             User selectedUser = Program.GetCurrentUser(); //using MVC
             //convert cells into values
@@ -85,14 +85,14 @@ namespace StationarySystem
             }
         }
 
-        private void searchBtn_Click(object sender, EventArgs e) //when the search button is clicked
+        private void SearchBtn_Click(object sender, EventArgs e) //when the search button is clicked
         {
             string searchValue = SearchBox.Text;
             //use a LIKE query to filter the tableview based on the contents of the searchbox
             stationeryrequestBindingSource2.Filter = "name LIKE '*" + searchValue + "*'";
         }
         
-        private void editBtn_Click(object sender, EventArgs e) //when the edit button is clicked
+        private void EditBtn_Click(object sender, EventArgs e) //when the edit button is clicked
         {
             string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString(); //gets the current selected row
             //only allow the request to be edited if the status is "Submitted"
@@ -103,11 +103,11 @@ namespace StationarySystem
                 selectedProduct.productid = Convert.ToInt32(selectedCellID); //converting to int
                 //disable these buttons when updating the quantity, reduce potential errors
                 requestDataGrid.Enabled = false;
-                cancelBtn.Enabled = false;
-                saveBtn.Visible = true;
-                cancelLbl.Visible = true;
-                qty.Visible = true;
-                quantityLbl.Visible = true;
+                CancelBtn.Enabled = false;
+                SaveBtn.Visible = true;
+                CancelLbl.Visible = true;
+                Qty.Visible = true;
+                QuantityLbl.Visible = true;
             }
             else
             {
@@ -115,13 +115,13 @@ namespace StationarySystem
             }
         }
 
-        private void cancelLbl_Click(object sender, EventArgs e) //when the cancel button is clicked
+        private void CancelLbl_Click(object sender, EventArgs e) //when the cancel button is clicked
         {
             RequestsForm form = new RequestsForm(); //load form
             form.Show();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e) //when the save button is clicked
+        private void SaveBtn_Click(object sender, EventArgs e) //when the save button is clicked
         {
             if (MessageBox.Show("Are you sure you want to update the quantity?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -129,7 +129,7 @@ namespace StationarySystem
                 //convert the encessary table cells to values
                 int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
                 int productPrice = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
-                int quantity = Convert.ToInt32(qty.Value);
+                int quantity = Convert.ToInt32(Qty.Value);
                 int totalPrice = (quantity * productPrice);
                 //the database table is updated
                 stationeryrequestTableAdapter.UpdateQuantity(quantity, totalPrice, selectedRequestID);
@@ -144,21 +144,21 @@ namespace StationarySystem
             }
         }
 
-        private void btnNotifications_Click(object sender, EventArgs e) //when the products button in the navigation bar is clicked
+        private void BtnNotifications_Click(object sender, EventArgs e) //when the products button in the navigation bar is clicked
         {
             ProductsForm products = new ProductsForm(); //load form
             products.Show();
             this.Close();
         }
 
-        private void btnSystemSettings_Click(object sender, EventArgs e) //when the requests button in the navigation bar is clicked
+        private void BtnSystemSettings_Click(object sender, EventArgs e) //when the requests button in the navigation bar is clicked
         {
             RequestsForm form = new RequestsForm(); //load form
             form.Show();
             this.Close();
         }
 
-        private void clearSearchBtn_Click(object sender, EventArgs e) //when the clear search button is clicked
+        private void ClearSearchBtn_Click(object sender, EventArgs e) //when the clear search button is clicked
         {
             User selectedUser = Program.GetCurrentUser(); //using MVC
             int findUserID = selectedUser.UserId;
@@ -166,7 +166,7 @@ namespace StationarySystem
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
         }
 
-        private void backBtn_Click(object sender, EventArgs e) //when the back button is clicked
+        private void BackBtn_Click(object sender, EventArgs e) //when the back button is clicked
         {
             Home homepage = new Home(); //load form
             homepage.Show();
