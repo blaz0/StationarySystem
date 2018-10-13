@@ -91,8 +91,8 @@ namespace StationarySystem
         }
         private void backBtn_Click(object sender, EventArgs e) //when back button is clicked
         {
-            Home homepage = new Home();  //load page
-            homepage.Show();
+            ProductsForm products = new ProductsForm();  //load page
+            products.Show();
             this.Close();
         }
         private void qty_ValueChanged(object sender, EventArgs e) //automatically update when the numericupdown changes

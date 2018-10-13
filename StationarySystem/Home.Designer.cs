@@ -313,7 +313,6 @@
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // tableAdapterManager1
             // 
@@ -325,7 +324,6 @@
             this.tableAdapterManager1.supplierorderTableAdapter = null;
             this.tableAdapterManager1.supplierTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.usersTableAdapter = this.usersTableAdapter1;
             // 
             // usersTableAdapter1
             // 

@@ -62,6 +62,8 @@ namespace StationarySystem
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StaffIDTF.Text = "";
                 PasswordTF.Text = "";
+                StaffIDTF.Focus();
+                loadingCircle.Visible = false;
                 return; 
             }
         }
