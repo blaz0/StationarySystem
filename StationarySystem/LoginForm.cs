@@ -85,7 +85,7 @@ namespace StationarySystem
             }
         }
 
-        private void closeLbl_Click(object sender, EventArgs e) //close application when clicked
+        private void CloseLbl_Click(object sender, EventArgs e) //close application when clicked
         {
             System.Windows.Forms.Application.Exit();
         }

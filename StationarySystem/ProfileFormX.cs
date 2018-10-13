@@ -19,15 +19,15 @@ namespace StationarySystem
             sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
             User loggedInUser = Program.GetCurrentUser(); //using MVC
             // Display values                    
-            txtFName.Text = loggedInUser.Fullname;
-            txtID.Text = loggedInUser.UserId.ToString();
-            txtEmail.Text = loggedInUser.EmailAddress;
-            txtCC.Text = loggedInUser.CostCentre;
-            txtPhoneNo.Text = loggedInUser.PhoneNo;
-            txtNickname.Text = loggedInUser.Nickname;
+            TxtFName.Text = loggedInUser.Fullname;
+            TxtID.Text = loggedInUser.UserId.ToString();
+            TxtEmail.Text = loggedInUser.EmailAddress;
+            TxtCC.Text = loggedInUser.CostCentre;
+            TxtPhoneNo.Text = loggedInUser.PhoneNo;
+            TxtNickname.Text = loggedInUser.Nickname;
             //editing buttons not visible yet
-            cancelBtn.Visible = false;
-            saveBtn.Visible = false;
+            CancelBtn.Visible = false;
+            SaveBtn.Visible = false;
         }
 
         public bool IsValidEmail(string source) //check if email is valid
@@ -35,56 +35,56 @@ namespace StationarySystem
             return new EmailAddressAttribute().IsValid(source);
         }
                 
-        private void btnHome_Click(object sender, EventArgs e)  //when home button is clicked
+        private void BtnHome_Click(object sender, EventArgs e)  //when home button is clicked
         {
             Home homepage = new Home(); //load page
             homepage.Show();
             this.Close();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e) //when logout button is clicked
+        private void PictureBox3_Click(object sender, EventArgs e) //when logout button is clicked
         {
             LoginForm loginPage = new LoginForm(); //load page
             loginPage.Show();
             this.Close();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e) //when profile button is clicked
+        private void BtnProfile_Click(object sender, EventArgs e) //when profile button is clicked
         {
             ProfileFormX profile = new ProfileFormX(); //load page
             profile.Show();
             this.Close();
         }
 
-        private void editBtn_Click(object sender, EventArgs e) //when edit button is clicked
+        private void EditBtn_Click(object sender, EventArgs e) //when edit button is clicked
         {
             //show editing buttons
-            this.cancelBtn.Visible = true;
-            this.saveBtn.Visible = true;
+            this.CancelBtn.Visible = true;
+            this.SaveBtn.Visible = true;
             //change readonly status
-            this.txtEmail.ReadOnly = false;
-            this.txtPhoneNo.ReadOnly = false;
+            this.TxtEmail.ReadOnly = false;
+            this.TxtPhoneNo.ReadOnly = false;
             //clearly show user what fields can and cannot be edited
-            this.txtEmail.BackColor = Color.LightGray;
-            this.txtPhoneNo.BackColor = Color.LightGray;
+            this.TxtEmail.BackColor = Color.LightGray;
+            this.TxtPhoneNo.BackColor = Color.LightGray;
         }
 
-        private void cancelBtn_Click(object sender, EventArgs e) //when cancel button is clicked
+        private void CancelBtn_Click(object sender, EventArgs e) //when cancel button is clicked
         {
             ProfileFormX profile = new ProfileFormX(); //load page
             profile.Show();
             this.Close();
         }
 
-        private void saveBtn_Click(object sender, EventArgs e) //when save button is clicked
+        private void SaveBtn_Click(object sender, EventArgs e) //when save button is clicked
         {
             User selectedUser = Program.GetCurrentUser(); //using MVC
             sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
-            usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text)); //update user details using SQL statement
-            selectedUser.EmailAddress = txtEmail.Text; //update fields
-            selectedUser.PhoneNo = txtPhoneNo.Text; //update fields
+            usersTable.UpdateUserDetails(TxtEmail.Text, TxtPhoneNo.Text, Convert.ToInt32(TxtID.Text)); //update user details using SQL statement
+            selectedUser.EmailAddress = TxtEmail.Text; //update fields
+            selectedUser.PhoneNo = TxtPhoneNo.Text; //update fields
 
-            if (IsValidEmail(txtEmail.Text) == false || txtEmail.Text == null) //check if email is valid
+            if (IsValidEmail(TxtEmail.Text) == false || TxtEmail.Text == null) //check if email is valid
             {
                 MessageBox.Show("Please enter a valid email address."); //message box
             }
@@ -96,30 +96,30 @@ namespace StationarySystem
             }
         }
 
-        private void txtPhoneNo_TextChanged(object sender, EventArgs e) //check if only numbers are entered
+        private void TxtPhoneNo_TextChanged(object sender, EventArgs e) //check if only numbers are entered
         {
-                if (System.Text.RegularExpressions.Regex.IsMatch(txtPhoneNo.Text, "[^0-9]"))
+                if (System.Text.RegularExpressions.Regex.IsMatch(TxtPhoneNo.Text, "[^0-9]"))
                 {
                     MessageBox.Show("Please enter only numbers.");
-                    txtPhoneNo.Text = txtPhoneNo.Text.Remove(txtPhoneNo.Text.Length - 1); //remove non-numeric character
+                    TxtPhoneNo.Text = TxtPhoneNo.Text.Remove(TxtPhoneNo.Text.Length - 1); //remove non-numeric character
                 }
         }
         
-        private void button2_Click(object sender, EventArgs e) //when products button is clicked
+        private void Button2_Click(object sender, EventArgs e) //when products button is clicked
         {
             ProductsForm products = new ProductsForm();  //load page
             products.Show();
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e) //when requests button is clicked
+        private void Button1_Click(object sender, EventArgs e) //when requests button is clicked
         {
             RequestsForm form = new RequestsForm(); //load page
             form.Show();
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
+        private void PictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
         {
             LoginForm logout = new LoginForm(); //load page
             logout.Show();

@@ -34,7 +34,7 @@ namespace StationarySystem
             }
         }
 
-        private void btnHome_Click(object sender, EventArgs e) //when home button is clicked
+        private void BtnHome_Click(object sender, EventArgs e) //when home button is clicked
         {
             Home homepage = new Home(); //load form
             homepage.Show();
@@ -42,47 +42,47 @@ namespace StationarySystem
             
         }
 
-        private void btnProfile_Click(object sender, EventArgs e) //when profile button is clicked
+        private void BtnProfile_Click(object sender, EventArgs e) //when profile button is clicked
         {
             ProfileFormX profile = new ProfileFormX(); //load form
             profile.Show();
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
+        private void PictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
         {
             LoginForm loginPage = new LoginForm(); //load form
             loginPage.Show();
             this.Close();
         }
 
-       private void searchBtn_Click(object sender, EventArgs e) //when search button is clicked
+       private void SearchBtn_Click(object sender, EventArgs e) //when search button is clicked
         {
             string searchValue = SearchBox.Text;
             productBindingSource.Filter = "name LIKE '*" + searchValue + "*'"; //search for matches containing the search value
 
         }
         
-        private void clearSearchBtn_Click(object sender, EventArgs e) //reset search and clear filter
+        private void ClearSearchBtn_Click(object sender, EventArgs e) //reset search and clear filter
         {
             productBindingSource.Filter = null;
         }
 
-        private void btnHome_Click_1(object sender, EventArgs e) //when home button is clicked
+        private void BtnHome_Click_1(object sender, EventArgs e) //when home button is clicked
         {
             Home homepage = new Home(); //load form
             homepage.Show();
             this.Close();
         }
 
-        private void btnProfile_Click_1(object sender, EventArgs e) //when profile button is clicked
+        private void BtnProfile_Click_1(object sender, EventArgs e) //when profile button is clicked
         {
             ProfileFormX profile = new ProfileFormX(); //load form
             profile.Show();
             this.Close();
         }
 
-        private void createRequestBtn_Click_1(object sender, EventArgs e)  //when create stationery request button is clicked
+        private void CreateRequestBtn_Click_1(object sender, EventArgs e)  //when create stationery request button is clicked
         {
             Product selectedProduct = Program.GetCurrentProduct(); //using MVC
             string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString(); //converting cell to value
@@ -103,21 +103,21 @@ namespace StationarySystem
             }
         }
 
-        private void btnNotifications_Click(object sender, EventArgs e)  //when product button is clicked
+        private void BtnNotifications_Click(object sender, EventArgs e)  //when product button is clicked
         {
             ProductsForm products = new ProductsForm(); //load form
             products.Show();
             this.Close();
         }
 
-        private void btnSystemSettings_Click(object sender, EventArgs e)  //when requests button is clicked
+        private void BtnSystemSettings_Click(object sender, EventArgs e)  //when requests button is clicked
         {
             RequestsForm form = new RequestsForm(); //load form
             form.Show();
             this.Close();
         }
 
-        private void backBtn_Click_1(object sender, EventArgs e) //when back button is clicked
+        private void BackBtn_Click_1(object sender, EventArgs e) //when back button is clicked
         {
             Home homepage = new Home(); //load form
             homepage.Show();
