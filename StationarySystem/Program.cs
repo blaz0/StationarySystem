@@ -13,7 +13,7 @@ namespace StationarySystem
         /// </summary>
 
         private static User currentUser = null;
-        public static User getCurrentUser()
+        public static User GetCurrentUser()
         {
             if (currentUser == null)
             {
@@ -23,7 +23,7 @@ namespace StationarySystem
         }
 
         private static Product currentProduct = null;
-        public static Product getCurrentProduct()
+        public static Product GetCurrentProduct()
         {
             if (currentProduct == null)
             {

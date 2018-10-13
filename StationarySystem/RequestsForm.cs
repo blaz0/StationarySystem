@@ -20,9 +20,9 @@ namespace StationarySystem
         {
             //load page
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); //fill datagridview with table data
-            User selectedUser = Program.getCurrentUser(); //using MVC
-            Product selectedProduct = Program.getCurrentProduct(); //using MVC
-            int findUserID = selectedUser.userId;
+            User selectedUser = Program.GetCurrentUser(); //using MVC
+            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
+            int findUserID = selectedUser.UserId;
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
             //ensure these buttons are not visible when the page initially loads
             saveBtn.Visible = false;
@@ -57,7 +57,7 @@ namespace StationarySystem
 
         private void cancelBtn_Click(object sender, EventArgs e) //when the cancel request button is clicked
         {
-            User selectedUser = Program.getCurrentUser(); //using MVC
+            User selectedUser = Program.GetCurrentUser(); //using MVC
             //convert cells into values
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value); 
             string requestStatus = requestDataGrid.CurrentRow.Cells[7].Value.ToString();
@@ -98,7 +98,7 @@ namespace StationarySystem
             //only allow the request to be edited if the status is "Submitted"
             if (requestStatus == "Submitted")
             {
-                Product selectedProduct = Program.getCurrentProduct(); //using MVC
+                Product selectedProduct = Program.GetCurrentProduct(); //using MVC
                 string selectedCellID = requestDataGrid.CurrentRow.Cells[2].Value.ToString(); //converting from cell to string
                 selectedProduct.productid = Convert.ToInt32(selectedCellID); //converting to int
                 //disable these buttons when updating the quantity, reduce potential errors
@@ -160,8 +160,8 @@ namespace StationarySystem
 
         private void clearSearchBtn_Click(object sender, EventArgs e) //when the clear search button is clicked
         {
-            User selectedUser = Program.getCurrentUser(); //using MVC
-            int findUserID = selectedUser.userId;
+            User selectedUser = Program.GetCurrentUser(); //using MVC
+            int findUserID = selectedUser.UserId;
             //the "clear search" will reset the tableview, but will continue to only show the requests for the user based on their userid
             stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
         }

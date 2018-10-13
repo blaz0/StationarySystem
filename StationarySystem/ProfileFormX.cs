@@ -17,14 +17,14 @@ namespace StationarySystem
             WindowState = FormWindowState.Maximized;
             //get current user information
             sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
-            User loggedInUser = Program.getCurrentUser(); //using MVC
+            User loggedInUser = Program.GetCurrentUser(); //using MVC
             // Display values                    
-            txtFName.Text = loggedInUser.fullname;
-            txtID.Text = loggedInUser.userId.ToString();
-            txtEmail.Text = loggedInUser.emailAddress;
-            txtCC.Text = loggedInUser.costCentre;
-            txtPhoneNo.Text = loggedInUser.phoneNo;
-            txtNickname.Text = loggedInUser.nickname;
+            txtFName.Text = loggedInUser.Fullname;
+            txtID.Text = loggedInUser.UserId.ToString();
+            txtEmail.Text = loggedInUser.EmailAddress;
+            txtCC.Text = loggedInUser.CostCentre;
+            txtPhoneNo.Text = loggedInUser.PhoneNo;
+            txtNickname.Text = loggedInUser.Nickname;
             //editing buttons not visible yet
             cancelBtn.Visible = false;
             saveBtn.Visible = false;
@@ -78,11 +78,11 @@ namespace StationarySystem
 
         private void saveBtn_Click(object sender, EventArgs e) //when save button is clicked
         {
-            User selectedUser = Program.getCurrentUser(); //using MVC
+            User selectedUser = Program.GetCurrentUser(); //using MVC
             sepdbDataSetTableAdapters.usersTableAdapter usersTable = new sepdbDataSetTableAdapters.usersTableAdapter();
             usersTable.UpdateUserDetails(txtEmail.Text, txtPhoneNo.Text, Convert.ToInt32(txtID.Text)); //update user details using SQL statement
-            selectedUser.emailAddress = txtEmail.Text; //update fields
-            selectedUser.phoneNo = txtPhoneNo.Text; //update fields
+            selectedUser.EmailAddress = txtEmail.Text; //update fields
+            selectedUser.PhoneNo = txtPhoneNo.Text; //update fields
 
             if (IsValidEmail(txtEmail.Text) == false || txtEmail.Text == null) //check if email is valid
             {

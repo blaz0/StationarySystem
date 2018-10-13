@@ -19,10 +19,10 @@ namespace StationarySystem
             //maximise the windows automatically
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            User loggedInUser = Program.getCurrentUser(); //using MVC
-            welcomeTxt.Text = "Welcome " + loggedInUser.firstName; //create personalised message
+            User loggedInUser = Program.GetCurrentUser(); //using MVC
+            welcomeTxt.Text = "Welcome " + loggedInUser.FirstName; //create personalised message
             //display different buttons depending on the user's role
-            if (loggedInUser.roleId == 1) //stationery manager
+            if (loggedInUser.RoleId == 1) //stationery manager
             {
                 btnStockLevel.Visible = true;
                 stockPicture.Visible = true;
@@ -31,7 +31,7 @@ namespace StationarySystem
                 approveReqBtn.Visible = true;
                 okPicture.Visible = true;
             }
-            else if (loggedInUser.roleId == 3) //system admin
+            else if (loggedInUser.RoleId == 3) //system admin
             {
                 btnStockLevel.Visible = true;
                 stockPicture.Visible = true;
@@ -125,8 +125,8 @@ namespace StationarySystem
 
         private void okPicture_Click(object sender, EventArgs e)  //when approve/deny picture is clicked
         {
-            User selectedUser = Program.getCurrentUser(); //using MVC
-            if (selectedUser.userId == 4) //system admin does not have access to approve/deny requests
+            User selectedUser = Program.GetCurrentUser(); //using MVC
+            if (selectedUser.UserId == 4) //system admin does not have access to approve/deny requests
             {
                 MessageBox.Show("You do not have access to this button.");
             }
@@ -140,8 +140,8 @@ namespace StationarySystem
 
         private void approveReqBtn_Click(object sender, EventArgs e)  //when approve/deny button is clicked
         {
-            User selectedUser = Program.getCurrentUser(); //using MVC
-            if (selectedUser.userId == 4) //system admin does not have access to approve/deny requests
+            User selectedUser = Program.GetCurrentUser(); //using MVC
+            if (selectedUser.UserId == 4) //system admin does not have access to approve/deny requests
             {
                 MessageBox.Show("You do not have access to this button."); //displayed message
             }

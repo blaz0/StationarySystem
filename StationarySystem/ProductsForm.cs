@@ -23,8 +23,8 @@ namespace StationarySystem
             //maximise  window automatically
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            User loggedInUser = Program.getCurrentUser(); //using MVC
-            if (loggedInUser.userId == 1) //if stationery manager show extra detailed table
+            User loggedInUser = Program.GetCurrentUser(); //using MVC
+            if (loggedInUser.UserId == 1) //if stationery manager show extra detailed table
             {
                 detailsDataGrid.Visible = true;
             }
@@ -84,7 +84,7 @@ namespace StationarySystem
 
         private void createRequestBtn_Click_1(object sender, EventArgs e)  //when create stationery request button is clicked
         {
-            Product selectedProduct = Program.getCurrentProduct(); //using MVC
+            Product selectedProduct = Program.GetCurrentProduct(); //using MVC
             string selectedstock = productDataGrid.CurrentRow.Cells[2].Value.ToString(); //converting cell to value
             if (selectedstock == "Out of Stock!") //only allow user to continue if the product is in stock
             {

@@ -32,16 +32,16 @@ namespace StationarySystem
                 sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
                 if (dt.Rows.Count > 0)
                 {
-                    User loggedInUser = Program.getCurrentUser();
+                    User loggedInUser = Program.GetCurrentUser();
                     DataRow dr = dt.Rows[0];
-                    loggedInUser.userId = int.Parse(dr["userid"].ToString());
-                    loggedInUser.firstName = dr["firstname"].ToString();
-                    loggedInUser.lastName = dr["lastname"].ToString();
-                    loggedInUser.emailAddress = dr["emailAddress"].ToString();
-                    loggedInUser.phoneNo = dr["phoneNumber"].ToString();
-                    loggedInUser.costCentre = dr["costCentre"].ToString();
-                    loggedInUser.nickname = dr["nickname"].ToString();
-                    loggedInUser.roleId = int.Parse(dr["roleID"].ToString());
+                    loggedInUser.UserId = int.Parse(dr["userid"].ToString());
+                    loggedInUser.FirstName = dr["firstname"].ToString();
+                    loggedInUser.LastName = dr["lastname"].ToString();
+                    loggedInUser.EmailAddress = dr["emailAddress"].ToString();
+                    loggedInUser.PhoneNo = dr["phoneNumber"].ToString();
+                    loggedInUser.CostCentre = dr["costCentre"].ToString();
+                    loggedInUser.Nickname = dr["nickname"].ToString();
+                    loggedInUser.RoleId = int.Parse(dr["roleID"].ToString());
                     //load form
                     Home homepage = new Home(); 
                     homepage.Show();
