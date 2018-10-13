@@ -18,11 +18,12 @@ namespace StationarySystem
         public string costCentre { get; set; }
         public string nickname { get; set; }
         public string fullname { get { return firstName + " " + lastName; } }
-        
+        public int roleId { get; set; }
+
         public User()
         { }
 
-        public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname)
+        public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname, int roleId)
         {
             this.userId = id;
             this.firstName = firstName;
@@ -33,6 +34,7 @@ namespace StationarySystem
             this.phoneNo = phoneNo;
             this.costCentre = costCentre;
             this.nickname = nickname;
+            this.roleId = roleId;
         }
 
         public int GetId()

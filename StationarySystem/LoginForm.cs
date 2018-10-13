@@ -41,6 +41,7 @@ namespace StationarySystem
                     loggedInUser.phoneNo = dr["phoneNumber"].ToString();
                     loggedInUser.costCentre = dr["costCentre"].ToString();
                     loggedInUser.nickname = dr["nickname"].ToString();
+                    loggedInUser.roleId = int.Parse(dr["roleID"].ToString());
                     //load form
                     Home homepage = new Home(); 
                     homepage.Show();

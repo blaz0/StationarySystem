@@ -22,7 +22,7 @@ namespace StationarySystem
             User loggedInUser = Program.getCurrentUser(); //using MVC
             welcomeTxt.Text = "Welcome " + loggedInUser.firstName; //create personalised message
             //display different buttons depending on the user's role
-            if (loggedInUser.userId == 1) //stationery manager
+            if (loggedInUser.roleId == 1) //stationery manager
             {
                 btnStockLevel.Visible = true;
                 stockPicture.Visible = true;
@@ -31,7 +31,7 @@ namespace StationarySystem
                 approveReqBtn.Visible = true;
                 okPicture.Visible = true;
             }
-            else if (loggedInUser.userId == 4) //system admin
+            else if (loggedInUser.roleId == 3) //system admin
             {
                 btnStockLevel.Visible = true;
                 stockPicture.Visible = true;

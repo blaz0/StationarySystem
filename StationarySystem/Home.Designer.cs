@@ -306,7 +306,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.invoiceTableAdapter = null;
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
@@ -317,7 +316,6 @@
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.invoiceTableAdapter = null;
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
