@@ -486,7 +486,6 @@
             this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutBtn.TabIndex = 25;
             this.logOutBtn.TabStop = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
             // pictureBox2
             // 

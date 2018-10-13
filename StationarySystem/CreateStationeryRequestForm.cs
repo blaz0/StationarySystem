@@ -13,8 +13,7 @@ namespace StationarySystem
     public partial class CreateStationeryRequestForm : Form
     {
         public CreateStationeryRequestForm() => InitializeComponent();
-
-        private void CreateStationeryRequestForm_Load(object sender, EventArgs e)
+        private void CreateStationeryRequestForm_Load(object sender, EventArgs e) //what the use will see when the page initially loads
         {
             //load form
             loadingCircle.Visible = false; //loading circle not visible
@@ -36,12 +35,11 @@ namespace StationarySystem
             selectedProduct.stockLevel = dr["stockLevel"].ToString();
             //updating textfields
             productNameTxt.Text = selectedProduct.name;
-            priceTxt.Text = "$" + selectedProduct.price.ToString() + ".00";
-            int qtyCount = Convert.ToInt32(qty.Value);
-            totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";
+            priceTxt.Text = "$" + selectedProduct.price.ToString() + ".00"; //formatting
+            int qtyCount = Convert.ToInt32(qty.Value); //convert numericupdown to value
+            totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00";  //formatting
             descriptionTxt.Text = selectedProduct.description;
         }
-
             private void pictureBox1_Click(object sender, EventArgs e) //when logout button is clicked
         {
             loadingCircle1.Visible = true; //loading circle visible
@@ -49,7 +47,6 @@ namespace StationarySystem
             loginPage.Show();
             this.Close();
         }
-        
         private void btnHome_Click(object sender, EventArgs e)  //when home button is clicked
         {
             loadingCircle1.Visible = true;  //loading circle visible
@@ -57,7 +54,6 @@ namespace StationarySystem
             homepage.Show();
             this.Close();
         }
-
         private void btnProfile_Click(object sender, EventArgs e)  //when profile button is clicked
         {
             loadingCircle1.Visible = true;  //loading circle visible
@@ -65,49 +61,43 @@ namespace StationarySystem
             profile.Show();
             this.Close();
         }
-
-
-        private void submitBtn_Click(object sender, EventArgs e)
+        private void submitBtn_Click(object sender, EventArgs e) //when submit button is clicked
         {
             loadingCircle.Visible = true;  //loading circle visible
-            Product selectedProduct = Program.getCurrentProduct();
-            User selectedUser = Program.getCurrentUser();
-            int quantity = Convert.ToInt32(qty.Value);
+            Product selectedProduct = Program.getCurrentProduct(); //using MVC
+            User selectedUser = Program.getCurrentUser(); //using MVC
+            int quantity = Convert.ToInt32(qty.Value); //converting numericupdown to value
             int totalPrice = Convert.ToInt32(quantity * selectedProduct.price);
-            
+            //adding a stationery request to the database table by populating with required data
             sepdbDataSetTableAdapters.stationeryrequestTableAdapter statReq = new sepdbDataSetTableAdapters.stationeryrequestTableAdapter();
-            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted", quantity, totalPrice);
-            
+            statReq.SubmitStatReq(selectedUser.userId, selectedProduct.productid, DateTime.Today + "", "Submitted", quantity, totalPrice); 
+            //show when request has been submitted
             MessageBox.Show("Your Product Request has been Submitted.");
             ProductsForm productform = new ProductsForm(); //load page
             productform.Show();
             this.Close();
         }
-
-        private void btnNotifications_Click(object sender, EventArgs e)
+        private void btnNotifications_Click(object sender, EventArgs e) //when products button is clicked
         {
             ProductsForm products = new ProductsForm(); //load page
             products.Show();
             this.Close();
         }
-
-        private void btnSystemSettings_Click(object sender, EventArgs e)
+        private void btnSystemSettings_Click(object sender, EventArgs e) //when requests button is clicked
         {
             RequestsForm form = new RequestsForm(); //load page
             form.Show();
             this.Close();
         }
-
-        private void backBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e) //when back button is clicked
         {
             Home homepage = new Home();  //load page
             homepage.Show();
             this.Close();
         }
-
-        private void qty_ValueChanged(object sender, EventArgs e)
+        private void qty_ValueChanged(object sender, EventArgs e) //automatically update when the numericupdown changes
         {
-            int qtyCount = Convert.ToInt32(qty.Value);
+            int qtyCount = Convert.ToInt32(qty.Value); //convert numericupdown to value
             Product selectedProduct = Program.getCurrentProduct(); //using MVC
             totalPriceTxt.Text = "$" + (qtyCount * selectedProduct.price) + ".00"; //ensure appropriate layout to user
         }
