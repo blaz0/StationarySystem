@@ -201,21 +201,24 @@ namespace StationarySystem
 
         }
 
-        private void LoginForm_Load(object sender, EventArgs e) //first page user sees, contents when page is laoded
+        // First page user sees, contents when page is laoded.
+        private void LoginForm_Load(object sender, EventArgs e) 
         {
-            //maximise fields automatically
+            // Maximise fields automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             LoginBtn.Enabled = false;
             loadingCircle.Visible = false;
         }
 
-        private void StaffIDTF_TextChanged(object sender, EventArgs e) //check if only numbers are entered
+        // Check if only numbers are entered.
+        private void StaffIDTF_TextChanged(object sender, EventArgs e) 
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(StaffIDTF.Text, "[^0-9]"))
             {
                 MessageBox.Show("Please enter only numbers.");
-                StaffIDTF.Text = StaffIDTF.Text.Remove(StaffIDTF.Text.Length - 1); //remove non-numeric character
+                // Remove non-numeric character.
+                StaffIDTF.Text = StaffIDTF.Text.Remove(StaffIDTF.Text.Length - 1); 
             }
         }
 

@@ -239,7 +239,7 @@
             this.ApproveBtn.TabIndex = 33;
             this.ApproveBtn.Text = "Approve";
             this.ApproveBtn.UseVisualStyleBackColor = false;
-            this.ApproveBtn.Click += new System.EventHandler(this.approveBtn_Click);
+            this.ApproveBtn.Click += new System.EventHandler(this.ApproveBtn_Click);
             // 
             // errorProvider1
             // 

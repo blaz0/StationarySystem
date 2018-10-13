@@ -138,7 +138,6 @@
     <Compile Include="ProductsForm.Designer.cs">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Profile.cs" />
     <Compile Include="ProfileFormX.cs">
       <SubType>Form</SubType>
     </Compile>

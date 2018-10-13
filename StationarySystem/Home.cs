@@ -13,16 +13,22 @@ namespace StationarySystem
     public partial class Home : Form
     {
         public Home() => InitializeComponent();
-        private void Homepage_Load(object sender, EventArgs e) //when the page initially loads
+
+        // When the page initially loads.
+        private void Homepage_Load(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = false; //loading circle not visible
-            //maximise the windows automatically
+            // Loading circle not visible.
+            loadingCircle.Visible = false; 
+            // Maximise the windows automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
-            User loggedInUser = Program.GetCurrentUser(); //using MVC
-            WelcomeTxt.Text = "Welcome " + loggedInUser.FirstName; //create personalised message
-            //display different buttons depending on the user's role
-            if (loggedInUser.RoleId == 1) //stationery manager
+            // Using MVC.
+            User loggedInUser = Program.GetCurrentUser(); 
+            // Create personalised message.
+            WelcomeTxt.Text = "Welcome " + loggedInUser.FirstName; 
+            // Display different buttons depending on the user's role.
+            // Stationery manager.
+            if (loggedInUser.RoleId == 1) 
             {
                 BtnStockLevel.Visible = true;
                 StockPicture.Visible = true;
@@ -31,16 +37,19 @@ namespace StationarySystem
                 ApproveReqBtn.Visible = true;
                 OkPicture.Visible = true;
             }
-            else if (loggedInUser.RoleId == 3) //system admin
+            // System admin.
+            else if (loggedInUser.RoleId == 3) 
             {
                 BtnStockLevel.Visible = true;
                 StockPicture.Visible = true;
                 BtnSettings.Visible = true;
                 SettingsPicture.Visible = true;
-                ApproveReqBtn.Visible = true; //visible but no accessible
-                OkPicture.Visible = true; //visible but no accessible
+                // Visible but no accessible.
+                ApproveReqBtn.Visible = true;
+                // Visible but no accessible.
+                OkPicture.Visible = true; 
             }
-            else //users
+            else // Users.
             {
                 BtnStockLevel.Visible = false;
                 StockPicture.Visible = false;
@@ -51,125 +60,166 @@ namespace StationarySystem
             }
         }
 
-        private void BtnProfile_Click(object sender, EventArgs e) //when profile button is clicked
+        // When profile button is clicked.
+        private void BtnProfile_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void BtnProducts_Click(object sender, EventArgs e) //when product button is clicked
+        // When product button is clicked.
+        private void BtnProducts_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            ProductsForm allproducts = new ProductsForm(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            ProductsForm allproducts = new ProductsForm(); 
             allproducts.Show();
             this.Close();
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e) //when logout picture is clicked
+        // When logout picture is clicked
+        private void PictureBox2_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            LoginForm loginPage = new LoginForm(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Close();
         }
 
-        private void ProductPic_Click(object sender, EventArgs e) //when product picture is clicked
+        // When product picture is clicked
+        private void ProductPic_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            ProductsForm allproducts = new ProductsForm(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            ProductsForm allproducts = new ProductsForm(); 
             allproducts.Show();
             this.Close();
         }
 
-        private void BtnHome_Click(object sender, EventArgs e) //when home button is clicked
+        // When home button is clicked
+        private void BtnHome_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            Home homepage = new Home(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
-        
-        private void BtnRequests_Click(object sender, EventArgs e)//when requests button is clicked
+
+        // When requests button is clicked
+        private void BtnRequests_Click(object sender, EventArgs e)
         {
-            loadingCircle.Visible = true; //show loading circle
-            RequestsForm requests = new RequestsForm(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            RequestsForm requests = new RequestsForm(); 
             requests.Show();
             this.Close();
         }
 
-        private void PictureBox3_Click(object sender, EventArgs e)//when requests picture is clicked
+        // When requests picture is clicked
+        private void PictureBox3_Click(object sender, EventArgs e)
         {
-            loadingCircle.Visible = true; //show loading circle
-            RequestsForm requests = new RequestsForm(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            RequestsForm requests = new RequestsForm(); 
             requests.Show();
             this.Close();
         }
 
-        private void BtnProfile2_Click(object sender, EventArgs e)//when profile button is clicked
+        // When profile button is clicked
+        private void BtnProfile2_Click(object sender, EventArgs e)
         {
-            loadingCircle.Visible = true; //show loading circle
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void PictureBox1_Click(object sender, EventArgs e) //when profile picture is clicked
+        // When profile picture is clicked.
+        private void PictureBox1_Click(object sender, EventArgs e) 
         {
-            loadingCircle.Visible = true; //show loading circle
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Show loading circle.
+            loadingCircle.Visible = true;
+            // Load form.
+            ProfileFormX profile = new ProfileFormX(); 
             profile.Show();
             this.Close();
         }
 
-        private void OkPicture_Click(object sender, EventArgs e)  //when approve/deny picture is clicked
+        // When approve/deny picture is clicked.
+        private void OkPicture_Click(object sender, EventArgs e)  
         {
-            User selectedUser = Program.GetCurrentUser(); //using MVC
-            if (selectedUser.UserId == 4) //system admin does not have access to approve/deny requests
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser();
+            // System admin does not have access to approve/deny requests.
+            if (selectedUser.UserId == 4) 
             {
                 MessageBox.Show("You do not have access to this button.");
             }
             else
             {
-                ApproveRequestForm approve = new ApproveRequestForm();//load form
+                // Load form.
+                ApproveRequestForm approve = new ApproveRequestForm();
                 approve.Show();
                 this.Close();
             }
         }
 
-        private void ApproveReqBtn_Click(object sender, EventArgs e)  //when approve/deny button is clicked
+        // When approve/deny button is clicked.
+        private void ApproveReqBtn_Click(object sender, EventArgs e)  
         {
-            User selectedUser = Program.GetCurrentUser(); //using MVC
-            if (selectedUser.UserId == 4) //system admin does not have access to approve/deny requests
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser(); 
+            // System admin does not have access to approve/deny requests.
+            if (selectedUser.UserId == 4) 
             {
-                MessageBox.Show("You do not have access to this button."); //displayed message
+                MessageBox.Show("You do not have access to this button."); 
             }
             else
             {
-                ApproveRequestForm approve = new ApproveRequestForm();//load form
+                // Load form.
+                ApproveRequestForm approve = new ApproveRequestForm();
                 approve.Show();
                 this.Close();
             }
         }
 
-        private void BtnNotifications_Click(object sender, EventArgs e) //when product button is clicked
+        // When product button is clicked.
+        private void BtnNotifications_Click(object sender, EventArgs e) 
         {
-            ProductsForm products = new ProductsForm();//load form
+            // Load form.
+            ProductsForm products = new ProductsForm();
             products.Show();
             this.Close();
         }
 
-        private void BtnSystemSettings_Click(object sender, EventArgs e) //when request button is clicked
+        // When request button is clicked.
+        private void BtnSystemSettings_Click(object sender, EventArgs e) 
         {
-            RequestsForm form = new RequestsForm();//load form
+            // Load form.
+            RequestsForm form = new RequestsForm();
             form.Show();
             this.Close();
         }
 
-        private void PictureBox2_Click_1(object sender, EventArgs e) //when logout button is clicked
+        // When logout button is clicked.
+        private void PictureBox2_Click_1(object sender, EventArgs e) 
         {
-            LoginForm loginPage = new LoginForm();//load form
+            // Load form.
+            LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Close();
         }

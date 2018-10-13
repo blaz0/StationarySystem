@@ -11,23 +11,26 @@ namespace StationarySystem
         public char KeyChar { get; set; }
 
         public LoginForm() => InitializeComponent();
-        private void LoginBtn_Click(object sender, EventArgs e) //On Login button click
+
+        // On Login button click.
+        private void LoginBtn_Click(object sender, EventArgs e) 
         {
             string staffID = StaffIDTF.Text;
             string staffPassword = PasswordTF.Text;
-            loadingCircle.Visible = true; //loading circle visible
+            // Loading circle visible.
+            loadingCircle.Visible = true; 
 
-            // Check for missing ID - later disable login button until values is filled
+            // Check for missing ID - later disable login button until values is filled.
             if (string.IsNullOrEmpty(StaffIDTF.Text))
             {
-                //if fields are empty/null
+                //if fields are empty/null.
                 MessageBox.Show("Please enter your Staff ID", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 StaffIDTF.Focus();
                 return;
             }
             try
             {
-                //populate data points in User class
+                // Populate data points in User class.
                 sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
                 sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
                 if (dt.Rows.Count > 0)
@@ -42,23 +45,26 @@ namespace StationarySystem
                     loggedInUser.CostCentre = dr["costCentre"].ToString();
                     loggedInUser.Nickname = dr["nickname"].ToString();
                     loggedInUser.RoleId = int.Parse(dr["roleID"].ToString());
-                    //load form
+                    // Load form.
                     Home homepage = new Home(); 
                     homepage.Show();
                     this.Hide();
                 }
                 else
                 {
-                    MessageBox.Show("Login details incorrect."); //display message
+                    // Display message.
+                    MessageBox.Show("Login details incorrect."); 
                     StaffIDTF.Focus();
-                    //clear fields
+                    // Clear fields.
                     StaffIDTF.Text = "";
                     PasswordTF.Text = "";
-                    loadingCircle.Visible = false; //loading circle not visible
+                    // Loading circle not visible.
+                    loadingCircle.Visible = false;
                     return;
                 }
             }
-            catch (Exception ex) //error handling
+            // Error handling.
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StaffIDTF.Text = "";
@@ -69,13 +75,15 @@ namespace StationarySystem
             }
         }
 
-        private void PasswordTF_TextChanged(object sender, EventArgs e) //check username and password fields
+        // Check username and password fields.
+        private void PasswordTF_TextChanged(object sender, EventArgs e) 
         {
             if (KeyChar == (char)13)
             {
                 LoginBtn.PerformClick();
             }
-            if (String.IsNullOrWhiteSpace(PasswordTF.Text)) //only enable login button when both fields have text in them
+            // Only enable login button when both fields have text in them.
+            if (String.IsNullOrWhiteSpace(PasswordTF.Text)) 
             {
                 LoginBtn.Enabled = false;
             }
@@ -85,7 +93,8 @@ namespace StationarySystem
             }
         }
 
-        private void CloseLbl_Click(object sender, EventArgs e) //close application when clicked
+        // Close application when clicked.
+        private void CloseLbl_Click(object sender, EventArgs e) 
         {
             System.Windows.Forms.Application.Exit();
         }

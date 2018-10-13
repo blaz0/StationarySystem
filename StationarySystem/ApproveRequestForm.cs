@@ -17,135 +17,146 @@ namespace StationarySystem
             InitializeComponent();
         }
 
-        private void ApproveRequestForm_Load(object sender, EventArgs e) //processes to be achieved when the page loads
+        // Processes to be achieved when the page loads.
+        private void ApproveRequestForm_Load(object sender, EventArgs e) 
         {
-            //load page
-            LoadingCircle1.Visible = false; //don't display the loading circle
+            // Load page.
+            // Don't display the loading circle.
+            LoadingCircle1.Visible = false; 
             string selectedStatus = "Submitted";
-            stationeryrequestBindingSource.Filter = "status LIKE '*" + selectedStatus + "*'"; //place filter on the table to display only requests that have a status of "Submitted"
-            //fill datagridview with table data
+            // Place filter on the table to display only requests that have a status of "Submitted".
+            stationeryrequestBindingSource.Filter = "status LIKE '*" + selectedStatus + "*'"; 
+            //fill datagridview with table data.
             this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest);
-            //maximise the window automatically
+            // Maximise the window automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
         }
-                
-        private void BtnHome_Click(object sender, EventArgs e) //when the home button is clicked
+
+        // When the home button is clicked.
+        private void BtnHome_Click(object sender, EventArgs e) 
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
-            LoadingCircle1.Visible = true; //display loading circle
+            // Display loading circle.
+            LoadingCircle1.Visible = true; 
         }
 
-        private void BtnProfile_Click(object sender, EventArgs e) //when the profile button is clicked
+        // When the profile button is clicked.
+        private void BtnProfile_Click(object sender, EventArgs e) 
         {
-            ProfileFormX profile = new ProfileFormX(); //load form
+            // Load form.
+            ProfileFormX profile = new ProfileFormX();
             profile.Show();
             this.Close();
-            LoadingCircle1.Visible = true; //display loading circle
+            //display loading circle.
+            LoadingCircle1.Visible = true; 
         }
 
-        public static int SubtractQuantity(int originalQty, int amount) 
+        // When the approve button is clicked.
+        private void ApproveBtn_Click(object sender, EventArgs e)  
         {
-            return originalQty - amount; //subtract quantity from the original quantity
-        }
-
-        public static int AddQuantity(int originalQty, int amount)
-        {
-            return originalQty + amount; //add quantity to the original quantity
-        }
-
-        public static bool CheckQuantity(int currentStock, int amount) 
-        {
-            if (currentStock >= amount) //check if there is enough stock
-            {
-                return true;
-            }
-            return false;
-        }
-
-        private void approveBtn_Click(object sender, EventArgs e)  //when the approve button is clicked
-        {
-            //convert cells into values
+            // Convert cells into values.
             int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
             int selectedProductID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[2].Value);
             int selectedAmount = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[4].Value);
             int stock = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[8].Value);
-            int reducedAmount = SubtractQuantity(stock, selectedAmount); //subtract the approved quantity fromt he existing quantity
-            //check if there is enough stock
-            if (CheckQuantity(stock, selectedAmount) == true)
+            // Subtract the approved quantity from the existing quantity.
+            int reducedAmount = Product.SubtractQuantity(stock, selectedAmount); 
+            // Check if there is enough stock.
+            if (Product.CheckQuantity(stock, selectedAmount) == true)
             {
-                //show messagebox with yes/no options
+                // Show messagebox with yes/no options.
                 if (MessageBox.Show("Are you sure you want to approve this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    // user clicked yes
-                    stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID); //update request status
-                    stationeryrequestTableAdapter.UpdateStock(reducedAmount, selectedProductID); //update product amount
-                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest); //refresh table view
+                    // User clicked yes.
+                    // Update request status.
+                    stationeryrequestTableAdapter.UpdateStatus("Approved", selectedRequestID);
+                    // Update product amount.
+                    stationeryrequestTableAdapter.UpdateStock(reducedAmount, selectedProductID);
+                    // Refresh table view.
+                    this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet.stationeryrequest); 
                 }
                 else
                 {
-                    // user clicked no
-                    //nothing happens, return to "My Requests" page
+                    // User clicked no.
+                    // Nothing happens, return to "My Requests" page.
                     LoadingCircle1.Visible = true;
                 }
             }
-            else if(stock == 0) //if stock equals 0
+            // If stock equals 0.
+            else if (stock == 0) 
             {
                 MessageBox.Show("There is no more stock for this product.");
             }
-            else //if there is not enough stock
+            // If there is not enough stock.
+            else
             {
                 MessageBox.Show("There is not enough stock to approve this request.");
             }
         }
 
-        private void RejectBtn_Click(object sender, EventArgs e)  //when the reject button is clicked
+        // When the reject button is clicked.
+        private void RejectBtn_Click(object sender, EventArgs e)  
         {
-            //display confirmation display box
+            // Display confirmation display box.
             if (MessageBox.Show("Are you sure you want to reject this stationery request?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // user clicked yes
-                int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value); //convert cells into values
-                stationeryrequestTableAdapter.UpdateStatus("Denied", selectedRequestID); //update database row for the request
-                ApproveRequestForm approve = new ApproveRequestForm(); //load form
+                // User clicked yes.
+                // Convert cells into values.
+                int selectedRequestID = Convert.ToInt32(requestDataGrid.CurrentRow.Cells[0].Value);
+                // Update database row for the request.
+                stationeryrequestTableAdapter.UpdateStatus("Denied", selectedRequestID);
+                // Load form.
+                ApproveRequestForm approve = new ApproveRequestForm(); 
                 approve.Show();
                 this.Close();
-                LoadingCircle1.Visible = true; //display loading circle
+                // Display loading circle.
+                LoadingCircle1.Visible = true; 
             }
             else
             {
-                // user clicked no
-                //nothing happens, return to "My Requests" page
-                LoadingCircle1.Visible = true; //display loading circle
+                // User clicked no.
+                // Nothing happens, return to "My Requests" page.
+                // Display loading circle.
+                LoadingCircle1.Visible = true; 
             }
         }
-        
-        private void btnNotifications_Click(object sender, EventArgs e)  //when the products button is clicked
+
+        //When the products button is clicked.
+        private void btnNotifications_Click(object sender, EventArgs e)  
         {
-            ProductsForm products = new ProductsForm(); //load form
+            // Load form.
+            ProductsForm products = new ProductsForm(); 
             products.Show();
             this.Close();
         }
 
-        private void btnSystemSettings_Click(object sender, EventArgs e)  //when the requests button is clicked
+        // When the requests button is clicked.
+        private void btnSystemSettings_Click(object sender, EventArgs e)  
         {
-            RequestsForm form = new RequestsForm(); //load form
+            // Load form.
+            RequestsForm form = new RequestsForm(); 
             form.Show();
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)  //when the logout button is clicked
+        //When the logout button is clicked.
+        private void pictureBox1_Click(object sender, EventArgs e)  
         {
-            LoginForm loginPage = new LoginForm(); //load form
+            // Load form.
+            LoginForm loginPage = new LoginForm(); 
             loginPage.Show();
             this.Close();
         }
 
-        private void backBtn_Click(object sender, EventArgs e)  //when the back button is clicked
+        // When the back button is clicked.
+        private void backBtn_Click(object sender, EventArgs e)  
         {
-            Home homepage = new Home(); //load form
+            // Load form.
+            Home homepage = new Home(); 
             homepage.Show();
             this.Close();
         }
