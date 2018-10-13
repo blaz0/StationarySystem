@@ -36,49 +36,8 @@ namespace StationarySystem
             this.nickname = nickname;
             this.roleId = roleId;
         }
-
-        public int GetId()
-        {
-            return userId;
-        }
-        public string GetFirstName()
-        {
-            return firstName;
-        }
-        public string GetLastName()
-        {
-            return lastName;
-        }
-        public string GetFullName(string firstName, string lastName)
-        {
-            string fullname = firstName + lastName;
-            return fullname;
-        }
-        public int GetUsername()
-        {
-            return username;
-        }
-        public string GetPassword()
-        {
-            return password;
-        }
-        public string GetEmailAddress()
-        {
-            return emailAddress;
-        }
-        public string GetPhoneNo()
-        {
-            return phoneNo;
-        }
-        public string GetCostCentre()
-        {
-            return costCentre;
-        }
-        public string GetNickname()
-        {
-            return nickname;
-        }
-        public bool CheckID (int ID)
+                
+        public bool checkID (int ID)
         {
             if (ID == this.userId)
                 return true;
