@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StationarySystem", "Station
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B0CBBEFD-05CB-456F-A09C-C89743E71B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.specs", "TestProject.specs\TestProject.specs.csproj", "{6394FD74-6C3A-46EF-9031-9DD6CCCAE334}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject.specs\TestProject.csproj", "{6394FD74-6C3A-46EF-9031-9DD6CCCAE334}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
