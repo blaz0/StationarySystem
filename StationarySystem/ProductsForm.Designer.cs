@@ -40,8 +40,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ProductsLbl = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.searchBtn = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.SearchBtn = new System.Windows.Forms.PictureBox();
             this.productDataGrid = new System.Windows.Forms.DataGridView();
             this.productID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +51,10 @@
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.utsLogo = new System.Windows.Forms.PictureBox();
-            this.btnSystemSettings = new System.Windows.Forms.Button();
-            this.btnNotifications = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
+            this.BtnSystemSettings = new System.Windows.Forms.Button();
+            this.BtnNotifications = new System.Windows.Forms.Button();
+            this.BtnProfile = new System.Windows.Forms.Button();
+            this.BtnHome = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.detailsDataGrid = new System.Windows.Forms.DataGridView();
             this.productIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,8 +64,8 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priceDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clearSearchBtn = new System.Windows.Forms.Button();
-            this.createRequestBtn = new System.Windows.Forms.Button();
+            this.ClearSearchBtn = new System.Windows.Forms.Button();
+            this.CreateRequestBtn = new System.Windows.Forms.Button();
             this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
@@ -73,9 +73,9 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productTableAdapter();
             this.productDetailTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.productDetailTableAdapter();
-            this.backBtn = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).BeginInit();
+            this.BackBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
@@ -93,9 +93,10 @@
             // 
             this.ProductsLbl.AutoSize = true;
             this.ProductsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductsLbl.Location = new System.Drawing.Point(310, 40);
+            this.ProductsLbl.Location = new System.Drawing.Point(620, 77);
+            this.ProductsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.ProductsLbl.Name = "ProductsLbl";
-            this.ProductsLbl.Size = new System.Drawing.Size(214, 55);
+            this.ProductsLbl.Size = new System.Drawing.Size(423, 108);
             this.ProductsLbl.TabIndex = 10;
             this.ProductsLbl.Text = "Products";
             // 
@@ -106,37 +107,38 @@
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchBox.HideSelection = false;
-            this.SearchBox.Location = new System.Drawing.Point(319, 120);
+            this.SearchBox.Location = new System.Drawing.Point(638, 231);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(608, 30);
+            this.SearchBox.Size = new System.Drawing.Size(1212, 53);
             this.SearchBox.TabIndex = 11;
             this.SearchBox.Text = "Search for products";
             // 
-            // pictureBox1
+            // PictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1144, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(2288, 46);
+            this.PictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox1.TabIndex = 13;
+            this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // searchBtn
+            // SearchBtn
             // 
-            this.searchBtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(942, 120);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(32, 33);
-            this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.searchBtn.TabIndex = 14;
-            this.searchBtn.TabStop = false;
-            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
+            this.SearchBtn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("SearchBtn.Image")));
+            this.SearchBtn.Location = new System.Drawing.Point(1884, 231);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(60, 60);
+            this.SearchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SearchBtn.TabIndex = 14;
+            this.SearchBtn.TabStop = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // productDataGrid
             // 
@@ -167,7 +169,8 @@
             this.productDataGrid.DefaultCellStyle = dataGridViewCellStyle4;
             this.productDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.productDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.productDataGrid.Location = new System.Drawing.Point(318, 160);
+            this.productDataGrid.Location = new System.Drawing.Point(636, 308);
+            this.productDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.productDataGrid.MultiSelect = false;
             this.productDataGrid.Name = "productDataGrid";
             this.productDataGrid.ReadOnly = true;
@@ -177,7 +180,7 @@
             this.productDataGrid.RowTemplate.Height = 33;
             this.productDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.productDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.productDataGrid.Size = new System.Drawing.Size(876, 319);
+            this.productDataGrid.Size = new System.Drawing.Size(1752, 613);
             this.productDataGrid.TabIndex = 15;
             this.productDataGrid.TabStop = false;
             // 
@@ -238,87 +241,93 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.utsLogo);
-            this.panel1.Controls.Add(this.btnSystemSettings);
-            this.panel1.Controls.Add(this.btnNotifications);
-            this.panel1.Controls.Add(this.btnProfile);
-            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.BtnSystemSettings);
+            this.panel1.Controls.Add(this.BtnNotifications);
+            this.panel1.Controls.Add(this.BtnProfile);
+            this.panel1.Controls.Add(this.BtnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 741);
+            this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 18;
             // 
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(75, 82);
+            this.utsLogo.Location = new System.Drawing.Point(150, 158);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(100, 150);
+            this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
             // 
-            // btnSystemSettings
+            // BtnSystemSettings
             // 
-            this.btnSystemSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSystemSettings.FlatAppearance.BorderSize = 0;
-            this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 422);
-            this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
-            this.btnSystemSettings.TabIndex = 3;
-            this.btnSystemSettings.Text = "My Requests";
-            this.btnSystemSettings.UseVisualStyleBackColor = true;
-            this.btnSystemSettings.Click += new System.EventHandler(this.btnSystemSettings_Click);
+            this.BtnSystemSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSystemSettings.FlatAppearance.BorderSize = 0;
+            this.BtnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSystemSettings.ForeColor = System.Drawing.Color.White;
+            this.BtnSystemSettings.Location = new System.Drawing.Point(0, 812);
+            this.BtnSystemSettings.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnSystemSettings.Name = "BtnSystemSettings";
+            this.BtnSystemSettings.Size = new System.Drawing.Size(500, 77);
+            this.BtnSystemSettings.TabIndex = 3;
+            this.BtnSystemSettings.Text = "My Requests";
+            this.BtnSystemSettings.UseVisualStyleBackColor = true;
+            this.BtnSystemSettings.Click += new System.EventHandler(this.BtnSystemSettings_Click);
             // 
-            // btnNotifications
+            // BtnNotifications
             // 
-            this.btnNotifications.BackColor = System.Drawing.Color.Teal;
-            this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 377);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
-            this.btnNotifications.TabIndex = 2;
-            this.btnNotifications.Text = "Products";
-            this.btnNotifications.UseVisualStyleBackColor = false;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            this.BtnNotifications.BackColor = System.Drawing.Color.Teal;
+            this.BtnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNotifications.FlatAppearance.BorderSize = 0;
+            this.BtnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNotifications.ForeColor = System.Drawing.Color.White;
+            this.BtnNotifications.Location = new System.Drawing.Point(0, 725);
+            this.BtnNotifications.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnNotifications.Name = "BtnNotifications";
+            this.BtnNotifications.Size = new System.Drawing.Size(500, 77);
+            this.BtnNotifications.TabIndex = 2;
+            this.BtnNotifications.Text = "Products";
+            this.BtnNotifications.UseVisualStyleBackColor = false;
+            this.BtnNotifications.Click += new System.EventHandler(this.BtnNotifications_Click);
             // 
-            // btnProfile
+            // BtnProfile
             // 
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 332);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(250, 40);
-            this.btnProfile.TabIndex = 1;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click_1);
+            this.BtnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProfile.FlatAppearance.BorderSize = 0;
+            this.BtnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfile.ForeColor = System.Drawing.Color.White;
+            this.BtnProfile.Location = new System.Drawing.Point(0, 638);
+            this.BtnProfile.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnProfile.Name = "BtnProfile";
+            this.BtnProfile.Size = new System.Drawing.Size(500, 77);
+            this.BtnProfile.TabIndex = 1;
+            this.BtnProfile.Text = "Profile";
+            this.BtnProfile.UseVisualStyleBackColor = true;
+            this.BtnProfile.Click += new System.EventHandler(this.BtnProfile_Click_1);
             // 
-            // btnHome
+            // BtnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Black;
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 285);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(250, 40);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click_1);
+            this.BtnHome.BackColor = System.Drawing.Color.Black;
+            this.BtnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnHome.FlatAppearance.BorderSize = 0;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHome.ForeColor = System.Drawing.Color.White;
+            this.BtnHome.Location = new System.Drawing.Point(0, 548);
+            this.BtnHome.Margin = new System.Windows.Forms.Padding(6);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(500, 77);
+            this.BtnHome.TabIndex = 0;
+            this.BtnHome.Text = "Home";
+            this.BtnHome.UseVisualStyleBackColor = false;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click_1);
             // 
             // errorProvider1
             // 
@@ -362,7 +371,8 @@
             this.detailsDataGrid.DefaultCellStyle = dataGridViewCellStyle8;
             this.detailsDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsDataGrid.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.detailsDataGrid.Location = new System.Drawing.Point(318, 558);
+            this.detailsDataGrid.Location = new System.Drawing.Point(636, 1073);
+            this.detailsDataGrid.Margin = new System.Windows.Forms.Padding(6);
             this.detailsDataGrid.MultiSelect = false;
             this.detailsDataGrid.Name = "detailsDataGrid";
             this.detailsDataGrid.ReadOnly = true;
@@ -372,7 +382,7 @@
             this.detailsDataGrid.RowTemplate.Height = 33;
             this.detailsDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.detailsDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.detailsDataGrid.Size = new System.Drawing.Size(876, 62);
+            this.detailsDataGrid.Size = new System.Drawing.Size(1752, 119);
             this.detailsDataGrid.TabIndex = 19;
             this.detailsDataGrid.TabStop = false;
             // 
@@ -428,34 +438,34 @@
             this.detailsBindingSource.DataMember = "product_details_relation";
             this.detailsBindingSource.DataSource = this.productBindingSource;
             // 
-            // clearSearchBtn
+            // ClearSearchBtn
             // 
-            this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
-            this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(994, 116);
-            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.clearSearchBtn.Name = "clearSearchBtn";
-            this.clearSearchBtn.Size = new System.Drawing.Size(200, 34);
-            this.clearSearchBtn.TabIndex = 20;
-            this.clearSearchBtn.Text = "Clear Search";
-            this.clearSearchBtn.UseVisualStyleBackColor = false;
-            this.clearSearchBtn.Click += new System.EventHandler(this.clearSearchBtn_Click);
+            this.ClearSearchBtn.BackColor = System.Drawing.Color.Teal;
+            this.ClearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.ClearSearchBtn.ForeColor = System.Drawing.Color.White;
+            this.ClearSearchBtn.Location = new System.Drawing.Point(1988, 223);
+            this.ClearSearchBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ClearSearchBtn.Name = "ClearSearchBtn";
+            this.ClearSearchBtn.Size = new System.Drawing.Size(400, 65);
+            this.ClearSearchBtn.TabIndex = 20;
+            this.ClearSearchBtn.Text = "Clear Search";
+            this.ClearSearchBtn.UseVisualStyleBackColor = false;
+            this.ClearSearchBtn.Click += new System.EventHandler(this.ClearSearchBtn_Click);
             // 
-            // createRequestBtn
+            // CreateRequestBtn
             // 
-            this.createRequestBtn.BackColor = System.Drawing.Color.Teal;
-            this.createRequestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.createRequestBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.createRequestBtn.ForeColor = System.Drawing.Color.White;
-            this.createRequestBtn.Location = new System.Drawing.Point(319, 502);
-            this.createRequestBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.createRequestBtn.Name = "createRequestBtn";
-            this.createRequestBtn.Size = new System.Drawing.Size(265, 34);
-            this.createRequestBtn.TabIndex = 21;
-            this.createRequestBtn.Text = "Create Stationery Request";
-            this.createRequestBtn.UseVisualStyleBackColor = false;
-            this.createRequestBtn.Click += new System.EventHandler(this.createRequestBtn_Click_1);
+            this.CreateRequestBtn.BackColor = System.Drawing.Color.Teal;
+            this.CreateRequestBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CreateRequestBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.CreateRequestBtn.ForeColor = System.Drawing.Color.White;
+            this.CreateRequestBtn.Location = new System.Drawing.Point(638, 965);
+            this.CreateRequestBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.CreateRequestBtn.Name = "CreateRequestBtn";
+            this.CreateRequestBtn.Size = new System.Drawing.Size(530, 65);
+            this.CreateRequestBtn.TabIndex = 21;
+            this.CreateRequestBtn.Text = "Create Stationery Request";
+            this.CreateRequestBtn.UseVisualStyleBackColor = false;
+            this.CreateRequestBtn.Click += new System.EventHandler(this.CreateRequestBtn_Click_1);
             // 
             // usersTableAdapter
             // 
@@ -474,14 +484,14 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.usersTableAdapter = null;
             // 
             // usersBindingSource1
             // 
@@ -496,44 +506,46 @@
             // 
             this.productDetailTableAdapter.ClearBeforeFill = true;
             // 
-            // backBtn
+            // BackBtn
             // 
-            this.backBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.backBtn.BackColor = System.Drawing.Color.Transparent;
-            this.backBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("backBtn.BackgroundImage")));
-            this.backBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtn.ForeColor = System.Drawing.Color.White;
-            this.backBtn.Location = new System.Drawing.Point(256, 12);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(41, 43);
-            this.backBtn.TabIndex = 40;
-            this.backBtn.UseVisualStyleBackColor = false;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click_1);
+            this.BackBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackBtn.BackColor = System.Drawing.Color.Transparent;
+            this.BackBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BackBtn.BackgroundImage")));
+            this.BackBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.ForeColor = System.Drawing.Color.White;
+            this.BackBtn.Location = new System.Drawing.Point(512, 23);
+            this.BackBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(82, 83);
+            this.BackBtn.TabIndex = 40;
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click_1);
             // 
             // ProductsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
-            this.Controls.Add(this.backBtn);
-            this.Controls.Add(this.createRequestBtn);
-            this.Controls.Add(this.clearSearchBtn);
+            this.ClientSize = new System.Drawing.Size(2564, 1399);
+            this.Controls.Add(this.BackBtn);
+            this.Controls.Add(this.CreateRequestBtn);
+            this.Controls.Add(this.ClearSearchBtn);
             this.Controls.Add(this.detailsDataGrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.productDataGrid);
-            this.Controls.Add(this.searchBtn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.SearchBtn);
+            this.Controls.Add(this.PictureBox1);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.ProductsLbl);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "ProductsForm";
             this.Text = "Products";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ProductsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SearchBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
@@ -560,23 +572,23 @@
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.Label ProductsLbl;
         private System.Windows.Forms.TextBox SearchBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox searchBtn;
+        private System.Windows.Forms.PictureBox PictureBox1;
+        private System.Windows.Forms.PictureBox SearchBtn;
         private System.Windows.Forms.DataGridView productDataGrid;
         private System.Windows.Forms.BindingSource productBindingSource;
         private sepdbDataSetTableAdapters.productTableAdapter productTableAdapter;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox utsLogo;
-        private System.Windows.Forms.Button btnSystemSettings;
-        private System.Windows.Forms.Button btnNotifications;
-        private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnHome;
+        private System.Windows.Forms.Button BtnSystemSettings;
+        private System.Windows.Forms.Button BtnNotifications;
+        private System.Windows.Forms.Button BtnProfile;
+        private System.Windows.Forms.Button BtnHome;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridView detailsDataGrid;
-        private System.Windows.Forms.Button clearSearchBtn;
+        private System.Windows.Forms.Button ClearSearchBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockLevelDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.Button createRequestBtn;
+        private System.Windows.Forms.Button CreateRequestBtn;
         private System.Windows.Forms.BindingSource detailsBindingSource;
         private sepdbDataSetTableAdapters.productDetailTableAdapter productDetailTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn productID;
@@ -589,6 +601,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button BackBtn;
     }
 }

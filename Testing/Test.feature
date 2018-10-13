@@ -4,7 +4,7 @@
 	I want to login with my credentials
 
 @login_valid
-Scenario: Use correct credentials
+Scenario: login_valid
 	Given I have an account in the system
 	And I have also entered the correct details
 	When I press login

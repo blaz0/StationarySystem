@@ -41,7 +41,7 @@ namespace StationarySystem
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loadingCircle = new CircularProgressBar.CircularProgressBar();
-            this.closeLbl = new System.Windows.Forms.Label();
+            this.CloseLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,16 +163,16 @@ namespace StationarySystem
             this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.loadingCircle.Value = 68;
             // 
-            // closeLbl
+            // CloseLbl
             // 
-            this.closeLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.closeLbl.AutoSize = true;
-            this.closeLbl.Location = new System.Drawing.Point(520, 393);
-            this.closeLbl.Name = "closeLbl";
-            this.closeLbl.Size = new System.Drawing.Size(67, 25);
-            this.closeLbl.TabIndex = 9;
-            this.closeLbl.Text = "Close";
-            this.closeLbl.Click += new System.EventHandler(this.closeLbl_Click);
+            this.CloseLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CloseLbl.AutoSize = true;
+            this.CloseLbl.Location = new System.Drawing.Point(520, 393);
+            this.CloseLbl.Name = "CloseLbl";
+            this.CloseLbl.Size = new System.Drawing.Size(67, 25);
+            this.CloseLbl.TabIndex = 9;
+            this.CloseLbl.Text = "Close";
+            this.CloseLbl.Click += new System.EventHandler(this.CloseLbl_Click);
             // 
             // LoginForm
             // 
@@ -181,7 +181,7 @@ namespace StationarySystem
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(768, 513);
-            this.Controls.Add(this.closeLbl);
+            this.Controls.Add(this.CloseLbl);
             this.Controls.Add(this.loadingCircle);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -201,24 +201,25 @@ namespace StationarySystem
 
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        // First page user sees, contents when page is laoded.
+        private void LoginForm_Load(object sender, EventArgs e) 
         {
-            //throw new NotImplementedException();
-            //ensure that the maximised screen still displays the toolbar/taskbar
+            // Maximise fields automatically.
             MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
             WindowState = FormWindowState.Maximized;
             LoginBtn.Enabled = false;
             loadingCircle.Visible = false;
         }
-        //void calculate()
-        //{
-        //    LoginBtn.Enabled = (StaffIDTF.Text != "" && PasswordTF.Text != "");
-        //}
 
-        private void StaffIDTF_TextChanged(object sender, EventArgs e)
+        // Check if only numbers are entered.
+        private void StaffIDTF_TextChanged(object sender, EventArgs e) 
         {
-            //throw new NotImplementedException
-            
+            if (System.Text.RegularExpressions.Regex.IsMatch(StaffIDTF.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                // Remove non-numeric character.
+                StaffIDTF.Text = StaffIDTF.Text.Remove(StaffIDTF.Text.Length - 1); 
+            }
         }
 
         #endregion
@@ -231,6 +232,6 @@ namespace StationarySystem
         private Label label1;
         private PictureBox pictureBox1;
         private CircularProgressBar.CircularProgressBar loadingCircle;
-        private Label closeLbl;
+        private Label CloseLbl;
     }
 }

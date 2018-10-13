@@ -33,16 +33,16 @@
             this.utsLogo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.loadingCircle = new CircularProgressBar.CircularProgressBar();
-            this.btnSystemSettings = new System.Windows.Forms.Button();
-            this.btnNotifications = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnHome = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
-            this.btnRequests = new System.Windows.Forms.Button();
-            this.btnOrders = new System.Windows.Forms.Button();
-            this.productPic = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.BtnSystemSettings = new System.Windows.Forms.Button();
+            this.BtnNotifications = new System.Windows.Forms.Button();
+            this.BtnProfile = new System.Windows.Forms.Button();
+            this.BtnHome = new System.Windows.Forms.Button();
+            this.BtnProducts = new System.Windows.Forms.Button();
+            this.BtnRequests = new System.Windows.Forms.Button();
+            this.BtnOrders = new System.Windows.Forms.Button();
+            this.ProductPic = new System.Windows.Forms.PictureBox();
+            this.PictureBox3 = new System.Windows.Forms.PictureBox();
+            this.PictureBox4 = new System.Windows.Forms.PictureBox();
             this.sepdbDataSet = new StationarySystem.sepdbDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new StationarySystem.sepdbDataSetTableAdapters.usersTableAdapter();
@@ -53,34 +53,34 @@
             this.sepdbDataSet1 = new StationarySystem.sepdbDataSet();
             this.usersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.welcomeTxt = new System.Windows.Forms.TextBox();
-            this.btnStockLevel = new System.Windows.Forms.Button();
-            this.stockPicture = new System.Windows.Forms.PictureBox();
-            this.btnSettings = new System.Windows.Forms.Button();
-            this.settingsPicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnProfile2 = new System.Windows.Forms.Button();
-            this.okPicture = new System.Windows.Forms.PictureBox();
-            this.approveReqBtn = new System.Windows.Forms.Button();
+            this.WelcomeTxt = new System.Windows.Forms.TextBox();
+            this.BtnStockLevel = new System.Windows.Forms.Button();
+            this.StockPicture = new System.Windows.Forms.PictureBox();
+            this.BtnSettings = new System.Windows.Forms.Button();
+            this.SettingsPicture = new System.Windows.Forms.PictureBox();
+            this.PictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BtnProfile2 = new System.Windows.Forms.Button();
+            this.OkPicture = new System.Windows.Forms.PictureBox();
+            this.ApproveReqBtn = new System.Windows.Forms.Button();
             this.logOutBtn = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OkPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // utsLogo
@@ -99,10 +99,10 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.loadingCircle);
             this.panel1.Controls.Add(this.utsLogo);
-            this.panel1.Controls.Add(this.btnSystemSettings);
-            this.panel1.Controls.Add(this.btnNotifications);
-            this.panel1.Controls.Add(this.btnProfile);
-            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.BtnSystemSettings);
+            this.panel1.Controls.Add(this.BtnNotifications);
+            this.panel1.Controls.Add(this.BtnProfile);
+            this.panel1.Controls.Add(this.BtnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
@@ -142,152 +142,152 @@
             this.loadingCircle.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.loadingCircle.Value = 68;
             // 
-            // btnSystemSettings
+            // BtnSystemSettings
             // 
-            this.btnSystemSettings.FlatAppearance.BorderSize = 0;
-            this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 814);
-            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
-            this.btnSystemSettings.TabIndex = 3;
-            this.btnSystemSettings.Text = "My Requests";
-            this.btnSystemSettings.UseVisualStyleBackColor = true;
-            this.btnSystemSettings.Click += new System.EventHandler(this.btnSystemSettings_Click);
+            this.BtnSystemSettings.FlatAppearance.BorderSize = 0;
+            this.BtnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSystemSettings.ForeColor = System.Drawing.Color.White;
+            this.BtnSystemSettings.Location = new System.Drawing.Point(0, 814);
+            this.BtnSystemSettings.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnSystemSettings.Name = "BtnSystemSettings";
+            this.BtnSystemSettings.Size = new System.Drawing.Size(500, 77);
+            this.BtnSystemSettings.TabIndex = 3;
+            this.BtnSystemSettings.Text = "My Requests";
+            this.BtnSystemSettings.UseVisualStyleBackColor = true;
+            this.BtnSystemSettings.Click += new System.EventHandler(this.BtnSystemSettings_Click);
             // 
-            // btnNotifications
+            // BtnNotifications
             // 
-            this.btnNotifications.FlatAppearance.BorderSize = 0;
-            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
-            this.btnNotifications.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
-            this.btnNotifications.TabIndex = 2;
-            this.btnNotifications.Text = "Products";
-            this.btnNotifications.UseVisualStyleBackColor = true;
-            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
+            this.BtnNotifications.FlatAppearance.BorderSize = 0;
+            this.BtnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNotifications.ForeColor = System.Drawing.Color.White;
+            this.BtnNotifications.Location = new System.Drawing.Point(0, 725);
+            this.BtnNotifications.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnNotifications.Name = "BtnNotifications";
+            this.BtnNotifications.Size = new System.Drawing.Size(500, 77);
+            this.BtnNotifications.TabIndex = 2;
+            this.BtnNotifications.Text = "Products";
+            this.BtnNotifications.UseVisualStyleBackColor = true;
+            this.BtnNotifications.Click += new System.EventHandler(this.BtnNotifications_Click);
             // 
-            // btnProfile
+            // BtnProfile
             // 
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 636);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(500, 77);
-            this.btnProfile.TabIndex = 1;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.BtnProfile.FlatAppearance.BorderSize = 0;
+            this.BtnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfile.ForeColor = System.Drawing.Color.White;
+            this.BtnProfile.Location = new System.Drawing.Point(0, 636);
+            this.BtnProfile.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnProfile.Name = "BtnProfile";
+            this.BtnProfile.Size = new System.Drawing.Size(500, 77);
+            this.BtnProfile.TabIndex = 1;
+            this.BtnProfile.Text = "Profile";
+            this.BtnProfile.UseVisualStyleBackColor = true;
+            this.BtnProfile.Click += new System.EventHandler(this.BtnProfile_Click);
             // 
-            // btnHome
+            // BtnHome
             // 
-            this.btnHome.BackColor = System.Drawing.Color.Teal;
-            this.btnHome.FlatAppearance.BorderSize = 0;
-            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 548);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(500, 77);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Home";
-            this.btnHome.UseVisualStyleBackColor = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.BtnHome.BackColor = System.Drawing.Color.Teal;
+            this.BtnHome.FlatAppearance.BorderSize = 0;
+            this.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHome.ForeColor = System.Drawing.Color.White;
+            this.BtnHome.Location = new System.Drawing.Point(0, 548);
+            this.BtnHome.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(500, 77);
+            this.BtnHome.TabIndex = 0;
+            this.BtnHome.Text = "Home";
+            this.BtnHome.UseVisualStyleBackColor = false;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // btnProducts
+            // BtnProducts
             // 
-            this.btnProducts.BackColor = System.Drawing.Color.Black;
-            this.btnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProducts.ForeColor = System.Drawing.Color.White;
-            this.btnProducts.Location = new System.Drawing.Point(544, 298);
-            this.btnProducts.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Size = new System.Drawing.Size(600, 250);
-            this.btnProducts.TabIndex = 8;
-            this.btnProducts.Text = "View Products";
-            this.btnProducts.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProducts.UseVisualStyleBackColor = false;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            this.BtnProducts.BackColor = System.Drawing.Color.Black;
+            this.BtnProducts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProducts.ForeColor = System.Drawing.Color.White;
+            this.BtnProducts.Location = new System.Drawing.Point(544, 298);
+            this.BtnProducts.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnProducts.Name = "BtnProducts";
+            this.BtnProducts.Size = new System.Drawing.Size(600, 250);
+            this.BtnProducts.TabIndex = 8;
+            this.BtnProducts.Text = "View Products";
+            this.BtnProducts.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnProducts.UseVisualStyleBackColor = false;
+            this.BtnProducts.Click += new System.EventHandler(this.BtnProducts_Click);
             // 
-            // btnRequests
+            // BtnRequests
             // 
-            this.btnRequests.BackColor = System.Drawing.Color.Black;
-            this.btnRequests.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequests.ForeColor = System.Drawing.Color.White;
-            this.btnRequests.Location = new System.Drawing.Point(1180, 298);
-            this.btnRequests.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnRequests.Name = "btnRequests";
-            this.btnRequests.Size = new System.Drawing.Size(600, 250);
-            this.btnRequests.TabIndex = 9;
-            this.btnRequests.Text = "Requests";
-            this.btnRequests.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRequests.UseVisualStyleBackColor = false;
-            this.btnRequests.Click += new System.EventHandler(this.btnRequests_Click);
+            this.BtnRequests.BackColor = System.Drawing.Color.Black;
+            this.BtnRequests.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRequests.ForeColor = System.Drawing.Color.White;
+            this.BtnRequests.Location = new System.Drawing.Point(1180, 298);
+            this.BtnRequests.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnRequests.Name = "BtnRequests";
+            this.BtnRequests.Size = new System.Drawing.Size(600, 250);
+            this.BtnRequests.TabIndex = 9;
+            this.BtnRequests.Text = "Requests";
+            this.BtnRequests.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRequests.UseVisualStyleBackColor = false;
+            this.BtnRequests.Click += new System.EventHandler(this.BtnRequests_Click);
             // 
-            // btnOrders
+            // BtnOrders
             // 
-            this.btnOrders.BackColor = System.Drawing.Color.Black;
-            this.btnOrders.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrders.ForeColor = System.Drawing.Color.White;
-            this.btnOrders.Location = new System.Drawing.Point(1820, 298);
-            this.btnOrders.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnOrders.Name = "btnOrders";
-            this.btnOrders.Size = new System.Drawing.Size(600, 250);
-            this.btnOrders.TabIndex = 10;
-            this.btnOrders.Text = "Orders";
-            this.btnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnOrders.UseVisualStyleBackColor = false;
+            this.BtnOrders.BackColor = System.Drawing.Color.Black;
+            this.BtnOrders.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnOrders.ForeColor = System.Drawing.Color.White;
+            this.BtnOrders.Location = new System.Drawing.Point(1820, 298);
+            this.BtnOrders.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnOrders.Name = "BtnOrders";
+            this.BtnOrders.Size = new System.Drawing.Size(600, 250);
+            this.BtnOrders.TabIndex = 10;
+            this.BtnOrders.Text = "Orders";
+            this.BtnOrders.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnOrders.UseVisualStyleBackColor = false;
             // 
-            // productPic
+            // ProductPic
             // 
-            this.productPic.BackColor = System.Drawing.Color.Black;
-            this.productPic.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.productPic.Image = ((System.Drawing.Image)(resources.GetObject("productPic.Image")));
-            this.productPic.Location = new System.Drawing.Point(771, 336);
-            this.productPic.Name = "productPic";
-            this.productPic.Size = new System.Drawing.Size(135, 141);
-            this.productPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.productPic.TabIndex = 12;
-            this.productPic.TabStop = false;
-            this.productPic.Tag = "";
-            this.productPic.Click += new System.EventHandler(this.productPic_Click);
+            this.ProductPic.BackColor = System.Drawing.Color.Black;
+            this.ProductPic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProductPic.Image = ((System.Drawing.Image)(resources.GetObject("ProductPic.Image")));
+            this.ProductPic.Location = new System.Drawing.Point(771, 336);
+            this.ProductPic.Name = "ProductPic";
+            this.ProductPic.Size = new System.Drawing.Size(135, 141);
+            this.ProductPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductPic.TabIndex = 12;
+            this.ProductPic.TabStop = false;
+            this.ProductPic.Tag = "";
+            this.ProductPic.Click += new System.EventHandler(this.ProductPic_Click);
             // 
-            // pictureBox3
+            // PictureBox3
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1408, 336);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(135, 141);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.PictureBox3.BackColor = System.Drawing.Color.Black;
+            this.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox3.Image")));
+            this.PictureBox3.Location = new System.Drawing.Point(1408, 336);
+            this.PictureBox3.Name = "PictureBox3";
+            this.PictureBox3.Size = new System.Drawing.Size(135, 141);
+            this.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox3.TabIndex = 13;
+            this.PictureBox3.TabStop = false;
+            this.PictureBox3.Click += new System.EventHandler(this.PictureBox3_Click);
             // 
-            // pictureBox4
+            // PictureBox4
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Black;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2054, 336);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(135, 141);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
+            this.PictureBox4.BackColor = System.Drawing.Color.Black;
+            this.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox4.Image")));
+            this.PictureBox4.Location = new System.Drawing.Point(2054, 336);
+            this.PictureBox4.Name = "PictureBox4";
+            this.PictureBox4.Size = new System.Drawing.Size(135, 141);
+            this.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox4.TabIndex = 14;
+            this.PictureBox4.TabStop = false;
             // 
             // sepdbDataSet
             // 
@@ -306,26 +306,26 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.invoiceTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.orderedproductsTableAdapter = null;
             this.tableAdapterManager.productDetailTableAdapter = null;
             this.tableAdapterManager.productTableAdapter = null;
             this.tableAdapterManager.supplierorderTableAdapter = null;
             this.tableAdapterManager.supplierTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            this.tableAdapterManager.usersTableAdapter = null;
             // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.invoiceTableAdapter = null;
+            this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.orderedproductsTableAdapter = null;
             this.tableAdapterManager1.productDetailTableAdapter = null;
             this.tableAdapterManager1.productTableAdapter = null;
             this.tableAdapterManager1.supplierorderTableAdapter = null;
             this.tableAdapterManager1.supplierTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = StationarySystem.sepdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager1.usersTableAdapter = this.usersTableAdapter1;
+            this.tableAdapterManager1.usersTableAdapter = null;
             // 
             // usersTableAdapter1
             // 
@@ -351,129 +351,129 @@
             this.usersBindingSource1.DataMember = "users";
             this.usersBindingSource1.DataSource = this.sepdbDataSet1;
             // 
-            // welcomeTxt
+            // WelcomeTxt
             // 
-            this.welcomeTxt.BackColor = System.Drawing.SystemColors.Window;
-            this.welcomeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.welcomeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeTxt.Location = new System.Drawing.Point(544, 56);
-            this.welcomeTxt.Name = "welcomeTxt";
-            this.welcomeTxt.ReadOnly = true;
-            this.welcomeTxt.Size = new System.Drawing.Size(1648, 145);
-            this.welcomeTxt.TabIndex = 15;
-            this.welcomeTxt.Text = "Welcome [first name of user]";
+            this.WelcomeTxt.BackColor = System.Drawing.SystemColors.Window;
+            this.WelcomeTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WelcomeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WelcomeTxt.Location = new System.Drawing.Point(544, 56);
+            this.WelcomeTxt.Name = "WelcomeTxt";
+            this.WelcomeTxt.ReadOnly = true;
+            this.WelcomeTxt.Size = new System.Drawing.Size(1648, 145);
+            this.WelcomeTxt.TabIndex = 15;
+            this.WelcomeTxt.Text = "Welcome [first name of user]";
             // 
-            // btnStockLevel
+            // BtnStockLevel
             // 
-            this.btnStockLevel.BackColor = System.Drawing.Color.Black;
-            this.btnStockLevel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnStockLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStockLevel.ForeColor = System.Drawing.Color.White;
-            this.btnStockLevel.Location = new System.Drawing.Point(1820, 625);
-            this.btnStockLevel.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnStockLevel.Name = "btnStockLevel";
-            this.btnStockLevel.Size = new System.Drawing.Size(600, 250);
-            this.btnStockLevel.TabIndex = 16;
-            this.btnStockLevel.Text = "Stock Levels";
-            this.btnStockLevel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnStockLevel.UseVisualStyleBackColor = false;
+            this.BtnStockLevel.BackColor = System.Drawing.Color.Black;
+            this.BtnStockLevel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnStockLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnStockLevel.ForeColor = System.Drawing.Color.White;
+            this.BtnStockLevel.Location = new System.Drawing.Point(1820, 625);
+            this.BtnStockLevel.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnStockLevel.Name = "BtnStockLevel";
+            this.BtnStockLevel.Size = new System.Drawing.Size(600, 250);
+            this.BtnStockLevel.TabIndex = 16;
+            this.BtnStockLevel.Text = "Stock Levels";
+            this.BtnStockLevel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnStockLevel.UseVisualStyleBackColor = false;
             // 
-            // stockPicture
+            // StockPicture
             // 
-            this.stockPicture.BackColor = System.Drawing.Color.Black;
-            this.stockPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.stockPicture.Image = ((System.Drawing.Image)(resources.GetObject("stockPicture.Image")));
-            this.stockPicture.Location = new System.Drawing.Point(2054, 661);
-            this.stockPicture.Name = "stockPicture";
-            this.stockPicture.Size = new System.Drawing.Size(135, 141);
-            this.stockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.stockPicture.TabIndex = 17;
-            this.stockPicture.TabStop = false;
+            this.StockPicture.BackColor = System.Drawing.Color.Black;
+            this.StockPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StockPicture.Image = ((System.Drawing.Image)(resources.GetObject("StockPicture.Image")));
+            this.StockPicture.Location = new System.Drawing.Point(2054, 661);
+            this.StockPicture.Name = "StockPicture";
+            this.StockPicture.Size = new System.Drawing.Size(135, 141);
+            this.StockPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.StockPicture.TabIndex = 17;
+            this.StockPicture.TabStop = false;
             // 
-            // btnSettings
+            // BtnSettings
             // 
-            this.btnSettings.BackColor = System.Drawing.Color.Black;
-            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Location = new System.Drawing.Point(544, 955);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(600, 250);
-            this.btnSettings.TabIndex = 18;
-            this.btnSettings.Text = "System Settings";
-            this.btnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSettings.UseVisualStyleBackColor = false;
+            this.BtnSettings.BackColor = System.Drawing.Color.Black;
+            this.BtnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSettings.ForeColor = System.Drawing.Color.White;
+            this.BtnSettings.Location = new System.Drawing.Point(544, 955);
+            this.BtnSettings.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnSettings.Name = "BtnSettings";
+            this.BtnSettings.Size = new System.Drawing.Size(600, 250);
+            this.BtnSettings.TabIndex = 18;
+            this.BtnSettings.Text = "System Settings";
+            this.BtnSettings.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSettings.UseVisualStyleBackColor = false;
             // 
-            // settingsPicture
+            // SettingsPicture
             // 
-            this.settingsPicture.BackColor = System.Drawing.Color.Black;
-            this.settingsPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.settingsPicture.Image = ((System.Drawing.Image)(resources.GetObject("settingsPicture.Image")));
-            this.settingsPicture.Location = new System.Drawing.Point(772, 992);
-            this.settingsPicture.Name = "settingsPicture";
-            this.settingsPicture.Size = new System.Drawing.Size(140, 141);
-            this.settingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.settingsPicture.TabIndex = 19;
-            this.settingsPicture.TabStop = false;
+            this.SettingsPicture.BackColor = System.Drawing.Color.Black;
+            this.SettingsPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SettingsPicture.Image = ((System.Drawing.Image)(resources.GetObject("SettingsPicture.Image")));
+            this.SettingsPicture.Location = new System.Drawing.Point(772, 992);
+            this.SettingsPicture.Name = "SettingsPicture";
+            this.SettingsPicture.Size = new System.Drawing.Size(140, 141);
+            this.SettingsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.SettingsPicture.TabIndex = 19;
+            this.SettingsPicture.TabStop = false;
             // 
-            // pictureBox1
+            // PictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1408, 661);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 141);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.PictureBox1.BackColor = System.Drawing.Color.Black;
+            this.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox1.Image")));
+            this.PictureBox1.Location = new System.Drawing.Point(1408, 661);
+            this.PictureBox1.Name = "PictureBox1";
+            this.PictureBox1.Size = new System.Drawing.Size(135, 141);
+            this.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PictureBox1.TabIndex = 21;
+            this.PictureBox1.TabStop = false;
+            this.PictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
-            // btnProfile2
+            // BtnProfile2
             // 
-            this.btnProfile2.BackColor = System.Drawing.Color.Black;
-            this.btnProfile2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile2.ForeColor = System.Drawing.Color.White;
-            this.btnProfile2.Location = new System.Drawing.Point(1180, 625);
-            this.btnProfile2.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.btnProfile2.Name = "btnProfile2";
-            this.btnProfile2.Size = new System.Drawing.Size(600, 250);
-            this.btnProfile2.TabIndex = 20;
-            this.btnProfile2.Text = "View Profile";
-            this.btnProfile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnProfile2.UseVisualStyleBackColor = false;
-            this.btnProfile2.Click += new System.EventHandler(this.btnProfile2_Click);
+            this.BtnProfile2.BackColor = System.Drawing.Color.Black;
+            this.BtnProfile2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProfile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfile2.ForeColor = System.Drawing.Color.White;
+            this.BtnProfile2.Location = new System.Drawing.Point(1180, 625);
+            this.BtnProfile2.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.BtnProfile2.Name = "BtnProfile2";
+            this.BtnProfile2.Size = new System.Drawing.Size(600, 250);
+            this.BtnProfile2.TabIndex = 20;
+            this.BtnProfile2.Text = "View Profile";
+            this.BtnProfile2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnProfile2.UseVisualStyleBackColor = false;
+            this.BtnProfile2.Click += new System.EventHandler(this.BtnProfile2_Click);
             // 
-            // okPicture
+            // OkPicture
             // 
-            this.okPicture.BackColor = System.Drawing.Color.Black;
-            this.okPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.okPicture.Image = ((System.Drawing.Image)(resources.GetObject("okPicture.Image")));
-            this.okPicture.Location = new System.Drawing.Point(771, 661);
-            this.okPicture.Name = "okPicture";
-            this.okPicture.Size = new System.Drawing.Size(135, 141);
-            this.okPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.okPicture.TabIndex = 23;
-            this.okPicture.TabStop = false;
-            this.okPicture.Click += new System.EventHandler(this.okPicture_Click);
+            this.OkPicture.BackColor = System.Drawing.Color.Black;
+            this.OkPicture.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OkPicture.Image = ((System.Drawing.Image)(resources.GetObject("OkPicture.Image")));
+            this.OkPicture.Location = new System.Drawing.Point(771, 661);
+            this.OkPicture.Name = "OkPicture";
+            this.OkPicture.Size = new System.Drawing.Size(135, 141);
+            this.OkPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.OkPicture.TabIndex = 23;
+            this.OkPicture.TabStop = false;
+            this.OkPicture.Click += new System.EventHandler(this.OkPicture_Click);
             // 
-            // approveReqBtn
+            // ApproveReqBtn
             // 
-            this.approveReqBtn.BackColor = System.Drawing.Color.Black;
-            this.approveReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.approveReqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.approveReqBtn.ForeColor = System.Drawing.Color.White;
-            this.approveReqBtn.Location = new System.Drawing.Point(544, 625);
-            this.approveReqBtn.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
-            this.approveReqBtn.Name = "approveReqBtn";
-            this.approveReqBtn.Size = new System.Drawing.Size(600, 250);
-            this.approveReqBtn.TabIndex = 22;
-            this.approveReqBtn.Text = "Approve / Deny Requests";
-            this.approveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.approveReqBtn.UseVisualStyleBackColor = false;
-            this.approveReqBtn.Click += new System.EventHandler(this.approveReqBtn_Click);
+            this.ApproveReqBtn.BackColor = System.Drawing.Color.Black;
+            this.ApproveReqBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ApproveReqBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ApproveReqBtn.ForeColor = System.Drawing.Color.White;
+            this.ApproveReqBtn.Location = new System.Drawing.Point(544, 625);
+            this.ApproveReqBtn.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
+            this.ApproveReqBtn.Name = "ApproveReqBtn";
+            this.ApproveReqBtn.Size = new System.Drawing.Size(600, 250);
+            this.ApproveReqBtn.TabIndex = 22;
+            this.ApproveReqBtn.Text = "Approve / Deny Requests";
+            this.ApproveReqBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ApproveReqBtn.UseVisualStyleBackColor = false;
+            this.ApproveReqBtn.Click += new System.EventHandler(this.ApproveReqBtn_Click);
             // 
             // logOutBtn
             // 
@@ -486,18 +486,17 @@
             this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutBtn.TabIndex = 25;
             this.logOutBtn.TabStop = false;
-            this.logOutBtn.Click += new System.EventHandler(this.logOutBtn_Click);
             // 
-            // pictureBox2
+            // PictureBox2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2320, 56);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 26;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
+            this.PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("PictureBox2.Image")));
+            this.PictureBox2.Location = new System.Drawing.Point(2320, 56);
+            this.PictureBox2.Name = "PictureBox2";
+            this.PictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox2.TabIndex = 26;
+            this.PictureBox2.TabStop = false;
+            this.PictureBox2.Click += new System.EventHandler(this.PictureBox2_Click_1);
             // 
             // Home
             // 
@@ -505,24 +504,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2564, 1399);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PictureBox2);
             this.Controls.Add(this.logOutBtn);
-            this.Controls.Add(this.okPicture);
-            this.Controls.Add(this.approveReqBtn);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnProfile2);
-            this.Controls.Add(this.settingsPicture);
-            this.Controls.Add(this.btnSettings);
-            this.Controls.Add(this.stockPicture);
-            this.Controls.Add(this.btnStockLevel);
-            this.Controls.Add(this.welcomeTxt);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.productPic);
-            this.Controls.Add(this.btnOrders);
-            this.Controls.Add(this.btnRequests);
+            this.Controls.Add(this.OkPicture);
+            this.Controls.Add(this.ApproveReqBtn);
+            this.Controls.Add(this.PictureBox1);
+            this.Controls.Add(this.BtnProfile2);
+            this.Controls.Add(this.SettingsPicture);
+            this.Controls.Add(this.BtnSettings);
+            this.Controls.Add(this.StockPicture);
+            this.Controls.Add(this.BtnStockLevel);
+            this.Controls.Add(this.WelcomeTxt);
+            this.Controls.Add(this.PictureBox4);
+            this.Controls.Add(this.PictureBox3);
+            this.Controls.Add(this.ProductPic);
+            this.Controls.Add(this.BtnOrders);
+            this.Controls.Add(this.BtnRequests);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnProducts);
+            this.Controls.Add(this.BtnProducts);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.Name = "Home";
@@ -530,21 +529,21 @@
             this.Load += new System.EventHandler(this.Homepage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.utsLogo)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.productPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sepdbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.settingsPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.okPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StockPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SettingsPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OkPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.logOutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,27 +563,27 @@
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private System.Windows.Forms.PictureBox utsLogo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSystemSettings;
-        private System.Windows.Forms.Button btnNotifications;
-        private System.Windows.Forms.Button btnProfile;
-        private System.Windows.Forms.Button btnHome;
-        private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.Button btnRequests;
-        private System.Windows.Forms.Button btnOrders;
-        private System.Windows.Forms.PictureBox productPic;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TextBox welcomeTxt;
-        private System.Windows.Forms.Button btnStockLevel;
-        private System.Windows.Forms.PictureBox stockPicture;
-        private System.Windows.Forms.Button btnSettings;
-        private System.Windows.Forms.PictureBox settingsPicture;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnProfile2;
-        private System.Windows.Forms.PictureBox okPicture;
-        private System.Windows.Forms.Button approveReqBtn;
+        private System.Windows.Forms.Button BtnSystemSettings;
+        private System.Windows.Forms.Button BtnNotifications;
+        private System.Windows.Forms.Button BtnProfile;
+        private System.Windows.Forms.Button BtnHome;
+        private System.Windows.Forms.Button BtnProducts;
+        private System.Windows.Forms.Button BtnRequests;
+        private System.Windows.Forms.Button BtnOrders;
+        private System.Windows.Forms.PictureBox ProductPic;
+        private System.Windows.Forms.PictureBox PictureBox3;
+        private System.Windows.Forms.PictureBox PictureBox4;
+        private System.Windows.Forms.TextBox WelcomeTxt;
+        private System.Windows.Forms.Button BtnStockLevel;
+        private System.Windows.Forms.PictureBox StockPicture;
+        private System.Windows.Forms.Button BtnSettings;
+        private System.Windows.Forms.PictureBox SettingsPicture;
+        private System.Windows.Forms.PictureBox PictureBox1;
+        private System.Windows.Forms.Button BtnProfile2;
+        private System.Windows.Forms.PictureBox OkPicture;
+        private System.Windows.Forms.Button ApproveReqBtn;
         private System.Windows.Forms.PictureBox logOutBtn;
         private CircularProgressBar.CircularProgressBar loadingCircle;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PictureBox2;
     }
 }

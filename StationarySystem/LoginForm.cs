@@ -10,77 +10,80 @@ namespace StationarySystem
     {
         public char KeyChar { get; set; }
 
-        public LoginForm()
-        {
-            InitializeComponent();
-        }
-        
-        //On Login button click
-        private void LoginBtn_Click(object sender, EventArgs e)
+        public LoginForm() => InitializeComponent();
+
+        // On Login button click.
+        private void LoginBtn_Click(object sender, EventArgs e) 
         {
             string staffID = StaffIDTF.Text;
             string staffPassword = PasswordTF.Text;
-            loadingCircle.Visible = true;
+            // Loading circle visible.
+            loadingCircle.Visible = true; 
 
-            // Check for missing ID - later disable login button until values is filled
+            // Check for missing ID - later disable login button until values is filled.
             if (string.IsNullOrEmpty(StaffIDTF.Text))
             {
+                //if fields are empty/null.
                 MessageBox.Show("Please enter your Staff ID", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 StaffIDTF.Focus();
                 return;
             }
-
             try
             {
+                // Populate data points in User class.
                 sepdbDataSetTableAdapters.usersTableAdapter user = new sepdbDataSetTableAdapters.usersTableAdapter();
                 sepdbDataSet.usersDataTable dt = user.Login(staffID, staffPassword);
                 if (dt.Rows.Count > 0)
                 {
-                    User loggedInUser = Program.getCurrentUser();
+                    User loggedInUser = Program.GetCurrentUser();
                     DataRow dr = dt.Rows[0];
-                    loggedInUser.userId = int.Parse(dr["userid"].ToString());
-                    loggedInUser.firstName = dr["firstname"].ToString();
-                    loggedInUser.lastName = dr["lastname"].ToString();
-                    loggedInUser.emailAddress = dr["emailAddress"].ToString();
-                    loggedInUser.phoneNo = dr["phoneNumber"].ToString();
-                    loggedInUser.costCentre = dr["costCentre"].ToString();
-                    loggedInUser.nickname = dr["nickname"].ToString();
-                    //MessageBox.Show("Login OK", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //ProfileFormX profile = new ProfileFormX();
-                    Home homepage = new Home();
-                    //Form1 profile = new Form1();
+                    loggedInUser.UserId = int.Parse(dr["userid"].ToString());
+                    loggedInUser.FirstName = dr["firstname"].ToString();
+                    loggedInUser.LastName = dr["lastname"].ToString();
+                    loggedInUser.EmailAddress = dr["emailAddress"].ToString();
+                    loggedInUser.PhoneNo = dr["phoneNumber"].ToString();
+                    loggedInUser.CostCentre = dr["costCentre"].ToString();
+                    loggedInUser.Nickname = dr["nickname"].ToString();
+                    loggedInUser.RoleId = int.Parse(dr["roleID"].ToString());
+                    // Load form.
+                    Home homepage = new Home(); 
                     homepage.Show();
                     this.Hide();
                 }
                 else
                 {
-                    //StaffIDTF.Clear();
-                    //PasswordTF.Clear();
-                    MessageBox.Show("Login details incorrect.");
+                    // Display message.
+                    MessageBox.Show("Login details incorrect."); 
                     StaffIDTF.Focus();
+                    // Clear fields.
                     StaffIDTF.Text = "";
                     PasswordTF.Text = "";
+                    // Loading circle not visible.
                     loadingCircle.Visible = false;
                     return;
                 }
             }
-            catch (Exception ex)
+            // Error handling.
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 StaffIDTF.Text = "";
                 PasswordTF.Text = "";
+                StaffIDTF.Focus();
+                loadingCircle.Visible = false;
                 return; 
             }
-           
         }
 
-        private void PasswordTF_TextChanged(object sender, EventArgs e)
+        // Check username and password fields.
+        private void PasswordTF_TextChanged(object sender, EventArgs e) 
         {
-            //PasswordTF.PasswordChar = '*';
-
             if (KeyChar == (char)13)
+            {
                 LoginBtn.PerformClick();
-            if (String.IsNullOrWhiteSpace(PasswordTF.Text))
+            }
+            // Only enable login button when both fields have text in them.
+            if (String.IsNullOrWhiteSpace(PasswordTF.Text)) 
             {
                 LoginBtn.Enabled = false;
             }
@@ -88,10 +91,10 @@ namespace StationarySystem
             {
                 LoginBtn.Enabled = true;
             }
-
         }
 
-        private void closeLbl_Click(object sender, EventArgs e)
+        // Close application when clicked.
+        private void CloseLbl_Click(object sender, EventArgs e) 
         {
             System.Windows.Forms.Application.Exit();
         }

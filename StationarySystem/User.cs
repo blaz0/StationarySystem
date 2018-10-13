@@ -8,77 +8,48 @@ namespace StationarySystem
 {
     public class User
     {
-        public int userId { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public int username { get; set; }
-        public string password { get; set; }
-        public string emailAddress { get; set; }
-        public string phoneNo { get; set; }
-        public string costCentre { get; set; }
-        public string nickname { get; set; }
-        public string fullname { get { return firstName + " " + lastName; } }
-        
+        public int UserId { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public int Username { get; set; }
+
+        public string Password { get; set; }
+
+        public string EmailAddress { get; set; }
+
+        public string PhoneNo { get; set; }
+
+        public string CostCentre { get; set; }
+
+        public string Nickname { get; set; }
+
+        public string Fullname { get { return FirstName + " " + LastName; } }
+
+        public int RoleId { get; set; }
+
         public User()
         { }
 
-        public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname)
+        public User(int id, string firstName, string lastName, int username, string password, string emailAddress, string phoneNo, string costCentre, string nickname, int roleId)
         {
-            this.userId = id;
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.username = username;
-            this.password = password;
-            this.emailAddress = emailAddress;
-            this.phoneNo = phoneNo;
-            this.costCentre = costCentre;
-            this.nickname = nickname;
+            this.UserId = id;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Username = username;
+            this.Password = password;
+            this.EmailAddress = emailAddress;
+            this.PhoneNo = phoneNo;
+            this.CostCentre = costCentre;
+            this.Nickname = nickname;
+            this.RoleId = roleId;
         }
-
-        public int GetId()
-        {
-            return userId;
-        }
-        public string GetFirstName()
-        {
-            return firstName;
-        }
-        public string GetLastName()
-        {
-            return lastName;
-        }
-        public string GetFullName(string firstName, string lastName)
-        {
-            string fullname = firstName + lastName;
-            return fullname;
-        }
-        public int GetUsername()
-        {
-            return username;
-        }
-        public string GetPassword()
-        {
-            return password;
-        }
-        public string GetEmailAddress()
-        {
-            return emailAddress;
-        }
-        public string GetPhoneNo()
-        {
-            return phoneNo;
-        }
-        public string GetCostCentre()
-        {
-            return costCentre;
-        }
-        public string GetNickname()
-        {
-            return nickname;
-        }
+                
         public bool CheckID (int ID)
         {
-            if (ID == this.userId)
+            if (ID == this.UserId)
                 return true;
             else
                 return false;
