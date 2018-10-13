@@ -1,6 +1,7 @@
 language: csharp
 solution: StationarySystem.sln
-os: windows
+os: 
+- windows
 
 deploy:
   provider: releases
