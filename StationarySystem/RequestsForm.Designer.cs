@@ -98,10 +98,10 @@
             this.clearSearchBtn.BackColor = System.Drawing.Color.Teal;
             this.clearSearchBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.clearSearchBtn.ForeColor = System.Drawing.Color.White;
-            this.clearSearchBtn.Location = new System.Drawing.Point(971, 118);
-            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.clearSearchBtn.Location = new System.Drawing.Point(1942, 227);
+            this.clearSearchBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.clearSearchBtn.Name = "clearSearchBtn";
-            this.clearSearchBtn.Size = new System.Drawing.Size(211, 34);
+            this.clearSearchBtn.Size = new System.Drawing.Size(422, 65);
             this.clearSearchBtn.TabIndex = 30;
             this.clearSearchBtn.Text = "Clear Search";
             this.clearSearchBtn.UseVisualStyleBackColor = false;
@@ -114,9 +114,10 @@
             // utsLogo
             // 
             this.utsLogo.Image = ((System.Drawing.Image)(resources.GetObject("utsLogo.Image")));
-            this.utsLogo.Location = new System.Drawing.Point(75, 82);
+            this.utsLogo.Location = new System.Drawing.Point(150, 158);
+            this.utsLogo.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.utsLogo.Name = "utsLogo";
-            this.utsLogo.Size = new System.Drawing.Size(100, 150);
+            this.utsLogo.Size = new System.Drawing.Size(200, 288);
             this.utsLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.utsLogo.TabIndex = 4;
             this.utsLogo.TabStop = false;
@@ -129,9 +130,10 @@
             this.btnSystemSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSystemSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSystemSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSystemSettings.Location = new System.Drawing.Point(0, 422);
+            this.btnSystemSettings.Location = new System.Drawing.Point(0, 812);
+            this.btnSystemSettings.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSystemSettings.Name = "btnSystemSettings";
-            this.btnSystemSettings.Size = new System.Drawing.Size(250, 40);
+            this.btnSystemSettings.Size = new System.Drawing.Size(500, 77);
             this.btnSystemSettings.TabIndex = 3;
             this.btnSystemSettings.Text = "My Requests";
             this.btnSystemSettings.UseVisualStyleBackColor = false;
@@ -144,9 +146,10 @@
             this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotifications.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNotifications.ForeColor = System.Drawing.Color.White;
-            this.btnNotifications.Location = new System.Drawing.Point(0, 377);
+            this.btnNotifications.Location = new System.Drawing.Point(0, 725);
+            this.btnNotifications.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnNotifications.Name = "btnNotifications";
-            this.btnNotifications.Size = new System.Drawing.Size(250, 40);
+            this.btnNotifications.Size = new System.Drawing.Size(500, 77);
             this.btnNotifications.TabIndex = 2;
             this.btnNotifications.Text = "Products";
             this.btnNotifications.UseVisualStyleBackColor = true;
@@ -159,9 +162,10 @@
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 332);
+            this.btnProfile.Location = new System.Drawing.Point(0, 638);
+            this.btnProfile.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(250, 40);
+            this.btnProfile.Size = new System.Drawing.Size(500, 77);
             this.btnProfile.TabIndex = 1;
             this.btnProfile.Text = "Profile";
             this.btnProfile.UseVisualStyleBackColor = true;
@@ -175,9 +179,10 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Location = new System.Drawing.Point(0, 285);
+            this.btnHome.Location = new System.Drawing.Point(0, 548);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(250, 40);
+            this.btnHome.Size = new System.Drawing.Size(500, 77);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -193,8 +198,9 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 741);
+            this.panel1.Size = new System.Drawing.Size(500, 1399);
             this.panel1.TabIndex = 28;
             // 
             // cancelBtn
@@ -203,10 +209,10 @@
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(972, 536);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.cancelBtn.Location = new System.Drawing.Point(1944, 1031);
+            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(211, 34);
+            this.cancelBtn.Size = new System.Drawing.Size(422, 65);
             this.cancelBtn.TabIndex = 27;
             this.cancelBtn.Text = "Cancel Request";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -217,10 +223,10 @@
             this.searchBtn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.searchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.searchBtn.Image = ((System.Drawing.Image)(resources.GetObject("searchBtn.Image")));
-            this.searchBtn.Location = new System.Drawing.Point(930, 120);
-            this.searchBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.searchBtn.Location = new System.Drawing.Point(1860, 231);
+            this.searchBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(28, 31);
+            this.searchBtn.Size = new System.Drawing.Size(54, 58);
             this.searchBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.searchBtn.TabIndex = 25;
             this.searchBtn.TabStop = false;
@@ -229,10 +235,10 @@
             // logOutBtn
             // 
             this.logOutBtn.Image = ((System.Drawing.Image)(resources.GetObject("logOutBtn.Image")));
-            this.logOutBtn.Location = new System.Drawing.Point(1130, 20);
-            this.logOutBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.logOutBtn.Location = new System.Drawing.Point(2260, 38);
+            this.logOutBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.logOutBtn.Name = "logOutBtn";
-            this.logOutBtn.Size = new System.Drawing.Size(50, 52);
+            this.logOutBtn.Size = new System.Drawing.Size(100, 100);
             this.logOutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logOutBtn.TabIndex = 24;
             this.logOutBtn.TabStop = false;
@@ -245,9 +251,10 @@
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.SearchBox.ForeColor = System.Drawing.Color.Gray;
             this.SearchBox.HideSelection = false;
-            this.SearchBox.Location = new System.Drawing.Point(325, 120);
+            this.SearchBox.Location = new System.Drawing.Point(650, 231);
+            this.SearchBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(596, 30);
+            this.SearchBox.Size = new System.Drawing.Size(1188, 53);
             this.SearchBox.TabIndex = 22;
             this.SearchBox.Text = "Search requests by product";
             // 
@@ -255,9 +262,10 @@
             // 
             this.RequestsLbl.AutoSize = true;
             this.RequestsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RequestsLbl.Location = new System.Drawing.Point(315, 36);
+            this.RequestsLbl.Location = new System.Drawing.Point(630, 69);
+            this.RequestsLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.RequestsLbl.Name = "RequestsLbl";
-            this.RequestsLbl.Size = new System.Drawing.Size(305, 55);
+            this.RequestsLbl.Size = new System.Drawing.Size(603, 108);
             this.RequestsLbl.TabIndex = 21;
             this.RequestsLbl.Text = "My Requests";
             // 
@@ -283,14 +291,14 @@
             this.price});
             this.requestDataGrid.DataSource = this.stationeryrequestBindingSource2;
             this.requestDataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.requestDataGrid.Location = new System.Drawing.Point(325, 176);
+            this.requestDataGrid.Location = new System.Drawing.Point(650, 338);
             this.requestDataGrid.Margin = new System.Windows.Forms.Padding(0);
             this.requestDataGrid.Name = "requestDataGrid";
             this.requestDataGrid.ReadOnly = true;
             this.requestDataGrid.RowHeadersVisible = false;
             this.requestDataGrid.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.requestDataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.requestDataGrid.Size = new System.Drawing.Size(856, 345);
+            this.requestDataGrid.Size = new System.Drawing.Size(1712, 663);
             this.requestDataGrid.TabIndex = 31;
             // 
             // requestIDDataGridViewTextBoxColumn
@@ -397,9 +405,10 @@
             this.editBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("editBtn.BackgroundImage")));
             this.editBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.editBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.editBtn.Location = new System.Drawing.Point(926, 536);
+            this.editBtn.Location = new System.Drawing.Point(1852, 1031);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(32, 34);
+            this.editBtn.Size = new System.Drawing.Size(64, 65);
             this.editBtn.TabIndex = 32;
             this.editBtn.UseVisualStyleBackColor = false;
             this.editBtn.Click += new System.EventHandler(this.editBtn_Click);
@@ -408,18 +417,18 @@
             // 
             this.quantityLbl.AutoSize = true;
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.quantityLbl.Location = new System.Drawing.Point(322, 536);
-            this.quantityLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.quantityLbl.Location = new System.Drawing.Point(644, 1031);
+            this.quantityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(186, 25);
+            this.quantityLbl.Size = new System.Drawing.Size(376, 46);
             this.quantityLbl.TabIndex = 34;
             this.quantityLbl.Text = "Enter New Quantity:";
             // 
             // qty
             // 
             this.qty.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.qty.Location = new System.Drawing.Point(513, 536);
-            this.qty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.qty.Location = new System.Drawing.Point(1026, 1031);
+            this.qty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.qty.Maximum = new decimal(new int[] {
             50,
             0,
@@ -431,7 +440,7 @@
             0,
             0});
             this.qty.Name = "qty";
-            this.qty.Size = new System.Drawing.Size(47, 26);
+            this.qty.Size = new System.Drawing.Size(94, 44);
             this.qty.TabIndex = 35;
             this.qty.Value = new decimal(new int[] {
             1,
@@ -445,10 +454,10 @@
             this.saveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.saveBtn.ForeColor = System.Drawing.Color.White;
-            this.saveBtn.Location = new System.Drawing.Point(326, 567);
-            this.saveBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.saveBtn.Location = new System.Drawing.Point(652, 1090);
+            this.saveBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(147, 34);
+            this.saveBtn.Size = new System.Drawing.Size(294, 65);
             this.saveBtn.TabIndex = 36;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = false;
@@ -507,10 +516,10 @@
             // 
             this.cancelLbl.AutoSize = true;
             this.cancelLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.cancelLbl.Location = new System.Drawing.Point(488, 573);
-            this.cancelLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cancelLbl.Location = new System.Drawing.Point(976, 1102);
+            this.cancelLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cancelLbl.Name = "cancelLbl";
-            this.cancelLbl.Size = new System.Drawing.Size(74, 25);
+            this.cancelLbl.Size = new System.Drawing.Size(145, 46);
             this.cancelLbl.TabIndex = 38;
             this.cancelLbl.Text = "Cancel";
             this.cancelLbl.Click += new System.EventHandler(this.cancelLbl_Click);
@@ -524,20 +533,21 @@
             this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.backBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtn.ForeColor = System.Drawing.Color.White;
-            this.backBtn.Location = new System.Drawing.Point(256, 12);
+            this.backBtn.Location = new System.Drawing.Point(512, 23);
+            this.backBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(41, 43);
+            this.backBtn.Size = new System.Drawing.Size(82, 83);
             this.backBtn.TabIndex = 40;
             this.backBtn.UseVisualStyleBackColor = false;
             this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // RequestsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(2564, 1399);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.cancelLbl);
             this.Controls.Add(this.saveBtn);
@@ -552,6 +562,7 @@
             this.Controls.Add(this.logOutBtn);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.RequestsLbl);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "RequestsForm";
             this.Text = "RequestsForm";
             this.Load += new System.EventHandler(this.RequestsForm_Load);
