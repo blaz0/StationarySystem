@@ -1,5 +1,6 @@
 language: csharp
 solution: StationarySystem.sln
+os: windows
 
 deploy:
   provider: releases
@@ -7,4 +8,4 @@ deploy:
   file: "StationarySystem"
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
