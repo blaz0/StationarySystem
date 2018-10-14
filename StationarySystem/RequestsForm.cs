@@ -101,7 +101,11 @@ namespace StationarySystem
         private void SearchBtn_Click(object sender, EventArgs e) 
         {
             string searchValue = SearchBox.Text;
-            // Use a LIKE query to filter the tableview based on the contents of the searchbox.
+            // Using MVC.
+            User selectedUser = Program.GetCurrentUser();
+            // Use LIKE queries to filter the tableview based on the contents of the searchbox and the userID
+            int findUserID = selectedUser.UserId;
+            stationeryrequestBindingSource2.Filter = "Convert([userID], System.String) LIKE '" + findUserID + "'";
             stationeryrequestBindingSource2.Filter = "name LIKE '*" + searchValue + "*'";
         }
 
