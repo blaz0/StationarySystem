@@ -1,10 +1,2 @@
 language: csharp
 solution: StationarySystem.sln
-
-deploy:
-  provider: releases
-  api_key: "8bd566465ee8473727ed5beb8e229bc36c45faef"
-  file: "StationarySystem"
-  skip_cleanup: true
-  on:
-    tags: true
