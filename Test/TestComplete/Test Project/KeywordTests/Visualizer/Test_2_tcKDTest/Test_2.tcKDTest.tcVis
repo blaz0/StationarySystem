@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{42D2222C-ACA2-405F-8E67-05D5C42EB839}" version="2">
+	<data key="{69ACFE89-F53A-492A-B921-B551FF842141}">
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="0" kind="0" dateTime="43387.5509722222" objectName="Aliases.StationarySystem.LoginForm.StaffIDTF" objectLeft="639" objectTop="328" objectRight="793" objectBottom="354" clickPointX="-1" clickPointY="-1" imageFileName="tcvi7720953109046.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="1" kind="0" dateTime="43387.5509953704" objectName="Aliases.StationarySystem.LoginForm.PasswordTF" objectLeft="639" objectTop="378" objectRight="793" objectBottom="404" clickPointX="675" clickPointY="382" imageFileName="tcvi7722890109047.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="2" kind="0" dateTime="43387.5510185185" objectName="Aliases.StationarySystem.LoginForm.PasswordTF" objectLeft="639" objectTop="378" objectRight="793" objectBottom="404" clickPointX="-1" clickPointY="-1" imageFileName="tcvi7724140109049.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="3" kind="0" dateTime="43387.5510416667" objectName="Aliases.StationarySystem.LoginForm.LoginBtn" objectLeft="639" objectTop="430" objectRight="739" objectBottom="470" clickPointX="708" clickPointY="458" imageFileName="tcvi77268751090410.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="5" kind="0" dateTime="43387.5513078704" objectName="Aliases.StationarySystem.dlg.btnOK" objectLeft="77" objectTop="99" objectRight="152" objectBottom="122" clickPointX="125" clickPointY="107" imageFileName="tcvi77506711090413.png" storageFileName="" needUpdate="False" rectColor="255" />
+	</data>
+</Root>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tests>
+  <edtdocversion branch="retail" build="30319" revision="42000" />
+  <TestCompleteTest type="TestComplete.VSI.Tests.TestCompleteTest, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <TestComplete_Project_File type="System.String">TestComplete\Test Project.pjs</TestComplete_Project_File>
+    <Configuration type="TestComplete.VSI.Tests.TestsConfiguration, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <ConfigHash type="System.String">{00000000-0000-0000-0000-000000000000}</ConfigHash>
+      <tests type="System.Collections.Generic.List`1[[TestComplete.VSI.Tests.TestsConfigurationItem, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null]]">
+        <_items type="TestComplete.VSI.Tests.TestsConfigurationItem[], TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <element type="TestComplete.VSI.Tests.TestsConfigurationItem, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+            <TestName type="System.String">Test Project</TestName>
+            <TestMoniker type="System.String">{8E631D69-2CE3-4853-9BE5-41B3F2E53FF1}</TestMoniker>
+            <TestEnabled type="System.Boolean">True</TestEnabled>
+            <tests type="System.Collections.Generic.List`1[[TestComplete.VSI.Tests.TestsConfigurationItem, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null]]">
+              <_size type="System.Int32">0</_size>
+              <_version type="System.Int32">0</_version>
+            </tests>
+          </element>
+          <element />
+          <element />
+          <element />
+        </_items>
+        <_size type="System.Int32">1</_size>
+        <_version type="System.Int32">1</_version>
+      </tests>
+    </Configuration>
+    <clientApp type="TestComplete.VSI.Tests.TCClientApp, TestComplete12.VSI, Version=12.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <value__ type="System.Int32">0</value__>
+    </clientApp>
+    <UsePSConfig type="System.Boolean">True</UsePSConfig>
+    <cssProjectStructure type="System.String" />
+    <isRunOnRestart type="System.Boolean">False</isRunOnRestart>
+    <timeOut type="System.Int32">0</timeOut>
+    <isGroupable type="System.Boolean">True</isGroupable>
+    <abortRunOnAgentFailure type="System.Boolean">False</abortRunOnAgentFailure>
+    <cssIteration type="System.String" />
+    <workItemIds type="System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]">
+      <_size type="System.Int32">0</_size>
+      <_version type="System.Int32">1</_version>
+    </workItemIds>
+    <id type="Microsoft.VisualStudio.TestTools.Common.TestId">
+      <m_id type="System.Guid">e6a4fe71-9830-4f9b-9501-9231ed65d867</m_id>
+    </id>
+    <name type="System.String">acceptancetest</name>
+    <description type="System.String" />
+    <enabled type="System.Boolean">True</enabled>
+    <owner type="System.String" />
+    <priority type="System.Int32">2147483647</priority>
+    <TestCategories type="Microsoft.VisualStudio.TestTools.Common.TestCategoryItemCollection" />
+    <executionId type="Microsoft.VisualStudio.TestTools.Common.TestExecId">
+      <id type="System.Guid">00000000-0000-0000-0000-000000000000</id>
+    </executionId>
+    <parentExecutId type="Microsoft.VisualStudio.TestTools.Common.TestExecId">
+      <id type="System.Guid">00000000-0000-0000-0000-000000000000</id>
+    </parentExecutId>
+    <m_deploymentItems type="Microsoft.VisualStudio.TestTools.Common.DeploymentItemCollection" />
+    <agentAttributes type="System.Collections.Specialized.StringDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <storage type="System.String">c:\users\maxin\source\repos\stationarysystem\test\acceptancetest.tc12test</storage>
+    <projectData type="Microsoft.VisualStudio.TestTools.Common.ProjectData">
+      <id type="System.Guid">1976408d-78a3-4624-b176-dcf353156898</id>
+      <projectName type="System.String">Test</projectName>
+      <solutionName type="System.String">StationarySystem</solutionName>
+      <projectRelativePath type="System.String">Test\Test.csproj</projectRelativePath>
+    </projectData>
+    <m_nonRunnableReason type="System.String" />
+  </TestCompleteTest>
+</Tests>
