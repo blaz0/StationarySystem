@@ -484,6 +484,7 @@
             this.userIDDataGridViewTextBoxColumn.HeaderText = "User ID";
             this.userIDDataGridViewTextBoxColumn.Name = "userIDDataGridViewTextBoxColumn";
             this.userIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.userIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // productIDDataGridViewTextBoxColumn
             // 
