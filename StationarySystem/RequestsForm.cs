@@ -20,7 +20,7 @@ namespace StationarySystem
         {
             // Load form.
             // Fill datagridview with table data.
-            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest); 
+            this.stationeryrequestTableAdapter.Fill(this.sepdbDataSet1.stationeryrequest);
             // Using MVC.
             User selectedUser = Program.GetCurrentUser(); 
             Product selectedProduct = Program.GetCurrentProduct(); 
@@ -40,7 +40,7 @@ namespace StationarySystem
         private void LogOutBtn_Click(object sender, EventArgs e) 
         {
             // Load form.
-            LoginForm loginPage = new LoginForm(); 
+            LoginForm loginPage = new LoginForm();
             loginPage.Show();
             this.Hide();
         }
